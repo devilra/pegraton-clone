@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full flex justify-between items-center px-8 pt-8 md:pt-16 md:pl-28 pb-4 z-50"
+      className="fixed top-0 left-0 w-full flex justify-between items-center px-8 pt-8  md:pl-28 pb-4 z-50"
       style={{
         background: "transparent",
         color: "white",
@@ -26,7 +26,7 @@ function Navbar() {
       <Link
         to="/"
         className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
-        PEGATRON
+        <img src="/logo.webp" className="h-20 md:h-20 " />
       </Link>
 
       {/* Desktop Menu */}
