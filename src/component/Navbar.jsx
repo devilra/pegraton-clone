@@ -25,7 +25,7 @@ function Navbar() {
       {/* Logo */}
       <Link
         to="/"
-        className="text-4xl text-neutral-300 md:text-neutral-100 font-sans tracking-[2px] font-bold">
+        className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
         PEGATRON
       </Link>
 
