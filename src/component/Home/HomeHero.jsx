@@ -3,6 +3,10 @@ import { useLocation } from "react-router-dom";
 import { IoFlagOutline } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
+import { FaTimes } from "react-icons/fa";
+import { images } from "../data";
+
+//const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
 const HomeHero = () => {
   const videoSrc = "/bg.mp4";
@@ -30,6 +34,8 @@ const HomeHero = () => {
 
   const [sectionIndex, setSectionIndex] = useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const videoRef = useRef(null);
 
   const handleVideoEnded = () => {
@@ -54,11 +60,13 @@ const HomeHero = () => {
       setSectionIndex((prevIndex) => {
         if (e.key === "ArrowDown" && prevIndex < sections.length - 1) {
           e.preventDefault();
-          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex + 1);
           return prevIndex + 1;
         } else if (e.key === "ArrowUp" && prevIndex > 0) {
           e.preventDefault();
-          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex - 1);
           return prevIndex - 1;
         }
         return prevIndex;
@@ -67,25 +75,34 @@ const HomeHero = () => {
 
     let touchStartY = 0;
     let touchEndY = 0;
+    let isSwipe = false;
 
     const handleTouchStart = (e) => {
       touchStartY = e.touches[0].clientY;
+      isSwipe = false;
     };
     const handleTouchMove = (e) => {
-      e.preventDefault();
+      //e.preventDefault();
       touchEndY = e.touches[0].clientY;
-      // if (window.scrollY === 0 && touchEndY > touchStartY) {
+      const diff = Math.abs(touchStartY - touchEndY);
 
-      // }
+      if (diff > 10) {
+        e.preventDefault();
+        isSwipe = true;
+      }
     };
     const handleTouchEnd = () => {
+      if (!isSwipe) return;
+
       setSectionIndex((prevIndex) => {
         const swipeDistance = touchStartY - touchEndY;
         if (swipeDistance > 50 && prevIndex < sections.length - 1) {
-          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex + 1);
           return prevIndex + 1;
         } else if (swipeDistance < -50 && prevIndex > 0) {
-          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex - 1);
           return prevIndex - 1;
         }
         return prevIndex;
@@ -99,10 +116,12 @@ const HomeHero = () => {
 
       setSectionIndex((prevIndex) => {
         if (e.deltaY > 0 && prevIndex < sections.length - 1) {
-          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex + 1);
           return prevIndex + 1;
         } else if (e.deltaY < 0 && prevIndex > 0) {
-          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          goToSection(prevIndex - 1);
           return prevIndex - 1;
         }
         return prevIndex;
@@ -111,6 +130,10 @@ const HomeHero = () => {
       setTimeout(() => {
         isScrolling = false;
       }, 800);
+    };
+
+    const disableScroll = (e) => {
+      e.preventDefault();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -133,7 +156,7 @@ const HomeHero = () => {
       {/* Section 1 - Normal */}
       <section className="full-section relative h-screen flex items-center justify-start bg-black">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
           loading="lazy"
@@ -151,7 +174,7 @@ const HomeHero = () => {
       {/* Section 2 - Blur */}
       <section className="full-section relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
           muted
@@ -279,11 +302,24 @@ const HomeHero = () => {
         </div>
       </section>
 
-      {/* Section mobile -- 3 and Desktop --hidden - Blur */}
+      {/* Section 3 - Blur */}
+      <section className="full-section md:hidden relative h-screen flex items-center justify-center bg-black">
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+          src={videoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+      </section>
+
+      {/* Section mobile -- 4 and Desktop --hidden - Blur */}
 
       <section className="full-section md:hidden relative h-screen flex items-center justify-center bg-black">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
           muted
@@ -293,46 +329,79 @@ const HomeHero = () => {
         <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
         <div className="relative z-10 text-white text-4xl ">
           <div className=" md:hidden py-3">
-            <div className="gap-5 relative  rounded-lg grid grid-cols-1 overflow-hidden  shadow-lg">
-              <div className="relative  rounded-lg  overflow-hidden  cursor-pointer group   ">
-                <img
-                  src="/f1.png"
-                  alt="EV"
-                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-2 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
-                  ESG
+            <div className="gap-5 relative rounded-lg grid grid-cols-1 overflow-hidden  shadow-lg">
+              {images.map((item, i) => (
+                <div
+                  key={i}
+                  className="relative  rounded-lg  overflow-hidden  cursor-pointer group"
+                  onClick={() => setSelectedImage(item)}>
+                  <img
+                    src={item.src}
+                    alt={`Image ${i + 1}`}
+                    className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                 </div>
-              </div>
-              <div className="relative  rounded-lg  overflow-hidden   cursor-pointer group   ">
-                <img
-                  src="/f2.png"
-                  alt="EV"
-                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-2 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
-                  GLOBAL FOOTPRINT
-                </div>
-              </div>
-              <div className="relative  rounded-lg  overflow-hidden   cursor-pointer group   ">
-                <img
-                  src="/f3.png"
-                  alt="EV"
-                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-20 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
-                  CAREERS
-                </div>
-              </div>
+              ))}
             </div>
+          </div>
+          <div className="">
+            {selectedImage && (
+              <div
+                className="fixed inset-0 pt-16 bg-black bg-opacity-90 flex md:flex md:flex-col items-center justify-center z-50"
+                onClick={() => setSelectedImage(null)}>
+                <div className="relative flex flex-col w-[700px]  mx-28  gap-7">
+                  <div>
+                    <img
+                      src={selectedImage.src}
+                      alt="Full view"
+                      className="w-[500px] md:h-[70vh] h-[200px]  object-contain rounded-lg"
+                    />
+                    {/* <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute bottom-2 -right-24 bg-white text-black cursor-pointer rounded-full px-3 py-1 text-sm font-bold">
+                <FaTimes className="cursor-pointer" />
+              </button> */}
+
+                    <div className="pt-3 w-[400px] mx-auto md-pt-5 ">
+                      <h1 className=" bg-gradient-to-r text-[20px] leading-snug from-[#ff2e27] via-[#c2b0af]  to-[#f56560] text-transparent bg-clip-text font-[500]">
+                        {selectedImage.title}
+                      </h1>
+                      <div className=" w-[100px] mt-2 h-1  rounded-full bg-[#ff2e27]"></div>
+                      <div className="w-[300px]">
+                        {selectedImage.subTitle && (
+                          <h1 className="py-3 text-[18px] font-bold">
+                            {selectedImage.subTitle}
+                          </h1>
+                        )}
+
+                        <p className="w-[400px] font-[700]  leading-snug text-[15px] font-mono py-5">
+                          {selectedImage.description.split("").slice(0, 310)}
+                        </p>
+                      </div>
+                      {Array.isArray(selectedImage.points) ? (
+                        <ul className="text-[14px] leading-snug custom-bullet list-disc pl-5 font-sans md:leading-6">
+                          {selectedImage.points.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="w-[400px] text-neutral-100 leading-snug text-[15px] font-mono py-5">
+                          {selectedImage.points}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
-      {/* Section mobile -- 4 and Desktop --3 - Blur */}
+      {/* Section mobile -- 5 and Desktop --4 - Blur */}
       <section className="full-section relative h-screen flex items-center justify-center bg-black">
         <video
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
           muted

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { HiChevronDown, HiChevronUp } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
+import { images } from "./data";
 
 const Footer = () => {
   // State to track open sections for mobile accordion
@@ -21,23 +22,23 @@ const Footer = () => {
     });
   };
 
-  const images = [
-    "/sansirong/s1.jpg",
-    "/sansirong/s2.jpg",
-    "/sansirong/s3.jpg",
-  ];
+  // const images = [
+  //   "/sansirong/s1.jpg",
+  //   "/sansirong/s2.jpg",
+  //   "/sansirong/s3.jpg",
+  // ];
 
   return (
     <div>
       <div className="  hidden md:block py-8">
         <div className="gap-5 relative md:pl-28  md:pr-28 rounded-lg grid grid-cols-3  overflow-hidden md:pt-2 shadow-lg">
-          {images.map((src, i) => (
+          {images.map((item, i) => (
             <div
               key={i}
               className="relative  rounded-lg  overflow-hidden  cursor-pointer group"
-              onClick={() => setSelectedImage(src)}>
+              onClick={() => setSelectedImage(item)}>
               <img
-                src={src}
+                src={item.src}
                 alt={`Image ${i + 1}`}
                 className="w-full h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -78,19 +79,47 @@ const Footer = () => {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 mt-10 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setIm}>
-          <div className="relative">
-            <img
-              src={selectedImage}
-              alt="Full view"
-              className="max-w-[80vw] max-h-[70vh] object-contain rounded-lg"
-            />
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 bg-white text-black cursor-pointer rounded-full px-3 py-1 text-sm font-bold">
-              <FaTimes />
-            </button>
+          className="fixed inset-0 pt-16 bg-black bg-opacity-95 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}>
+          <div className="relative flex gap-7">
+            <div>
+              <img
+                src={selectedImage.src}
+                alt="Full view"
+                className="max-w-[80vw] max-h-[70vh] object-contain rounded-lg"
+              />
+              {/* <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute bottom-2 -right-24 bg-white text-black cursor-pointer rounded-full px-3 py-1 text-sm font-bold">
+                <FaTimes className="cursor-pointer" />
+              </button> */}
+            </div>
+            <div className="pt-5 ">
+              <h1 className=" bg-gradient-to-r from-[#ff2e27] via-[#c2b0af]  to-[#f56560] text-transparent bg-clip-text font-[500]">
+                {selectedImage.title}
+              </h1>
+              <div className="w-[200px] mt-2 h-1  rounded-full bg-[#ff2e27]"></div>
+              {selectedImage.subTitle && (
+                <h1 className="py-3 text-[18px] font-bold">
+                  {selectedImage.subTitle}
+                </h1>
+              )}
+
+              <p className="w-[700px] font-[700]  leading-snug text-[15px] font-mono py-5">
+                {selectedImage.description}
+              </p>
+              {Array.isArray(selectedImage.points) ? (
+                <ul className="text-[14px] leading-snug custom-bullet list-disc pl-5 font-sans md:leading-6">
+                  {selectedImage.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="w-[700px] text-neutral-100 leading-snug text-[15px] font-mono py-5">
+                  {selectedImage.points}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       )}

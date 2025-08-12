@@ -9,3 +9,8 @@ body {
     padding: 0;
     overflow: hidden;
 }
+
+.custom-bullet li::marker {
+
+    color: red;
+}
