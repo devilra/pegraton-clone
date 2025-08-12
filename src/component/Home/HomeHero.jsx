@@ -73,10 +73,11 @@ const HomeHero = () => {
       touchStartY = e.touches[0].clientY;
     };
     const handleTouchMove = (e) => {
+      e.preventDefault();
       touchEndY = e.touches[0].clientY;
-      if (window.scrollY === 0 && touchEndY > touchStartY) {
-        e.preventDefault();
-      }
+      // if (window.scrollY === 0 && touchEndY > touchStartY) {
+
+      // }
     };
     const handleTouchEnd = () => {
       setSectionIndex((prevIndex) => {
