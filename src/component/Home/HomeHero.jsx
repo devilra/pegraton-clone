@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import { IoFlagOutline } from "react-icons/io5";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Footer from "../Footer";
 
 const HomeHero = () => {
   const videoSrc =
@@ -12,6 +13,19 @@ const HomeHero = () => {
     "https://www.pegatroncorp.com/media/20250115032749773_MainBN_Server_mb.mp4";
   const video3 =
     "https://www.pegatroncorp.com/media/20250115032815108_MainBN_Maker_XL_mb.mp4";
+
+  const g1 =
+    "https://www.pegatroncorp.com/media/20241219033242374_Automotive_hover.mp4";
+  const g2 =
+    "https://www.pegatroncorp.com/media/20250117102612342_5G_hover.mp4";
+  const g3 =
+    "https://www.pegatroncorp.com/media/20250117102537583_IOT_hover.mp4";
+  const g4 =
+    "https://www.pegatroncorp.com/media/20250117102527866_Computing_hover.mp4";
+  const g5 =
+    "https://www.pegatroncorp.com/media/20241219113526769_news_expand.png";
+  const g6 =
+    "https://www.pegatroncorp.com/media/20241219033738573_AI_hover.mp4";
 
   const videos = [video1, video2, video3];
 
@@ -29,73 +43,87 @@ const HomeHero = () => {
 
   const location = useLocation();
 
-  // State to track open sections for mobile accordion
-  const [openSections, setOpenSections] = useState({});
-
-  // Toggle function for a section
-  const toggleSection = (section) => {
-    setOpenSections((prev) => {
-      if (prev[section]) {
-        return {};
-      } else {
-        return { [section]: true };
-      }
-    });
-  };
-
   useEffect(() => {
     const sections = document.querySelectorAll(".full-section");
 
     const goToSection = (index) => {
       setSectionIndex(index);
-      sections[index].scrollIntoView({ behavior: "smooth" });
+      sections[index]?.scrollIntoView({ behavior: "smooth" });
     };
 
-    // ---- KEYBOARD SCROLL ----
     const handleKeyDown = (e) => {
-      if (e.key === "ArrowDown" && sectionIndex < sections.length - 1) {
-        e.preventDefault();
-        goToSection(sectionIndex + 1);
-      } else if (e.key === "ArrowUp" && sectionIndex > 0) {
-        e.preventDefault();
-        goToSection(sectionIndex - 1);
-      }
+      setSectionIndex((prevIndex) => {
+        if (e.key === "ArrowDown" && prevIndex < sections.length - 1) {
+          e.preventDefault();
+          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex + 1;
+        } else if (e.key === "ArrowUp" && prevIndex > 0) {
+          e.preventDefault();
+          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex - 1;
+        }
+        return prevIndex;
+      });
     };
 
-    // ---- TOUCH SWIPE ----
     let touchStartY = 0;
     let touchEndY = 0;
 
     const handleTouchStart = (e) => {
       touchStartY = e.touches[0].clientY;
     };
-
     const handleTouchMove = (e) => {
       touchEndY = e.touches[0].clientY;
     };
-
     const handleTouchEnd = () => {
-      const swipeDistance = touchStartY - touchEndY;
+      setSectionIndex((prevIndex) => {
+        const swipeDistance = touchStartY - touchEndY;
+        if (swipeDistance > 50 && prevIndex < sections.length - 1) {
+          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex + 1;
+        } else if (swipeDistance < -50 && prevIndex > 0) {
+          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex - 1;
+        }
+        return prevIndex;
+      });
+    };
 
-      if (swipeDistance > 50 && sectionIndex < sections.length - 1) {
-        goToSection(sectionIndex + 1);
-      } else if (swipeDistance < -50 && sectionIndex > 0) {
-        goToSection(sectionIndex - 1);
-      }
+    let isScrolling = false;
+    const handleWheel = (e) => {
+      if (isScrolling) return;
+      isScrolling = true;
+
+      setSectionIndex((prevIndex) => {
+        if (e.deltaY > 0 && prevIndex < sections.length - 1) {
+          sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex + 1;
+        } else if (e.deltaY < 0 && prevIndex > 0) {
+          sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+          return prevIndex - 1;
+        }
+        return prevIndex;
+      });
+
+      setTimeout(() => {
+        isScrolling = false;
+      }, 800);
     };
 
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("touchstart", handleTouchStart);
     window.addEventListener("touchmove", handleTouchMove);
     window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("wheel", handleWheel);
     };
-  }, [sectionIndex]);
+  }, []);
 
   return (
     <div className="overflow-hidden">
@@ -117,7 +145,7 @@ const HomeHero = () => {
       </section>
 
       {/* Section 2 - Blur */}
-      <section className="full-section relative md:h-[h-100%] h-screen flex flex-col  pt-28 px-8 md:px-0  bg-black">
+      <section className="full-section relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src={videoSrc}
@@ -131,7 +159,7 @@ const HomeHero = () => {
           <h1 className="md:hidden text-3xl text-white/85 pt-5 pb-8">
             Navigate the future
           </h1>
-          <div className="flex md:pb-24 relative md:pl-28 rounded-lg overflow-hidden md:pt-20 shadow-lg">
+          <div className="flex md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
             <video
               key={currentVideoIndex}
               ref={videoRef}
@@ -149,17 +177,155 @@ const HomeHero = () => {
                 <div
                   key={i}
                   onClick={() => handleDotClick(i)}
-                  className={`w-3 h-3 rounded-full cursor-pointer ${
+                  className={`w-2 h-2 rounded-full cursor-pointer hidden md:block ${
                     i === currentVideoIndex ? "bg-white" : "bg-white/50"
                   }`}
                 />
               ))}
             </div>
+
+            {/* Right side - grid of smaller images with text */}
+
+            <div className=" max-w-[400px] md:h-[300px] grid grid-cols-3 grid-rows-3  gap-x-3 gap-y-2 ">
+              {/* EV */}
+              <div className="relative rounded-lg  overflow-hidden md:row-span-2   cursor-pointer group   ">
+                <img
+                  src="/g1.jpg"
+                  alt="EV"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  EV
+                </div>
+              </div>
+
+              {/* 5G */}
+              <div className="relative rounded-lg overflow-hidden md:row-span-2 cursor-pointer group ">
+                <img
+                  src="/g2.jpg"
+                  alt="5G"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  5G
+                </div>
+              </div>
+
+              {/* IOT & Smart application */}
+              <div className="relative rounded-lg overflow-hidden cursor-pointer group  ">
+                <img
+                  src="/g3.jpg"
+                  alt="IOT & Smart application"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-semibold text-sm sm:text-base leading-snug">
+                  IOT & Smart <br /> application
+                </div>
+              </div>
+
+              {/* PEGAVERSE (span 2 columns on sm+, full width on mobile) */}
+              <div className="relative rounded-lg overflow-hidden cursor-pointer group ">
+                <img
+                  src="/g4.png"
+                  alt="PEGAVERSE"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  PEGAVERSE
+                </div>
+              </div>
+
+              {/* Computing */}
+              <div className="relative rounded-lg md:col-span-2 order-2 overflow-hidden  cursor-pointer group  ">
+                <img
+                  src="/g6.png"
+                  alt="Computing"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  Computing
+                </div>
+              </div>
+
+              {/* News */}
+              <div className="relative rounded-lg order-1 md:h-[98px] md:w-[130px] overflow-hidden md:col-span-1 cursor-pointer group aspect-[4/5] sm:aspect-[3/4]">
+                <img
+                  src="/g5.png"
+                  alt="News"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  News
+                </div>
+              </div>
+            </div>
+            <div className=" hidden md:block absolute left-28 bottom-5  ">
+              <div className="flex items-center justify-center h-full  ">
+                <h1 className="font-[500] text-4xl">Navigate the future</h1>
+                <MdOutlineArrowForwardIos size={40} className="pt-2 mx-3" />
+              </div>
+            </div>
+            <div className=" hidden md:block absolute right-28  bottom-5  ">
+              <div className="flex items-center justify-center space-x-1 border border-white px-3 rounded-full  ">
+                <IoFlagOutline size={15} />
+                <h1 className="font-[500] text-[12px]">Feedback</h1>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 - Blur */}
+      {/* Section mobile -- 3 and Desktop --hidden - Blur */}
+
+      <section className="full-section md:hidden relative h-screen flex items-center justify-center bg-black">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={videoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+        <div className="relative z-10 text-white text-4xl ">
+          <div className=" md:hidden py-3">
+            <div className="gap-5 relative  rounded-lg grid grid-cols-1 overflow-hidden  shadow-lg">
+              <div className="relative  rounded-lg  overflow-hidden  cursor-pointer group   ">
+                <img
+                  src="/f1.png"
+                  alt="EV"
+                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
+                  ESG
+                </div>
+              </div>
+              <div className="relative  rounded-lg  overflow-hidden   cursor-pointer group   ">
+                <img
+                  src="/f2.png"
+                  alt="EV"
+                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-2 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
+                  GLOBAL FOOTPRINT
+                </div>
+              </div>
+              <div className="relative  rounded-lg  overflow-hidden   cursor-pointer group   ">
+                <img
+                  src="/f3.png"
+                  alt="EV"
+                  className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-20 w-[200px] left-2 text-white font-[400] md:text-4xl sm:text-xl">
+                  CAREERS
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section mobile -- 4 and Desktop --3 - Blur */}
       <section className="full-section relative h-screen flex items-center justify-center bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -171,187 +337,7 @@ const HomeHero = () => {
         />
         <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
         <div className="relative z-10 text-white text-4xl pt-96  md:pt-64">
-          <footer className="bg-gradient-to-br from-cyan-700 via-cyan-600 pb-36 md:pb-10 to-cyan-500 text-white px-6 py-10 md:px-10 md:py-10">
-            <div className="max-w-7xl mx-auto">
-              {/* Top links */}
-              <div className="grid grid-cols-1 md:grid-cols-6 gap-6 mb-8">
-                {/* About */}
-                <div>
-                  <button
-                    onClick={() => toggleSection("about")}
-                    className="flex w-full items-center justify-between md:justify-start uppercase text-sm font-bold mb-3 md:mb-5 focus:outline-none">
-                    ABOUT
-                    <span className="md:hidden">
-                      {openSections.about ? (
-                        <HiChevronUp size={20} />
-                      ) : (
-                        <HiChevronDown size={20} />
-                      )}
-                    </span>
-                  </button>
-                  {/* List - show only if open or on md+ */}
-                  <ul
-                    className={`text-sm space-y-1 md:block ${
-                      openSections.about ? "block" : "hidden"
-                    }`}>
-                    <li>The Company</li>
-                    <li>Our Vision</li>
-                    <li>Corporate Philosophy</li>
-                    <li>Global Footprint</li>
-                  </ul>
-                </div>
-
-                {/* Product & Service */}
-                <div>
-                  <button
-                    onClick={() => toggleSection("product")}
-                    className="flex w-full items-center justify-between md:justify-start uppercase text-sm font-bold mb-3 md:mb-5 focus:outline-none">
-                    PRODUCT & SERVICE
-                    <span className="md:hidden">
-                      {openSections.product ? (
-                        <HiChevronUp size={20} />
-                      ) : (
-                        <HiChevronDown size={20} />
-                      )}
-                    </span>
-                  </button>
-                  <ul
-                    className={`text-sm space-y-1 md:block ${
-                      openSections.product ? "block" : "hidden"
-                    }`}>
-                    <li>Product Development</li>
-                    <li>Manufacturing</li>
-                    <li>Service</li>
-                  </ul>
-                </div>
-
-                {/* Investors */}
-                <div>
-                  <button
-                    onClick={() => toggleSection("investors")}
-                    className="flex w-full items-center justify-between md:justify-start uppercase text-sm font-bold mb-3 md:mb-5 focus:outline-none">
-                    INVESTORS
-                    <span className="md:hidden">
-                      {openSections.investors ? (
-                        <HiChevronUp size={20} />
-                      ) : (
-                        <HiChevronDown size={20} />
-                      )}
-                    </span>
-                  </button>
-                  <ul
-                    className={`text-sm space-y-1 md:block ${
-                      openSections.investors ? "block" : "hidden"
-                    }`}>
-                    <li>Company Profile</li>
-                    <li>Corporate Governance</li>
-                    <li>Financial Information</li>
-                    <li>Annual Reports</li>
-                    <li>Shareholder Services</li>
-                    <li>Material Information & Activities</li>
-                  </ul>
-                </div>
-
-                {/* Sustainability */}
-                <div>
-                  <button
-                    onClick={() => toggleSection("sustainability")}
-                    className="flex w-full items-center justify-between md:justify-start uppercase text-sm font-bold mb-3 md:mb-5 focus:outline-none">
-                    SUSTAINABILITY
-                    <span className="md:hidden">
-                      {openSections.sustainability ? (
-                        <HiChevronUp size={20} />
-                      ) : (
-                        <HiChevronDown size={20} />
-                      )}
-                    </span>
-                  </button>
-                  <ul
-                    className={`text-sm space-y-1 md:block ${
-                      openSections.sustainability ? "block" : "hidden"
-                    }`}>
-                    <li>Commitment & Policy</li>
-                    <li>Sustainable Environment</li>
-                    <li>Occupational Health & Safety</li>
-                    <li>Corporate Citizenship</li>
-                    <li>Product Responsibility</li>
-                    <li>Stakeholder Communications & Sustainability Report</li>
-                  </ul>
-                </div>
-
-                {/* Careers */}
-                <div>
-                  <button
-                    onClick={() => toggleSection("careers")}
-                    className="flex w-full items-center justify-between md:justify-start uppercase text-sm font-bold mb-3 md:mb-5 focus:outline-none">
-                    CAREERS
-                    <span className="md:hidden">
-                      {openSections.careers ? (
-                        <HiChevronUp size={20} />
-                      ) : (
-                        <HiChevronDown size={20} />
-                      )}
-                    </span>
-                  </button>
-                  <ul
-                    className={`text-sm space-y-1 md:block ${
-                      openSections.careers ? "block" : "hidden"
-                    }`}>
-                    <li>Learning & Development</li>
-                    <li>Employee Benefits</li>
-                    <li>Join PEGATRON</li>
-                    <li>Contact HR</li>
-                    <li>Recruitment Events</li>
-                  </ul>
-                </div>
-
-                {/* Feedback button */}
-                <div className="flex items-start justify-center">
-                  <button className="border border-white rounded-md px-4 py-2 text-sm hover:bg-white hover:text-cyan-700 transition">
-                    Feedback
-                  </button>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <hr className="border-white/30 mb-6" />
-
-              {/* Bottom row */}
-              <div className="flex flex-col md:flex-row items-center justify-between text-sm">
-                <p>© sansirong Corporation. All rights reserved</p>
-                <p>Developed by Amigo webster</p>
-
-                <div className="flex items-center space-x-4 mt-3 md:mt-0">
-                  <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    className="hover:text-white/80">
-                    <FaLinkedinIn size={18} />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="Instagram"
-                    className="hover:text-white/80">
-                    <FaInstagram size={18} />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="YouTube"
-                    className="hover:text-white/80">
-                    <FaYoutube size={18} />
-                  </a>
-                  <span className="border-l border-white/30 h-4 mx-4" />
-                  <a href="#" className="hover:underline">
-                    Contact Us
-                  </a>
-                  <span className="mx-2">|</span>
-                  <a href="#" className="hover:underline">
-                    Privacy & Cookies Policy
-                  </a>
-                </div>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </section>
     </div>
