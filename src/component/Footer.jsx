@@ -53,11 +53,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className="bg-gradient-to-br from-cyan-700 via-cyan-600 w-full pb-72 md:pb-36 to-cyan-500 text-white px-6 py-10 md:px-10 md:py-10">
+      <footer className="bg-gradient-to-br from-cyan-700 via-cyan-600 w-full pb-72 md:pb-40 to-cyan-500 text-white px-6 py-10 md:px-28 md:py-10">
         <div className="">
           {/* Top links */}
 
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-6 pb-48 md:pb-5 md:px-32">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6 pb-48 md:pb-5 md:px-32 ">
             {/* About */}
             <div>
               <button

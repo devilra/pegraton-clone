@@ -74,6 +74,9 @@ const HomeHero = () => {
     };
     const handleTouchMove = (e) => {
       touchEndY = e.touches[0].clientY;
+      if (window.scrollY === 0 && touchEndY > touchStartY) {
+        e.preventDefault();
+      }
     };
     const handleTouchEnd = () => {
       setSectionIndex((prevIndex) => {
@@ -112,7 +115,7 @@ const HomeHero = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
     window.addEventListener("touchend", handleTouchEnd);
     window.addEventListener("wheel", handleWheel, { passive: false });
 
