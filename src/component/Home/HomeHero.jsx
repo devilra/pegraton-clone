@@ -5,8 +5,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
 
 const HomeHero = () => {
-  const videoSrc =
-    "https://www.pegatroncorp.com/media/20250211094153188_bg_v6.mp4";
+  const videoSrc = "/bg.mp4";
   const video1 =
     "https://www.pegatroncorp.com/media/20250115032849629_MainBN_AI_mb.mp4";
   const video2 =
@@ -137,6 +136,7 @@ const HomeHero = () => {
           className="absolute inset-0 w-full h-full object-cover"
           src={videoSrc}
           autoPlay
+          loading="lazy"
           muted
           loop
           playsInline
