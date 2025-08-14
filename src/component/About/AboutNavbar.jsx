@@ -34,13 +34,9 @@ function AboutNavbar() {
   return (
     <nav
       className={`top-0 left-0  w-full flex justify-between items-center px-8 md:pl-28 pb-4 z-50 transition-all duration-300
-        md:backdrop-blur-lg md:bg-white/5 shadow-md  text-[#f30d0d] 
+        md:backdrop-blur-lgv backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
         fixed 
-        ${
-          isScrolled
-            ? "backdrop-blur-sm bg-white/5 shadow-md text-white md:bg-transparent md:shadow-none md:text-black font-extrabold"
-            : "backdrop-blur-sm bg-white/5 text-white font-[800]"
-        }`}>
+      `}>
       {/* Logo */}
       <Link to="/" className="text-4xl font-sans tracking-[2px] font-bold">
         <img src="/logo.png" className="h-20 md:h-20" />
