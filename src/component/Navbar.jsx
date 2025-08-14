@@ -66,11 +66,11 @@ function Navbar({ aboutScroll }) {
           />
         </Link>
         <h1 className="pl-1  leading-[20px] md:px-2">
-          <span className="text-white md:text-white text-4xl font-[600] md:text-4xl">
+          <span className="text-white md:text-[#ff302c] text-4xl font-[600] md:text-4xl">
             SANSIRONG
           </span>
           <br />
-          <span className="text-white md:text-white text-[13px] leading-[18px] md:text-[13px]">
+          <span className="text-white md:text-[#ff302c] text-[13px] font-[600] leading-[18px] md:text-[13px]">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
@@ -78,7 +78,7 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-[#ff0004] drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
+      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
         <Link
           //to="/about"
           onClick={closeMenu}
