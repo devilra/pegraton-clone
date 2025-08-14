@@ -69,7 +69,7 @@ function Navbar({ aboutScroll }) {
           <span className="text-[#D41618] text-xl font-extrabold  md:text-2xl">
             SANSIRONG
           </span>
-          <span className="text-white font-mono md:text-neutral-800 px-2">
+          <span className="text-[#D41618] px-2">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
