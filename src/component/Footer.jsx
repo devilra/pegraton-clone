@@ -30,7 +30,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="  hidden md:block py-8">
+      <div className=" hidden md:block py-8">
         <div className="gap-5 relative md:pl-28  md:pr-28 rounded-lg grid grid-cols-3  overflow-hidden md:pt-2 shadow-lg">
           {images.map((item, i) => (
             <div
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
       )}
 
-      <footer className="bg-gradient-to-br from-cyan-700 via-cyan-600 w-full pb-72 md:pb-40 to-cyan-500 text-white px-6 py-10 md:px-28 md:py-10">
+      <footer className="bg-gradient-to-br from-cyan-700 via-cyan-600 w-full pb-72 md:pb-0 to-cyan-500 text-white px-6 py-10 md:px-28 md:py-10">
         <div className="">
           {/* Top links */}
 

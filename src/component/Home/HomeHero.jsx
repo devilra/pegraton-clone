@@ -3,9 +3,8 @@ import { useLocation } from "react-router-dom";
 import { IoFlagOutline } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
-import { FaTimes } from "react-icons/fa";
 import { images } from "../data";
-import Service from "./Service";
+import { Link } from "react-router-dom";
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
@@ -183,7 +182,7 @@ const HomeHero = () => {
       {/* Section 2 - Blur */}
       <section className="full-section relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
         <video
-          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+          className="absolute inset-0 w-full h-full mb-5 object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
           muted
@@ -196,7 +195,7 @@ const HomeHero = () => {
             Navigate the future
           </h1>
           <div className="flex md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
-            <video
+            {/* <video
               key={currentVideoIndex}
               ref={videoRef}
               src={videos[currentVideoIndex]}
@@ -205,10 +204,42 @@ const HomeHero = () => {
               playsInline
               onEnded={handleVideoEnded}
               className="w-full h-[200px]  md:h-[300px] rounded-lg md:w-[800px]  object-cover"
-            />
+            /> */}
+
+            <div className="w-full overflow-y-scroll  md:overflow-hidden h-[200px]  md:h-[315px] pl-5 rounded-lg md:w-[800px] border border-dotted">
+              <h1 className=" text-[18px] md:text-[30px] pr-3 pt-3">
+                About us
+              </h1>
+              <div className="w-[50px] md:w-[90px] h-[2px] bg-white  md:mt-1 rounded-full"></div>
+              <div className="leading-snug pb-10">
+                <h1 className="text-[25px] font-[800] pt-5">
+                  Who We Are -What We Do
+                </h1>
+                <p className="text-[16px]  md:w-[700px] font-[500] ">
+                  Our company specializes in providing comprehensive OSS
+                  solutions tailored to meet the needs of various industries. We
+                  pride ourselves on delivering skilled and reliable
+                  professionals who contribute to the seamless execution of
+                  operations.
+                </p>
+                <h1 className="text-[25px]  font-[800] pt-5">
+                  Trading & Sourcing
+                </h1>
+                <p className="text-[16px]  md:w-[700px] font-[500] md:mb-5 ">
+                  By in no ecstatic wondered disposal my speaking. Direct wholly
+                  valley or uneasy it at really. Sir wish like said dull and
+                  need make. Sportsman one bed departure..
+                  <Link
+                    to="/about"
+                    className="text-blue-500 text-[15px] cursor-pointer hover:underline">
+                    Readmore
+                  </Link>
+                </p>
+              </div>
+            </div>
             {/* Dots */}
 
-            <div className="absolute bottom-4 md:bottom-28 md:right-[35%] flex gap-2">
+            {/* <div className="absolute bottom-4 md:bottom-28 md:right-[35%] flex gap-2">
               {videos.map((_, i) => (
                 <div
                   key={i}
@@ -218,7 +249,7 @@ const HomeHero = () => {
                   }`}
                 />
               ))}
-            </div>
+            </div> */}
 
             {/* Right side - grid of smaller images with text */}
 
@@ -226,81 +257,84 @@ const HomeHero = () => {
               {/* EV */}
               <div className="relative rounded-lg  overflow-hidden md:row-span-2   cursor-pointer group   ">
                 <img
-                  src="/g1.jpg"
+                  src="sansirong/s1.jpg"
                   alt="EV"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  EV
-                </div>
+                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                  OSS SERVICES
+                </div> */}
               </div>
 
               {/* 5G */}
               <div className="relative rounded-lg overflow-hidden md:row-span-2 cursor-pointer group ">
                 <img
-                  src="/g2.jpg"
+                  src="sansirong/s2.jpg"
                   alt="5G"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
                   5G
-                </div>
+                </div> */}
               </div>
 
               {/* IOT & Smart application */}
               <div className="relative rounded-lg overflow-hidden cursor-pointer group  ">
                 <img
-                  src="/g3.jpg"
+                  src="sansirong/s3.jpg"
                   alt="IOT & Smart application"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-semibold text-sm sm:text-base leading-snug">
+                {/* <div className="absolute bottom-2 left-2 text-white font-semibold text-sm sm:text-base leading-snug">
                   IOT & Smart <br /> application
-                </div>
+                </div> */}
               </div>
 
               {/* PEGAVERSE (span 2 columns on sm+, full width on mobile) */}
               <div className="relative rounded-lg overflow-hidden cursor-pointer group ">
                 <img
-                  src="/g4.png"
+                  src="about/s1.jpg"
                   alt="PEGAVERSE"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
                   PEGAVERSE
-                </div>
+                </div> */}
               </div>
 
               {/* Computing */}
               <div className="relative rounded-lg md:col-span-2 order-2 overflow-hidden  cursor-pointer group  ">
                 <img
-                  src="/g6.png"
+                  src="about/s2.jpg"
                   alt="Computing"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
                   Computing
-                </div>
+                </div> */}
               </div>
 
               {/* News */}
               <div className="relative rounded-lg order-1 md:h-[98px] md:w-[130px] overflow-hidden md:col-span-1 cursor-pointer group aspect-[4/5] sm:aspect-[3/4]">
                 <img
-                  src="/g5.png"
+                  src="about/s3.jpg"
                   alt="News"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
+                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
                   News
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className=" hidden md:block absolute left-28 bottom-5  ">
-              <div className="flex items-center justify-center h-full  ">
-                <h1 className="font-[500] text-4xl">Navigate the future</h1>
+            <div className="hidden md:block  absolute cursor-pointer left-28 bottom-5">
+              <Link
+                to="/about"
+                className="flex items-center cursor-pointer justify-center h-full  font-[500] text-4xl">
+                Read more
                 <MdOutlineArrowForwardIos size={40} className="pt-2 mx-3" />
-              </div>
+              </Link>
             </div>
+
             <div className=" hidden md:block absolute right-28  bottom-5  ">
               <div className="flex items-center justify-center space-x-1 border border-white px-3 rounded-full  ">
                 <IoFlagOutline size={15} />

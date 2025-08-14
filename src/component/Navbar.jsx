@@ -50,7 +50,7 @@ function Navbar({ aboutScroll }) {
 
   return (
     <nav
-      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 pt-8  md:pl-28 pb-4 z-50 ${
+      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 pt-8 md:pt-2  md:pl-28 pb-4 z-50 ${
         location.pathname === "/about" && isScrolled
           ? "backdrop-blur-md bg-black/50"
           : "bg-transparent"
@@ -80,7 +80,7 @@ function Navbar({ aboutScroll }) {
       {/* Desktop Menu */}
       <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
         <Link
-          //to="/about"
+          to="/about"
           onClick={closeMenu}
           className={` text-[17px] ${
             location.pathname === "/about" ? "underline" : ""
