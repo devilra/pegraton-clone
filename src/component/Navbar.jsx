@@ -65,9 +65,12 @@ function Navbar({ aboutScroll }) {
             className="h-20 w-28 md:w-full mr-2 md:mr-0 md:h-20 "
           />
         </Link>
-        <h1 className="pl-1 font-bold  md:px-2">
-          <span className="text-black text-lg   md:text-xl">SANSIRONG</span>
-          <span className="text-black text-lg md:text-xl px-2">
+        <h1 className="pl-1  leading-[20px] md:px-2">
+          <span className="text-black text-lg font-[600] md:text-4xl">
+            SANSIRONG
+          </span>
+          <br />
+          <span className="text-black text-lg leading-[18px] md:text-[13px]">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
@@ -75,11 +78,11 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-[#D41618] md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden text-[#D41618] font-semibold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
         <Link
           //to="/about"
           onClick={closeMenu}
-          className={location.pathname === "/about" ? "underline" : ""}>
+          className={` ${location.pathname === "/about" ? "underline" : ""}`}>
           ABOUT
         </Link>
         <Link
