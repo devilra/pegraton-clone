@@ -70,7 +70,7 @@ function Navbar({ aboutScroll }) {
             SANSIRONG
           </span>
           <br />
-          <span className="text-white md:text-[#ff302c] text-[13px] font-[600] leading-[18px] md:text-[13px]">
+          <span className="text-white md:text-[#ff302c] text-[13px] font-[800] leading-[18px] md:text-[13px]">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
