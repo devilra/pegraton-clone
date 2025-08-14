@@ -10,7 +10,9 @@ import Service from "./Service";
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
 const HomeHero = () => {
-  const videoSrc = "/h.mp4";
+  // const videoSrc = "/h.mp4";
+  const videoSrc =
+    "https://www.pegatroncorp.com/media/20250115032815108_MainBN_Maker_XL_mb.mp4";
   const video1 =
     "https://www.pegatroncorp.com/media/20250115032849629_MainBN_AI_mb.mp4";
   const video2 =
@@ -156,7 +158,7 @@ const HomeHero = () => {
     <div className="overflow-hidden">
       {/* Section 1 - Normal */}
       <section className="full-section relative h-screen flex items-center justify-start bg-black">
-        {/* <video
+        <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
@@ -164,12 +166,12 @@ const HomeHero = () => {
           muted
           loop
           playsInline
-        /> */}
-        <img
+        />
+        {/* <img
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src="/banner.jpg"
           alt="Banner"
-        />
+        /> */}
 
         <div className="relative z-10 flex flex-col items-center justify-center md:justify-end h-full text-white">
           <p className="mt-4 text-white text-5xl px-8 md:px-0 md:pb-28  md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
