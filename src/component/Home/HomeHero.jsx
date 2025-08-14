@@ -156,7 +156,7 @@ const HomeHero = () => {
     <div className="overflow-hidden">
       {/* Section 1 - Normal */}
       <section className="full-section relative h-screen flex items-center justify-start bg-black">
-        <video
+        {/* <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
           autoPlay
@@ -164,6 +164,11 @@ const HomeHero = () => {
           muted
           loop
           playsInline
+        /> */}
+        <img
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+          src="/banner.jpg"
+          alt="Banner"
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center md:justify-end h-full text-white">
