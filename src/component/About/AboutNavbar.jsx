@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Launguage from "../Launguage";
 
 function AboutNavbar() {
   const location = useLocation();
@@ -10,7 +11,7 @@ function AboutNavbar() {
   const navitems = [
     { title: "ABOUT", to: "about" },
     { title: "SERVICE", to: "service" },
-    { title: "INVESTERS", to: "investers" },
+    { title: "Onsite support Services(OSS)", to: "oss" },
     { title: "CONTACT", to: "contact" },
     { title: "CAREERS", to: "careers" },
   ];
@@ -53,6 +54,9 @@ function AboutNavbar() {
             {page.title}
           </Link>
         ))}
+        <div>
+          <Launguage />
+        </div>
       </div>
 
       {/* Mobile Hamburger Icon */}

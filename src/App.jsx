@@ -4,24 +4,30 @@ import Home from "./component/Home/Home";
 import Navbar from "./component/Navbar";
 import About from "./component/About/About";
 import ProductService from "./component/ProductService/ProductService";
-import Investors from "./component/Investors/Investors";
 import Careers from "./component/Careers/Careers";
 import Contact from "./component/Contact/Contact";
+
+//launguage changes code
+import { useTranslation } from "react-i18next";
+import "./i18n";
+import OnsiteService from "./component/Oss/OnsiteService";
 
 const App = () => {
   const validNavbar = ["/"];
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <>
       {validNavbar.includes(location.pathname) && <Navbar />}
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<ProductService />} />
-        <Route path="/investors" element={<Investors />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/" element={<Home t={t} />} />
+        <Route path="/about" element={<About t={t} />} />
+        <Route path="/service" element={<ProductService t={t} />} />
+        <Route path="/oss" element={<OnsiteService t={t} />} />
+        <Route path="/contact" element={<Contact t={t} />} />
+        <Route path="/careers" element={<Careers t={t} />} />
       </Routes>
     </>
   );

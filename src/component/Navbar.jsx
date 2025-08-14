@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Launguage from "./Launguage";
 
 function Navbar({ aboutScroll }) {
   const location = useLocation();
@@ -96,12 +97,12 @@ function Navbar({ aboutScroll }) {
           PRODUCT&SERVICE
         </Link>
         <Link
-          //to="/investors"
+          to="/oss"
           onClick={closeMenu}
           className={` text-[17px] ${
-            location.pathname === "/about" ? "underline" : ""
+            location.pathname === "/oss" ? "underline" : ""
           }`}>
-          INVESTORS
+          Onsite support Services(OSS)
         </Link>
         <Link
           to="/contact"
@@ -119,7 +120,9 @@ function Navbar({ aboutScroll }) {
           }`}>
           CAREERS
         </Link>
+        <Launguage />
       </div>
+      <div></div>
 
       {/* Mobile Hamburger Icon */}
       <button
