@@ -165,6 +165,8 @@ const HomeHero = () => {
           loop
           playsInline
         />
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/40" />
+
         <div className="relative z-10 flex flex-col items-center justify-center md:justify-end h-full text-white">
           <p className="mt-4 text-white text-5xl px-8 md:px-0 md:pb-28  md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
             INNOVATIVE MINDSET, STRIVING FOR EXCELLENCE.

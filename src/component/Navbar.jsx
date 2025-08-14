@@ -78,7 +78,7 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-[#ff2327] drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
+      <div className="hidden text-[#ff0004] drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
         <Link
           //to="/about"
           onClick={closeMenu}
