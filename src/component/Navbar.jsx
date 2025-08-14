@@ -82,33 +82,41 @@ function Navbar({ aboutScroll }) {
         <Link
           //to="/about"
           onClick={closeMenu}
-          className={` ${location.pathname === "/about" ? "underline" : ""}`}>
+          className={` text-[17px] ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
           ABOUT
         </Link>
         <Link
           //to="/service"
           onClick={closeMenu}
-          className={location.pathname === "/service" ? "underline" : ""}>
+          className={` text-[17px] ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
           PRODUCT&SERVICE
         </Link>
         <Link
           //to="/investors"
           onClick={closeMenu}
-          className={location.pathname === "/investors" ? "underline" : ""}>
+          className={` text-[17px] ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
           INVESTORS
         </Link>
         <Link
           //to="/sustainability"
           onClick={closeMenu}
-          className={
-            location.pathname === "/sustainability" ? "underline" : ""
-          }>
+          className={` text-[17px] ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
           SUSTAINABILITY
         </Link>
         <Link
           //to="/careers"
           onClick={closeMenu}
-          className={location.pathname === "/careers" ? "underline" : ""}>
+          className={` text-[17px] ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
           CAREERS
         </Link>
       </div>
