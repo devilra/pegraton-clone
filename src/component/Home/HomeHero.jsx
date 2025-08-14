@@ -5,6 +5,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
 import { FaTimes } from "react-icons/fa";
 import { images } from "../data";
+import Service from "./Service";
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
@@ -303,7 +304,7 @@ const HomeHero = () => {
       </section>
 
       {/* Section 3 - Blur */}
-      <section className="full-section md:hidden relative h-screen flex items-center justify-center bg-black">
+      <section className="full-section  relative h-screen flex items-center justify-center bg-black ">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -312,7 +313,46 @@ const HomeHero = () => {
           loop
           playsInline
         />
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+        <div className="absolute inset-0 backdrop-blur-xl animate-bgPulse bg-black" />
+        <div className="w-full h-[400px] px-5 md:px-8 md:h-[350px]  mb-14  ">
+          <section
+            className="relative w-full h-full rotate-2 md:rotate-0 scale-110  bg-white brightness-90 py-16 rounded-tl-[180px] rounded-tr-[20px] rounded-br-[280px] "
+            style={{
+              backgroundImage: "url('/world.jpg')", // Replace with your image path
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              filter: "brightness(90%)",
+            }}>
+            {/* Heading */}
+            <div className="text-center">
+              <p className="text-blue-500 uppercase tracking-wide text-sm font-semibold">
+                Worldwide Experience
+              </p>
+              {/* <h2 className="text-3xl md:text-4xl font-[200] text-neutral-600 mt-2 leading-snug">
+                We Always Try To Understand
+                <br />
+                Users Expectation
+              </h2> */}
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-center max-w-3xl mx-auto">
+              <div>
+                <p className="text-blue-500 text-4xl font-bold">250+</p>
+                <p className="text-gray-700 text-sm mt-1">OSS</p>
+              </div>
+              <div>
+                <p className="text-blue-500 text-4xl font-bold">10+</p>
+                <p className="text-gray-700 text-sm mt-1">Trading</p>
+              </div>
+              <div>
+                <p className="text-blue-500 text-4xl font-bold">20+</p>
+                <p className="text-gray-700 text-sm mt-1">Languages</p>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
 
       {/* Section mobile -- 4 and Desktop --hidden - Blur */}
@@ -398,7 +438,32 @@ const HomeHero = () => {
         </div>
       </section>
 
-      {/* Section mobile -- 5 and Desktop --4 - Blur */}
+      {/* {section 5 services } */}
+
+      <section className="full-section relative h-screen  bg-black">
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+          src={videoSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+        <div className="absolute top-10 h-full w-full md:px-20 px-5 ">
+          <div className="flex flex-col items-center  md:items-start">
+            <h1 className="text-white  font-semibold text-3xl pt-28">
+              Our services
+            </h1>
+            <div className="w-20 h-[2px]  rounded-full  bg-white mt-3"></div>
+          </div>
+          <div className="h-full">
+            <Service />
+          </div>
+        </div>
+      </section>
+
+      {/* Section mobile -- 6 and Desktop --5 - Blur */}
       <section className="full-section relative h-screen flex items-center justify-center bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"

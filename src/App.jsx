@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./component/Home/Home";
 import Navbar from "./component/Navbar";
 import About from "./component/About/About";
@@ -9,9 +9,12 @@ import Sustainability from "./component/Sustainability/Sustainability";
 import Careers from "./component/Careers/Careers";
 
 const App = () => {
+  const validNavbar = ["/"];
+  const location = useLocation();
+
   return (
     <>
-      <Navbar />
+      {validNavbar.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

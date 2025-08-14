@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ aboutScroll }) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  console.log(isScrolled);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,57 +16,106 @@ function Navbar() {
     setIsOpen(false);
   };
 
+  // useEffect(() => {
+  //   if (location.pathname === "/about") {
+  //     const handleScroll = () => {
+  //       if (window.scrollY > 5) {
+  //         setIsScrolled(true);
+  //       } else {
+  //         setIsScrolled(false);
+  //       }
+  //     };
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   } else {
+  //     setIsScrolled(false);
+  //   }
+  // }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname === "/about") {
+      if (aboutScroll > 5) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    } else {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 5);
+      };
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [location.pathname, aboutScroll]);
+
   return (
     <nav
-      className="fixed top-0 left-0 w-full flex justify-between items-center px-8 pt-8  md:pl-28 pb-4 z-50"
-      style={{
-        background: "transparent",
-        color: "white",
-        fontWeight: "500",
-      }}>
+      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 pt-8  md:pl-28 pb-4 z-50 ${
+        location.pathname === "/about" && isScrolled
+          ? "backdrop-blur-md bg-black/50"
+          : "bg-transparent"
+      }`}>
       {/* Logo */}
-      <Link
-        to="/"
-        className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
-        <img src="/logo.webp" className="h-20 md:h-20 " />
-      </Link>
+      <div className="md:px-2  flex items-center">
+        <Link
+          to="/"
+          className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
+          <img
+            src="/logo.webp"
+            className="h-20 w-28 md:w-full mr-2 md:mr-0 md:h-20 "
+          />
+        </Link>
+        <h1 className="pl-1 md:pl-0">
+          <span className="text-[#D41618] text-xl font-extrabold  md:text-2xl">
+            SANSIRONG
+          </span>
+          <span className="text-white font-mono md:text-neutral-800 px-2">
+            {" "}
+            INTERNATIONAL PRIVATE LIMITED
+          </span>
+        </h1>
+      </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-8 md:gap-14 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
         <Link
           to="/about"
           onClick={closeMenu}
-          className={location.pathname === "/" ? "underline" : ""}>
+          className={location.pathname === "/about" ? "underline" : ""}>
           ABOUT
         </Link>
         <Link
           to="/service"
           onClick={closeMenu}
-          className={location.pathname === "/about" ? "underline" : ""}>
+          className={location.pathname === "/service" ? "underline" : ""}>
           PRODUCT&SERVICE
         </Link>
         <Link
           to="/investors"
           onClick={closeMenu}
-          className={location.pathname === "/products" ? "underline" : ""}>
+          className={location.pathname === "/investors" ? "underline" : ""}>
           INVESTORS
         </Link>
         <Link
           to="/sustainability"
           onClick={closeMenu}
-          className={location.pathname === "/products" ? "underline" : ""}>
+          className={
+            location.pathname === "/sustainability" ? "underline" : ""
+          }>
           SUSTAINABILITY
         </Link>
         <Link
           to="/careers"
           onClick={closeMenu}
-          className={location.pathname === "/products" ? "underline" : ""}>
+          className={location.pathname === "/careers" ? "underline" : ""}>
           CAREERS
         </Link>
       </div>
 
       {/* Mobile Hamburger Icon */}
-      <button className="md:hidden text-2xl cursor-pointer">
+      <button
+        onClick={toggleMenu}
+        className="md:hidden text-2xl text-[#D41618] cursor-pointer">
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 

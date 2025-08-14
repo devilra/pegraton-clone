@@ -14,3 +14,19 @@ body {
 
     color: red;
 }
+@keyframes bgPulse {
+    0% {
+        background-color: rgba(232, 242, 243, 0.7);
+    }
+
+    50% {
+        background-color: rgba(228, 251, 252, 0.7);
+    }
+
+    100% {
+        background-color: rgba(238, 252, 253, 0.7);
+    }
+}
+.animate-bgPulse {
+    animation: bgPulse 6s infinite ease-in-out;
+}
