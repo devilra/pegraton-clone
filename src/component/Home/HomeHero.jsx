@@ -304,7 +304,7 @@ const HomeHero = () => {
       </section>
 
       {/* Section 3 - Blur */}
-      <section className="full-section  relative h-screen flex items-center justify-center bg-black ">
+      {/* <section className="full-section  relative h-screen flex items-center justify-center bg-black ">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -324,19 +324,14 @@ const HomeHero = () => {
               backgroundPosition: "center",
               filter: "brightness(90%)",
             }}>
-            {/* Heading */}
+           
             <div className="text-center">
               <p className="text-blue-500 uppercase tracking-wide text-sm font-semibold">
                 Worldwide Experience
               </p>
-              {/* <h2 className="text-3xl md:text-4xl font-[200] text-neutral-600 mt-2 leading-snug">
-                We Always Try To Understand
-                <br />
-                Users Expectation
-              </h2> */}
+              
             </div>
 
-            {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-center max-w-3xl mx-auto">
               <div>
                 <p className="text-blue-500 text-4xl font-bold">250+</p>
@@ -353,7 +348,7 @@ const HomeHero = () => {
             </div>
           </section>
         </div>
-      </section>
+      </section> */}
 
       {/* Section mobile -- 4 and Desktop --hidden - Blur */}
 
@@ -440,7 +435,7 @@ const HomeHero = () => {
 
       {/* {section 5 services } */}
 
-      <section className="full-section relative h-screen  bg-black">
+      {/* <section className="full-section relative h-screen  bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -461,7 +456,7 @@ const HomeHero = () => {
             <Service />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
       <section className="full-section relative h-screen flex items-center justify-center bg-black">

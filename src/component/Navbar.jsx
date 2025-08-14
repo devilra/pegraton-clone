@@ -61,13 +61,13 @@ function Navbar({ aboutScroll }) {
           to="/"
           className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
           <img
-            src="/logo.webp"
+            src="/logo.png"
             className="h-20 w-28 md:w-full mr-2 md:mr-0 md:h-20 "
           />
         </Link>
-        <h1 className="pl-1 font-[400]  md:px-2">
-          <span className="text-[#D41618] text-lg   md:text-xl">SANSIRONG</span>
-          <span className="text-[#D41618] text-lg md:text-xl px-2">
+        <h1 className="pl-1 font-bold  md:px-2">
+          <span className="text-black text-lg   md:text-xl">SANSIRONG</span>
+          <span className="text-black text-lg md:text-xl px-2">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
@@ -75,27 +75,27 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-black md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden text-[#D41618] md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
         <Link
-          to="/about"
+          //to="/about"
           onClick={closeMenu}
           className={location.pathname === "/about" ? "underline" : ""}>
           ABOUT
         </Link>
         <Link
-          to="/service"
+          //to="/service"
           onClick={closeMenu}
           className={location.pathname === "/service" ? "underline" : ""}>
           PRODUCT&SERVICE
         </Link>
         <Link
-          to="/investors"
+          //to="/investors"
           onClick={closeMenu}
           className={location.pathname === "/investors" ? "underline" : ""}>
           INVESTORS
         </Link>
         <Link
-          to="/sustainability"
+          //to="/sustainability"
           onClick={closeMenu}
           className={
             location.pathname === "/sustainability" ? "underline" : ""
@@ -103,7 +103,7 @@ function Navbar({ aboutScroll }) {
           SUSTAINABILITY
         </Link>
         <Link
-          to="/careers"
+          //to="/careers"
           onClick={closeMenu}
           className={location.pathname === "/careers" ? "underline" : ""}>
           CAREERS
