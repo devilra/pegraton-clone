@@ -7,6 +7,14 @@ function AboutNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const navitems = [
+    { title: "ABOUT", to: "about" },
+    { title: "SERVICE", to: "service" },
+    { title: "INVESTERS", to: "investers" },
+    { title: "CONTACT", to: "contact" },
+    { title: "CAREERS", to: "careers" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -25,8 +33,8 @@ function AboutNavbar() {
 
   return (
     <nav
-      className={`top-0 left-0 w-full flex justify-between items-center px-8 md:pl-28 pb-4 z-50 transition-all duration-300
-        md:relative md:backdrop-blur-lg md:bg-white/5 shadow-md text-white  
+      className={`top-0 left-0  w-full flex justify-between items-center px-8 md:pl-28 pb-4 z-50 transition-all duration-300
+        md:backdrop-blur-lg md:bg-white/5 shadow-md  text-[#f30d0d] 
         fixed 
         ${
           isScrolled
@@ -35,22 +43,20 @@ function AboutNavbar() {
         }`}>
       {/* Logo */}
       <Link to="/" className="text-4xl font-sans tracking-[2px] font-bold">
-        <img src="/logo.webp" className="h-20 md:h-20" />
+        <img src="/logo.png" className="h-20 md:h-20" />
       </Link>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-8 md:gap-14 md:pr-14 text-sm md:text-[15px]">
-        {["about", "service", "investors", "sustainability", "careers"].map(
-          (page) => (
-            <Link
-              key={page}
-              to={`/${page}`}
-              onClick={closeMenu}
-              className={location.pathname === `/${page}` ? "underline" : ""}>
-              {page.toUpperCase()}
-            </Link>
-          )
-        )}
+        {navitems.map((page, index) => (
+          <Link
+            key={page.title}
+            to={`/${page.to}`}
+            onClick={closeMenu}
+            className={location.pathname === `/${page.to}` ? "underline" : ""}>
+            {page.title}
+          </Link>
+        ))}
       </div>
 
       {/* Mobile Hamburger Icon */}
@@ -68,17 +74,15 @@ function AboutNavbar() {
         <button onClick={toggleMenu} className="flex justify-end">
           <FaTimes className="text-white" />
         </button>
-        {["about", "service", "investors", "sustainability", "careers"].map(
-          (page) => (
-            <Link
-              key={page}
-              to={`/${page}`}
-              className="text-white"
-              onClick={closeMenu}>
-              {page.toUpperCase()}
-            </Link>
-          )
-        )}
+        {navitems.map((page) => (
+          <Link
+            key={page.title}
+            to={`/${page.to}`}
+            className="text-white"
+            onClick={closeMenu}>
+            {page.title}
+          </Link>
+        ))}
       </div>
     </nav>
   );

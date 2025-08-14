@@ -5,8 +5,8 @@ import Navbar from "./component/Navbar";
 import About from "./component/About/About";
 import ProductService from "./component/ProductService/ProductService";
 import Investors from "./component/Investors/Investors";
-import Sustainability from "./component/Sustainability/Sustainability";
 import Careers from "./component/Careers/Careers";
+import Contact from "./component/Contact/Contact";
 
 const App = () => {
   const validNavbar = ["/"];
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<ProductService />} />
         <Route path="/investors" element={<Investors />} />
-        <Route path="/sustainability" element={<Sustainability />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
       </Routes>
     </>

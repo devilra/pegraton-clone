@@ -104,12 +104,12 @@ function Navbar({ aboutScroll }) {
           INVESTORS
         </Link>
         <Link
-          //to="/sustainability"
+          to="/contact"
           onClick={closeMenu}
           className={` text-[17px] ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
-          SUSTAINABILITY
+          CONTACT
         </Link>
         <Link
           //to="/careers"
@@ -146,8 +146,8 @@ function Navbar({ aboutScroll }) {
         <Link to="/investors" onClick={() => setIsOpen(false)}>
           INVESTORS
         </Link>
-        <Link to="/sustainability" onClick={() => setIsOpen(false)}>
-          SUSTAINABILITY
+        <Link to="/contact" onClick={() => setIsOpen(false)}>
+          CONTACT
         </Link>
         <Link to="/careers" onClick={() => setIsOpen(false)}>
           CAREERS
