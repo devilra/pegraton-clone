@@ -65,11 +65,11 @@ function Navbar({ aboutScroll }) {
             className="h-20 w-28 md:w-full mr-2 md:mr-0 md:h-20 "
           />
         </Link>
-        <h1 className="pl-1 md:pl-0">
-          <span className="text-[#D41618] text-xl font-extrabold  md:text-2xl">
+        <h1 className="pl-1 font-extrabold md:pl-0">
+          <span className="text-[#D41618] text-xl   md:text-2xl">
             SANSIRONG
           </span>
-          <span className="text-[#D41618] px-2">
+          <span className="text-[#D41618] text-xl md:text-2xl px-2">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
@@ -115,7 +115,7 @@ function Navbar({ aboutScroll }) {
       {/* Mobile Hamburger Icon */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-2xl text-[#D41618] cursor-pointer">
+        className="md:hidden text-2xl text-white cursor-pointer">
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
