@@ -51,7 +51,7 @@ function Navbar({ aboutScroll }) {
 
   return (
     <nav
-      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 md:px-5 pt-8 md:pt-2  md:pl-18 pb-4 z-50 ${
+      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 md:px-5  md:pt-2  md:pl-18 pb-4 z-50 ${
         location.pathname === "/about" && isScrolled
           ? "backdrop-blur-md bg-black/50"
           : "bg-transparent"
@@ -80,7 +80,18 @@ function Navbar({ aboutScroll }) {
 
       {/* Desktop Menu */}
       <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-4 md:pr-14 text-2xl ">
-        <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           HOME
           {location.pathname === "/" && (
             <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
@@ -89,9 +100,15 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/about"
           onClick={closeMenu}
-          className={` text-[15px] ${
-            location.pathname === "/about" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           ABOUT
           {location.pathname === "/about" && (
             <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
@@ -100,45 +117,75 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/oss"
           onClick={closeMenu}
-          className={` text-[15px]  ${
-            location.pathname === "/oss" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           ONSITE SUPPORT SERVICES(OSS)
         </Link>
         <Link
           to="/trading"
           onClick={closeMenu}
-          className={` text-[15px]  ${
-            location.pathname === "/about" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           TRADING
         </Link>
 
         <Link
           to="/launguage"
           onClick={closeMenu}
-          className={` text-[15px]  ${
-            location.pathname === "/launguage" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           LAUNGUAGE INTERPRETATION
         </Link>
         <Link
           to="/contact"
           onClick={closeMenu}
-          className={` text-[15px] ${
-            location.pathname === "/about" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           CONTACT
         </Link>
         <Link
           to="/careers"
           onClick={closeMenu}
-          className={` text-[15px] ${
-            location.pathname === "/about" ? "underline" : ""
-          }`}>
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+          onMouseEnter={(e) =>
+            (e.target.style.textShadow =
+              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
+          }
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
           CAREERS
         </Link>
-        <Launguage />
+        {/* <Launguage /> */}
       </div>
       <div></div>
 
@@ -163,7 +210,7 @@ function Navbar({ aboutScroll }) {
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
         </Link>
-        <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
+        <Link to="/about" onClick={closeMenu} className={` text-[15px] `}>
           ABOUT
           {location.pathname === "/about" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>

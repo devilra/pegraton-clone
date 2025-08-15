@@ -87,7 +87,7 @@ const AboutFooter = () => {
           <a
             href="#"
             className="text-white px-5 text-[15px] font-bold hover:underline">
-            Amigo webster
+            Amigowebster
           </a>
         </div>
       </div>
