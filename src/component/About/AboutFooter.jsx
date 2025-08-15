@@ -1,57 +1,97 @@
-import React, { useState } from "react";
-import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import React from "react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaPinterestP,
+} from "react-icons/fa";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 const AboutFooter = () => {
-  //console.log(selectedImage);
-
-  // Toggle function for a section
-
-  // const images = [
-  //   "/sansirong/s1.jpg",
-  //   "/sansirong/s2.jpg",
-  //   "/sansirong/s3.jpg",
-  // ];
-
   return (
-    <div>
-      <footer className="bg-gradient-to-br  from-cyan-700 via-cyan-600 w-full   to-cyan-500 text-white px-6 py-10 md:px-28 md:py-10">
-        <div className="">
-          {/* Top links */}
-
-          {/* Divider */}
-
-          {/* Bottom row */}
-          <div className="flex flex-col md:flex-row items-center justify-between text-sm">
-            <p>© sansirong Corporation. All rights reserved</p>
-            <p>Developed by Amigo webster</p>
-
-            <div className="flex items-center space-x-4 mt-3 md:mt-0">
-              <a href="#" aria-label="LinkedIn" className="hover:text-white/80">
-                <FaLinkedinIn size={18} />
+    <footer className="bg-sky-500 text-white pt-10 pb-4">
+      <div className="container mx-auto px-6 md:px-20">
+        {/* Top section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-800 pb-8">
+          {/* Logo & Socials */}
+          <div>
+            <img
+              src="/logo.png" // Replace with your logo path
+              alt="Logo"
+              className="w-16 mb-4"
+            />
+            <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
+            <div className="flex space-x-4">
+              <a href="#" className="hover:text-pink-400">
+                <FaFacebookF size={18} />
               </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="hover:text-white/80">
+              <a href="#" className="hover:text-pink-400">
+                <FaTwitter size={18} />
+              </a>
+              <a href="#" className="hover:text-pink-400">
                 <FaInstagram size={18} />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-white/80">
-                <FaYoutube size={18} />
-              </a>
-              <span className="border-l border-white/30 h-4 mx-4" />
-              <a href="#" className="hover:underline">
-                Contact Us
-              </a>
-              <span className="mx-2">|</span>
-              <a href="#" className="hover:underline">
-                Privacy & Cookies Policy
+              <a href="#" className="hover:text-pink-400">
+                <FaPinterestP size={18} />
               </a>
             </div>
           </div>
+
+          {/* About */}
+          <div>
+            <h3 className="font-semibold mb-2">About</h3>
+            <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-pink-400">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-pink-400">
+                  onsitesupportservicesoss
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-pink-400">
+                  languageinterpretation
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="font-semibold mb-2">Contact Us</h3>
+            <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center gap-2">
+                <FiPhone className="text-pink-400" /> +91 8610102669
+              </li>
+              <li className="flex items-center gap-2">
+                <FiMail className="text-pink-400" /> sansirongsales@gmail.com
+              </li>
+              <li className="flex items-start gap-2">
+                <FiMapPin className="text-pink-400 mt-1" />
+                4, Hiranandani Park, Padharvadi Village, Kundrathur Taluk,
+                Thriveni Nagar, Oragadam Industrial Area, Kancheepuram, Tamil
+                Nadu 603204
+              </li>
+            </ul>
+          </div>
         </div>
-      </footer>
-    </div>
+
+        {/* Bottom */}
+        <div className="text-center text-xs text-white mt-4">
+          © 2025 Created with{" "}
+          <a
+            href="#"
+            className="text-white px-5 text-[15px] font-bold hover:underline">
+            Amigo webster
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
 

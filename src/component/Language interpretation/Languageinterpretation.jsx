@@ -47,11 +47,11 @@ const OnsiteService = () => {
       <AboutNavbar />
 
       {/* Top section with background image */}
-      <div
+      {/* <div
         className="bg-cover bg-center brightness-50 bg-no-repeat"
         style={{ backgroundImage: 'url("./trading/a4.jpg")', height: "400px" }}>
-        {/* Buttons */}
-      </div>
+      
+      </div> */}
 
       {/* section--1 */}
 

@@ -79,7 +79,13 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-3 md:pr-14 text-2xl ">
+      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-4 md:pr-14 text-2xl ">
+        <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
+          HOME
+          {location.pathname === "/" && (
+            <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
+        </Link>
         <Link
           to="/about"
           onClick={closeMenu}
@@ -92,20 +98,20 @@ function Navbar({ aboutScroll }) {
           )}
         </Link>
         <Link
-          to="/trading"
-          onClick={closeMenu}
-          className={` text-[15px]  ${
-            location.pathname === "/about" ? "underline" : ""
-          }`}>
-          TRADING
-        </Link>
-        <Link
           to="/oss"
           onClick={closeMenu}
           className={` text-[15px]  ${
             location.pathname === "/oss" ? "underline" : ""
           }`}>
           ONSITE SUPPORT SERVICES(OSS)
+        </Link>
+        <Link
+          to="/trading"
+          onClick={closeMenu}
+          className={` text-[15px]  ${
+            location.pathname === "/about" ? "underline" : ""
+          }`}>
+          TRADING
         </Link>
 
         <Link

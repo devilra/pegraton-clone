@@ -19,11 +19,11 @@ const Careers = () => {
       <AboutNavbar />
 
       {/* Top section with background image */}
-      <div
-        className="bg-cover bg-center brightness-50 bg-no-repeat"
-        style={{ backgroundImage: 'url("./trading/a5.jpg")', height: "400px" }}>
-        {/* Buttons */}
-      </div>
+      {/* // <div
+      //   className="bg-cover bg-center brightness-50 bg-no-repeat"
+      //   style={{ backgroundImage: 'url("./trading/a5.jpg")', height: "400px" }}>
+        
+      // </div> */}
 
       <div>
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-10 px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
@@ -161,7 +161,7 @@ const Careers = () => {
                   </label>
                   <input
                     type="tel"
-                    placeholder="E.g. +1 300 400 5000"
+                    placeholder="E.g. +91 9878473878"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                     required
                   />
@@ -175,7 +175,7 @@ const Careers = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="E.g. 42 Wallaby Way"
+                  placeholder="E.g. 42 chennai"
                   className="w-full border rounded p-2 text-sm sm:text-base"
                 />
               </div>
@@ -198,17 +198,17 @@ const Careers = () => {
                   <label className="block text-sm font-medium mb-1">City</label>
                   <input
                     type="text"
-                    placeholder="E.g. Sydney"
+                    placeholder="E.g. chennai"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    State/Province
+                    State
                   </label>
                   <input
                     type="text"
-                    placeholder="E.g. New South Wales"
+                    placeholder="E.g. Tamilnadu"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
@@ -222,7 +222,7 @@ const Careers = () => {
                   </label>
                   <input
                     type="text"
-                    placeholder="E.g. 2000"
+                    placeholder="E.g. 600457"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
@@ -243,7 +243,7 @@ const Careers = () => {
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                   <input
                     type="text"
-                    placeholder="E.g. text placeholder"
+                    placeholder="E.g.graduate"
                     className="w-full border rounded p-2 text-sm"
                   />
                   <input
@@ -252,7 +252,7 @@ const Careers = () => {
                   />
                 </div>
                 <textarea
-                  placeholder="E.g. text placeholder\nYou can add new line"
+                  placeholder="E.g. Institute name"
                   rows="3"
                   className="w-full border rounded p-2 text-sm"></textarea>
                 <button
@@ -267,7 +267,7 @@ const Careers = () => {
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                   <input
                     type="text"
-                    placeholder="E.g. text placeholder"
+                    placeholder="E.g.company name"
                     className="w-full border rounded p-2 text-sm"
                   />
                   <input
@@ -276,7 +276,7 @@ const Careers = () => {
                   />
                 </div>
                 <textarea
-                  placeholder="E.g. text placeholder\nYou can add new line"
+                  placeholder="E.g. job Resposibilities"
                   rows="3"
                   className="w-full border rounded p-2 text-sm"></textarea>
                 <button

@@ -501,7 +501,38 @@ const HomeHero = () => {
       </section> */}
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
-      <section className="full-section relative h-screen flex items-center justify-center bg-black">
+
+      <section className="full-section relative h-screen flex items-center justify-start bg-black">
+        <video
+          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+          src={videoSrc}
+          autoPlay
+          loading="lazy"
+          muted
+          loop
+          playsInline
+        />
+
+        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+        <div className=" z-10 h-full text-white">
+          <div className="flex flex-col pt-28 md:pl-16 md:flex-row gap-5">
+            {images.map((item, i) => (
+              <div
+                key={i}
+                className=" rounded-lg  cursor-pointer group"
+                onClick={() => setSelectedImage(item)}>
+                <img
+                  src={item.src}
+                  alt={`Image ${i + 1}`}
+                  className="w-full f-full md:h-[200px] md:w-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="full-section relative h-screen md:flex md:f items-center justify-center bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -511,10 +542,13 @@ const HomeHero = () => {
           playsInline
         />
         <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
-        <div className="relative z-10 text-white text-4xl pt-96  md:pt-64">
+        <div>
+          <h1>Hello</h1>
+        </div>
+        <div className=" z-10 mt-2 text-white text-4xl ">
           <Footer />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

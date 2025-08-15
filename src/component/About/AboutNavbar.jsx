@@ -9,10 +9,12 @@ function AboutNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navitems = [
+    { title: "HOME", to: "/" },
     { title: "ABOUT", to: "/about" },
+    { title: "ONSITE SUPPORT SERVICES(OSS)", to: "/oss" },
     { title: "TRADING", to: "/trading" },
-    { title: "Onsite support Services(OSS)", to: "/oss" },
-    { title: "LAUNGUAGE INTERPRETSTION", to: "/launguage" },
+
+    { title: "LAUNGUAGE INTERPRETATION", to: "/launguage" },
     { title: "CONTACT", to: "/contact" },
     { title: "CAREERS", to: "/careers" },
   ];
@@ -45,7 +47,7 @@ function AboutNavbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden md:flex gap-8 md:gap-5 md:pr-14 text-sm md:text-[15px]">
         {navitems.map((page, index) => (
           <div key={page.title} className="flex flex-col items-center">
             <Link to={page.to} className="text-[#fa160e]" onClick={closeMenu}>
