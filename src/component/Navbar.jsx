@@ -89,12 +89,12 @@ function Navbar({ aboutScroll }) {
           ABOUT
         </Link>
         <Link
-          //to="/service"
+          to="/trading"
           onClick={closeMenu}
           className={` text-[15px]  ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
-          PRODUCT&SERVICE
+          TRADING
         </Link>
         <Link
           to="/oss"

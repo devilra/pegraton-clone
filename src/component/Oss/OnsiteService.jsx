@@ -226,22 +226,22 @@ const OnsiteService = () => {
             {/* Right Images */}
             <div className="grid grid-cols-2 gap-4 justify-items-center">
               <img
-                src="/oss/o5.webp"
+                src="/oss/p1.png"
                 alt="Top Left"
                 className="w-[250px] rounded-lg object-cover"
               />
               <img
-                src="/oss/o6.avif"
+                src="/oss/p2.png"
                 alt="Top Right"
                 className="w-[400px] max-w-full rounded-lg object-cover"
               />
               <img
-                src="/oss/o7.avif"
+                src="/oss/p3.png"
                 alt="Bottom Left"
                 className="w-[400px] max-w-full rounded-lg object-cover"
               />
               <img
-                src="/oss/o7.webp"
+                src="/oss/p4.png"
                 alt="Bottom Right"
                 className="w-[400px] max-w-full rounded-lg object-cover"
               />

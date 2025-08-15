@@ -13,7 +13,7 @@ import {
   FaStar,
   FaStarHalfAlt,
 } from "react-icons/fa";
-import Footer from "../Footer";
+
 import AboutFooter from "./AboutFooter";
 
 // const sections = [

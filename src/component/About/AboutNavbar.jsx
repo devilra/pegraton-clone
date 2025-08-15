@@ -10,11 +10,11 @@ function AboutNavbar() {
 
   const navitems = [
     { title: "ABOUT", to: "about" },
-    { title: "SERVICE", to: "service" },
+    { title: "TRADING", to: "trading" },
     { title: "Onsite support Services(OSS)", to: "oss" },
+    { title: "LAUNGUAGE INTERPRETSTION", to: "launguage" },
     { title: "CONTACT", to: "contact" },
     { title: "CAREERS", to: "careers" },
-    { title: "LAUNGUAGE INTERPRETSTION", to: "launguage" },
   ];
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function AboutNavbar() {
 
   return (
     <nav
-      className={`top-0 left-0  w-full flex justify-between items-center px-8 md:pl-28 pb-4 z-50 transition-all duration-300
+      className={`top-0 left-0  w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
         md:backdrop-blur-lgv backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
         fixed 
       `}>
@@ -45,7 +45,7 @@ function AboutNavbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-8 md:gap-14 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
         {navitems.map((page, index) => (
           <Link
             key={page.title}
