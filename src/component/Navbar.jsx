@@ -87,6 +87,9 @@ function Navbar({ aboutScroll }) {
             location.pathname === "/about" ? "underline" : ""
           }`}>
           ABOUT
+          {location.pathname === "/about" && (
+            <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
         <Link
           to="/trading"

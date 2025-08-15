@@ -9,12 +9,12 @@ function AboutNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navitems = [
-    { title: "ABOUT", to: "about" },
-    { title: "TRADING", to: "trading" },
-    { title: "Onsite support Services(OSS)", to: "oss" },
-    { title: "LAUNGUAGE INTERPRETSTION", to: "launguage" },
-    { title: "CONTACT", to: "contact" },
-    { title: "CAREERS", to: "careers" },
+    { title: "ABOUT", to: "/about" },
+    { title: "TRADING", to: "/trading" },
+    { title: "Onsite support Services(OSS)", to: "/oss" },
+    { title: "LAUNGUAGE INTERPRETSTION", to: "/launguage" },
+    { title: "CONTACT", to: "/contact" },
+    { title: "CAREERS", to: "/careers" },
   ];
 
   useEffect(() => {
@@ -47,14 +47,16 @@ function AboutNavbar() {
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-8 md:gap-10 md:pr-14 text-sm md:text-[15px]">
         {navitems.map((page, index) => (
-          <Link
-            key={page.title}
-            to={`/${page.to}`}
-            onClick={closeMenu}
-            className={location.pathname === `/${page.to}` ? "underline" : ""}>
-            {page.title}
-          </Link>
+          <div key={page.title} className="flex flex-col items-center">
+            <Link to={page.to} className="text-[#fa160e]" onClick={closeMenu}>
+              {page.title}
+            </Link>
+            {location.pathname === page.to && (
+              <div className="w-full h-[2px] bg-[#ff746f] mt-2 transition-all duration-300 ease-in-out rounded-full"></div>
+            )}
+          </div>
         ))}
+
         <div>
           <Launguage />
         </div>
@@ -76,13 +78,14 @@ function AboutNavbar() {
           <FaTimes className="text-white" />
         </button>
         {navitems.map((page) => (
-          <Link
-            key={page.title}
-            to={`/${page.to}`}
-            className="text-white"
-            onClick={closeMenu}>
-            {page.title}
-          </Link>
+          <div key={page.title} className="flex flex-col items-center">
+            <Link to={page.to} className="text-[#fa160e]" onClick={closeMenu}>
+              {page.title}
+            </Link>
+            {location.pathname === page.to && (
+              <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
+            )}
+          </div>
         ))}
       </div>
     </nav>
