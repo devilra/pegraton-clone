@@ -2,33 +2,15 @@ import React, { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaPinterestP,
   FaTwitter,
-  FaYoutube,
 } from "react-icons/fa";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
-import { FaTimes } from "react-icons/fa";
+
 import { images } from "./data";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
-  // State to track open sections for mobile accordion
-  const [openSections, setOpenSections] = useState({});
-  const [selectedImage, setSelectedImage] = useState(null);
-
   //console.log(selectedImage);
-
-  // Toggle function for a section
-  const toggleSection = (section) => {
-    setOpenSections((prev) => {
-      if (prev[section]) {
-        return {};
-      } else {
-        return { [section]: true };
-      }
-    });
-  };
 
   // const images = [
   //   "/sansirong/s1.jpg",

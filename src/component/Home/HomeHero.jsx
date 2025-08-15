@@ -612,7 +612,7 @@ const HomeHero = () => {
                   <a
                     href="#"
                     className="text-white px-2 text-[13px] font-bold hover:underline">
-                    Amigo webster
+                    Amigowebster
                   </a>
                 </div>
               </div>
