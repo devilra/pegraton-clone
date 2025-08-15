@@ -37,7 +37,7 @@ function AboutNavbar() {
 
   return (
     <nav
-      className={`top-0 left-0  w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
+      className={`top-0 left-0 md:pt-3 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
         md:backdrop-blur-lgv backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
         fixed 
       `}>

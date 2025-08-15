@@ -91,7 +91,7 @@ const Trading = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-0 h-screen overflow-y-scroll">
+    <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
       <AboutNavbar />
 

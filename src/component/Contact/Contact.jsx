@@ -5,17 +5,24 @@ import AboutFooter from "../About/AboutFooter";
 
 const Contact = () => {
   return (
-    <div className="pt-28  overflow-y-scroll h-screen ">
+    <div className="  overflow-y-scroll h-screen ">
       <div>
         <AboutNavbar />
       </div>
-      <div className="flex flex-col md:flex-row  items-start justify-center gap-8 px-6 py-12 md:px-16">
+      <div
+        className="bg-cover bg-center brightness-50 bg-no-repeat"
+        style={{
+          backgroundImage:
+            'url("https://static.vecteezy.com/system/resources/previews/051/166/491/non_2x/communication-concept-with-email-message-box-and-contacts-icons-e-mail-marketing-customer-support-counseling-and-support-hotline-connection-with-modern-network-technology-contact-us-free-photo.jpg")',
+          height: "400px",
+        }}></div>
+      <div className="flex flex-col md:flex-row md:pt-20 items-start justify-center gap-8 px-6 py-12 md:px-16">
         {/* Left Side - Image */}
         <div className="flex-1">
           <img
             src="/contact/school.jpg"
             alt="Office Building"
-            className="rounded-xl shadow-lg w-full object-cover"
+            className="rounded-xl shadow-lg w-full md:h-[460px] object-cover"
           />
         </div>
 

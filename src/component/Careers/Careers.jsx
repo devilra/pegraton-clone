@@ -14,19 +14,21 @@ const Careers = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-0 h-screen overflow-y-scroll">
+    <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
       <AboutNavbar />
 
       {/* Top section with background image */}
-      {/* // <div
-      //   className="bg-cover bg-center brightness-50 bg-no-repeat"
-      //   style={{ backgroundImage: 'url("./trading/a5.jpg")', height: "400px" }}>
-        
-      // </div> */}
+      <div
+        className="bg-cover bg-center brightness-50 bg-no-repeat"
+        style={{
+          backgroundImage:
+            'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
+          height: "400px",
+        }}></div>
 
       <div>
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 sm:gap-10 px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row md:pt-20 justify-between md items-start gap-8 sm:gap-10 px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="lg:w-1/2 space-y-6 sm:space-y-8">
             {/* What Defines Us */}

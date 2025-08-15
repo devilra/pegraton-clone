@@ -5,6 +5,14 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
 import { images } from "../data";
 import { Link } from "react-router-dom";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPinterestP,
+  FaTwitter,
+} from "react-icons/fa";
+import AboutFooter from "../About/AboutFooter";
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
@@ -502,53 +510,135 @@ const HomeHero = () => {
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
 
-      <section className="full-section relative h-screen flex items-center justify-start bg-black">
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
-          src={videoSrc}
-          autoPlay
-          loading="lazy"
-          muted
-          loop
-          playsInline
-        />
+      <div className="">
+        <section className="full-section  relative h-screen md:flex md:items-center md:flex-col md:justify-start bg-black">
+          <video
+            className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+            src={videoSrc}
+            autoPlay
+            loading="lazy"
+            muted
+            loop
+            playsInline
+          />
 
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
-        <div className=" z-10 h-full text-white">
-          <div className="flex flex-col pt-28 md:pl-16 md:flex-row gap-5">
-            {images.map((item, i) => (
-              <div
-                key={i}
-                className=" rounded-lg  cursor-pointer group"
-                onClick={() => setSelectedImage(item)}>
-                <img
-                  src={item.src}
-                  alt={`Image ${i + 1}`}
-                  className="w-full f-full md:h-[200px] md:w-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-            ))}
+          <div className="absolute inset-0 backdrop-blur-lg hidden md:block bg-black/40" />
+          <div className=" z-10 h-full text-white">
+            <div className="flex flex-col pt-28 md:pl-16 md:flex-row gap-5">
+              {images.map((item, i) => (
+                <div
+                  key={i}
+                  className=" rounded-lg  cursor-pointer group"
+                  onClick={() => setSelectedImage(item)}>
+                  <img
+                    src={item.src}
+                    alt={`Image ${i + 1}`}
+                    className="w-full f-full md:h-[200px] rounded-lg hover:brightness-50 md:transition-all md:duration-500 md:w-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+          <div>
+            <footer className="absolute bottom-0 py-20  w-[100vw] md:px-10 md:py-5 left-0 bg-sky-500 text-white">
+              <div className="container mx-auto px-6 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
+                  {/* Logo & Socials */}
+                  <div className="pl-2 md:pl-0">
+                    <img src="/logo.png" alt="Logo" className="w-14 mb-3" />
+                    <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
+                    <div className="flex space-x-3">
+                      <a href="#" className="hover:text-pink-400">
+                        <FaFacebookF size={16} />
+                      </a>
+                      <a href="#" className="hover:text-pink-400">
+                        <FaTwitter size={16} />
+                      </a>
+                      <a href="#" className="hover:text-pink-400">
+                        <FaInstagram size={16} />
+                      </a>
+                      <a href="#" className="hover:text-pink-400">
+                        <FaPinterestP size={16} />
+                      </a>
+                    </div>
+                  </div>
 
-      {/* <section className="full-section relative h-screen md:flex md:f items-center justify-center bg-black">
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
-          src={videoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
-        <div>
-          <h1>Hello</h1>
-        </div>
-        <div className=" z-10 mt-2 text-white text-4xl ">
-          <Footer />
-        </div>
-      </section> */}
+                  {/* About */}
+                  <div className="pl-2 md:pl-0">
+                    <h3 className="font-semibold mb-2">About</h3>
+                    <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
+                    <ul className="space-y-1 pl-4 md:pl-0 text-sm">
+                      <li>
+                        <a href="#" className="hover:text-pink-400">
+                          About Us
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" className="hover:text-pink-400">
+                          onsitesupportservicesoss
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" className="hover:text-pink-400">
+                          languageinterpretation
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Contact */}
+                  <div>
+                    <h3 className="font-semibold mb-2">Contact Us</h3>
+                    <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <FiPhone className="text-pink-400" /> +91 8610102669
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <FiMail className="text-pink-400" />{" "}
+                        sansirongsales@gmail.com
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <FiMapPin className="text-pink-400 mt-1" /> 4,
+                        Hiranandani Park, Padharvadi Village, Kundrathur Taluk,
+                        Thriveni Nagar, Oragadam Industrial Area, Kancheepuram,
+                        Tamil Nadu 603204
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="text-center text-xs text-white mt-3">
+                  © 2025 Created with{" "}
+                  <a
+                    href="#"
+                    className="text-white px-2 text-[13px] font-bold hover:underline">
+                    Amigo webster
+                  </a>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </div>
+
+      {/* <div className="md:hidden ">
+        <section className="full-section relative h-screen md:flex md:f items-center justify-center bg-black">
+          <video
+            className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
+            src={videoSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+          <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+
+          <div className=" z-10 mt-2 text-white text-4xl ">
+            <AboutFooter />
+            <h1>Hello</h1>
+          </div>
+        </section>
+      </div> */}
     </div>
   );
 };

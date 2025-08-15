@@ -47,11 +47,13 @@ const OnsiteService = () => {
       <AboutNavbar />
 
       {/* Top section with background image */}
-      {/* <div
+      <div
         className="bg-cover bg-center brightness-50 bg-no-repeat"
-        style={{ backgroundImage: 'url("./trading/a4.jpg")', height: "400px" }}>
-      
-      </div> */}
+        style={{
+          backgroundImage:
+            'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
+          height: "400px",
+        }}></div>
 
       {/* section--1 */}
 

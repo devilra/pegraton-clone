@@ -42,7 +42,7 @@ const OnsiteService = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-0 h-screen overflow-y-scroll">
+    <div className=" md:pt-0 h-screen overflow-y-scroll">
       {/* Navbar */}
       <AboutNavbar />
 

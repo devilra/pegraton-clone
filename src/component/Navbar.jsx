@@ -131,7 +131,7 @@ function Navbar({ aboutScroll }) {
           CONTACT
         </Link>
         <Link
-          //to="/careers"
+          to="/careers"
           onClick={closeMenu}
           className={` text-[15px] ${
             location.pathname === "/about" ? "underline" : ""
@@ -157,21 +157,51 @@ function Navbar({ aboutScroll }) {
         <button onClick={toggleMenu} className="flex justify-end">
           <FaTimes />
         </button>
-        <Link to="/about" onClick={() => setIsOpen(false)}>
-          ABOUT
+        <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
+          HOME
+          {location.pathname === "/" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
-        <Link to="/service" onClick={() => setIsOpen(false)}>
-          PRODUCT&SERVICE
+        <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
+          ABOUT
+          {location.pathname === "/about" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
+        </Link>
+        <Link to="/oss" onClick={closeMenu} className={` text-[15px] `}>
+          ONSITE SUPPORT SERVICES(OSS)
+          {location.pathname === "/oss" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
 
-        <Link to="/investors" onClick={() => setIsOpen(false)}>
-          INVESTORS
+        <Link to="/trading" onClick={closeMenu} className={` text-[15px]`}>
+          TRADING
+          {location.pathname === "/trading" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
-        <Link to="/contact" onClick={() => setIsOpen(false)}>
+        <Link to="/launguage" onClick={closeMenu} className={` text-[15px]`}>
+          LAUNGUAGE INTERPRETATION
+          {location.pathname === "/launguage" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
+        </Link>
+        <Link to="/contact" onClick={closeMenu} className={` text-[15px]`}>
           CONTACT
+          {location.pathname === "/contact" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
-        <Link to="/careers" onClick={() => setIsOpen(false)}>
+        <Link
+          //to="/careers"
+          onClick={closeMenu}
+          className={` text-[15px]`}>
           CAREERS
+          {location.pathname === "/contact" && (
+            <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
+          )}
         </Link>
       </div>
     </nav>

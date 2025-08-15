@@ -9,7 +9,7 @@ import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 const AboutFooter = () => {
   return (
-    <footer className="bg-sky-500 text-white pt-10 pb-4">
+    <footer className="bg-sky-500 text-white pb-10 md:pb-0 pt-10 ">
       <div className="container mx-auto px-6 md:px-20">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-800 pb-8">
@@ -41,7 +41,7 @@ const AboutFooter = () => {
           <div>
             <h3 className="font-semibold mb-2">About</h3>
             <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 pl-4 md:pl-0 text-sm">
               <li>
                 <a href="#" className="hover:text-pink-400">
                   About Us
