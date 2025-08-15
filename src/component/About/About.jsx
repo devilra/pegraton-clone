@@ -118,10 +118,13 @@ const About = () => {
 
         {/* Background Image */}
         <div
-          className="w-full h-[200px] md:h-[300px] bg-cover bg-center brightness-50"
+          className="bg-cover bg-center brightness-50 bg-no-repeat"
           style={{
-            backgroundImage: "url('/about/a.png')",
-          }}></div>
+            backgroundImage: 'url("./about/a.png")',
+            height: "400px",
+          }}>
+          {/* Buttons */}
+        </div>
       </div>
 
       {/* Content */}

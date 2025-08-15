@@ -42,20 +42,20 @@ const OnsiteService = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-36 h-screen overflow-y-scroll">
+    <div className="pt-28 md:pt-0 h-screen overflow-y-scroll">
       {/* Navbar */}
       <AboutNavbar />
 
       {/* Top section with background image */}
       <div
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("./oss/auto.webp")' }}>
+        className="bg-cover bg-center brightness-50 bg-no-repeat"
+        style={{ backgroundImage: 'url("./trading/a4.jpg")', height: "400px" }}>
         {/* Buttons */}
       </div>
 
       {/* section--1 */}
 
-      <div className="bg-white  py-10 md:pt-48 px-4 md:px-40">
+      <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
         <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
           {/* LEFT SECTION */}
           <div className="">

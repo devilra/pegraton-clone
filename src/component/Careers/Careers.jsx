@@ -14,14 +14,14 @@ const Careers = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-36 h-screen overflow-y-scroll">
+    <div className="pt-28 md:pt-0 h-screen overflow-y-scroll">
       {/* Navbar */}
       <AboutNavbar />
 
       {/* Top section with background image */}
       <div
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("./oss/auto.webp")' }}>
+        className="bg-cover bg-center brightness-50 bg-no-repeat"
+        style={{ backgroundImage: 'url("./trading/a5.jpg")', height: "400px" }}>
         {/* Buttons */}
       </div>
 
