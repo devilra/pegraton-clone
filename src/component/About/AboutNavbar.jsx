@@ -14,6 +14,7 @@ function AboutNavbar() {
     { title: "Onsite support Services(OSS)", to: "oss" },
     { title: "CONTACT", to: "contact" },
     { title: "CAREERS", to: "careers" },
+    { title: "LAUNGUAGE INTERPRETSTION", to: "launguage" },
   ];
 
   useEffect(() => {

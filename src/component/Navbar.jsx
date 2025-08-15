@@ -51,13 +51,13 @@ function Navbar({ aboutScroll }) {
 
   return (
     <nav
-      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 pt-8 md:pt-2  md:pl-28 pb-4 z-50 ${
+      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 md:px-5 pt-8 md:pt-2  md:pl-18 pb-4 z-50 ${
         location.pathname === "/about" && isScrolled
           ? "backdrop-blur-md bg-black/50"
           : "bg-transparent"
       }`}>
       {/* Logo */}
-      <div className="md:px-2  flex items-center">
+      <div className="md:px-2 flex items-center">
         <Link
           to="/"
           className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
@@ -79,11 +79,11 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-2xl md:text-[15px]">
+      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-3 md:pr-14 text-2xl ">
         <Link
           to="/about"
           onClick={closeMenu}
-          className={` text-[17px] ${
+          className={` text-[15px] ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
           ABOUT
@@ -91,7 +91,7 @@ function Navbar({ aboutScroll }) {
         <Link
           //to="/service"
           onClick={closeMenu}
-          className={` text-[17px] ${
+          className={` text-[15px]  ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
           PRODUCT&SERVICE
@@ -99,15 +99,24 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/oss"
           onClick={closeMenu}
-          className={` text-[17px] ${
+          className={` text-[15px]  ${
             location.pathname === "/oss" ? "underline" : ""
           }`}>
-          Onsite support Services(OSS)
+          ONSITE SUPPORT SERVICES(OSS)
+        </Link>
+
+        <Link
+          to="/launguage"
+          onClick={closeMenu}
+          className={` text-[15px]  ${
+            location.pathname === "/launguage" ? "underline" : ""
+          }`}>
+          LAUNGUAGE INTERPRETATION
         </Link>
         <Link
           to="/contact"
           onClick={closeMenu}
-          className={` text-[17px] ${
+          className={` text-[15px] ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
           CONTACT
@@ -115,7 +124,7 @@ function Navbar({ aboutScroll }) {
         <Link
           //to="/careers"
           onClick={closeMenu}
-          className={` text-[17px] ${
+          className={` text-[15px] ${
             location.pathname === "/about" ? "underline" : ""
           }`}>
           CAREERS

@@ -30,3 +30,7 @@ body {
 .animate-bgPulse {
     animation: bgPulse 6s infinite ease-in-out;
 }
+
+ul {
+    list-style-type: square;
+}

@@ -11,6 +11,7 @@ import Contact from "./component/Contact/Contact";
 import { useTranslation } from "react-i18next";
 import "./i18n";
 import OnsiteService from "./component/Oss/OnsiteService";
+import Languageinterpretation from "./component/Language interpretation/Languageinterpretation";
 
 const App = () => {
   const validNavbar = ["/"];
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/oss" element={<OnsiteService t={t} />} />
         <Route path="/contact" element={<Contact t={t} />} />
         <Route path="/careers" element={<Careers t={t} />} />
+        <Route path="/launguage" element={<Languageinterpretation t={t} />} />
       </Routes>
     </>
   );

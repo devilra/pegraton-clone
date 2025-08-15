@@ -42,50 +42,219 @@ const OnsiteService = () => {
   };
 
   return (
-    <div className="pt-28 md:pt-36 overflow-y-scroll h-screen ">
-      <div>
-        <AboutNavbar />
+    <div className="pt-28 md:pt-36 h-screen overflow-y-scroll">
+      {/* Navbar */}
+      <AboutNavbar />
+
+      {/* Top section with background image */}
+      <div
+        className="bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("./oss/auto.webp")' }}>
+        {/* Buttons */}
       </div>
-      <div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-5 px-20 mb-6">
-          {data.map((item, index) => (
-            <button
-              key={index}
-              onClick={() => handleClick(index)}
-              className={`py-2 border text-[14px] rounded-md font-semibold transition-all duration-200 
-              ${
-                activeIndex === index
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-200 hover:bg-gray-300"
-              }`}>
-              {item.title}
-            </button>
-          ))}
-        </div>
-      </div>
-      {/* Content */}
-      <div className="">
-        <div className=" ">
-          <div
-            className=""
-            style={{
-              backgroundImage:
-                'url("https://www.biztenent.com/wp-content/uploads/2023/10/595067.jpg")',
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              height: "300px",
-            }}>
-            <h3 className="text-3xl text-white text-center p-10 font-semibold mb-2">
-              {data[activeIndex].title}
-            </h3>
+
+      <div className="bg-white  py-10 md:pt-48 px-4 md:px-40">
+        <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
+          {/* LEFT SECTION */}
+          <div className="">
+            <img
+              src="./oss/o1.png"
+              alt="Factory"
+              className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
+            />
           </div>
 
-          <p className="text-gray-700 px-20 py-20">
-            {data[activeIndex].content}
-          </p>
+          {/* RIGHT SECTION */}
+          <div className="md:w-[500px]">
+            <p className="text-sm uppercase text-gray-500 font-semibold">
+              Onsite Support Service (OSS)
+            </p>
+
+            <h3 className="text-2xl font-bold mt-2">Who We Are</h3>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              At{" "}
+              <span className="font-semibold">
+                SANSIRONG INTERNATIONAL PRIVATE LIMITED
+              </span>{" "}
+              is a leading Contract Development and Manufacturing Organisation
+              (CDMO) in the medtech, consumer electronics, and automotive
+              industries.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Our support ranges from full turnkey services to bespoke
+              solutions, backed by over three decades of custom automation and
+              precision engineering experience.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-6">
+              Design Anywhere, Build Anywhere
+            </h3>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              From concept to commercialisation, our versatile “Design
+              Everywhere, Build Anywhere” approach ensures we can innovate and
+              develop products globally while manufacturing them at the most
+              advantageous locations.
+            </p>
+          </div>
+        </div>
+
+        {/* section -3 */}
+        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
+          {/* LEFT SECTION */}
+          <div className="order-2">
+            <img
+              src="./oss/02.jpg"
+              alt="Factory"
+              className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
+            />
+          </div>
+
+          {/* RIGHT SECTION */}
+          <div className="md:w-[500px] order-1">
+            <p className="text-sm uppercase text-gray-500 font-semibold">
+              Scalable Production to Meet Market Demand
+            </p>
+
+            <h3 className="text-2xl font-bold mt-2">
+              At SANSIRONG INTERNATIONAL PRIVATE LIMITED{" "}
+            </h3>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Our production capabilities are highly scalable, allowing us to
+              ramp up or down to meet varying market demands efficiently.
+            </p>
+            <h1 className="text-2xl font-bold mt-2">Cost-Effectiveness</h1>
+            <p className="text-sm uppercase text-gray-500 font-semibold">
+              At SANSIRONG INTERNATIONAL PRIVATE LIMITED{" "}
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Our operations are optimized for cost-efficiency, providing
+              high-quality products and services at competitive prices. Our
+              multiple factory sites across different regions also allow us to
+              strategically manage production to minimize tariffs and reduce
+              costs for our clients.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-6">
+              Strategic Headquarters and Factory Locations
+            </h3>
+            <h1 className="text-sm uppercase text-gray-500 font-semibold">
+              At SANSIRONG INTERNATIONAL PRIVATE LIMITED
+            </h1>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Headquartered in Singapore, with factory sites in multiple
+              locations, we have a strategic edge to serve both Western and
+              Eastern markets effectively.
+            </p>
+          </div>
+        </div>
+
+        {/* section-3 */}
+        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
+          {/* LEFT SECTION */}
+          <div className="">
+            <img
+              src="./oss/o4.jpg"
+              alt="Factory"
+              className="w-full md:w-[500px] md:h-[650px] rounded-md shadow"
+            />
+          </div>
+
+          {/* RIGHT SECTION */}
+          <div className="md:w-[500px] ">
+            <h3 className="text-2xl font-bold mt-2">
+              Planning to Engaging the oss through mobile application
+            </h3>
+            <p className="text-sm uppercase text-gray-500 font-semibold">
+              At SANSIRONG INTERNATIONAL PRIVATE LIMITED
+            </p>
+            <ul className=" list-inside text-gray-700 mt-2 leading-relaxed">
+              <li>Attendance follow-up with Geo-fencing</li>
+              <li>Report submissions – Daily, weekly, and Monthly</li>
+              <li>Learning Platform</li>
+              <li>Assessment platform</li>
+              <li>OSS grievance address platform</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-6">
+              Equip OSS engineers (L1 to L3) with advanced skills in:
+            </h3>
+            <ul className="list-inside text-gray-700 mt-2 leading-relaxed">
+              <li>Automation Systems (PLC, HMI, VFD)</li>
+              <li>Electromechanical Maintenance</li>
+              <li>Vision System Integration</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-6">
+              Training Modules Overview
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 mt-2 leading-relaxed">
+              <li>Automation: PLC Basics, Servo Motion, VFD</li>
+              <li>
+                Electromechanical: Fixture Assembly, Maintenance Protocols
+              </li>
+              <li>Vision: Camera Setup, Template Matching, Image Parameters</li>
+              <li>Debugging: Software Logs, Root Cause Analysis</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      {/* section -4  */}
+
+      <div>
+        <section className="w-full bg-white">
+          <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16 flex flex-col lg:flex-row items-start gap-10">
+            {/* Left Text */}
+            <div className="flex-1 max-w-xl">
+              <h2 className="text-3xl lg:text-4xl font-bold  leading-snug">
+                ONSITE SUPPORT <br /> Service (OSS)
+              </h2>
+              <p className="mt-4 text-sm lg:text-base leading-6 text-neutral-800 text-justify">
+                Sansirong International Private Limited offers reliable{" "}
+                <b>Onsite Support Services (OSS)</b> to ensure smooth,
+                uninterrupted operations at your location. Our skilled
+                professionals provide hands‑on technical and operational
+                assistance for installation, troubleshooting, maintenance, and
+                system upgrades. Whether it’s IT infrastructure, equipment
+                setup, or specialized industry support, Sansirong ensures quick
+                response times, minimal downtime, and customized
+                solutions—delivered right at your doorstep. Empower your
+                business with trusted onsite expertise from Sansirong.
+              </p>
+            </div>
+
+            {/* Right Images */}
+            <div className="grid grid-cols-2 gap-4 justify-items-center">
+              <img
+                src="/oss/o5.webp"
+                alt="Top Left"
+                className="w-[250px] rounded-lg object-cover"
+              />
+              <img
+                src="/oss/o6.avif"
+                alt="Top Right"
+                className="w-[400px] max-w-full rounded-lg object-cover"
+              />
+              <img
+                src="/oss/o7.avif"
+                alt="Bottom Left"
+                className="w-[400px] max-w-full rounded-lg object-cover"
+              />
+              <img
+                src="/oss/o7.webp"
+                alt="Bottom Right"
+                className="w-[400px] max-w-full rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* <div>
+        <h1 className="text-center text-2xl font-bold">Automation</h1>
+      </div> */}
+
+      {/* Footer */}
       <AboutFooter />
     </div>
   );
