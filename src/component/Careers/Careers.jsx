@@ -3,6 +3,7 @@ import AboutNavbar from "../About/AboutNavbar";
 import AboutFooter from "../About/AboutFooter";
 import countryList from "react-select-country-list";
 import Select from "react-select";
+import Clients from "../../clients/Clients";
 
 const Careers = () => {
   const [value, setValue] = useState("");
@@ -126,7 +127,7 @@ const Careers = () => {
 
           {/* Right Form */}
           <div className="lg:w-1/2 bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
-            <h2 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">
+            <h2 className="text-base sm:text-lg fonta-semibold mb-4 sm:mb-6">
               Personal Information
             </h2>
 
@@ -240,7 +241,7 @@ const Careers = () => {
                   />
                 </div>
               </div>
-              <div className=" lg:w-1/2 bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
+              <div className="  bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
                 <h2 className="text-lg font-semibold mb-4">Education</h2>
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                   <input
@@ -260,7 +261,7 @@ const Careers = () => {
                 <button
                   type="button"
                   className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
-                  Add Item
+                  Add Education
                 </button>
               </div>
 
@@ -284,7 +285,7 @@ const Careers = () => {
                 <button
                   type="button"
                   className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
-                  Add Item
+                  Add Experience
                 </button>
               </div>
 
@@ -311,6 +312,7 @@ const Careers = () => {
             </form>
           </div>
         </div>
+        <Clients />
       </div>
 
       {/* Footer */}

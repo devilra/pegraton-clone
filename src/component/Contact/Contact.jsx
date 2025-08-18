@@ -1,9 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import AboutNavbar from "../About/AboutNavbar";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import AboutFooter from "../About/AboutFooter";
+import axios from "axios";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState({ message: "", type: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const API = import.meta.env.VITE_BACKEND_URL;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const isValidForm =
+    formData.name.trim() &&
+    isValidEmail(formData.email) &&
+    formData.message.trim() &&
+    !isSubmitting;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ message: "Sending...", type: "info" });
+
+    try {
+      const res = await axios.post(`${API}/send-email`, formData);
+      console.log(res.status);
+      if (res && res.status === 200) {
+        setStatus({ message: "Application submitted", type: "success" });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus({ message: "Something went wrong", type: "failed" });
+      }
+      setTimeout(() => {
+        setStatus({ message: "", type: "" });
+      }, 2000);
+    } catch (error) {
+      setStatus({ message: "Something went wrong", type: "failed" });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => {
+        setStatus({ message: "", type: "" });
+      }, 2000);
+    }
+  };
+
   return (
     <div className="  overflow-y-scroll h-screen ">
       <div>
@@ -86,7 +138,7 @@ const Contact = () => {
             </div>
 
             {/* Right side - Form */}
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs text-[#2C3E91] mb-1">
                   Name
@@ -94,6 +146,9 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"
                 />
               </div>
@@ -104,6 +159,9 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email"
                   className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"
                 />
@@ -114,6 +172,9 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Message"
                   rows="4"
                   className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"></textarea>
@@ -121,9 +182,42 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-pink-300 text-white py-2 rounded-md font-medium hover:bg-pink-400 transition">
-                Send
+                disabled={!isValidForm}
+                className={`w-full py-2   rounded-md font-medium transition ${
+                  isValidForm
+                    ? "bg-pink-300 text-white hover:bg-pink-400"
+                    : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                }`}>
+                {isSubmitting ? "Sending..." : "Send"}
               </button>
+              {/* {status.message && status.type === "success" ? (
+                <p className="text-sm md:text-lg  text-green-500 border py-5 rounded bg-[#effdef] border-[#c6fac6] font-bold  text-center">
+                  {status.message}
+                </p>
+              ) : status.type === "failed" ? (
+                <p className="text-sm md:text-lg text-red-500 border py-5 rounded border-[#fad1d1] bg-[#fde3e3] font-bold mt-2 text-center">
+                  {status.message}
+                </p>
+              ) : (
+                <p className="text-sm md:text-lg text-red-500  font-bold mt-2 text-center">
+                  {status.message}
+                </p>
+              )} */}
+              {status.message ? (
+                status.type === "success" ? (
+                  <p className="text-green-500 border bg-[#effdef] border-[#c6fac6] py-5 rounded font-bold text-center">
+                    {status.message}
+                  </p>
+                ) : status.type === "failed" ? (
+                  <p className="text-red-500 border bg-[#fde3e3] border-[#fad1d1] py-5 rounded font-bold text-center">
+                    {status.message}
+                  </p>
+                ) : status.type === "info" ? (
+                  <p className="text-neutral-700 border bg-[#f7f6f6] border-neutral-500 py-5 rounded font-bold text-center">
+                    {status.message}
+                  </p>
+                ) : null
+              ) : null}
             </form>
           </div>
         </div>

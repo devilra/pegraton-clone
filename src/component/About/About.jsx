@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 
 import AboutFooter from "./AboutFooter";
+import Clients from "../../clients/Clients";
 
 // const sections = [
 //   {
@@ -323,7 +324,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
       <div>
+        <Clients />
         <AboutFooter />
       </div>
     </div>
