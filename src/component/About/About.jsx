@@ -273,57 +273,6 @@ const About = () => {
           </Swiper>
         </div>
       </section>
-      <section className="py-16 px-6 md:px-20 lg:px-28 bg-white">
-        <div className="grid md:grid-cols-[300px_1fr] gap-10">
-          {/* Left Text Section */}
-          <div>
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Trading</h2>
-            <p className="text-gray-600 leading-relaxed">
-              By no on ecstatic wondered disposal my speaking. Direct wholly
-              valley or uneasy it at really. Sir wish like said dull and need
-              make. Sportsman do offending supported extremity breakfast by
-              listening. Off say yet ample ten ought hence. Depending in
-              newspaper an september do existence.
-            </p>
-          </div>
-
-          {/* Team Members */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className={`rounded-md object-cover w-full h-[300px] ${
-                    (index === 1 && "mt-10") || (index === 3 && "mt-10")
-                  } `}
-                />
-                <h3 className="mt-4 font-semibold text-gray-800">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-pink-500">{member.role}</p>
-                <div className="flex justify-center gap-3 mt-2">
-                  <a
-                    href="#"
-                    className="border border-pink-300 text-pink-500 p-2 rounded hover:bg-pink-100">
-                    <FaFacebookF />
-                  </a>
-                  <a
-                    href="#"
-                    className="border border-pink-300 text-pink-500 p-2 rounded hover:bg-pink-100">
-                    <FaInstagram />
-                  </a>
-                  <a
-                    href="#"
-                    className="border border-pink-300 text-pink-500 p-2 rounded hover:bg-pink-100">
-                    <FaLinkedinIn />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <div>
         <Clients />

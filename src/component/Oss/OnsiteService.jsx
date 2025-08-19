@@ -53,6 +53,10 @@ const OnsiteService = () => {
         {/* Buttons */}
       </div>
 
+      <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
+        Onsite Support Service (OSS) :
+      </h1>
+
       <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
         <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
           {/* LEFT SECTION */}

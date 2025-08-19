@@ -102,6 +102,10 @@ const Trading = () => {
         {/* Buttons */}
       </div>
 
+      <h1 className="hidden md:block md:text-4xl font-bold px-10 pt-20">
+        TRADING :
+      </h1>
+
       <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
         <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
           {/* LEFT SECTION */}
@@ -307,10 +311,10 @@ const Trading = () => {
 
       {/* section -4  */}
 
-      <div>
+      {/* <div>
         <section className="py-16 px-6 md:px-20 lg:px-28 bg-white">
           <div className="grid md:grid-cols-[300px_1fr] gap-10">
-            {/* Left Text Section */}
+           
             <div>
               <h2 className="text-3xl font-bold  mb-4">Trading</h2>
               <p className="text-gray-600 leading-relaxed">
@@ -322,7 +326,7 @@ const Trading = () => {
               </p>
             </div>
 
-            {/* Team Members */}
+            
             <div className="grid md:grid-cols-2 gap-8">
               {teamMembers.map((member, index) => (
                 <div key={index} className="text-center">
@@ -359,7 +363,7 @@ const Trading = () => {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
 
       {/* <div>
         <h1 className="text-center text-2xl font-bold">Automation</h1>

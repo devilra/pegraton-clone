@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Launguage from "./Launguage";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Navbar({ aboutScroll }) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  console.log(isScrolled);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,22 +17,6 @@ function Navbar({ aboutScroll }) {
   const closeMenu = () => {
     setIsOpen(false);
   };
-
-  // useEffect(() => {
-  //   if (location.pathname === "/about") {
-  //     const handleScroll = () => {
-  //       if (window.scrollY > 5) {
-  //         setIsScrolled(true);
-  //       } else {
-  //         setIsScrolled(false);
-  //       }
-  //     };
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => window.removeEventListener("scroll", handleScroll);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // }, [location.pathname]);
 
   useEffect(() => {
     if (location.pathname === "/about") {
@@ -79,11 +64,11 @@ function Navbar({ aboutScroll }) {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-4 md:pr-14 text-2xl ">
+      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14 text-[20px] ">
         <Link
           to="/"
           onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -100,7 +85,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/about"
           onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -117,50 +102,56 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/oss"
           onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
-          style={{
-            transition: "all 0.3s ease-in-out",
+          className="text-[16px] relative flex justify-center items-center md:gap-1 lg:gap-3 transition-all duration-300 ease-in-out hover:text-white"
+          onMouseEnter={(e) => {
+            setIsServicesOpen(!isServicesOpen);
           }}
-          onMouseEnter={(e) =>
-            (e.target.style.textShadow =
-              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
-          }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
-          ONSITE SUPPORT SERVICES(OSS)
-        </Link>
-        <Link
-          to="/trading"
-          onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
-          style={{
-            transition: "all 0.3s ease-in-out",
-          }}
-          onMouseEnter={(e) =>
-            (e.target.style.textShadow =
-              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
-          }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
-          TRADING
+          onMouseLeave={(e) => {
+            e.target.style.textShadow = "none";
+            setIsServicesOpen(!isServicesOpen);
+          }}>
+          <span>SERVICES</span>
+          {isServicesOpen ? (
+            <FaChevronUp className="transition-all duration-300 text-white" />
+          ) : (
+            <FaChevronDown className="transition-all duration-300" />
+          )}
+
+          <AnimatePresence>
+            {isServicesOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  ">
+                <Link
+                  to="/oss"
+                  onClick={closeMenu}
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white">
+                  ONSITE SUPPORT SERVICES (OSS)
+                </Link>
+                <Link
+                  to="/trading"
+                  onClick={closeMenu}
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                  TRADING
+                </Link>
+                <Link
+                  to="/launguage"
+                  onClick={closeMenu}
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                  LAUNGUAGE INTERPRETATION
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Link>
 
         <Link
-          to="/launguage"
-          onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
-          style={{
-            transition: "all 0.3s ease-in-out",
-          }}
-          onMouseEnter={(e) =>
-            (e.target.style.textShadow =
-              "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
-          }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
-          LAUNGUAGE INTERPRETATION
-        </Link>
-        <Link
           to="/contact"
           onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -174,7 +165,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/careers"
           onClick={closeMenu}
-          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -187,7 +178,6 @@ function Navbar({ aboutScroll }) {
         </Link>
         {/* <Launguage /> */}
       </div>
-      <div></div>
 
       {/* Mobile Hamburger Icon */}
       <button

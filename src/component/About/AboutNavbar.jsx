@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+
 import Launguage from "../Launguage";
 
 function AboutNavbar() {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navitems = [
     { title: "HOME", to: "/" },
     { title: "ABOUT", to: "/about" },
-    { title: "ONSITE SUPPORT SERVICES(OSS)", to: "/oss" },
-    { title: "TRADING", to: "/trading" },
+    { title: "SERVICES" },
+    // { title: "ONSITE SUPPORT SERVICES(OSS)", to: "/oss" },
+    // { title: "TRADING", to: "/trading" },
 
-    { title: "LAUNGUAGE INTERPRETATION", to: "/launguage" },
+    // { title: "LAUNGUAGE INTERPRETATION", to: "/launguage" },
     { title: "CONTACT", to: "/contact" },
     { title: "CAREERS", to: "/careers" },
   ];
@@ -33,7 +38,7 @@ function AboutNavbar() {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav
@@ -67,25 +72,73 @@ function AboutNavbar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex justify-end  md:gap-4 md:pr-14 text-sm md:text-[15px]">
+      <div className="hidden md:flex justify-end   md:pr-14 md:gap-10  md:text-[16px]">
         {navitems.map((page, index) => (
-          <div key={page.title} className="">
-            <Link
-              to={page.to}
-              style={{
-                transition: "all 0.2s ease-in-out",
-              }}
-              className="text-[#fa160e] hover:text-[#ff4a42] hover:shadow[0_0_10px_#fa160e]"
-              onClick={closeMenu}
-              onMouseLeave={(e) => (e.target.style.textShadow = "none")}
-              onMouseEnter={(e) =>
-                (e.target.style.textShadow =
-                  "0 0 10px #fa160e, 0 0 20px #fa160e")
-              }>
-              {page.title}
-            </Link>
-            {location.pathname === page.to && (
-              <div className="w-full h-[2px]  bg-[#ff746f]  mt-2 transition-all duration-300 ease-in-out rounded-full"></div>
+          <div key={page.title} className="relative">
+            {page.title === "SERVICES" ? (
+              <div
+                className="flex justify-center items-center gap-3 cursor-pointer"
+                onMouseEnter={() => setIsServicesOpen(!isServicesOpen)}
+                onMouseLeave={() => setIsServicesOpen(!isServicesOpen)}>
+                <span>{page.title}</span>
+                {/* icon toggle */}
+                {isServicesOpen ? (
+                  <FaChevronUp className="transition-all duration-300" />
+                ) : (
+                  <FaChevronDown className="transition-all duration-300" />
+                )}
+
+                <AnimatePresence>
+                  {isServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  ">
+                      <Link
+                        to="/oss"
+                        onClick={closeMenu}
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white">
+                        ONSITE SUPPORT SERVICES (OSS)
+                      </Link>
+                      <Link
+                        to="/trading"
+                        onClick={closeMenu}
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                        TRADING
+                      </Link>
+                      <Link
+                        to="/launguage"
+                        onClick={closeMenu}
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                        LAUNGUAGE INTERPRETATION
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <div key={page.title} className="">
+                <Link
+                  to={page.to}
+                  style={{
+                    transition: "all 0.2s ease-in-out",
+                  }}
+                  className="text-[#fa160e] hover:text-[#ff4a42] hover:shadow[0_0_10px_#fa160e]"
+                  onClick={closeMenu}
+                  onMouseLeave={(e) => (e.target.style.textShadow = "none")}
+                  onMouseEnter={(e) =>
+                    (e.target.style.textShadow =
+                      "0 0 10px #fa160e, 0 0 20px #fa160e")
+                  }>
+                  {page.title}
+                </Link>
+                {location.pathname === page.to && (
+                  <div className="w-full h-[2px]  bg-[#ff746f]   transition-all duration-300 ease-in-out rounded-full"></div>
+                )}
+                {page.title === "SERVICES"}
+              </div>
             )}
           </div>
         ))}

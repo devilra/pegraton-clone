@@ -312,7 +312,6 @@ const Careers = () => {
             </form>
           </div>
         </div>
-        <Clients />
       </div>
 
       {/* Footer */}

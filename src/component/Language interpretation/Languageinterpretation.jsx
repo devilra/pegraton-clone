@@ -55,6 +55,10 @@ const OnsiteService = () => {
           height: "400px",
         }}></div>
 
+      <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
+        Language Interpretation :
+      </h1>
+
       {/* section--1 */}
 
       <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">

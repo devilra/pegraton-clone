@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = Array.from({ length: 24 }, (_, i) => `${i + 1}.jpg`);
+const images = Array.from({ length: 20 }, (_, i) => `${i + 1}.jpg`);
 
 const settings = {
   dots: false,
@@ -24,14 +24,12 @@ const settings = {
   ],
 };
 
-console.log(images);
-
 const Clients = () => {
   return (
     <section className="bg-gradient-to-r  py-16">
       <div className="slider-container w-[90%] mx-auto">
         <h1 className="pl-5 py-5 md:py-10 text-3xl font-bold md:text-[36px]  text-[#29295e]">
-          Our Client
+          Our Team
         </h1>
         <Slider {...settings}>
           {images.map((img, index) => (
