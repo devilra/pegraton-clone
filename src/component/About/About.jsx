@@ -275,7 +275,10 @@ const About = () => {
       </section>
 
       <div>
-        <Clients />
+        <div>
+          <Clients />
+        </div>
+
         <AboutFooter />
       </div>
     </div>
