@@ -47,7 +47,7 @@ function Navbar({ aboutScroll }) {
           to="/"
           className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
           <img
-            src="/logo.png"
+            src="/logo1.png"
             className="h-20 md:w-full mr-2 md:mr-0 md:h-20 "
           />
         </Link>
