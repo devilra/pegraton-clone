@@ -60,19 +60,20 @@ const OnsiteService = () => {
 
       {/* Top section with background image */}
 
-      <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
+      {/* <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
         Onsite Support Service (OSS) :
-      </h1>
+      </h1> */}
 
       <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
-        <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
+        {/* className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 "> */}
+        <div className="">
           {/* LEFT SECTION */}
           <div className="">
-            <img
+            {/* <img
               src="./oss/o1.png"
               alt="Factory"
               className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
-            />
+            /> */}
           </div>
 
           {/* RIGHT SECTION */}
@@ -81,7 +82,9 @@ const OnsiteService = () => {
               Onsite Support Service (OSS)
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">Who We Are</h3>
+            <h3 className="text-2xl font-bold mt-2">
+              Engineering Excellence, Delivered Onsite.
+            </h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
               At{" "}
               <span className="font-semibold">
