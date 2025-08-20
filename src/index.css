@@ -153,3 +153,54 @@ ul {
     text-shadow: 0 0 10px rgb(253, 255, 255), 0 0 20px rgb(246, 255, 255), 0 0 40px rgb(243, 243, 243);
   }
 }
+
+
+
+.typewriter {
+  
+  font-weight: bold;
+  color: #fff;
+  border-right: 3px solid #0ff;
+  /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 4s steps(25, end) 1s infinite,
+    blinkCursor 0.7s step-end infinite;
+}
+
+/* Typing + Deleting */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  40% {
+    width: 25ch;
+  }
+
+  /* Full text typed */
+  60% {
+    width: 25ch;
+  }
+
+  /* Stay visible */
+  100% {
+    width: 0;
+  }
+
+  /* Delete */
+}
+
+/* Blinking cursor */
+@keyframes blinkCursor {
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #0ff;
+  }
+}

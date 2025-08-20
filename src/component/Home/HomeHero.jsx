@@ -182,9 +182,12 @@ const HomeHero = () => {
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center md:justify-end h-full text-white">
-          <p className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-5xl px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
-            INNOVATIVE MINDSET,{" "}
-            <span className="relative inline-block font-bold text-6xl text-white blink-fade">
+          <p className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-3xl md:text-5xl  px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
+            INNOVATIVE MINDSET, <br />
+            <span className="relative hidden md:block typewriter  font-bold text-6xl text-white">
+              STRIVING FOR EXCELLENCE.
+            </span>
+            <span className="relative md:hidden typewriter inline-block font-bold text-3xl text-white">
               STRIVING FOR EXCELLENCE.
             </span>
           </p>
