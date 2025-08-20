@@ -167,7 +167,7 @@ function AboutNavbar() {
           <div key={page.title} className="flex flex-col items-center">
             <Link
               to={page.to}
-              className="text-[#fa160e] text-[15px]"
+              className="text-white text-[15px]"
               onClick={closeMenu}>
               {page.title}
             </Link>

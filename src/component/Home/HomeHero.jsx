@@ -181,8 +181,8 @@ const HomeHero = () => {
         />
 
         <div className="relative z-10 flex flex-col items-center justify-center md:justify-end h-full text-white">
-          <p className="mt-4 text-white text-5xl px-8 md:px-0 md:pb-28  md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
-            INNOVATIVE MINDSET, STRIVING FOR EXCELLENCE.
+          <p className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-5xl px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
+            INNOVATIVE MINDSET, <span>STRIVING FOR EXCELLENCE.</span>
           </p>
         </div>
       </section>
