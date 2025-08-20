@@ -44,7 +44,7 @@ function AboutNavbar() {
     <nav
       className={`top-0 left-0 md:pt-3 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
         md:backdrop-blur-lgv backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
-        fixed 
+         
       `}>
       {/* Logo */}
       {/* <Link to="/" className="text-4xl font-sans tracking-[2px] font-bold">
@@ -60,11 +60,11 @@ function AboutNavbar() {
           />
         </Link>
         <h1 className="pl-1  leading-[20px] md:px-2">
-          <span className="text-white md:text-[#f82f2f] tracking-[2px] text-4xl font-[600] md:text-4xl">
+          <span className="text-white  tracking-[2px] text-4xl font-[600] md:text-4xl">
             SANSIRONG
           </span>
           <br />
-          <span className="text-white md:text-[#ff302c] text-[13px] font-[800] leading-[18px] md:text-[13px]">
+          <span className="text-white  text-[13px] font-[800] leading-[18px] md:text-[13px]">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>
@@ -77,7 +77,7 @@ function AboutNavbar() {
           <div key={page.title} className="relative">
             {page.title === "SERVICES" ? (
               <div
-                className="flex justify-center items-center gap-3 cursor-pointer"
+                className="flex justify-center items-center gap-3 text-white cursor-pointer"
                 onMouseEnter={() => setIsServicesOpen(!isServicesOpen)}
                 onMouseLeave={() => setIsServicesOpen(!isServicesOpen)}>
                 <span>{page.title}</span>
@@ -125,7 +125,7 @@ function AboutNavbar() {
                   style={{
                     transition: "all 0.2s ease-in-out",
                   }}
-                  className="text-[#fa160e] hover:text-[#ff4a42] hover:shadow[0_0_10px_#fa160e]"
+                  className="text-white hover:text-neutral-100 hover:shadow[0_0_10px_#fa160e]"
                   onClick={closeMenu}
                   onMouseLeave={(e) => (e.target.style.textShadow = "none")}
                   onMouseEnter={(e) =>

@@ -93,13 +93,27 @@ const Trading = () => {
   return (
     <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
-      <AboutNavbar />
+      {/* <AboutNavbar /> */}
 
       {/* Top section with background image */}
-      <div
+      {/* <div
         className="bg-cover bg-center brightness-50 bg-no-repeat"
         style={{ backgroundImage: 'url("./trading/a2.jpg")', height: "400px" }}>
-        {/* Buttons */}
+      
+      </div> */}
+
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full z-20">
+          <AboutNavbar />
+        </div>
+        <div
+          className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
+          style={{
+            backgroundImage: 'url("./trading/a2.jpg")',
+            height: "400px",
+          }}>
+          {/* Buttons */}
+        </div>
       </div>
 
       <h1 className="hidden md:block md:text-4xl font-bold px-10 pt-20">

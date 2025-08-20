@@ -176,7 +176,7 @@ const HomeHero = () => {
         /> */}
         <img
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
-          src="/b1.jpg"
+          src="/b3.jpg"
           alt="Banner"
         />
 

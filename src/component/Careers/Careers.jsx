@@ -17,16 +17,31 @@ const Careers = () => {
   return (
     <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
-      <AboutNavbar />
+      {/* <AboutNavbar /> */}
 
       {/* Top section with background image */}
-      <div
+      {/* <div
         className="bg-cover bg-center brightness-50 bg-no-repeat"
         style={{
           backgroundImage:
             'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
           height: "400px",
-        }}></div>
+        }}></div> */}
+
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full z-20">
+          <AboutNavbar />
+        </div>
+        <div
+          className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
+          style={{
+            backgroundImage:
+              'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
+            height: "400px",
+          }}>
+          {/* Buttons */}
+        </div>
+      </div>
 
       <div>
         <div className="flex flex-col lg:flex-row md:pt-20 justify-between md items-start gap-8 sm:gap-10 px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">

@@ -44,16 +44,31 @@ const OnsiteService = () => {
   return (
     <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
-      <AboutNavbar />
+      {/* <AboutNavbar /> */}
 
       {/* Top section with background image */}
-      <div
+      {/* <div
         className="bg-cover bg-center brightness-50 bg-no-repeat"
         style={{
           backgroundImage:
             'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
           height: "400px",
-        }}></div>
+        }}></div> */}
+
+      <div className="relative">
+        <div className="absolute top-0 left-0 w-full z-20">
+          <AboutNavbar />
+        </div>
+        <div
+          className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
+          style={{
+            backgroundImage:
+              'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
+            height: "400px",
+          }}>
+          {/* Buttons */}
+        </div>
+      </div>
 
       <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
         Language Interpretation :
