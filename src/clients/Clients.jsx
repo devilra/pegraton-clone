@@ -70,7 +70,6 @@ const Clients = () => {
         <Slider {...mobileSettings}>
           {images.map((img, index) => (
             <div key={index} className="py-10 px-4">
-              {console.log(img)}
               <img
                 src={`/our_clients/${img}`}
                 alt={`slide-${index}`}
