@@ -24,6 +24,18 @@ function AboutNavbar() {
     { title: "CAREERS", to: "/careers" },
   ];
 
+  const mobNavitems = [
+    { title: "HOME", to: "/" },
+    { title: "ABOUT", to: "/about" },
+
+    { title: "ONSITE SUPPORT SERVICES(OSS)", to: "/oss" },
+    { title: "TRADING", to: "/trading" },
+
+    { title: "LAUNGUAGE INTERPRETATION", to: "/launguage" },
+    { title: "CONTACT", to: "/contact" },
+    { title: "CAREERS", to: "/careers" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -43,7 +55,7 @@ function AboutNavbar() {
   return (
     <nav
       className={`top-0 left-0 md:pt-3 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
-        md:backdrop-blur-lgv backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
+        md:backdrop-blur-lgv fixed md:relative backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
          
       `}>
       {/* Logo */}
@@ -55,7 +67,7 @@ function AboutNavbar() {
           to="/"
           className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
           <img
-            src="/logo.png"
+            src="/logo1.png"
             className="h-20 md:w-full mr-2 md:mr-0 md:h-20 "
           />
         </Link>
@@ -163,7 +175,7 @@ function AboutNavbar() {
         <button onClick={toggleMenu} className="flex justify-end">
           <FaTimes className="text-white" />
         </button>
-        {navitems.map((page) => (
+        {mobNavitems.map((page) => (
           <div key={page.title} className="flex flex-col items-center">
             <Link
               to={page.to}
