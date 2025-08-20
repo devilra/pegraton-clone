@@ -35,10 +35,47 @@ const data = [
   },
 ];
 
+const companies = [
+  "TEAL",
+  "TATA",
+  "Foxconn",
+  "Pegatron",
+  "ASM",
+  "Bharat Forge",
+  "Great Ventures",
+  "JLK",
+  "Indo-MIM",
+  "J-Axis",
+  "Salcomp",
+  "Luster",
+];
+
+const colors = [
+  { bg: "bg-red-100", text: "text-red-700", border: "border-red-400" },
+  { bg: "bg-green-100", text: "text-green-700", border: "border-green-400" },
+  { bg: "bg-blue-100", text: "text-blue-700", border: "border-blue-400" },
+  {
+    bg: "bg-yellow-100",
+    text: "text-yellow-700",
+    border: "border-yellow-400",
+  },
+  {
+    bg: "bg-purple-100",
+    text: "text-purple-700",
+    border: "border-purple-400",
+  },
+  { bg: "bg-pink-100", text: "text-pink-700", border: "border-pink-400" },
+  { bg: "bg-teal-100", text: "text-teal-700", border: "border-teal-400" },
+];
+
 const OnsiteService = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const handleClick = (index) => {
     setActiveIndex(index);
+  };
+
+  const getRandomColor = () => {
+    return colors[Math.floor(Math.random() * colors.length)];
   };
 
   return (
@@ -64,7 +101,7 @@ const OnsiteService = () => {
         Onsite Support Service (OSS) :
       </h1> */}
 
-      <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
+      <div className="bg-white  py-10 md:pt-20 px-4 md:pl-32 md:pr-20">
         {/* className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 "> */}
         <div className="">
           {/* LEFT SECTION */}
@@ -77,7 +114,7 @@ const OnsiteService = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="md:w-[500px]">
+          <div className="">
             <p className="text-sm uppercase text-gray-500 font-semibold">
               Onsite Support Service (OSS)
             </p>
@@ -85,7 +122,7 @@ const OnsiteService = () => {
             <h3 className="text-2xl font-bold mt-2">
               Engineering Excellence, Delivered Onsite.
             </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            {/* <p className="text-gray-700 mt-2 leading-relaxed">
               At{" "}
               <span className="font-semibold">
                 SANSIRONG INTERNATIONAL PRIVATE LIMITED
@@ -93,91 +130,142 @@ const OnsiteService = () => {
               is a leading Contract Development and Manufacturing Organisation
               (CDMO) in the medtech, consumer electronics, and automotive
               industries.
-            </p>
+            </p> */}
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Our support ranges from full turnkey services to bespoke
-              solutions, backed by over three decades of custom automation and
-              precision engineering experience.
+              At Sansirong International Pvt Ltd, we specialize in delivering
+              Onsite Support Services (OSS) for leading global and domestic
+              organizations. Our team of 200+ highly skilled L1, L2 & L3
+              engineers from diverse disciplines — Mechanical, Electrical,
+              Electronics, Automation, and Software Engineering — ensures that
+              our clients achieve uninterrupted operations, higher efficiency,
+              and faster execution.
             </p>
 
             <h3 className="text-2xl font-bold mt-6">
-              Design Anywhere, Build Anywhere
+              Our Esteemed OSS Clients
             </h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            {/* <p className="text-gray-700 mt-2 leading-relaxed">
               From concept to commercialisation, our versatile “Design
               Everywhere, Build Anywhere” approach ensures we can innovate and
               develop products globally while manufacturing them at the most
               advantageous locations.
-            </p>
+            </p> */}
+            <h1 className="text-gray-500 py-5 text-xl font-bold">
+              We proudly support some of the world’s most respected companies:
+            </h1>
+            <div className="md:max-w-4xl md:my-20 gap-5  mx-auto grid grid-cols-4 md:grid-cols-6">
+              {companies.map((company, index) => {
+                const color = getRandomColor();
+                return (
+                  <span
+                    key={index}
+                    className={`px-4 inline-block text-center rounded  py-2 text-sm font-semibold ${color.bg} ${color.text} ${color.border}`}>
+                    {company}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         </div>
 
         {/* section -3 */}
         <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
           {/* LEFT SECTION */}
-          <div className="order-2">
+          {/* <div className="order-2">
             <img
               src="./oss/02.jpg"
               alt="Factory"
               className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
             />
-          </div>
+          </div> */}
 
           {/* RIGHT SECTION */}
-          <div className="md:w-[500px] order-1">
-            <p className="text-sm uppercase text-gray-500 font-semibold">
+          <div className="">
+            {/* <p className="text-sm uppercase text-gray-500 font-semibold">
               Scalable Production to Meet Market Demand
-            </p>
+            </p> */}
 
-            <h3 className="text-2xl font-bold mt-2">
-              At SANSIRONG INTERNATIONAL PRIVATE LIMITED{" "}
-            </h3>
+            <h3 className="text-2xl font-bold mt-2">Our Engineering Levels</h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
-              Our production capabilities are highly scalable, allowing us to
-              ramp up or down to meet varying market demands efficiently.
+              Engineers (Frontline Support): Handle first-level troubleshooting,
+              preventive maintenance, and basic operational support to ensure
+              smooth day-to-day functioning.
             </p>
-            <h1 className="text-2xl font-bold mt-2">Cost-Effectiveness</h1>
-            <p className="text-sm uppercase text-gray-500 font-semibold">
-              At SANSIRONG INTERNATIONAL PRIVATE LIMITED{" "}
+            {/* <h1 className="text-2xl font-bold mt-2">Cost-Effectiveness</h1> */}
+            <p className="text-sm md:text-lg uppercase py-5 leading-[30px] text-gray-500 font-semibold">
+              Engineers (Advanced Support): Manage complex issues, system
+              integration, process optimization, and detailed problem-solving.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Our operations are optimized for cost-efficiency, providing
-              high-quality products and services at competitive prices. Our
-              multiple factory sites across different regions also allow us to
-              strategically manage production to minimize tariffs and reduce
-              costs for our clients.
+              Engineers (Expert Support): Provide high-level technical
+              expertise, root cause analysis, design improvements, and advanced
+              automation/software solutions.
             </p>
 
-            <h3 className="text-2xl font-bold mt-6">
+            {/* <h3 className="text-2xl font-bold mt-6">
               Strategic Headquarters and Factory Locations
-            </h3>
+            </h3> */}
             <h1 className="text-sm uppercase text-gray-500 font-semibold">
-              At SANSIRONG INTERNATIONAL PRIVATE LIMITED
+              Digital Tools & Workforce Benefits
             </h1>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Headquartered in Singapore, with factory sites in multiple
-              locations, we have a strategic edge to serve both Western and
-              Eastern markets effectively.
+              Dedicated OSS Application – for real-time monitoring of
+              attendance, performance reports, and learning modules.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Attendance Bonus & Skill Allowance – rewarding engineers for
+              discipline, upskilling, and consistent performance.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Continuous Learning & Development – inbuilt training programs to
+              strengthen technical and professional capabilities.
+            </p>
+            <h3 className="text-2xl font-bold mt-2">
+              Why Choose Sansirong OSS?
+            </h3>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Multi-disciplinary Expertise – end-to-end support across
+              engineering and technology.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Layered Support Structure – L1, L2 & L3 engineers to cover every
+              level of client need.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Scalable Workforce – deployable teams tailored to project
+              requirements.
+            </p>
+
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Proven Industry Trust – delivering results for world-class
+              clients.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              Operational Excellence – ensuring reliability, quality, and
+              seamless execution.
+            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">
+              With Sansirong OSS, you gain a trusted partner committed to
+              delivering engineering excellence onsite, keeping your business
+              operations strong and future-ready
             </p>
           </div>
         </div>
 
         {/* section-3 */}
-        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
+        <div className="">
           {/* LEFT SECTION */}
-          <div className="">
+          {/* <div className="">
             <img
               src="./oss/o4.jpg"
               alt="Factory"
               className="w-full md:w-[500px] md:h-[650px] rounded-md shadow"
             />
-          </div>
+          </div> */}
 
           {/* RIGHT SECTION */}
-          <div className="md:w-[500px] ">
-            <h3 className="text-2xl font-bold mt-2">
-              Planning to Engaging the oss through mobile application
-            </h3>
+          {/* <div className="">
+            <h3 className="text-2xl font-bold mt-2">Our Engineering Levels</h3>
             <p className="text-sm uppercase text-gray-500 font-semibold">
               At SANSIRONG INTERNATIONAL PRIVATE LIMITED
             </p>
@@ -209,16 +297,16 @@ const OnsiteService = () => {
               <li>Vision: Camera Setup, Template Matching, Image Parameters</li>
               <li>Debugging: Software Logs, Root Cause Analysis</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* section -4  */}
 
-      <div>
+      {/* <div>
         <section className="w-full bg-white">
           <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16 flex flex-col lg:flex-row items-start gap-10">
-            {/* Left Text */}
+           
             <div className="flex-1 max-w-xl">
               <h2 className="text-3xl lg:text-4xl font-bold  leading-snug">
                 ONSITE SUPPORT <br /> Service (OSS)
@@ -237,7 +325,7 @@ const OnsiteService = () => {
               </p>
             </div>
 
-            {/* Right Images */}
+          
             <div className="grid grid-cols-2 gap-4 justify-items-center">
               <img
                 src="/oss/p1.png"
@@ -262,10 +350,6 @@ const OnsiteService = () => {
             </div>
           </div>
         </section>
-      </div>
-
-      {/* <div>
-        <h1 className="text-center text-2xl font-bold">Automation</h1>
       </div> */}
 
       {/* Footer */}
