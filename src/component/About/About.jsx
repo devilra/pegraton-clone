@@ -253,11 +253,11 @@ const About = () => {
 
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-start text-[#29295e]  mb-10">
+          <h2 className="text-3xl font-bold text-center text-[#29295e]  mb-10">
             Meet Our Team
           </h2>
-          <div className="md:pl-40 pt-10">
-            <div className="grid gap-6 md:gap-2 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="md:pl-[330px] pt-10">
+            <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div
                   key={index}
@@ -268,7 +268,9 @@ const About = () => {
                     className="w-full h-64 md:w-[300px] object-cover"
                   />
                   <div className="p-4 text-center">
-                    <h3 className="text-lg font-semibold">{member.name}</h3>
+                    <h3 className="text-lg text-[#29295e] font-semibold">
+                      {member.name}
+                    </h3>
                     <p className="text-sm text-gray-500">{member.role}</p>
                   </div>
                 </div>
