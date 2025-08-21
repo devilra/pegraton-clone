@@ -253,7 +253,7 @@ const About = () => {
 
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-bold text-start text-[#29295e]  mb-10">
             Meet Our Team
           </h2>
           <div className="md:pl-40 pt-10">
