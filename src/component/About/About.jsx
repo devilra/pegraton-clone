@@ -166,7 +166,7 @@ const About = () => {
       <section className="bg-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side */}
         <div className="flex-1">
-          <p className="text-sm font-semibold text-gray-800">About Us</p>
+          {/* <p className="text-sm font-semibold text-gray-800">About Us</p> */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#1d2f6f] mt-2">
             Who We Are <span className="text-[#1d2f6f]">-</span> What We Do
           </h2>
@@ -198,13 +198,13 @@ const About = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <img
             src="/about/t.jpg" // replace with your actual image path
             alt="Translator Services"
             className="w-full md:h-[500px] rounded-lg shadow-lg"
           />
-        </div>
+        </div> */}
       </section>
       <section className="bg-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side */}
@@ -229,13 +229,13 @@ const About = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex-1 order-1">
+        {/* <div className="flex-1 order-1">
           <img
             src="/about/t2.jpg" // replace with your actual image path
             alt="Translator Services"
             className="w-full md:h-[500px] rounded-lg shadow-lg"
           />
-        </div>
+        </div> */}
       </section>
       <section className="bg-[#f8fcff] py-16">
         <div className="max-w-4xl mx-auto text-center px-4">
