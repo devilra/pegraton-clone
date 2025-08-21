@@ -153,13 +153,13 @@ const OnsiteService = () => {
             <h1 className="text-gray-500 py-5 text-xl font-bold">
               We proudly support some of the world’s most respected companies:
             </h1>
-            <div className="md:max-w-4xl md:my-20 gap-5  mx-auto grid grid-cols-4 md:grid-cols-6">
+            <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-3 md:grid-cols-6">
               {companies.map((company, index) => {
                 const color = getRandomColor();
                 return (
                   <span
                     key={index}
-                    className={`px-4 inline-block text-center rounded  py-2 text-sm font-semibold ${color.bg} ${color.text} ${color.border}`}>
+                    className={`px-4 inline-block text-center rounded bg-opacity-40  py-2 text-[13px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
                     {company}
                   </span>
                 );

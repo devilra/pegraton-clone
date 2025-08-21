@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AboutNavbar from "../About/AboutNavbar";
 import AboutFooter from "../About/AboutFooter";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -34,6 +35,36 @@ const data = [
       "Bizten can support you throughout the product development process for your assembly and parts needs, from simple to complex, at very competitive prices. Luminaires are holding or supporting devices used in the manufacturing industry and we are proficient in making luminaires for most manufacturing processes in the industries in which we operate.",
   },
 ];
+
+const serve = [
+  "Manufacturing & Engineering",
+  "Automotive & Aerospace",
+  "Healthcare & Pharma",
+  "IT & Software",
+  "Education & Training",
+  "International Trade & Business",
+];
+
+const colors = [
+  { bg: "bg-indigo-100", text: "text-indigo-700", border: "border-indigo-400" },
+  { bg: "bg-green-100", text: "text-green-700", border: "border-green-400" },
+  { bg: "bg-blue-100", text: "text-blue-700", border: "border-blue-400" },
+  {
+    bg: "bg-yellow-100",
+    text: "text-yellow-700",
+    border: "border-yellow-400",
+  },
+  {
+    bg: "bg-purple-100",
+    text: "text-purple-700",
+    border: "border-purple-400",
+  },
+  { bg: "bg-orange-100", text: "text-orange-700", border: "border-orange-400" },
+];
+
+const getRandomColor = () => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 const OnsiteService = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,50 +101,115 @@ const OnsiteService = () => {
         </div>
       </div>
 
-      <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
+      {/* <h1 className="hidden md:block md:text-4xl font-bold px-5 pt-20">
         Language Interpretation :
-      </h1>
+      </h1> */}
 
       {/* section--1 */}
 
-      <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
-        <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
+      <div className="bg-white  py-10 md:pt-20 px-4 md:pl-32 md:pr-24">
+        <div className="">
           {/* LEFT SECTION */}
-          <div className="">
+          {/* <div className="">
             <img
               src="./launguage/l1.jpg"
               alt="Factory"
               className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
             />
-          </div>
+          </div> */}
 
           {/* RIGHT SECTION */}
-          <div className="md:w-[500px]">
+          <div className="">
             <p className="text-sm uppercase text-gray-500 font-semibold">
-              Language Interpretation
+              Language Interpretation Services
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">Who We Are</h3>
+            <h3 className="text-2xl py-2 font-bold mt-2">
+              Breaking Barriers, Building Connections
+            </h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
-              SANSIRONG INTERNATIONAL PRIVATE LIMITED specializes in delivering
-              industry-specific solutions that bridge communication gaps across
-              languages. With a deep understanding of sector-specific
-              terminology, we empower businesses to achieve total clarity and
-              understanding with their clients, partners, and communities.
-              Trusted by leaders across healthcare, finance, technology,
-              insurance, telecom, defense, and more, Sansirong helps
-              organizations overcome language access challenges with precision
-              and professionalism. Let us support your mission with tailored
-              language and support services built for today’s global
-              environment.
+              At Sansirong International Pvt Ltd, we understand the power of
+              clear communication. In today’s global business environment,
+              language should never be a barrier. Our professional
+              interpretation services ensure seamless communication between
+              businesses, partners, and clients across borders.
             </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
+
+            <h3 className="text-2xl font-bold py-2 mt-2">
+              Our Interpretation Solutions
+            </h3>
+
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Onsite Interpretation – Expert interpreters available for
+              meetings, conferences, and factory visits.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Remote / Virtual Interpretation – Real-time interpretation support
+              for video calls, webinars, and global collaborations.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Multilingual Support – Covering major global and regional
+              languages to enable cross-cultural communication.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              {" "}
+              Industry-Specific Expertise – Specialized interpreters for
+              technical, engineering, manufacturing, and business environments.
+            </p>
+
+            <h3 className="text-2xl font-bold py-2 mt-2">
+              Why Choose Sansirong?
+            </h3>
+
+            <ul className="text-gray-700 mt-2 leading-relaxed custom-list space-y-3">
+              <li> Trained & Certified Professional Interpreters</li>
+              <li>
+                Real-time, Accurate, and Culturally Sensitive Communication
+              </li>
+              <li>
+                Support for Business, Legal, Medical, and Technical discussions
+              </li>
+              <li>Flexible Engagement: Hourly, Daily, or Long-term support</li>
+              <li>Trusted by Industry Leaders for Global Operations</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold py-2 mt-2">
+              Industries We Serve
+            </h3>
+
+            <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-2 md:grid-cols-3">
+              {serve.map((s, i) => {
+                const color = getRandomColor();
+                return (
+                  <span
+                    className={`px-4 md:px-2 inline-block text-center rounded  py-2 md:py-3 text-[13px] md:text-[15px] bg-opacity-40 font-semibold ${color.bg} ${color.text} ${color.border}`}
+                    key={i}>
+                    {s}
+                  </span>
+                );
+              })}
+            </div>
+            <h3 className="text-2xl font-bold py-2 mt-2">Call to Action</h3>
+            <p className="text-gray-700 mt-2 leading-relaxed md:w-[600px]">
+              Seamless communication starts here. Whether you need onsite or
+              virtual language interpretation, our experts ensure every word is
+              understood.
+              <br />
+              <span className="pt-5 inline-block text-blue-500 text-[15px] font-[500]">
+                <Link to="/careers">Work With Us</Link>
+              </span>
+              <br />
+              <span className="text-blue-500 text-[15px] font-[500]">
+                <Link to="/contact">Contact Our Team</Link>
+              </span>
+            </p>
+            {/* <p className="text-gray-700 mt-3 leading-relaxed">
               You deserve to work with the world’s finest interpreters and
               translators. Our linguists must meet the industry’s most rigorous
               standards of excellence.
-            </p>
+            </p> */}
 
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            {/* <p className="text-gray-700 mt-2 leading-relaxed">
               Sansirong International Private Limited understands the unique
               language and communication needs of your industry. With expertise
               across sectors such as healthcare, financial services, technology,
@@ -125,12 +221,12 @@ const OnsiteService = () => {
               barriers—enhancing clarity, compliance, and customer satisfaction
               at every level. Discover how we can help your organization
               navigate its communication challenges with confidence.
-            </p>
+            </p> */}
           </div>
         </div>
 
-        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
-          {/* LEFT SECTION */}
+        {/* <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
+      
           <div className="order-2">
             <img
               src="./launguage/l2.jpg"
@@ -139,7 +235,7 @@ const OnsiteService = () => {
             />
           </div>
 
-          {/* RIGHT SECTION */}
+       
           <div className="md:w-[500px] order-1">
             <p className="text-sm uppercase text-gray-500 font-semibold"></p>
 
@@ -185,10 +281,10 @@ const OnsiteService = () => {
               confidence.
             </p>
           </div>
-        </div>
-
+        </div> */}
+        {/* 
         <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
-          {/* LEFT SECTION */}
+        
           <div className="">
             <img
               src="./launguage/l3.png"
@@ -197,7 +293,7 @@ const OnsiteService = () => {
             />
           </div>
 
-          {/* RIGHT SECTION */}
+       
           <div className="md:w-[500px] ">
             <h1 className="text-2xl md:text-4xl py-5 font-extrabold mt-2">
               Types of Interpretations offered:
@@ -258,9 +354,8 @@ const OnsiteService = () => {
               understand regional business dynamics more effectively.
             </p>
           </div>
-        </div>
-        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
-          {/* LEFT SECTION */}
+        </div> */}
+        {/* <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
           <div className="order-2">
             <img
               src="./launguage/l4.jpg"
@@ -269,7 +364,6 @@ const OnsiteService = () => {
             />
           </div>
 
-          {/* RIGHT SECTION */}
           <div className="md:w-[500px] order-1 ">
             <h1 className="text-2xl md:text-4xl py-5 font-extrabold mt-2">
               Staff Recruitment & Assessment
@@ -332,13 +426,13 @@ const OnsiteService = () => {
               audiences, building your brand on a global stage.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div>
+      {/* <div>
         <section className="w-full bg-white">
           <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16 flex flex-col lg:flex-row items-start gap-10">
-            {/* Left Text */}
+            
             <div className="flex-1 max-w-xl">
               <h2 className="text-3xl lg:text-4xl font-bold  leading-snug">
                 Language Interpretation
@@ -361,7 +455,7 @@ const OnsiteService = () => {
               </p>
             </div>
 
-            {/* Right Images */}
+            
             <div className="grid grid-cols-2 gap-4 justify-items-center">
               <img
                 src="/launguage/l5.jpg"
@@ -386,10 +480,6 @@ const OnsiteService = () => {
             </div>
           </div>
         </section>
-      </div>
-
-      {/* <div>
-        <h1 className="text-center text-2xl font-bold">Automation</h1>
       </div> */}
 
       {/* Footer */}

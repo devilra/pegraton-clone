@@ -204,3 +204,18 @@ ul {
     border-color: #0ff;
   }
 }
+
+
+.custom-list {
+  list-style: none;
+  /* default bullet remove */
+  padding-left: 1.5rem;
+}
+
+.custom-list li::before {
+  content: "➤";
+  /* Unicode arrow */
+  color: teal;
+  font-weight: bold;
+  margin-right: 8px;
+}
