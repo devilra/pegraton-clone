@@ -160,6 +160,11 @@ const Trading = () => {
           }}>
           {/* Buttons */}
         </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+            Trading
+          </h1>
+        </div>
       </div>
 
       {/* <h1 className="hidden md:block md:text-4xl font-bold px-10 pt-20">
@@ -179,10 +184,6 @@ const Trading = () => {
 
           {/* RIGHT SECTION */}
           <div className="">
-            <p className="text-sm uppercase text-gray-500 font-semibold">
-              Trading
-            </p>
-
             <h3 className="text-2xl py-2 font-bold mt-2">
               Trading & Supply Chain Management Services Efficient Trading.
               Seamless Supply Chains. Global Reach.

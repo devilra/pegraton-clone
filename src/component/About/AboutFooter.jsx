@@ -16,7 +16,7 @@ const AboutFooter = () => {
           {/* Logo & Socials */}
           <div>
             <img
-              src="/logo.png" // Replace with your logo path
+              src="/logo1.png" // Replace with your logo path
               alt="Logo"
               className="w-16 mb-4"
             />

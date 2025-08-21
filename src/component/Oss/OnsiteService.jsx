@@ -85,6 +85,7 @@ const OnsiteService = () => {
         <div className="absolute top-0 left-0 w-full z-20">
           <AboutNavbar />
         </div>
+
         <div
           className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
           style={{
@@ -92,6 +93,11 @@ const OnsiteService = () => {
             height: "400px",
           }}>
           {/* Buttons */}
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+            Onsite Support Service (OSS)
+          </h1>
         </div>
       </div>
 
@@ -115,10 +121,6 @@ const OnsiteService = () => {
 
           {/* RIGHT SECTION */}
           <div className="">
-            <p className="text-sm uppercase text-gray-500 font-semibold">
-              Onsite Support Service (OSS)
-            </p>
-
             <h3 className="text-2xl font-bold mt-2">
               Engineering Excellence, Delivered Onsite.
             </h3>
