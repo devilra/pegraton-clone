@@ -68,7 +68,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/"
           onClick={closeMenu}
-          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -85,7 +85,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/about"
           onClick={closeMenu}
-          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -102,7 +102,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/oss"
           onClick={closeMenu}
-          className="text-[16px] relative flex justify-center items-center md:gap-1 lg:gap-3 transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[15px] relative flex justify-center items-center md:gap-1 lg:gap-3 transition-all duration-300 ease-in-out hover:text-white"
           onMouseEnter={(e) => {
             setIsServicesOpen(!isServicesOpen);
           }}
@@ -151,7 +151,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/contact"
           onClick={closeMenu}
-          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}
@@ -165,7 +165,7 @@ function Navbar({ aboutScroll }) {
         <Link
           to="/careers"
           onClick={closeMenu}
-          className="text-[16px] transition-all duration-300 ease-in-out hover:text-white"
+          className="text-[15px] transition-all duration-300 ease-in-out hover:text-white"
           style={{
             transition: "all 0.3s ease-in-out",
           }}

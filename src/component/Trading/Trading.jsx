@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 // const data = [
 //   {
@@ -90,6 +91,51 @@ const Trading = () => {
     setActiveIndex(index);
   };
 
+  // const serve = [
+  //   "Automotive & Aerospace",
+  //   "Electronics & Manufacturing",
+  //   "Consumer Goods & Retail",
+  //   "Energy & Industrial Products",
+  //   "Healthcare & Pharma",
+  // ];
+
+  const serve = [
+    {
+      title: "Automotive & Aerospace",
+      bg: "bg-slate-100",
+      text: "text-slate-700",
+      border: "border-slate-400",
+    },
+    {
+      title: "Electronics & Manufacturing",
+      bg: "bg-green-100",
+      text: "text-green-700",
+      border: "border-green-400",
+    },
+    {
+      title: "Consumer Goods & Retail",
+      bg: "bg-rose-100",
+      text: "text-rose-700",
+      border: "border-rose-400",
+    },
+    {
+      title: "Energy & Industrial Products",
+      bg: "bg-yellow-100",
+      text: "text-yellow-700",
+      border: "border-yellow-400",
+    },
+    {
+      title: "Healthcare & Pharma",
+      bg: "bg-purple-100",
+      text: "text-purple-700",
+      border: "border-purple-400",
+    },
+  ];
+
+  const getRandomColor = () => {
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
+
   return (
     <div className=" h-screen overflow-y-scroll">
       {/* Navbar */}
@@ -116,59 +162,116 @@ const Trading = () => {
         </div>
       </div>
 
-      <h1 className="hidden md:block md:text-4xl font-bold px-10 pt-20">
+      {/* <h1 className="hidden md:block md:text-4xl font-bold px-10 pt-20">
         TRADING :
-      </h1>
+      </h1> */}
 
-      <div className="bg-white  py-10 md:pt-20 px-4 md:px-40">
-        <div className="flex flex-col md:flex-row md:justify-between gap-5 md:gap-10 ">
+      <div className="bg-white py-10 md:pt-20 px-4 md:pl-32 md:pr-24">
+        <div className=" ">
           {/* LEFT SECTION */}
-          <div className="">
+          {/* <div className="">
             <img
               src="./trading/t1.jpg"
               alt="Factory"
               className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
             />
-          </div>
+          </div> */}
 
           {/* RIGHT SECTION */}
-          <div className="md:w-[500px]">
+          <div className="">
             <p className="text-sm uppercase text-gray-500 font-semibold">
               Trading
             </p>
 
-            <h3 className="text-2xl font-bold mt-2">Trading & Sourcing</h3>
+            <h3 className="text-2xl py-2 font-bold mt-2">
+              Trading & Supply Chain Management Services Efficient Trading.
+              Seamless Supply Chains. Global Reach.
+            </h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
-              At{" "}
-              <span className="font-semibold">
-                SANSIRONG INTERNATIONAL PRIVATE LIMITED
-              </span>{" "}
-              trading company, also known as a mercantile company, is a
-              commercial business entity that buys and sells various goods and
-              commodities. These companies are involved in various industries
-              and are typically responsible for all stages of the supply chain,
-              including processing, distribution, and sales. Trading companies
-              can specialize in specific business fields or operate across
-              multiple industries, often playing a crucial role in connecting
-              producers and consumers in the global marketplace. In the context
-              of international trade, trading companies are often involved in
-              commerce with foreign nations or in overseas territories, handling
-              a diverse array of products, from consumer goods to industrial
-              materials.
+              At Sansirong International Pvt Ltd, we help businesses move
+              smarter, faster, and cost-effectively with our end-to-end trading
+              and supply chain management solutions. From sourcing raw materials
+              to delivering finished products, we ensure reliability,
+              transparency, and efficiency at every step.
             </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Trading companies specialize in international import and export
-              services. They act as intermediaries between manufacturers and
-              overseas buyers, which is crucial in global trade. Unlike
-              manufacturers, trading companies source goods from various
-              producers and then sell them to clients worldwide.
+
+            <h3 className="text-2xl font-bold py-2 mt-2">Our Services</h3>
+
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Global Trading Solutions – Sourcing, procurement, and distribution
+              of quality products across industries.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Vendor & Supplier Management – Building strong partnerships and
+              ensuring reliable supply.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Inventory Management – Optimized stock levels with minimal holding
+              costs.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              {" "}
+              Logistics & Transportation – Domestic & international freight
+              (air, sea, and land).
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              Customs & Compliance – Hassle-free documentation and regulatory
+              adherence.
+            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">
+              {" "}
+              End-to-End Supply Chain Solutions – Integrated planning,
+              execution, and monitoring.
+            </p>
+
+            <h3 className="text-2xl font-bold py-2 mt-2">
+              Why Partner with Sansirong?
+            </h3>
+
+            <ul className="text-gray-700 mt-2 leading-relaxed custom-list space-y-3">
+              <li> Global supplier network & trading expertise</li>
+              <li>Cost-effective procurement with quality assurance</li>
+              <li>Real-time tracking & reporting systems</li>
+              <li>Industry-specific supply chain customization</li>
+              <li>
+                Dedicated L1, L2 & L3 professionals for operations & support
+              </li>
+            </ul>
+
+            <h3 className="text-2xl font-bold py-2 mt-2">
+              Industries We Support
+            </h3>
+
+            <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-2 md:grid-cols-3">
+              {serve.map((s, i) => {
+                return (
+                  <span
+                    className={`px-4 md:px-2 inline-block text-center rounded  py-2 md:py-3 text-[13px] md:text-[15px] bg-opacity-40 font-semibold ${s.bg} ${s.text} ${s.border}`}
+                    key={i}>
+                    {s.title}
+                  </span>
+                );
+              })}
+            </div>
+            <h3 className="text-2xl font-bold py-2 mt-2">Call to Action</h3>
+            <p className="text-gray-700 mt-2 leading-relaxed md:w-[600px]">
+              Your business growth starts with a strong supply chain. Let us
+              handle the complexity while you focus on scaling your business.
+              <br />
+              <span className="pt-5 inline-block text-blue-500 text-[15px] font-[500]">
+                <Link>Explore Trading Solutions</Link>
+              </span>
+              <br />
+              <span className="text-blue-500 text-[15px] font-[500]">
+                <Link>Connect with Our Experts</Link>
+              </span>
             </p>
           </div>
         </div>
 
         {/* section -3 */}
-        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
-          {/* LEFT SECTION */}
+        {/* <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
+          
           <div className="order-2">
             <img
               src="./trading/t2.jpg"
@@ -177,7 +280,7 @@ const Trading = () => {
             />
           </div>
 
-          {/* RIGHT SECTION */}
+          
           <div className="md:w-[500px] order-1">
             <h1 className="text-2xl font-bold mt-2">Trading & Sourcing</h1>
             <h3 className="text-2xl font-bold mt-2">
@@ -198,10 +301,9 @@ const Trading = () => {
               materials.
             </p>
           </div>
-        </div>
+        </div> */}
 
-        {/* section-3 */}
-        <div className="py-16">
+        {/* <div className="py-16">
           <h1 className="text-3xl font-bold">
             Should you work with a Trading Company? What are the Types of
             Companies you’ll find while sourcing?
@@ -280,47 +382,47 @@ const Trading = () => {
             salesperson to take a photograph of themselves in the factory,
             holding up a piece of paper with your name and date.{" "}
           </p>
-        </div>
-        <div>
-          <section className="bg-[#f8fcff] py-16">
-            <div className="max-w-4xl mx-auto text-center px-4">
-              <h4 className="text-[#1e3a8a] text-lg font-semibold">
-                Testimonial
-              </h4>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-10">
-                What People Think and experienced
-              </h2>
+        </div> */}
+      </div>
+      <div>
+        <section className="bg-[#f8fcff] py-16">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h4 className="text-[#1e3a8a] text-lg font-semibold">
+              Testimonial
+            </h4>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-10">
+              What People Think and experienced
+            </h2>
 
-              <Swiper
-                modules={[Navigation]}
-                navigation={true}
-                loop={true}
-                className="pb-10">
-                {testimonials.map((t, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="flex flex-col items-center">
-                      <img
-                        src={t.image}
-                        alt={t.name}
-                        className="w-20 h-20 rounded-full mb-4"
-                      />
-                      <h3 className="text-[#1e3a8a] font-semibold">{t.name}</h3>
-                      <div className="flex justify-center my-3 text-yellow-500">
-                        {Array.from({ length: Math.floor(t.rating) }).map(
-                          (_, i) => (
-                            <FaStar key={i} />
-                          )
-                        )}
-                        {t.rating % 1 !== 0 && <FaStarHalfAlt />}
-                      </div>
-                      <p className="text-gray-500 max-w-2xl">{t.text}</p>
+            <Swiper
+              modules={[Navigation]}
+              navigation={true}
+              loop={true}
+              className="pb-10">
+              {testimonials.map((t, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center">
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-20 h-20 rounded-full mb-4"
+                    />
+                    <h3 className="text-[#1e3a8a] font-semibold">{t.name}</h3>
+                    <div className="flex justify-center my-3 text-yellow-500">
+                      {Array.from({ length: Math.floor(t.rating) }).map(
+                        (_, i) => (
+                          <FaStar key={i} />
+                        )
+                      )}
+                      {t.rating % 1 !== 0 && <FaStarHalfAlt />}
                     </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </section>
-        </div>
+                    <p className="text-gray-500 max-w-2xl">{t.text}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </section>
       </div>
 
       {/* section -4  */}

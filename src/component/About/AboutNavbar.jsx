@@ -84,7 +84,7 @@ function AboutNavbar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex justify-end   md:pr-14 md:gap-10  md:text-[16px]">
+      <div className="hidden md:flex justify-end   md:pr-14 md:gap-10  md:text-[15px]">
         {navitems.map((page, index) => (
           <div key={page.title} className="relative">
             {page.title === "SERVICES" ? (
