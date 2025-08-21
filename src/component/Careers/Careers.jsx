@@ -41,6 +41,11 @@ const Careers = () => {
           }}>
           {/* Buttons */}
         </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+            Carrers
+          </h1>
+        </div>
       </div>
 
       <div>

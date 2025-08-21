@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AboutNavbar from "./AboutNavbar";
@@ -114,11 +115,91 @@ const teamLeaders = [
     img: "/hr/h2.jpeg",
   },
   {
-    name: "HEMACHANDIRAN SOMASKANDAN ",
-    role: "TECHNICAL MANAGER ( Learning and OSS opertaions)",
+    name: " Hemachandiran Somaskandan ",
+
+    role: "Technical Manager ( Learning and OSS opertaions)",
     img: "/hr/h1.jpeg",
   },
+  {
+    name: "Prasath Sridaran",
+    role: "Managing Director",
+    img: "/hr/h3.jpeg",
+  },
 ];
+
+const partners = [
+  {
+    img: "/part/1.png",
+  },
+  {
+    img: "/part/2.png",
+  },
+  {
+    img: "/part/3.png",
+  },
+  {
+    img: "/part/4.png",
+  },
+  {
+    img: "/part/5.png",
+  },
+  {
+    img: "/part/6.png",
+  },
+  {
+    img: "/part/7.png",
+  },
+  {
+    img: "/part/8.png",
+  },
+  {
+    img: "/part/9.png",
+  },
+  {
+    img: "/part/10.png",
+  },
+  {
+    img: "/part/11.png",
+  },
+];
+
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 8, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
+const mobSettings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
 const About = () => {
   const [active, setActive] = useState("vision");
@@ -138,6 +219,11 @@ const About = () => {
             height: "400px",
           }}>
           {/* Buttons */}
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+            About
+          </h1>
         </div>
       </div>
 
@@ -176,10 +262,13 @@ const About = () => {
           </div>
         </div>
       </div> */}
-      <section className="bg-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
-        {/* Left Side */}
+
+      <div>
+        <Clients />
+      </div>
+
+      <section className="bg-white py-10 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         <div className="flex-1">
-          {/* <p className="text-sm font-semibold text-gray-800">About Us</p> */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#1d2f6f] mt-2">
             Who We Are <span className="text-[#1d2f6f]">-</span> What We Do
           </h2>
@@ -192,7 +281,7 @@ const About = () => {
           </p>
 
           {/* Stats */}
-          <div className="flex gap-8 mt-10">
+          <div className="flex md:justify-center gap-8 mt-10 md:mt-20">
             <div>
               <h3 className="text-pink-500 text-3xl font-bold">100%</h3>
               <p className="text-sm text-gray-600 mt-1">OSS</p>
@@ -219,13 +308,9 @@ const About = () => {
           />
         </div> */}
       </section>
-      <section className="bg-white py-16 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
+      <section className="bg-white py-5 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side */}
         <div className="flex-1 order-2">
-          <p className="text-sm font-semibold text-gray-800">Trading</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1d2f6f] mt-2">
-            Trading & Sourcing
-          </h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
             By in no ecstatic wondered disposal my speaking. Direct wholly
             valley or uneasy it at really. Sir wish like said dull and need
@@ -239,6 +324,15 @@ const About = () => {
             rapturous situation disposing his. Off say yet ample ten ought
             hence. Depending in newspaper an september do existenc.
           </p>
+          <p className="text-gray-700 mt-3 leading-relaxed">
+            At Sansirong International Pvt Ltd, we specialize in delivering
+            Onsite Support Services (OSS) for leading global and domestic
+            organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers
+            from diverse disciplines — Mechanical, Electrical, Electronics,
+            Automation, and Software Engineering — ensures that our clients
+            achieve uninterrupted operations, higher efficiency, and faster
+            execution.
+          </p>
         </div>
 
         {/* Right Side */}
@@ -251,12 +345,12 @@ const About = () => {
         </div> */}
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 md:mt-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#29295e]  mb-10">
             Meet Our Team
           </h2>
-          <div className="md:pl-[330px] pt-10">
+          <div className="md:pl-[150px] pt-10">
             <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div
@@ -278,14 +372,42 @@ const About = () => {
             </div>
           </div>
         </div>
+        <section className="py-12 hidden md:block mt-32 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...settings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[100px] object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+        <section className="py-12 md:hidden bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...mobSettings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[100px] object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
       </section>
 
       <div>
-        <div>
-          <Clients />
-        </div>
-
-        <section className="bg-[#f8fcff] py-16">
+        {/* <section className="bg-[#f8fcff] py-16">
           <div className="max-w-4xl mx-auto text-center px-4">
             <h4 className="text-[#1e3a8a] text-lg font-semibold">
               Testimonial
@@ -322,7 +444,7 @@ const About = () => {
               ))}
             </Swiper>
           </div>
-        </section>
+        </section> */}
 
         <AboutFooter />
       </div>

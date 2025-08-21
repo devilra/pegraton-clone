@@ -195,7 +195,7 @@ const HomeHero = () => {
       </section>
 
       {/* Section 2 - Blur */}
-      <section className="full-section relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
+      <section className="full-section w-full  relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
         <video
           className="absolute inset-0 w-full h-full mb-5 object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -206,9 +206,9 @@ const HomeHero = () => {
         />
         <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
         <div className="relative z-10 text-white text-4xl">
-          <h1 className="md:hidden text-3xl text-white/85 pt-5 pb-8">
+          {/* <h1 className="md:hidden text-3xl text-white/85 pt-5 pb-8">
             Navigate the future
-          </h1>
+          </h1> */}
           <div className="flex md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
             {/* <video
               key={currentVideoIndex}
@@ -221,7 +221,7 @@ const HomeHero = () => {
               className="w-full h-[200px]  md:h-[300px] rounded-lg md:w-[800px]  object-cover"
             /> */}
 
-            <div className="w-full overflow-y-scroll  md:overflow-hidden h-[200px]  md:h-[315px] pl-5 rounded-lg md:w-[800px] border border-dotted">
+            <div className="w-full overflow-y-scroll  md:overflow-hidden h-[200px]  md:h-[315px] pl-5 md:pl-10 md:pt-5 rounded-lg md:w-[1140px] border border-dotted">
               <h1 className=" text-[18px] md:text-[30px] pr-3 pt-3">
                 About us
               </h1>
@@ -230,20 +230,22 @@ const HomeHero = () => {
                 <h1 className="text-[25px] font-[800] pt-5">
                   Who We Are -What We Do
                 </h1>
-                <p className="text-[16px]  md:w-[700px] font-[500] ">
+                <p className="text-[16px] md:pt-3 md:w-[900px] font-[500] ">
                   Our company specializes in providing comprehensive OSS
                   solutions tailored to meet the needs of various industries. We
                   pride ourselves on delivering skilled and reliable
                   professionals who contribute to the seamless execution of
                   operations.
                 </p>
-                <h1 className="text-[25px]  font-[800] pt-5">
+                {/* <h1 className="text-[25px]  font-[800] pt-5">
                   Trading & Sourcing
-                </h1>
-                <p className="text-[16px]  md:w-[700px] font-[500] md:mb-5 ">
+                </h1> */}
+                <p className="text-[16px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
                   By in no ecstatic wondered disposal my speaking. Direct wholly
                   valley or uneasy it at really. Sir wish like said dull and
-                  need make. Sportsman one bed departure..
+                  need make. Sportsman one bed departure rapturous situation
+                  disposing his. Off say yet ample ten ought hence. Depending in
+                  newspaper an september do existenc...
                   <Link
                     to="/about"
                     className="text-blue-500 text-[15px] cursor-pointer hover:underline">
@@ -268,79 +270,67 @@ const HomeHero = () => {
 
             {/* Right side - grid of smaller images with text */}
 
-            <div className=" max-w-[400px] md:h-[300px] grid grid-cols-3 grid-rows-3  gap-x-3 gap-y-2 ">
-              {/* EV */}
+            {/* <div className=" max-w-[400px] md:h-[300px] grid grid-cols-3 grid-rows-3  gap-x-3 gap-y-2 ">
+             
               <div className="relative rounded-lg  overflow-hidden md:row-span-2   cursor-pointer group   ">
                 <img
                   src="sansirong/s1.jpg"
                   alt="EV"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  OSS SERVICES
-                </div> */}
+             
               </div>
 
-              {/* 5G */}
+            
               <div className="relative rounded-lg overflow-hidden md:row-span-2 cursor-pointer group ">
                 <img
                   src="sansirong/s2.jpg"
                   alt="5G"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  5G
-                </div> */}
+               
               </div>
 
-              {/* IOT & Smart application */}
+             
               <div className="relative rounded-lg overflow-hidden cursor-pointer group  ">
                 <img
                   src="sansirong/s3.jpg"
                   alt="IOT & Smart application"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-semibold text-sm sm:text-base leading-snug">
-                  IOT & Smart <br /> application
-                </div> */}
+              
               </div>
 
-              {/* PEGAVERSE (span 2 columns on sm+, full width on mobile) */}
+              
               <div className="relative rounded-lg overflow-hidden cursor-pointer group ">
                 <img
                   src="about/s1.jpg"
                   alt="PEGAVERSE"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  PEGAVERSE
-                </div> */}
+                
               </div>
 
-              {/* Computing */}
+          
               <div className="relative rounded-lg md:col-span-2 order-2 overflow-hidden  cursor-pointer group  ">
                 <img
                   src="about/s2.jpg"
                   alt="Computing"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  Computing
-                </div> */}
+             
               </div>
 
-              {/* News */}
+              
               <div className="relative rounded-lg order-1 md:h-[98px] md:w-[130px] overflow-hidden md:col-span-1 cursor-pointer group aspect-[4/5] sm:aspect-[3/4]">
                 <img
                   src="about/s3.jpg"
                   alt="News"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* <div className="absolute bottom-2 left-2 text-white font-bold text-lg sm:text-xl">
-                  News
-                </div> */}
+             
               </div>
-            </div>
+            </div> */}
             <div className="hidden md:block  absolute cursor-pointer left-28 bottom-5">
               <Link
                 to="/about"

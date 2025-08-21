@@ -82,6 +82,11 @@ const Contact = () => {
           }}>
           {/* Buttons */}
         </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+            Contact
+          </h1>
+        </div>
       </div>
 
       <div className="flex flex-col md:flex-row md:pt-20 items-start justify-center gap-8 px-6 py-12 md:px-16">
