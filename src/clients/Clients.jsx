@@ -45,9 +45,9 @@ const mobileSettings = {
 
 const Clients = () => {
   return (
-    <section className="bg-gradient-to-r py-16">
+    <section className="bg-gradient-to-r py-5 md:py-10 ">
       <div className="slider-container w-[90%] hidden md:block mx-auto">
-        <h1 className="pl-5 py-5 md:py-10 text-3xl font-bold md:text-[36px] text-center  text-[#29295e]">
+        <h1 className="pl-5 py-3 md:py-10 text-3xl font-bold md:text-[36px] text-center  text-[#29295e]">
           Our Team
         </h1>
         <Slider {...settings}>
@@ -64,7 +64,7 @@ const Clients = () => {
         </Slider>
       </div>
       <div className="slider-container w-[90%] md:hidden mx-auto">
-        <h1 className="pl-5 py-5 md:py-10  text-3xl font-bold md:text-[36px]  text-[#29295e]">
+        <h1 className="pl-5  md:py-10  text-3xl font-bold md:text-[36px]  text-[#29295e]">
           Our Team
         </h1>
         <Slider {...mobileSettings}>

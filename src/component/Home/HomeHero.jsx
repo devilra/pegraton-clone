@@ -209,7 +209,7 @@ const HomeHero = () => {
           {/* <h1 className="md:hidden text-3xl text-white/85 pt-5 pb-8">
             Navigate the future
           </h1> */}
-          <div className="flex md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
+          <div className="flex mt-20 md:mt-0 md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
             {/* <video
               key={currentVideoIndex}
               ref={videoRef}
@@ -221,16 +221,14 @@ const HomeHero = () => {
               className="w-full h-[200px]  md:h-[300px] rounded-lg md:w-[800px]  object-cover"
             /> */}
 
-            <div className="w-full overflow-y-scroll  md:overflow-hidden h-[200px]  md:h-[315px] pl-5 md:pl-10 md:pt-5 rounded-lg md:w-[1140px] border border-dotted">
-              <h1 className=" text-[18px] md:text-[30px] pr-3 pt-3">
-                About us
-              </h1>
+            <div className="w-full  md:overflow-hidden pr-3 h-[520px]  md:h-[325px] pl-5 md:pl-10  rounded-lg md:w-[1140px] border border-dotted">
+              <h1 className=" text-[18px] md:text-[30px]  pt-3">About us</h1>
               <div className="w-[50px] md:w-[90px] h-[2px] bg-white  md:mt-1 rounded-full"></div>
               <div className="leading-snug pb-10">
                 <h1 className="text-[25px] font-[800] pt-5">
                   Who We Are -What We Do
                 </h1>
-                <p className="text-[16px] md:pt-3 md:w-[900px] font-[500] ">
+                <p className="text-[16px] leading-[25px] tracking-[1px] md:pt-3 md:w-[900px] font-[500] ">
                   Our company specializes in providing comprehensive OSS
                   solutions tailored to meet the needs of various industries. We
                   pride ourselves on delivering skilled and reliable
@@ -240,7 +238,7 @@ const HomeHero = () => {
                 {/* <h1 className="text-[25px]  font-[800] pt-5">
                   Trading & Sourcing
                 </h1> */}
-                <p className="text-[16px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
+                <p className="text-[16px] tracking-[1px] pt-5 leading-[25px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
                   By in no ecstatic wondered disposal my speaking. Direct wholly
                   valley or uneasy it at really. Sir wish like said dull and
                   need make. Sportsman one bed departure rapturous situation
