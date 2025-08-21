@@ -107,6 +107,19 @@ const teamMembers = [
   },
 ];
 
+const teamLeaders = [
+  {
+    name: "Vignesh",
+    role: "HR Associate",
+    img: "/hr/h2.jpeg",
+  },
+  {
+    name: "HEMACHANDIRAN SOMASKANDAN ",
+    role: "TECHNICAL MANAGER ( Learning and OSS opertaions)",
+    img: "/hr/h1.jpeg",
+  },
+];
+
 const About = () => {
   const [active, setActive] = useState("vision");
   return (
@@ -237,40 +250,31 @@ const About = () => {
           />
         </div> */}
       </section>
-      <section className="bg-[#f8fcff] py-16">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h4 className="text-[#1e3a8a] text-lg font-semibold">Testimonial</h4>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-10">
-            What People Think and experienced
-          </h2>
 
-          <Swiper
-            modules={[Navigation]}
-            navigation={true}
-            loop={true}
-            className="pb-10">
-            {testimonials.map((t, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex flex-col items-center">
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            Meet Our Team
+          </h2>
+          <div className="md:pl-40 pt-10">
+            <div className="grid gap-6 md:gap-2 sm:grid-cols-2 lg:grid-cols-2">
+              {teamLeaders.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                   <img
-                    src={t.image}
-                    alt={t.name}
-                    className="w-20 h-20 rounded-full mb-4"
+                    src={member.img}
+                    alt={member.name}
+                    className="w-full h-64 md:w-[300px] object-cover"
                   />
-                  <h3 className="text-[#1e3a8a] font-semibold">{t.name}</h3>
-                  <div className="flex justify-center my-3 text-yellow-500">
-                    {Array.from({ length: Math.floor(t.rating) }).map(
-                      (_, i) => (
-                        <FaStar key={i} />
-                      )
-                    )}
-                    {t.rating % 1 !== 0 && <FaStarHalfAlt />}
+                  <div className="p-4 text-center">
+                    <h3 className="text-lg font-semibold">{member.name}</h3>
+                    <p className="text-sm text-gray-500">{member.role}</p>
                   </div>
-                  <p className="text-gray-500 max-w-2xl">{t.text}</p>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -278,6 +282,45 @@ const About = () => {
         <div>
           <Clients />
         </div>
+
+        <section className="bg-[#f8fcff] py-16">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h4 className="text-[#1e3a8a] text-lg font-semibold">
+              Testimonial
+            </h4>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] mb-10">
+              What People Think and experienced
+            </h2>
+
+            <Swiper
+              modules={[Navigation]}
+              navigation={true}
+              loop={true}
+              className="pb-10">
+              {testimonials.map((t, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center">
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-20 h-20 rounded-full mb-4"
+                    />
+                    <h3 className="text-[#1e3a8a] font-semibold">{t.name}</h3>
+                    <div className="flex justify-center my-3 text-yellow-500">
+                      {Array.from({ length: Math.floor(t.rating) }).map(
+                        (_, i) => (
+                          <FaStar key={i} />
+                        )
+                      )}
+                      {t.rating % 1 !== 0 && <FaStarHalfAlt />}
+                    </div>
+                    <p className="text-gray-500 max-w-2xl">{t.text}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </section>
 
         <AboutFooter />
       </div>
