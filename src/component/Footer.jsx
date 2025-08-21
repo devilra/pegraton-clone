@@ -8,6 +8,7 @@ import {
 
 import { images } from "./data";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   //console.log(selectedImage);
@@ -18,15 +19,18 @@ const Footer = () => {
   //   "/sansirong/s3.jpg",
   // ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="">
-      <div className="hidden h-screen md:block py-8">
+      <div className="h-screen py-8">
         <div className="gap-5 md:pl-28 md:pr-28 rounded-lg grid grid-cols-3  shadow-lg">
           {images.map((item, i) => (
             <div
               key={i}
               className="relative rounded-lg  cursor-pointer group"
-              onClick={() => setSelectedImage(item)}>
+              //onClick={() => setSelectedImage(item)}
+              onClick={() => console.log("hello click")}>
               <img
                 src={item.src}
                 alt={`Image ${i + 1}`}

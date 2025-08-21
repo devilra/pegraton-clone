@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { IoFlagOutline } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import Footer from "../Footer";
@@ -48,6 +48,7 @@ const HomeHero = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const videoRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleVideoEnded = () => {
     setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
@@ -413,18 +414,18 @@ const HomeHero = () => {
               {images.map((item, i) => (
                 <div
                   key={i}
-                  className="relative  rounded-lg  overflow-hidden  cursor-pointer group"
-                  onClick={() => setSelectedImage(item)}>
+                  className="relative  rounded-lg  overflow-hidden  cursor-pointer group">
                   <img
                     src={item.src}
                     alt={`Image ${i + 1}`}
+                    onClick={() => navigate("/oss")}
                     className="w-[400px] h-[200px] object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               ))}
             </div>
           </div>
-          <div className="">
+          {/* <div className="">
             {selectedImage && (
               <div
                 className="fixed inset-0 pt-16 bg-black bg-opacity-90 flex md:flex md:flex-col items-center justify-center z-50"
@@ -436,11 +437,7 @@ const HomeHero = () => {
                       alt="Full view"
                       className="w-[500px] md:h-[70vh] h-[200px]  object-contain rounded-lg"
                     />
-                    {/* <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute bottom-2 -right-24 bg-white text-black cursor-pointer rounded-full px-3 py-1 text-sm font-bold">
-                <FaTimes className="cursor-pointer" />
-              </button> */}
+                
 
                     <div className="pt-3 w-[400px] mx-auto md-pt-5 ">
                       <h1 className=" bg-gradient-to-r text-[20px] leading-snug from-[#ff2e27] via-[#c2b0af]  to-[#f56560] text-transparent bg-clip-text font-[500]">
@@ -474,7 +471,7 @@ const HomeHero = () => {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -524,10 +521,12 @@ const HomeHero = () => {
                 <div
                   key={i}
                   className=" rounded-lg  cursor-pointer group"
-                  onClick={() => setSelectedImage(item)}>
+                  //onClick={() => setSelectedImage(item)}
+                >
                   <img
                     src={item.src}
                     alt={`Image ${i + 1}`}
+                    onClick={() => navigate("/oss")}
                     className="w-full f-full md:h-[200px] rounded-lg hover:brightness-50 md:transition-all md:duration-500 md:w-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
