@@ -13,7 +13,7 @@ const Contact = () => {
   const [status, setStatus] = useState({ message: "", type: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const API = import.meta.env.VITE_BACKEND_URL;
+  const API = import.meta.env.VITE_PRODUCTION_BACKEND_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
