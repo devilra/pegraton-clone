@@ -70,19 +70,19 @@ const Footer = () => {
               <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
               <ul className="space-y-1 text-sm">
                 <li>
-                  <a href="#" className="hover:text-pink-400">
+                  <Link to="/abour" className="hover:text-pink-400">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-pink-400">
+                  <Link to="/oss" className="hover:text-pink-400">
                     onsitesupportservicesoss
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-pink-400">
+                  <Link to="/launguage" className="hover:text-pink-400">
                     languageinterpretation
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -111,9 +111,10 @@ const Footer = () => {
           <div className="text-center text-xs text-white mt-3">
             © 2025 Created with{" "}
             <a
-              href="#"
+              href="https://amigowebster.com/"
+              target="_blank"
               className="text-white px-2 text-[13px] font-bold hover:underline">
-              Amigowebster
+              amigowebster
             </a>
           </div>
         </div>

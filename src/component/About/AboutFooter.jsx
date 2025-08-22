@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const AboutFooter = () => {
   const whatsappNumber = "9344974912";
@@ -69,19 +70,19 @@ const AboutFooter = () => {
             <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
             <ul className="space-y-2 pl-4 md:pl-0 text-sm">
               <li>
-                <a href="#" className="hover:text-pink-400">
+                <Link to="/about" className="hover:text-pink-400">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400">
+                <Link to="/oss" className="hover:text-pink-400">
                   onsitesupportservicesoss
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-pink-400">
+                <Link to="/launguage" className="hover:text-pink-400">
                   languageinterpretation
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -111,9 +112,10 @@ const AboutFooter = () => {
         <div className="text-center text-xs md:pb-5 text-white mt-4">
           © 2025 Created with{" "}
           <a
-            href="#"
-            className="text-white px-5 text-[15px] font-bold hover:underline">
-            Amigowebster
+            href="https://amigowebster.com"
+            target="_blank"
+            className="text-white px-2 text-[13px] font-bold hover:underline">
+            amigowebster
           </a>
         </div>
       </div>

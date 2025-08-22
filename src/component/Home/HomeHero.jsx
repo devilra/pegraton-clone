@@ -539,7 +539,7 @@ const HomeHero = () => {
             </div>
           </div>
           <div className="">
-            <footer className="absolute bottom-0 py-20  w-[100vw] md:px-10 md:py-5 left-0 bg-sky-500 text-white">
+            <footer className="absolute z-[50] bottom-0 py-20  w-[100vw] md:px-10 md:py-5 left-0 bg-sky-500 text-white">
               <div className="container mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
                   {/* Logo & Socials */}
@@ -568,19 +568,19 @@ const HomeHero = () => {
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <ul className="space-y-1 pl-4 md:pl-0 text-sm">
                       <li>
-                        <a href="#" className="hover:text-pink-400">
+                        <Link to="/about" className="hover:text-pink-400">
                           About Us
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#" className="hover:text-pink-400">
+                        <Link to="/oss" className="hover:text-pink-400">
                           onsitesupportservicesoss
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#" className="hover:text-pink-400">
+                        <Link to="/launguage" className="hover:text-pink-400">
                           languageinterpretation
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -606,12 +606,13 @@ const HomeHero = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="text-center text-xs text-white mt-3">
+                <div className="text-center text-xs cursor-pointer text-white mt-3">
                   © 2025 Created with{" "}
                   <a
-                    href="#"
+                    href="https://amigowebster.com"
+                    target="_blank"
                     className="text-white px-2 text-[13px] font-bold hover:underline">
-                    Amigowebster
+                    amigowebster
                   </a>
                 </div>
               </div>
