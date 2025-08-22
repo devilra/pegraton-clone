@@ -11,7 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const AboutFooter = () => {
-  const whatsappNumber = "9344974912";
+  const whatsappNumber = "8610102669";
   const whatsappLink = `https://wa.me/91${whatsappNumber}?text=Hi, I would like to know more.`;
 
   const [showScroll, setShowScroll] = useState(false);

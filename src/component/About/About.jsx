@@ -120,11 +120,11 @@ const teamLeaders = [
     role: "Technical Manager ( Learning and OSS opertaions)",
     img: "/hr/h1.jpeg",
   },
-  {
-    name: "Prasath Sridaran",
-    role: "Managing Director",
-    img: "/hr/h3.jpeg",
-  },
+  // {
+  //   name: "Prasath Sridaran",
+  //   role: "Managing Director",
+  //   img: "/hr/h3.jpeg",
+  // },
 ];
 
 const partners = [
@@ -350,7 +350,20 @@ const About = () => {
           <h2 className="text-3xl font-bold text-center text-[#29295e]  mb-10">
             Meet Our Team
           </h2>
-          <div className="md:pl-[150px] pt-10">
+          <div className="bg-white md:ml-[500px] flex flex-col items-center justify-center md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+            <img
+              src="/hr/h3.jpeg"
+              alt="Managing Director"
+              className="w-full h-64 md:w-[300px] object-cover"
+            />
+            <div className="p-4 text-center">
+              <h3 className="text-lg text-[#29295e] font-semibold">
+                Prasath Sridaran
+              </h3>
+              <p className="text-sm text-gray-500">Managing Director</p>
+            </div>
+          </div>
+          <div className="md:pl-[320px] pt-10">
             <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div

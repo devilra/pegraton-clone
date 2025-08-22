@@ -49,7 +49,7 @@ const HomeHero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const whatsappNumber = "9344974912";
+  const whatsappNumber = "8610102669";
   const whatsappLink = `https://wa.me/91${whatsappNumber}?text=Hi, I would like to know more.`;
 
   const videoRef = useRef(null);
