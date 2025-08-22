@@ -435,6 +435,9 @@ const Careers = () => {
                     </div>
                     <textarea
                       placeholder="E.g. Institute name"
+                      name="institute"
+                      value={edu.institute}
+                      onChange={(e) => handleEducationChange(i, e)}
                       rows="3"
                       className="w-full border rounded p-2 text-sm"></textarea>
                   </div>
