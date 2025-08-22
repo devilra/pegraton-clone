@@ -109,7 +109,7 @@ const AboutFooter = () => {
         </div>
 
         {/* Bottom */}
-        <div className="text-center text-xs md:pb-5 text-white mt-4">
+        <div className="text-center pb-10 text-xs md:pb-5 text-white mt-4">
           © 2025 Created with{" "}
           <a
             href="https://amigowebster.com"

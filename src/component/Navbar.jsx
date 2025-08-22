@@ -36,7 +36,7 @@ function Navbar({ aboutScroll }) {
 
   return (
     <nav
-      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 md:px-5  md:pt-2  md:pl-18 pb-4 z-50 ${
+      className={`fixed top-0 text-white font-[500] left-0 w-full flex justify-between items-center px-8 md:px-5  md:pt-2  md:pl-18 pb-4 z-[9999] ${
         location.pathname === "/about" && isScrolled
           ? "backdrop-blur-md bg-black/50"
           : "bg-transparent"
