@@ -6,12 +6,139 @@ import Select from "react-select";
 import Clients from "../../clients/Clients";
 
 const Careers = () => {
-  const [value, setValue] = useState("");
+  const [country, setCountry] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const options = useMemo(() => countryList().getData(), []);
 
+  //console.log(country);
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    street: "",
+    apartment: "",
+    city: "",
+    state: "",
+    zip: "",
+    confirm: false,
+  });
+
+  const [education, setEducation] = useState([
+    {
+      degree: "",
+      year: "",
+      institute: "",
+    },
+  ]);
+
+  const [work, setWork] = useState([
+    {
+      company: "",
+      role: "",
+      experience: "",
+      responsibilities: "",
+    },
+  ]);
+  //console.log(work);
+
+  const [resume, setResume] = useState(null);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
   const changeHandler = (val) => {
-    setValue(val);
+    setCountry(val);
+  };
+
+  const addEducation = () => {
+    setEducation([...education, { degree: "", year: "", institute: "" }]);
+  };
+
+  const handleEducationChange = (index, e) => {
+    const newEdu = [...education];
+    newEdu[index][e.target.name] = e.target.value;
+    //console.log(newEdu);
+    setEducation(newEdu);
+  };
+
+  const addwork = () => {
+    setWork([
+      ...work,
+      { company: "", role: "", experience: "", responsibilities: "" },
+    ]);
+  };
+
+  const handleWorkChange = (index, e) => {
+    const workChange = [...work];
+    workChange[index][e.target.name] = e.target.value;
+    setWork(workChange);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError("");
+
+    try {
+      const formData = new FormData();
+      Object.keys(form).forEach((key) => formData.append(key, form[key]));
+      formData.append("country", country?.label || "");
+      formData.append("education", JSON.stringify(education));
+      formData.append("workExperience", JSON.stringify(work));
+      if (resume) formData.append("resume", resume);
+
+      const res = await fetch("http://localhost:4000/api/apply", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        throw new Error("Something went wrong!");
+      }
+
+      setSuccess(true);
+
+      setTimeout(() => {
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          street: "",
+          apartment: "",
+          city: "",
+          state: "",
+          zip: "",
+          country: "",
+        });
+        setEducation([
+          {
+            degree: "",
+            year: "",
+            institute: "",
+          },
+        ]);
+        setWork([
+          {
+            company: "",
+            role: "",
+            experience: "",
+            responsibilities: "",
+          },
+        ]);
+        setResume(null);
+        setSuccess(false);
+      }, 1000);
+    } catch (error) {
+      setError(error.message || "Something went wrong!");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -151,7 +278,7 @@ const Careers = () => {
               Personal Information
             </h2>
 
-            <form className="space-y-3 sm:space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               {/* Name */}
               <div>
                 <label className="block text-sm font-medium mb-1">
@@ -159,6 +286,9 @@ const Careers = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   placeholder="E.g. John Doe"
                   className="w-full border rounded p-2 text-sm sm:text-base"
                   required
@@ -174,6 +304,9 @@ const Careers = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     placeholder="E.g. john@doe.com"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
@@ -184,6 +317,9 @@ const Careers = () => {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
                     placeholder="E.g. +91 9878473878"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                     required
@@ -198,6 +334,9 @@ const Careers = () => {
                 </label>
                 <input
                   type="text"
+                  name="street"
+                  value={form.street}
+                  onChange={handleChange}
                   placeholder="E.g. 42 chennai"
                   className="w-full border rounded p-2 text-sm sm:text-base"
                 />
@@ -210,6 +349,9 @@ const Careers = () => {
                 </label>
                 <input
                   type="text"
+                  name="apartment"
+                  value={form.apartment}
+                  onChange={handleChange}
                   placeholder=""
                   className="w-full border rounded p-2 text-sm sm:text-base"
                 />
@@ -221,6 +363,9 @@ const Careers = () => {
                   <label className="block text-sm font-medium mb-1">City</label>
                   <input
                     type="text"
+                    name="city"
+                    value={form.city}
+                    onChange={handleChange}
                     placeholder="E.g. chennai"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
@@ -230,6 +375,9 @@ const Careers = () => {
                     State
                   </label>
                   <input
+                    name="state"
+                    value={form.state}
+                    onChange={handleChange}
                     type="text"
                     placeholder="E.g. Tamilnadu"
                     className="w-full border rounded p-2 text-sm sm:text-base"
@@ -244,6 +392,9 @@ const Careers = () => {
                     ZIP / Postal Code
                   </label>
                   <input
+                    name="zip"
+                    value={form.zip}
+                    onChange={handleChange}
                     type="text"
                     placeholder="E.g. 600457"
                     className="w-full border rounded p-2 text-sm sm:text-base"
@@ -255,7 +406,7 @@ const Careers = () => {
                   </label>
                   <Select
                     options={options}
-                    value={value}
+                    value={country}
                     onChange={changeHandler}
                     placeholder="Select country"
                   />
@@ -263,23 +414,34 @@ const Careers = () => {
               </div>
               <div className="  bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
                 <h2 className="text-lg font-semibold mb-4">Education</h2>
-                <div className="flex flex-col md:flex-row gap-4 mb-4">
-                  <input
-                    type="text"
-                    placeholder="E.g.graduate"
-                    className="w-full border rounded p-2 text-sm"
-                  />
-                  <input
-                    type="date"
-                    className="w-full border rounded p-2 text-sm"
-                  />
-                </div>
-                <textarea
-                  placeholder="E.g. Institute name"
-                  rows="3"
-                  className="w-full border rounded p-2 text-sm"></textarea>
+                {education.map((edu, i) => (
+                  <div key={i}>
+                    <div className="flex flex-col md:flex-row gap-4 mb-4">
+                      <input
+                        type="text"
+                        name="degree"
+                        value={edu.degree}
+                        onChange={(e) => handleEducationChange(i, e)}
+                        placeholder="E.g.graduate"
+                        className="w-full border rounded p-2 text-sm"
+                      />
+                      <input
+                        type="date"
+                        name="year"
+                        value={edu.year}
+                        onChange={(e) => handleEducationChange(i, e)}
+                        className="w-full border rounded p-2 text-sm"
+                      />
+                    </div>
+                    <textarea
+                      placeholder="E.g. Institute name"
+                      rows="3"
+                      className="w-full border rounded p-2 text-sm"></textarea>
+                  </div>
+                ))}
                 <button
                   type="button"
+                  onClick={addEducation}
                   className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
                   Add Education
                 </button>
@@ -287,23 +449,46 @@ const Careers = () => {
 
               <div>
                 <h2 className="text-lg font-semibold mb-4">Work Experience</h2>
-                <div className="flex flex-col md:flex-row gap-4 mb-4">
-                  <input
-                    type="text"
-                    placeholder="E.g.company name"
-                    className="w-full border rounded p-2 text-sm"
-                  />
-                  <input
-                    type="date"
-                    className="w-full border rounded p-2 text-sm"
-                  />
-                </div>
-                <textarea
-                  placeholder="E.g. job Resposibilities"
-                  rows="3"
-                  className="w-full border rounded p-2 text-sm"></textarea>
+                {work.map((w, i) => (
+                  <div key={i}>
+                    <div className="flex flex-col md:flex-row gap-4 mb-4">
+                      <input
+                        name="company"
+                        value={w.company}
+                        type="text"
+                        placeholder="E.g.company name"
+                        onChange={(e) => handleWorkChange(i, e)}
+                        className="w-full border rounded p-2 text-sm"
+                      />
+                      <input
+                        type="text"
+                        name="role"
+                        value={w.role}
+                        placeholder="Enter role"
+                        onChange={(e) => handleWorkChange(i, e)}
+                        className="w-full border rounded p-2 text-sm"
+                      />
+                      <input
+                        type="text"
+                        name="experience"
+                        value={w.experience}
+                        placeholder="Enter Experience years"
+                        onChange={(e) => handleWorkChange(i, e)}
+                        className="w-full border rounded p-2 text-sm"
+                      />
+                    </div>
+                    <textarea
+                      placeholder="E.g. job Resposibilities"
+                      name="responsibilities"
+                      value={w.responsibilities}
+                      onChange={(e) => handleWorkChange(i, e)}
+                      rows="3"
+                      className="w-full border rounded p-2 text-sm"></textarea>
+                  </div>
+                ))}
                 <button
                   type="button"
+                  onClick={addwork}
                   className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
                   Add Experience
                 </button>
@@ -313,12 +498,21 @@ const Careers = () => {
                 <h2 className="text-lg font-semibold mb-4">Resume Upload</h2>
                 <input
                   type="file"
+                  onChange={(e) => setResume(e.target.files[0])}
                   className="text-sm file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                 />
               </div>
 
               <div className="flex items-start gap-2">
-                <input type="checkbox" className="mt-1" />
+                <input
+                  type="checkbox"
+                  className="mt-1"
+                  checked={form.confirm}
+                  required
+                  onChange={(e) =>
+                    setForm({ ...form, confirm: e.target.checked })
+                  }
+                />
                 <label className="text-sm">
                   Confirm that the information provided is true and accurate.
                 </label>
@@ -326,10 +520,23 @@ const Careers = () => {
 
               <button
                 type="submit"
-                className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">
-                Apply
+                disabled={loading}
+                className={`px-6 py-2 rounded text-sm ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : success
+                    ? "bg-green-500 hover:bg-green-600 text-white"
+                    : "bg-blue-500 hover:bg-blue-600 text-white"
+                }`}>
+                {loading ? "Submitting..." : "Apply"}
               </button>
             </form>
+            {error && <p className="text-red-500 mt-2">{error}</p>}
+            {success && (
+              <p className="text-green-600 mt-2">
+                Application submitted successfully!
+              </p>
+            )}
           </div>
         </div>
       </div>
