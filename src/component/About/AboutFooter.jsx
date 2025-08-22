@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
   FaPinterestP,
+  FaArrowUp,
 } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const AboutFooter = () => {
+  const whatsappNumber = "9344974912";
+  const whatsappLink = `https://wa.me/91${whatsappNumber}?text=Hi, I would like to know more.`;
+
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    console.log("About Footer");
+    const handleScroll = () => {
+      console.log("Scroll Y position:", window.scrollY);
+      if (window.scrollY > 300) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="bg-sky-500 text-white pb-10 md:pb-0 pt-10 ">
+    <footer className="bg-sky-500 text-white pb-10  md:pb-0 pt-10 relative ">
       <div className="container mx-auto px-6 md:px-20">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-800 pb-8">
@@ -82,7 +108,7 @@ const AboutFooter = () => {
         </div>
 
         {/* Bottom */}
-        <div className="text-center text-xs text-white mt-4">
+        <div className="text-center text-xs md:pb-5 text-white mt-4">
           © 2025 Created with{" "}
           <a
             href="#"
@@ -91,6 +117,20 @@ const AboutFooter = () => {
           </a>
         </div>
       </div>
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-20 right-6 bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-pink-600 transition duration-300 z-[9999]">
+          <FaArrowUp size={20} />
+        </button>
+      )}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50">
+        <FaWhatsapp size={28} />
+      </a>
     </footer>
   );
 };

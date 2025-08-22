@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AboutNavbar from "../About/AboutNavbar";
 import AboutFooter from "../About/AboutFooter";
+import ScrollToTopButton from "../ScrollToTop";
 
 const data = [
   {

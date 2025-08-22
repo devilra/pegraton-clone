@@ -19,8 +19,6 @@ const Footer = () => {
   //   "/sansirong/s3.jpg",
   // ];
 
-  const navigate = useNavigate();
-
   return (
     <div className="">
       <div className="h-screen py-8">
@@ -42,7 +40,7 @@ const Footer = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-sky-500 text-white  pt-6 md:px-32 md:mb-60 pb-3 mt-10">
+      <footer className="bg-sky-500 relative overflow-y-scroll text-white  pt-6 md:px-32 md:mb-60 pb-3 mt-10">
         <div className="container mx-auto px-6 md:px-20">
           {/* Top section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">

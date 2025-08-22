@@ -3,7 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = Array.from({ length: 20 }, (_, i) => `${i + 1}.jpg`);
+const jpgImages = Array.from({ length: 20 }, (_, i) => `${i + 1}.jpg`);
+const jpegImages = Array.from({ length: 11 }, (_, i) => `${i + 1}.jpeg`);
+
+const images = [...jpgImages, ...jpegImages];
 
 const settings = {
   dots: false,
@@ -53,7 +56,6 @@ const Clients = () => {
         <Slider {...settings}>
           {images.map((img, index) => (
             <div key={index} className="py-10 px-4">
-              {console.log(img)}
               <img
                 src={`/our_clients/${img}`}
                 alt={`slide-${index}`}

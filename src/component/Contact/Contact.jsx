@@ -93,7 +93,7 @@ const Contact = () => {
         {/* Left Side - Image */}
         <div className="flex-1">
           <img
-            src="/contact/school.jpg"
+            src="/contact/c1.jpeg"
             alt="Office Building"
             className="rounded-xl shadow-lg w-full md:h-[460px] object-cover"
           />

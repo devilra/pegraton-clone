@@ -6,6 +6,8 @@ import Footer from "../Footer";
 import { images } from "../data";
 import { Link } from "react-router-dom";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -46,6 +48,9 @@ const HomeHero = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const whatsappNumber = "9344974912";
+  const whatsappLink = `https://wa.me/91${whatsappNumber}?text=Hi, I would like to know more.`;
 
   const videoRef = useRef(null);
   const navigate = useNavigate();
@@ -502,7 +507,7 @@ const HomeHero = () => {
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
 
-      <div className="">
+      <div className="relative">
         <section className="full-section  relative h-screen md:flex md:items-center md:flex-col md:justify-start bg-black">
           <video
             className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
@@ -533,7 +538,7 @@ const HomeHero = () => {
               ))}
             </div>
           </div>
-          <div>
+          <div className="">
             <footer className="absolute bottom-0 py-20  w-[100vw] md:px-10 md:py-5 left-0 bg-sky-500 text-white">
               <div className="container mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
@@ -612,6 +617,13 @@ const HomeHero = () => {
               </div>
             </footer>
           </div>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50">
+            <FaWhatsapp size={28} />
+          </a>
         </section>
       </div>
 
