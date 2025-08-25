@@ -287,7 +287,7 @@ const About = () => {
               <p className="text-sm text-gray-600 mt-1">OSS</p>
             </div>
             <div>
-              <h3 className="text-pink-500 text-3xl font-bold">13+</h3>
+              <h3 className="text-pink-500 text-3xl font-bold">12+</h3>
               <p className="text-sm text-gray-600 mt-1">
                 Language Interpretation
               </p>
@@ -382,7 +382,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <section className="py-12 hidden md:block mt-32 bg-gray-50">
+        <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
               Our Parteners
