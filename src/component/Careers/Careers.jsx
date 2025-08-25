@@ -295,7 +295,7 @@ const Careers = () => {
                   className="w-full border rounded p-2 text-sm sm:text-base"
                   required
                 />
-                <p className="text-xs text-red-500 mt-1">Name is required.</p>
+               
               </div>
 
               {/* Email & Phone */}
