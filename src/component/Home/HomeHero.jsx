@@ -340,12 +340,7 @@ const HomeHero = () => {
               </Link>
             </div>
 
-            <div className=" hidden md:block absolute right-28  bottom-5  ">
-              <div className="flex items-center justify-center space-x-1 border border-white px-3 rounded-full  ">
-                <IoFlagOutline size={15} />
-                <h1 className="font-[500] text-[12px]">Feedback</h1>
-              </div>
-            </div>
+       
           </div>
         </div>
       </section>

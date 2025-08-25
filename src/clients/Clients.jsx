@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const jpgImages = Array.from({ length: 20 }, (_, i) => `${i + 1}.jpg`);
-const jpegImages = Array.from({ length: 11 }, (_, i) => `${i + 1}.jpeg`);
+const jpgImages = Array.from({ length: 18 }, (_, i) => `${i + 1}.jpg`);
+const jpegImages = Array.from({ length: 7 }, (_, i) => `${i + 1}.jpeg`);
 
 const images = [...jpgImages, ...jpegImages];
 
