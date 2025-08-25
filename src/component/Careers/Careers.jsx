@@ -15,6 +15,8 @@ const Careers = () => {
 
   //console.log(country);
 
+    const API = import.meta.env.VITE_PRODUCTION_BACKEND_URL;
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -93,7 +95,7 @@ const Careers = () => {
       formData.append("workExperience", JSON.stringify(work));
       if (resume) formData.append("resume", resume);
 
-      const res = await fetch("http://localhost:4000/api/apply", {
+      const res = await fetch(`${API}/api/apply`, {
         method: "POST",
         body: formData,
       });
