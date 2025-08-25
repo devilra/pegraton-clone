@@ -172,12 +172,12 @@ const mobSettings = {
           style={{
             backgroundImage:
               'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
-            height: "700px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center">
             Language Interpretation Services
           </h1>
         </div>

@@ -217,7 +217,7 @@ const About = () => {
           className="bg-cover bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./about/a.png")',
-            height: "700px",
+            height: "500px",
             backgroundPosition:'center 20%',
             backgroundSize:'cover',
             backgroundRepeat:'no-repeat'
@@ -225,7 +225,7 @@ const About = () => {
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold pt-32 text-white text-center">
             About
           </h1>
         </div>
@@ -354,7 +354,7 @@ const About = () => {
             <img
               src="/hr/h3.jpeg"
               alt="Managing Director"
-              className="w-full h-64 md:w-[300px] object-cover"
+              className="w-full h-80 md:w-[300px] object-cover"
             />
             <div className="p-4 text-center">
               <h3 className="text-lg text-[#29295e] font-semibold">
@@ -373,7 +373,7 @@ const About = () => {
                   <img
                     src={member.img}
                     alt={member.name}
-                    className="w-full h-64 md:w-[300px] object-cover"
+                    className="w-full h-96 md:w-[300px] object-cover"
                   />
                   <div className="p-4 text-center">
                     <h3 className="text-lg text-[#29295e] font-semibold">

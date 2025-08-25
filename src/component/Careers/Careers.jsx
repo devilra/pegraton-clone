@@ -164,12 +164,12 @@ const Careers = () => {
           style={{
             backgroundImage:
               'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
-            height: "700px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white md:pt-32 text-center">
             Carrers
           </h1>
         </div>
