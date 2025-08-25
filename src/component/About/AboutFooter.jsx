@@ -39,7 +39,7 @@ const AboutFooter = () => {
     "https://www.pegatroncorp.com/media/20250115032815108_MainBN_Maker_XL_mb.mp4";
 
   return (
-    <footer className="relative text-white pb-10 md:pb-0 pt-10 overflow-hidden">
+    <footer className="relative text-white  md:pb-0 pt-10 overflow-hidden">
   {/* 🔹 Video Background */}
   <video
     autoPlay

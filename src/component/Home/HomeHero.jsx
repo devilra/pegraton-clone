@@ -262,12 +262,12 @@ const mobSettings = {
         />
 
         <div className="relative z-10 flex flex-col  items-center justify-center md:justify-end h-full text-white">
-          <h3 className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-3xl md:text-5xl  px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
+          <h3 className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-[28px] md:text-5xl  px-6 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[55px] md:leading-[70px] md:pl-28">
             INNOVATIVE MINDSET, <br />
-            <span className="relative hidden md:block typewriter md:leading-[80px]   font-bold text-6xl text-white">
+            <span className="relative hidden md:block typewriter md:leading-[80px]  font-bold text-6xl text-white">
               STRIVING FOR EXCELLENCE.
             </span>
-            <span className="relative md:hidden typewriter inline-block font-bold text-3xl text-white">
+            <span className="relative md:hidden typewriter inline-block font-bold text-[28px] text-white">
               STRIVING FOR EXCELLENCE.
             </span>
           </h3>
@@ -375,7 +375,7 @@ const mobSettings = {
 
       {/* Section mobile -- 4 and Desktop --hidden - Blur */}
 
-      <section className=" md:hidden relative h-screen flex items-center justify-center bg-black">
+      <section className=" md:hidden  relative h-[100%] flex items-center justify-center bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -384,7 +384,7 @@ const mobSettings = {
           loop
           playsInline
         />
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
+       <div className="absolute inset-0 backdrop-blur-lg md:pb-20 hidden md:block bg-black/40" />
         <div className="relative z-10 text-white text-4xl ">
           <div className=" md:hidden py-3">
             <div className="gap-5 relative rounded-lg grid grid-cols-1 overflow-hidden  shadow-lg">
@@ -409,7 +409,7 @@ const mobSettings = {
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
 
-      <div className="relative">
+      <div className="relative overflow-x-hidden">
         <section className="  relative h-screen md:flex md:items-center md:flex-col md:justify-start bg-black">
           <video
             className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
@@ -421,9 +421,9 @@ const mobSettings = {
             playsInline
           />
 
-          <div className="absolute inset-0 backdrop-blur-lg md:pb-20 hidden md:block bg-black/40" />
-          <div className=" z-10 h-full text-white">
-            <div className="flex flex-col pt-28 md:pl-14 md:flex-row md:pr-14 gap-5">
+          <div className="absolute inset-0 backdrop-blur-lg md:pb-20  md:block bg-black/40" />
+          <div className=" z-10 h-full hidden md:block text-white">
+            <div className="flex flex-col pt-28   md:pl-14 md:flex-row md:pr-14 gap-5">
               {images.map((item, i) => (
                 <div
                   key={i}
@@ -441,7 +441,7 @@ const mobSettings = {
             </div>
           </div>
           <div className="">
-            <footer className="absolute z-[50] bottom-0 py-20 top-1/2 w-[100vw] md:px-10   left-0  text-white">
+            <footer className="absolute z-[50] bottom-0 py-10 md:pt-20 md:top-1/2 w-[100vw] md:px-10   left-0  text-white">
               <div className="container mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
                   {/* Logo & Socials */}

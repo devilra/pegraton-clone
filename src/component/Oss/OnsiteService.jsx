@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import AboutNavbar from "../About/AboutNavbar";
 import AboutFooter from "../About/AboutFooter";
-import ScrollToTopButton from "../ScrollToTop";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Typewriter from "typewriter-effect";
+
 
 const data = [
   {
@@ -200,9 +201,17 @@ const mobSettings = {
 
           {/* RIGHT SECTION */}
           <div className="">
-            <h3 className="text-2xl typewritero font-bold mt-2" id="oss">
-              Engineering Excellence, Delivered Onsite.
-            </h3>
+            <div className="text-[22px] md:text-2xl font-bold">
+             <Typewriter
+              options={{
+                strings: ["Engineering Excellence, Delivered Onsite."],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+           </div>
+           
+
             {/* <p className="text-gray-700 mt-2 leading-relaxed">
               At{" "}
               <span className="font-semibold">
@@ -222,7 +231,7 @@ const mobSettings = {
               and faster execution.
             </p>
 
-            <h3 className="text-2xl font-bold mt-6">
+            <h3 className="md:text-2xl text-[22px] font-bold mt-6">
               Our Esteemed OSS Clients
             </h3>
             {/* <p className="text-gray-700 mt-2 leading-relaxed">
@@ -266,7 +275,7 @@ const mobSettings = {
               Scalable Production to Meet Market Demand
             </p> */}
 
-            <h3 className="text-2xl font-bold mt-2">Our Engineering Levels</h3>
+            <h3 className="md:text-2xl text-[22px] font-bold mt-2">Our Engineering Levels</h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
               Engineers (Frontline Support): Handle first-level troubleshooting,
               preventive maintenance, and basic operational support to ensure
@@ -286,7 +295,7 @@ const mobSettings = {
             {/* <h3 className="text-2xl font-bold mt-6">
               Strategic Headquarters and Factory Locations
             </h3> */}
-            <h1 className="text-sm uppercase text-gray-500 font-semibold">
+            <h1 className="md:text-2xl text-[22px] font-bold mt-5">
               Digital Tools & Workforce Benefits
             </h1>
             <p className="text-gray-700 mt-3 leading-relaxed">
@@ -301,7 +310,7 @@ const mobSettings = {
               Continuous Learning & Development-inbuilt training programs to
               strengthen technical and professional capabilities.
             </p>
-            <h3 className="text-2xl font-bold mt-2">
+            <h3 className="md:text-2xl text-[22px] font-bold mt-5">
               Why Choose Sansirong OSS?
             </h3>
             <p className="text-gray-700 mt-3 leading-relaxed">
@@ -435,7 +444,7 @@ const mobSettings = {
 
       <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+            <h2 className="text-3xl font-bold text-center text-black mb-10">
               Our Partners
             </h2>
             <Slider {...settings}>
@@ -449,15 +458,15 @@ const mobSettings = {
             </Slider>
           </div>
         </section>
-        <section className="py-12 md:hidden bg-gray-50">
+        <section className="py-12 md:hidden overflow-hidden bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Parteners
+              Our Partners
             </h2>
             <Slider {...mobSettings}>
               {partners.map((member, index) => (
                 <div key={index} className="px-4">
-                  <div className=" overflow-hidden  transition duration-300">
+                  <div className="   transition duration-300">
                     <img src={member.img} className="h-[100px]  object-cover" />
                   </div>
                 </div>

@@ -4,7 +4,7 @@ import AboutFooter from "../About/AboutFooter";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 const data = [
   {
@@ -152,17 +152,7 @@ const mobSettings = {
 
   return (
     <div className=" h-screen overflow-y-scroll">
-      {/* Navbar */}
-      {/* <AboutNavbar /> */}
-
-      {/* Top section with background image */}
-      {/* <div
-        className="bg-cover bg-center brightness-50 bg-no-repeat"
-        style={{
-          backgroundImage:
-            'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
-          height: "400px",
-        }}></div> */}
+     
 
       <div className="relative">
         <div className="absolute top-0 left-0 w-full z-20">
@@ -206,10 +196,16 @@ const mobSettings = {
             {/* <p className="text-sm uppercase text-gray-500 font-semibold">
               Language Interpretation Services
             </p> */}
-
-            <h3 className="text-2xl my-2 font-bold typewriterl  mt-2" id="oss">
-              Breaking Barriers, Building Connections.
-            </h3>
+                  <div className="text-[22px] md:text-2xl font-bold">
+             <Typewriter
+              options={{
+                strings: [" Breaking Barriers, Building Connections."],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+           </div>
+            
             <p className="text-gray-700 mt-2 leading-relaxed">
               At Sansirong International Pvt Ltd, we understand the power of
               clear communication. In today’s global business environment,
@@ -218,7 +214,7 @@ const mobSettings = {
               businesses, partners, and clients across borders.
             </p>
 
-            <h3 className="text-2xl font-bold py-2 mt-2">
+            <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
               Our Interpretation Solutions
             </h3>
 
@@ -240,7 +236,7 @@ const mobSettings = {
               technical, engineering, manufacturing, and business environments.
             </p>
 
-            <h3 className="text-2xl font-bold py-2 mt-2">
+            <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
               Why Choose Sansirong?
             </h3>
 
@@ -256,7 +252,7 @@ const mobSettings = {
               <li>Trusted by Industry Leaders for Global Operations</li>
             </ul>
 
-            <h3 className="text-2xl font-bold py-2 mt-2">
+            <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
               Industries We Serve
             </h3>
 
@@ -272,285 +268,13 @@ const mobSettings = {
                 );
               })}
             </div>
-           
-            {/* <p className="text-gray-700 mt-3 leading-relaxed">
-              You deserve to work with the world’s finest interpreters and
-              translators. Our linguists must meet the industry’s most rigorous
-              standards of excellence.
-            </p> */}
+          
 
-            {/* <p className="text-gray-700 mt-2 leading-relaxed">
-              Sansirong International Private Limited understands the unique
-              language and communication needs of your industry. With expertise
-              across sectors such as healthcare, financial services, technology,
-              insurance, telecommunications, aerospace, defense, and consumer
-              goods, we deliver precise, industry-specific support to ensure
-              complete understanding between you and your customers, clients, or
-              stakeholders. Trusted by leading organizations, Sansirong is your
-              partner in overcoming language and communication
-              barriers—enhancing clarity, compliance, and customer satisfaction
-              at every level. Discover how we can help your organization
-              navigate its communication challenges with confidence.
-            </p> */}
+           
           </div>
         </div>
 
-        {/* <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10 ">
-      
-          <div className="order-2">
-            <img
-              src="./launguage/l2.jpg"
-              alt="Factory"
-              className="w-full md:w-[500px]  md:h-[650px] rounded-md shadow"
-            />
-          </div>
-
-       
-          <div className="md:w-[500px] order-1">
-            <p className="text-sm uppercase text-gray-500 font-semibold"></p>
-
-            <h3 className="text-2xl font-bold mt-2">Language Interpretation</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              At SANSIRONG INTERNATIONAL PRIVATE LIMITED, we offer certified
-              interpretation services across a wide range of national and
-              international languages. Our team of expert interpreters brings
-              deep industry-specific knowledge, ensuring that every
-              communication is accurate, culturally sensitive, and clearly
-              understood—no matter the language or context.
-            </p>
-
-            <p className="text-sm uppercase text-gray-500 font-semibold">
-              Connecting with global clients can be complex—especially when
-              real-time multilingual interpretation is involved. Instead of
-              juggling multiple language providers, rely on SANSIRONG as your
-              single point of contact. Our extensive network of skilled
-              interpreters allows us to handle multiple assignments efficiently,
-              even on tight schedules, with seamless project coordination.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Our track record includes successful interpretation assignments
-              across key sectors such as medical, legal, corporate, and
-              technical industries. We ensure that every spoken word is
-              interpreted with precision, preserving its full meaning and
-              context in high-stakes environments.
-            </p>
-
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              We also provide online interpretation support via secure platforms
-              like Zoom, Microsoft Teams, Google Meet, Skype, and more. This
-              enables organizations to conduct smooth, multilingual virtual
-              meetings—anytime, anywhere—with complete confidence.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              With over 15 years of proven expertise in translation and
-              interpretation services, SANSIRONG INTERNATIONAL PRIVATE LIMITED
-              has consistently delivered precise, context-aware, and culturally
-              appropriate language solutions. Our long-standing experience
-              across diverse industries enables us to support global
-              communication needs with accuracy, professionalism, and
-              confidence.
-            </p>
-          </div>
-        </div> */}
-        {/* 
-        <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
-        
-          <div className="">
-            <img
-              src="./launguage/l3.png"
-              alt="Factory"
-              className="w-full md:w-[500px] md:h-[650px] rounded-md shadow"
-            />
-          </div>
-
-       
-          <div className="md:w-[500px] ">
-            <h1 className="text-2xl md:text-4xl py-5 font-extrabold mt-2">
-              Types of Interpretations offered:
-            </h1>
-            <h3 className="text-2xl font-bold mt-2">On-Site Interpretation</h3>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Ensure smooth and effective communication during face-to-face
-              meetings with our professional on-site interpreters. SANSIRONG
-              provides reliable and cost-effective language support for
-              interactions with international clients, partners, and employees.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-2">
-              Online / Remote Interpretation
-            </h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Conduct virtual meetings, webinars, and international
-              collaborations with ease through our remote interpretation
-              services. Our expert interpreters help you engage confidently with
-              global audiences on platforms like Zoom, Google Meet, Skype, and
-              more.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-6">Escort Interpretation</h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Traveling for business? Our escort interpreters accompany you on
-              domestic or international trips to support meetings, conferences,
-              factory visits, and local engagements—ensuring you’re understood
-              clearly at every step.
-            </p>
-            <h3 className="text-2xl font-bold mt-6">
-              Training Interpretation – Products & Services
-            </h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Deliver effective training to global employees or customers.
-              Whether it’s product knowledge or service briefings, our
-              interpreters ensure your message is accurately conveyed across
-              language barriers.
-            </p>
-            <h3 className="text-2xl font-bold mt-6">Fast Email Translation</h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Get your emails translated quickly and precisely by native
-              translators. Ideal for business communication, these translations
-              come with a fast turnaround and competitive pricing.
-            </p>
-            <h1 className="text-2xl font-bold mt-6">Appointment Scheduling</h1>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Let SANSIRONG streamline your international engagements. We help
-              schedule meetings with global clients and associates—ensuring
-              timing, language, and cultural etiquette are all in sync.
-            </p>
-            <h1 className="text-2xl font-bold mt-6">
-              Market Assessment & Research
-            </h1>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Entering a new market? Our interpreters assist in audience
-              research and market analysis, helping you gather insights and
-              understand regional business dynamics more effectively.
-            </p>
-          </div>
-        </div> */}
-        {/* <div className="flex flex-col md:mt-16 md:flex-row md:justify-between gap-5 md:gap-10">
-          <div className="order-2">
-            <img
-              src="./launguage/l4.jpg"
-              alt="Factory"
-              className="w-full md:w-[500px] md:h-[650px] rounded-md shadow"
-            />
-          </div>
-
-          <div className="md:w-[500px] order-1 ">
-            <h1 className="text-2xl md:text-4xl py-5 font-extrabold mt-2">
-              Staff Recruitment & Assessment
-            </h1>
-            <h3 className="text-2xl font-bold mt-2">On-Site Interpretation</h3>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Simplify hiring across borders. We provide interpretation and
-              translation support for interviews, CV reviews, and application
-              assessments, ensuring clear communication throughout your
-              recruitment process.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-2">Business Meetings</h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Bring our interpreters to your high-stakes business meetings for
-              accurate real-time language support. We help facilitate foreign
-              negotiations, agreements, and partnerships without
-              miscommunication.
-            </p>
-
-            <h3 className="text-2xl font-bold mt-6">Conferences</h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Participating in global conferences is easier than ever. Our
-              interpreters help you communicate effectively with international
-              clients, investors, and stakeholders, ensuring your voice is
-              heard.
-            </p>
-            <h3 className="text-2xl font-bold mt-6">
-              Bilingual Secretary Services
-            </h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Hire skilled bilingual secretaries fluent in multiple languages
-              and well-versed in cultural nuances. They assist in administrative
-              tasks, client communications, and cross-border coordination.
-            </p>
-            <h3 className="text-2xl font-bold mt-6">Business Negotiations</h3>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Confidently navigate international business deals. Our
-              interpreters ensure that language doesn’t become a barrier during
-              critical negotiations and contract discussions.
-            </p>
-            <h1 className="text-2xl font-bold mt-6">Business Trip Planning</h1>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Plan your international business trips with ease. From booking
-              flights and accommodations to arranging meetings, our interpreters
-              help make your travel organized and culturally smooth.
-            </p>
-            <h1 className="text-2xl font-bold mt-6">
-              Product & Material Sourcing
-            </h1>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Looking to import goods or materials? Our interpreters assist with
-              sourcing, supplier communication, and logistics coordination,
-              ensuring clarity in every step of your global procurement.
-            </p>
-            <h1 className="text-2xl font-bold mt-6">Exhibition Hosting</h1>
-            <p className=" list-inside text-gray-700 mt-2 leading-relaxed">
-              Host impactful exhibitions with interpretation support from
-              SANSIRONG. We help you connect with both local and foreign
-              audiences, building your brand on a global stage.
-            </p>
-          </div>
-        </div> */}
       </div>
-
-      {/* <div>
-        <section className="w-full bg-white">
-          <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16 flex flex-col lg:flex-row items-start gap-10">
-            
-            <div className="flex-1 max-w-xl">
-              <h2 className="text-3xl lg:text-4xl font-bold  leading-snug">
-                Language Interpretation
-              </h2>
-              <p className="mt-4 text-sm lg:text-base leading-6 text-neutral-800 text-justify">
-                The need for language access is unpredictable. Our solutions
-                meet your demands without fail, no matter how large or
-                unexpected they may be.
-              </p>
-              <p>
-                Residents and customers across diverse communities speak
-                hundreds of languages—and Sansirong International Private
-                Limited is committed to making communication seamless and
-                inclusive. With the introduction of Sansirong’s real-time
-                language support services, organizations can now connect with
-                customers in their preferred language through instant access to
-                live interpreters. Whether in public service, healthcare,
-                finance, or retail, Sansirong ensures that language is never a
-                barrier. Now, you can truly say: We speak your language.
-              </p>
-            </div>
-
-            
-            <div className="grid grid-cols-2 gap-4 justify-items-center">
-              <img
-                src="/launguage/l5.jpg"
-                alt="Top Left"
-                className="w-[250px] rounded-lg object-cover"
-              />
-              <img
-                src="/launguage/l6.jpg"
-                alt="Top Right"
-                className="w-[400px] max-w-full rounded-lg object-cover"
-              />
-              <img
-                src="/launguage/l7.jpg"
-                alt="Bottom Left"
-                className="w-[400px] max-w-full rounded-lg object-cover"
-              />
-              <img
-                src="/launguage/l8.jpg"
-                alt="Bottom Right"
-                className="w-[400px] max-w-full rounded-lg object-cover"
-              />
-            </div>
-          </div>
-        </section>
-      </div> */}
 
        <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
@@ -568,10 +292,10 @@ const mobSettings = {
             </Slider>
           </div>
         </section>
-        <section className="py-12 md:hidden bg-gray-50">
+        <section className="py-12 md:hidden overflow-hidden bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Parteners
+              Our Partners
             </h2>
             <Slider {...mobSettings}>
               {partners.map((member, index) => (

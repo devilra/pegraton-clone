@@ -54,8 +54,8 @@ function AboutNavbar() {
 
   return (
     <nav
-      className={`top-0 left-0 md:pt-3 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
-        md:backdrop-blur-lgv fixed md:relative backdrop-blur-sm md:bg-white/5 shadow-md font-extrabold  text-[#f30d0d] 
+      className={`top-0 left-0 md:pt-1 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
+        md:backdrop-blur-lgv fixed md:relative backdrop-blur-sm md:bg-white/5 shadow-md font-bold  text-[#f30d0d] 
          
       `}>
       {/* Logo */}
@@ -84,7 +84,7 @@ function AboutNavbar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex justify-end   md:pr-14 md:gap-10  md:text-[15px]">
+      <div className="hidden md:flex justify-end  md:pr-14 md:gap-10  md:text-[15px]">
         {navitems.map((page, index) => (
           <div key={page.title} className="relative">
             {page.title === "SERVICES" ? (
@@ -92,7 +92,7 @@ function AboutNavbar() {
                 className="flex justify-center items-center gap-3 text-white cursor-pointer"
                 onMouseEnter={() => setIsServicesOpen(!isServicesOpen)}
                 onMouseLeave={() => setIsServicesOpen(!isServicesOpen)}>
-                <span>{page.title}</span>
+                <span className="text-[15px]">{page.title}</span>
                 {/* icon toggle */}
                 {isServicesOpen ? (
                   <FaChevronUp className="transition-all duration-300" />
@@ -184,7 +184,7 @@ function AboutNavbar() {
               {page.title}
             </Link>
             {location.pathname === page.to && (
-              <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
+              <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
             )}
           </div>
         ))}

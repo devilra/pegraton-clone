@@ -354,7 +354,7 @@ const About = () => {
             <img
               src="/hr/h3.jpeg"
               alt="Managing Director"
-              className="w-full h-80 md:w-[300px] object-cover"
+              className="w-full h-96 md:w-[300px] object-cover"
             />
             <div className="p-4 text-center">
               <h3 className="text-lg text-[#29295e] font-semibold">
@@ -369,7 +369,7 @@ const About = () => {
               {teamLeaders.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-white md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                  className="bg-white  md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                   <img
                     src={member.img}
                     alt={member.name}
@@ -402,7 +402,7 @@ const About = () => {
             </Slider>
           </div>
         </section>
-        <section className="py-12 md:hidden bg-gray-50">
+        <section className="py-12 md:hidden overflow-x-hidden bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-black mb-10">
               Our Parteners
