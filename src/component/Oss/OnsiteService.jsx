@@ -122,7 +122,7 @@ const OnsiteService = () => {
 
           {/* RIGHT SECTION */}
           <div className="">
-            <h3 className="text-2xl font-bold mt-2">
+            <h3 className="text-2xl typewritero font-bold mt-2" id="oss">
               Engineering Excellence, Delivered Onsite.
             </h3>
             {/* <p className="text-gray-700 mt-2 leading-relaxed">

@@ -31,7 +31,7 @@ function AboutNavbar() {
     { title: "ONSITE SUPPORT SERVICES(OSS)", to: "/oss" },
     { title: "TRADING", to: "/trading" },
 
-    { title: "LAUNGUAGE INTERPRETATION", to: "/launguage" },
+    { title: "LANGUAGE INTERPRETATION", to: "/language" },
     { title: "CONTACT", to: "/contact" },
     { title: "CAREERS", to: "/careers" },
   ];
@@ -121,10 +121,10 @@ function AboutNavbar() {
                         TRADING
                       </Link>
                       <Link
-                        to="/launguage"
+                        to="/language"
                         onClick={closeMenu}
                         className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
-                        LAUNGUAGE INTERPRETATION
+                        LANGUAGE INTERPRETATION
                       </Link>
                     </motion.div>
                   )}

@@ -129,8 +129,8 @@ const OnsiteService = () => {
               Language Interpretation Services
             </p> */}
 
-            <h3 className="text-2xl py-2 font-bold mt-2">
-              Breaking Barriers, Building Connections
+            <h3 className="text-2xl my-2 font-bold typewriterl  mt-2" id="oss">
+              Breaking Barriers, Building Connections.
             </h3>
             <p className="text-gray-700 mt-2 leading-relaxed">
               At Sansirong International Pvt Ltd, we understand the power of

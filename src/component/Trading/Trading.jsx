@@ -184,8 +184,8 @@ const Trading = () => {
 
           {/* RIGHT SECTION */}
           <div className="">
-            <h3 className="text-2xl py-4 font-bold mt-2">
-              Trading & Supply Chain Management Services
+            <h3 className="text-2xl my-4 font-bold mt-2 typewritert" id="oss">
+              Trading & Supply Chain Management Services.
             </h3>
             <p className="text-gray-700  mt-2 text-[18px] font-[600] leading-relaxed">
               Efficient Trading, Seamless Supply Chains, Global Reach.

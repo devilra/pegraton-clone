@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/oss" element={<OnsiteService t={t} />} />
         <Route path="/contact" element={<Contact t={t} />} />
         <Route path="/careers" element={<Careers t={t} />} />
-        <Route path="/launguage" element={<Languageinterpretation t={t} />} />
+        <Route path="/language" element={<Languageinterpretation t={t} />} />
         <Route path="/trading" element={<Trading t={t} />} />
       </Routes>
     </>

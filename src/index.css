@@ -169,23 +169,131 @@ ul {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 4s steps(25, end) 1s infinite,
+  animation: typingh 4s steps(25, end) 1s infinite,
     blinkCursor 0.7s step-end infinite;
 }
 
 /* Typing + Deleting */
-@keyframes typing {
+@keyframes typingh {
   0% {
     width: 0;
   }
 
   40% {
-    width: 25ch;
+    width: 24ch;
   }
 
   /* Full text typed */
   60% {
-    width: 25ch;
+    width: 24ch;
+  }
+
+  /* Stay visible */
+  100% {
+    width: 0;
+  }
+
+  /* Delete */
+}
+
+.typewritero {
+  
+  font-weight: bold;
+  color: #fff;
+  border-right: 3px solid #0ff;
+  /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typingo 4s steps(25, end) 1s infinite,
+    blinkCursor 0.7s step-end infinite;
+}
+
+/* Typing + Deleting */
+@keyframes typingo {
+  0% {
+    width: 0;
+  }
+
+  40% {
+    width: 35ch;
+  }
+
+  /* Full text typed */
+  60% {
+    width: 35ch;
+  }
+
+  /* Stay visible */
+  100% {
+    width: 0;
+  }
+
+  /* Delete */
+}
+
+.typewritert {
+  
+  font-weight: bold;
+  color: #fff;
+  border-right: 3px solid #0ff;
+  /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typingt 4s steps(25, end) 1s infinite,
+    blinkCursor 0.7s step-end infinite;
+}
+
+/* Typing + Deleting */
+@keyframes typingt {
+  0% {
+    width: 0;
+  }
+
+  40% {
+    width: 39ch;
+  }
+
+  /* Full text typed */
+  60% {
+    width: 39ch;
+  }
+
+  /* Stay visible */
+  100% {
+    width: 0;
+  }
+
+  /* Delete */
+}
+
+.typewriterl {
+  
+  font-weight: bold;
+  color: #fff;
+  border-right: 3px solid #0ff;
+  /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typingl 4s steps(25, end) 1s infinite,
+    blinkCursor 0.7s step-end infinite;
+}
+
+/* Typing + Deleting */
+@keyframes typingl {
+  0% {
+    width: 0;
+  }
+
+  40% {
+    width: 34ch;
+  }
+
+  /* Full text typed */
+  60% {
+    width: 34ch;
   }
 
   /* Stay visible */
@@ -222,4 +330,8 @@ ul {
   color: teal;
   font-weight: bold;
   margin-right: 8px;
+}
+
+#oss{
+  color: black;
 }

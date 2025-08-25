@@ -138,10 +138,10 @@ function Navbar({ aboutScroll }) {
                   TRADING
                 </Link>
                 <Link
-                  to="/launguage"
+                  to="/language"
                   onClick={closeMenu}
                   className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
-                  LAUNGUAGE INTERPRETATION
+                  LANGUAGE INTERPRETATION
                 </Link>
               </motion.div>
             )}
@@ -219,8 +219,8 @@ function Navbar({ aboutScroll }) {
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
         </Link>
-        <Link to="/launguage" onClick={closeMenu} className={` text-[15px]`}>
-          LAUNGUAGE INTERPRETATION
+        <Link to="/language" onClick={closeMenu} className={` text-[15px]`}>
+          LANGUAGE INTERPRETATION
           {location.pathname === "/launguage" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
