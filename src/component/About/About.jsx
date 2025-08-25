@@ -114,12 +114,12 @@ const teamLeaders = [
     role: "HR Associate",
     img: "/hr/h2.jpeg",
   },
-  {
-    name: " Hemachandiran Somaskandan ",
+  // {
+  //   name: " Hemachandiran Somaskandan ",
 
-    role: "Technical Manager ( Learning and OSS opertaions)",
-    img: "/hr/h1.jpeg",
-  },
+  //   role: "Technical Manager ( Learning and OSS opertaions)",
+  //   img: "/hr/h1.jpeg",
+  // },
   // {
   //   name: "Prasath Sridaran",
   //   role: "Managing Director",
@@ -283,18 +283,18 @@ const About = () => {
           {/* Stats */}
           <div className="flex md:justify-center gap-8 mt-10 md:mt-20">
             <div>
-              <h3 className="text-pink-500 text-3xl font-bold">100%</h3>
+              <h3 className="text-pink-500 text-3xl font-bold">200+</h3>
               <p className="text-sm text-gray-600 mt-1">OSS</p>
             </div>
             <div>
-              <h3 className="text-pink-500 text-3xl font-bold">5k+</h3>
+              <h3 className="text-pink-500 text-3xl font-bold">13+</h3>
               <p className="text-sm text-gray-600 mt-1">
                 Language Interpretation
               </p>
             </div>
             <div>
-              <h3 className="text-pink-500 text-3xl font-bold">450</h3>
-              <p className="text-sm text-gray-600 mt-1">Trading & Sourcing</p>
+              <h3 className="text-pink-500 text-3xl font-bold">3+</h3>
+              <p className="text-sm text-gray-600 mt-1">Clients trading</p>
             </div>
           </div>
         </div>
@@ -345,7 +345,8 @@ const About = () => {
           <h2 className="text-3xl font-bold text-center text-[#29295e]  mb-10">
             Meet Our Team
           </h2>
-          <div className="bg-white md:ml-[500px] flex flex-col items-center justify-center md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <div className="flex justify-center">
+            <div className="bg-white md:max-w-[300px]  flex flex-col items-center justify-center  rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
             <img
               src="/hr/h3.jpeg"
               alt="Managing Director"
@@ -358,7 +359,8 @@ const About = () => {
               <p className="text-sm text-gray-500">Managing Director</p>
             </div>
           </div>
-          <div className="md:pl-[320px] pt-10">
+          </div>
+          <div className="w-full flex justify-center pt-10">
             <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div
