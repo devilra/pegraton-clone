@@ -500,7 +500,7 @@ const mobSettings = {
                         sansirongsales@gmail.com
                       </li>
                       <li className="flex items-start gap-2">
-                        <FiMapPin className="text-pink-400 mt-1" /> 4,
+                        <FiMapPin className="text-pink-400 mt-1" size={40} /> 4,
                       4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204
                       </li>
                     </ul>
