@@ -91,7 +91,7 @@ const AboutFooter = () => {
         <ul className="space-y-3 text-sm">
           <li className="flex items-center gap-2"><FiPhone className="text-pink-400" /> +91 8610102669</li>
           <li className="flex items-center gap-2"><FiMail className="text-pink-400" /> sansirongsales@gmail.com</li>
-          <li className="flex items-start gap-2"><FiMapPin className="text-pink-400 mt-1" /> 4, Hiranandani Park, Padharvadi Village, Kundrathur Taluk, Thriveni Nagar, Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204</li>
+          <li className="flex items-start gap-2"><FiMapPin className="text-pink-400 mt-1" /> 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204</li>
         </ul>
       </div>
     </div>

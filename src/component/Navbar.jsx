@@ -52,11 +52,11 @@ function Navbar({ aboutScroll }) {
           />
         </Link>
         <h1 className="pl-1  leading-[20px] md:px-2">
-          <span className="text-white  tracking-[2px] text-4xl font-[600] md:text-4xl">
+          <span className="text-white  tracking-[2px] text-4xl font-[600] md:text-[40px]">
             SANSIRONG
           </span>
           <br />
-          <span className="text-white  text-[13px] font-[800] leading-[18px] md:text-[13px]">
+          <span className="text-white  text-[13px] font-[800] leading-[18px] md:text-[14px]">
             {" "}
             INTERNATIONAL PRIVATE LIMITED
           </span>

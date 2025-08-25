@@ -289,7 +289,7 @@ const Careers = () => {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="E.g. John Doe"
+                  placeholder="E.g. Kumar"
                   className="w-full border rounded p-2 text-sm sm:text-base"
                   required
                 />
@@ -307,7 +307,7 @@ const Careers = () => {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="E.g. john@doe.com"
+                    placeholder="E.g. kumar@gmail.com"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>

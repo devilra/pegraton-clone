@@ -501,9 +501,7 @@ const mobSettings = {
                       </li>
                       <li className="flex items-start gap-2">
                         <FiMapPin className="text-pink-400 mt-1" /> 4,
-                        Hiranandani Park, Padharvadi Village, Kundrathur Taluk,
-                        Thriveni Nagar, Oragadam Industrial Area, Kancheepuram,
-                        Tamil Nadu 603204
+                      4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204
                       </li>
                     </ul>
                   </div>

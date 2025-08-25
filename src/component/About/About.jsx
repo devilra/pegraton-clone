@@ -274,7 +274,7 @@ const About = () => {
       <section className="bg-white py-10 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         <div className="flex-1 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
-            Who We Are <span className="text-[#1d2f6f]">-</span> What We Do
+            Who We Are <span className="text-black">-</span> What We Do
           </h2>
           <p className="mt-4 text-black leading-relaxed">
             Our company specializes in providing comprehensive{" "}
@@ -285,20 +285,20 @@ const About = () => {
           </p>
 
           {/* Stats */}
-          <div className="flex md:justify-center gap-8 mt-10 md:mt-20">
+          <div className="flex md:justify-center gap-8 font-[400] mt-10 md:mt-20">
             <Link to='/oss' className="space-y-2">
               <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">200+</h3>
-              <h4 className="text-sm font-bold md:text-2xl text-center mt-1">OSS</h4>
+              <h4 className="text-sm  md:text-2xl text-center mt-1">OSS</h4>
             </Link>
             <Link to='/language' className="space-y-2">
               <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">12+</h3>
-              <h4 className="text-sm md:text-2xl text-center font-bold mt-1">
+              <h4 className="text-sm md:text-2xl text-center  mt-1">
                 Language Interpretation
               </h4>
             </Link>
             <Link to='/trading' className="space-y-2">
               <h3 className="text-pink-500 text-3xl md:text-4xl text-center font-bold">3+</h3>
-              <h4 className="text-sm  md:text-2xl font-bold text-center mt-1">Clients trading</h4>
+              <h4 className="text-sm  md:text-2xl  text-center mt-1">Clients trading</h4>
             </Link>
           </div>
         </div>
