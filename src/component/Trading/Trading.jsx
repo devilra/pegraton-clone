@@ -103,31 +103,31 @@ const Trading = () => {
     {
       title: "Automotive & Aerospace",
       bg: "bg-slate-100",
-      text: "text-slate-700",
+      text: "text-black",
       border: "border-slate-400",
     },
     {
       title: "Electronics & Manufacturing",
       bg: "bg-green-100",
-      text: "text-green-700",
+      text: "text-black",
       border: "border-green-400",
     },
     {
       title: "Consumer Goods & Retail",
       bg: "bg-rose-100",
-      text: "text-rose-700",
+      text: "text-black",
       border: "border-rose-400",
     },
     {
       title: "Energy & Industrial Products",
       bg: "bg-yellow-100",
-      text: "text-yellow-700",
+      text: "text-black",
       border: "border-yellow-400",
     },
     {
       title: "Healthcare & Pharma",
       bg: "bg-purple-100",
-      text: "text-purple-700",
+      text: "text-black",
       border: "border-purple-400",
     },
   ];
@@ -156,12 +156,12 @@ const Trading = () => {
           className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./trading/a2.jpg")',
-            height: "400px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
             Trading
           </h1>
         </div>
@@ -257,19 +257,7 @@ const Trading = () => {
                 );
               })}
             </div>
-            <h3 className="text-2xl font-bold py-2 mt-2">Call to Action</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed md:w-[600px]">
-              Your business growth starts with a strong supply chain. Let us
-              handle the complexity while you focus on scaling your business.
-              <br />
-              <span className="pt-5 inline-block text-blue-500 text-[15px] font-[500]">
-                <Link>Explore Trading Solutions</Link>
-              </span>
-              <br />
-              <span className="text-blue-500 text-[15px] font-[500]">
-                <Link>Connect with Our Experts</Link>
-              </span>
-            </p>
+          
           </div>
         </div>
 

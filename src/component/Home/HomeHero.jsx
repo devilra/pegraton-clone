@@ -234,28 +234,24 @@ const HomeHero = () => {
                 <h1 className="text-[25px] font-[800] pt-5">
                   Who We Are -What We Do
                 </h1>
-                <p className="text-[16px] leading-[25px] tracking-[1px] md:pt-3 md:w-[900px] font-[500] ">
+                <h3 className="text-[16px] leading-[25px] tracking-[1px] md:pt-3 md:w-[900px] font-[500] ">
                   Our company specializes in providing comprehensive OSS
                   solutions tailored to meet the needs of various industries. We
                   pride ourselves on delivering skilled and reliable
                   professionals who contribute to the seamless execution of
                   operations.
-                </p>
+                </h3>
                 {/* <h1 className="text-[25px]  font-[800] pt-5">
                   Trading & Sourcing
                 </h1> */}
-                <p className="text-[16px] tracking-[1px] pt-5 leading-[25px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
-                  By in no ecstatic wondered disposal my speaking. Direct wholly
-                  valley or uneasy it at really. Sir wish like said dull and
-                  need make. Sportsman one bed departure rapturous situation
-                  disposing his. Off say yet ample ten ought hence. Depending in
-                  newspaper an september do existenc...
+                <h3 className="text-[16px]  tracking-[1px] pt-5 leading-[25px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
+    Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning...
                   <Link
                     to="/about"
                     className="text-blue-500 text-[15px] cursor-pointer hover:underline">
                     Readmore
                   </Link>
-                </p>
+                </h3>
               </div>
             </div>
             {/* Dots */}

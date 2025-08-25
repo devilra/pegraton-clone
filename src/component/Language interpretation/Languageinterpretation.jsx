@@ -46,20 +46,20 @@ const serve = [
 ];
 
 const colors = [
-  { bg: "bg-indigo-100", text: "text-indigo-700", border: "border-indigo-400" },
-  { bg: "bg-green-100", text: "text-green-700", border: "border-green-400" },
-  { bg: "bg-blue-100", text: "text-blue-700", border: "border-blue-400" },
+  { bg: "bg-indigo-100", text: "text-black", border: "border-indigo-400" },
+  { bg: "bg-green-100", text: "text-black", border: "border-green-400" },
+  { bg: "bg-blue-100", text: "text-black", border: "border-blue-400" },
   {
     bg: "bg-yellow-100",
-    text: "text-yellow-700",
+    text: "text-black",
     border: "border-yellow-400",
   },
   {
     bg: "bg-purple-100",
-    text: "text-purple-700",
+    text: "text-black",
     border: "border-purple-400",
   },
-  { bg: "bg-orange-100", text: "text-orange-700", border: "border-orange-400" },
+  { bg: "bg-orange-100", text: "text-black", border: "border-orange-400" },
 ];
 
 const getRandomColor = () => {
@@ -95,12 +95,12 @@ const OnsiteService = () => {
           style={{
             backgroundImage:
               'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
-            height: "400px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
             Language Interpretation Services
           </h1>
         </div>
@@ -194,20 +194,7 @@ const OnsiteService = () => {
                 );
               })}
             </div>
-            <h3 className="text-2xl font-bold py-2 mt-2">Call to Action</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed md:w-[600px]">
-              Seamless communication starts here. Whether you need onsite or
-              virtual language interpretation, our experts ensure every word is
-              understood.
-              <br />
-              <span className="pt-5 inline-block text-blue-500 text-[15px] font-[500]">
-                <Link to="/careers">Work With Us</Link>
-              </span>
-              <br />
-              <span className="text-blue-500 text-[15px] font-[500]">
-                <Link to="/contact">Contact Our Team</Link>
-              </span>
-            </p>
+           
             {/* <p className="text-gray-700 mt-3 leading-relaxed">
               You deserve to work with the world’s finest interpreters and
               translators. Our linguists must meet the industry’s most rigorous

@@ -50,7 +50,7 @@ const Clients = () => {
   return (
     <section className="bg-gradient-to-r py-5 md:py-10 ">
       <div className="slider-container w-[90%] hidden md:block mx-auto">
-        <h1 className="pl-5 py-3 md:py-10 text-3xl font-bold md:text-[36px] text-center  text-[#29295e]">
+        <h1 className="pl-5 py-3 md:py-10 text-3xl font-bold md:text-[36px] text-center  text-black">
           Our Team
         </h1>
         <Slider {...settings}>

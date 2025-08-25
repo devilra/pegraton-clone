@@ -52,21 +52,21 @@ const companies = [
 ];
 
 const colors = [
-  { bg: "bg-red-100", text: "text-red-700", border: "border-red-400" },
-  { bg: "bg-green-100", text: "text-green-700", border: "border-green-400" },
-  { bg: "bg-blue-100", text: "text-blue-700", border: "border-blue-400" },
+  { bg: "bg-red-100", text: "text-black", border: "border-red-400" },
+  { bg: "bg-green-100", text: "text-black", border: "border-green-400" },
+  { bg: "bg-blue-100", text: "text-black", border: "border-blue-400" },
   {
     bg: "bg-yellow-100",
-    text: "text-yellow-700",
+    text: "text-black",
     border: "border-yellow-400",
   },
   {
     bg: "bg-purple-100",
-    text: "text-purple-700",
+    text: "text-black",
     border: "border-purple-400",
   },
-  { bg: "bg-pink-100", text: "text-pink-700", border: "border-pink-400" },
-  { bg: "bg-teal-100", text: "text-teal-700", border: "border-teal-400" },
+  { bg: "bg-pink-100", text: "text-black", border: "border-pink-400" },
+  { bg: "bg-teal-100", text: "text-black", border: "border-teal-400" },
 ];
 
 const OnsiteService = () => {
@@ -91,12 +91,12 @@ const OnsiteService = () => {
           className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./trading/a3.jpg")',
-            height: "400px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
             Onsite Support Service (OSS)
           </h1>
         </div>
@@ -162,7 +162,7 @@ const OnsiteService = () => {
                 return (
                   <span
                     key={index}
-                    className={`px-4 inline-block text-center rounded bg-opacity-40  py-2 text-[13px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
+                    className={`px-4 inline-block text-center rounded bg-opacity-40  py-2 text-[13px] md:text-[15px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
                     {company}
                   </span>
                 );

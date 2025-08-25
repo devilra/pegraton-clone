@@ -216,12 +216,12 @@ const About = () => {
           className="bg-cover bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./about/a.png")',
-            height: "400px",
+            height: "500px",
           }}>
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-4xl font-bold text-white text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-white text-center">
             About
           </h1>
         </div>
@@ -268,11 +268,11 @@ const About = () => {
       </div>
 
       <section className="bg-white py-10 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
-        <div className="flex-1">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1d2f6f] mt-2">
+        <div className="flex-1 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
             Who We Are <span className="text-[#1d2f6f]">-</span> What We Do
           </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed">
+          <p className="mt-4 text-black leading-relaxed">
             Our company specializes in providing comprehensive{" "}
             <span className="font-semibold">OSS</span> solutions tailored to
             meet the needs of various industries. We pride ourselves on
@@ -311,20 +311,7 @@ const About = () => {
       <section className="bg-white py-5 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side */}
         <div className="flex-1 order-2">
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            By in no ecstatic wondered disposal my speaking. Direct wholly
-            valley or uneasy it at really. Sir wish like said dull and need
-            make. Sportsman one bed departure rapturous situation disposing his.
-            Off say yet ample ten ought hence. Depending in newspaper an
-            september do existenc.
-          </p>
-
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            Sir wish like said dull and need make. Sportsman one bed departure
-            rapturous situation disposing his. Off say yet ample ten ought
-            hence. Depending in newspaper an september do existenc.
-          </p>
-          <p className="text-gray-700 mt-3 leading-relaxed">
+         <p className="text-gray-700 mt-3 leading-relaxed">
             At Sansirong International Pvt Ltd, we specialize in delivering
             Onsite Support Services (OSS) for leading global and domestic
             organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers
@@ -333,6 +320,14 @@ const About = () => {
             achieve uninterrupted operations, higher efficiency, and faster
             execution.
           </p>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+     Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning.
+          </p>
+
+          <p className="mt-4 text-gray-600 leading-relaxed">
+       Engineers (Expert Support): Provide high-level technical expertise, root cause analysis, design improvements, and advanced automation/software solutions.
+          </p>
+         
         </div>
 
         {/* Right Side */}
@@ -403,7 +398,7 @@ const About = () => {
         </section>
         <section className="py-12 md:hidden bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+            <h2 className="text-3xl font-bold text-center text-black mb-10">
               Our Parteners
             </h2>
             <Slider {...mobSettings}>
