@@ -125,22 +125,22 @@ const Contact = () => {
           <div className="flex items-start mb-6 text-gray-700">
             <FaMapMarkerAlt className="text-pink-500 mr-3 mt-1" />
             <p className="text-sm leading-relaxed">
-              4, Hiranandani Park, Padhuravadi Village, Kundrathur Taluk,
-              Triveni Nagar, Oragadam Industrial Area, Kancheepuram Tamil Nadu
-              603204
+              4, maple building, thiriveni nagar, opposite to saraswathi statue vadakkupattu village 
             </p>
           </div>
 
           {/* Google Map */}
           <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.20822487492!2d80.2091282!3d13.0836937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f6dfeab8cf7%3A0xa3c70a4b2c54d8f!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1691590913415!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"></iframe>
+          <iframe
+      title="Google Map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.643495934319!2d79.932525!3d12.8175113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52faa4d7a6001d%3A0x7e173ecf45f4c639!2s4%2C%20maple%20building%2C%20thiriveni%20nagar%2C%20opposite%20to%20saraswathi%20statue%20vadakupattu%20village!5e0!3m2!1sen!2sin!4v1691590913415!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+   overflow-y: auto;
 }
 
 p{
@@ -252,12 +252,12 @@ ul {
   }
 
   40% {
-    width: 39ch;
+    width: 47ch;
   }
 
   /* Full text typed */
   60% {
-    width: 39ch;
+    width: 47ch;
   }
 
   /* Stay visible */

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import AboutNavbar from "../About/AboutNavbar";
 import AboutFooter from "../About/AboutFooter";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
 const data = [
@@ -71,6 +74,80 @@ const OnsiteService = () => {
   const handleClick = (index) => {
     setActiveIndex(index);
   };
+
+  const partners = [
+  {
+    img: "/part/1.png",
+  },
+  {
+    img: "/part/2.png",
+  },
+  {
+    img: "/part/3.png",
+  },
+  {
+    img: "/part/4.png",
+  },
+  {
+    img: "/part/5.png",
+  },
+  {
+    img: "/part/6.png",
+  },
+  {
+    img: "/part/7.png",
+  },
+  {
+    img: "/part/8.png",
+  },
+  {
+    img: "/part/9.png",
+  },
+  {
+    img: "/part/10.png",
+  },
+  {
+    img: "/part/11.png",
+  },
+];
+
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 5, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
+const mobSettings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
   return (
     <div className=" h-screen overflow-y-scroll">
@@ -187,7 +264,7 @@ const OnsiteService = () => {
                 const color = getRandomColor();
                 return (
                   <span
-                    className={`px-4 md:px-2 inline-block text-center rounded  py-2 md:py-3 text-[13px] md:text-[15px] bg-opacity-40 font-semibold ${color.bg} ${color.text} ${color.border}`}
+                    className={`px-4 md:px-2 inline-block text-center rounded  py-2 md:py-3 text-[13px] md:text-[18px] bg-opacity-40 font-semibold ${color.bg} ${color.text} ${color.border}`}
                     key={i}>
                     {s}
                   </span>
@@ -473,6 +550,39 @@ const OnsiteService = () => {
           </div>
         </section>
       </div> */}
+
+       <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...settings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[150px] object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+        <section className="py-12 md:hidden bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-black mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...mobSettings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[100px]  object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
 
       {/* Footer */}
       <AboutFooter />

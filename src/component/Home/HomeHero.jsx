@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { IoFlagOutline } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import Footer from "../Footer";
 import { images } from "../data";
 import { Link } from "react-router-dom";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import {
   FaFacebookF,
@@ -14,7 +15,6 @@ import {
   FaPinterestP,
   FaTwitter,
 } from "react-icons/fa";
-import AboutFooter from "../About/AboutFooter";
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
@@ -55,123 +55,197 @@ const HomeHero = () => {
   const videoRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleVideoEnded = () => {
-    setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
-  };
+  // const handleVideoEnded = () => {
+  //   setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
+  // };
 
-  const handleDotClick = (index) => {
-    setCurrentVideoIndex(index);
-  };
+  // const handleDotClick = (index) => {
+  //   setCurrentVideoIndex(index);
+  // };
 
   const location = useLocation();
 
-  useEffect(() => {
-    const sections = document.querySelectorAll(".full-section");
+  // useEffect(() => {
+  //   const sections = document.querySelectorAll(".full-section");
 
-    const goToSection = (index) => {
-      setSectionIndex(index);
-      sections[index]?.scrollIntoView({ behavior: "smooth" });
-    };
+  //   const goToSection = (index) => {
+  //     setSectionIndex(index);
+  //     sections[index]?.scrollIntoView({ behavior: "smooth" });
+  //   };
 
-    const handleKeyDown = (e) => {
-      setSectionIndex((prevIndex) => {
-        if (e.key === "ArrowDown" && prevIndex < sections.length - 1) {
-          e.preventDefault();
-          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex + 1);
-          return prevIndex + 1;
-        } else if (e.key === "ArrowUp" && prevIndex > 0) {
-          e.preventDefault();
-          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex - 1);
-          return prevIndex - 1;
-        }
-        return prevIndex;
-      });
-    };
+  //   const handleKeyDown = (e) => {
+  //     setSectionIndex((prevIndex) => {
+  //       if (e.key === "ArrowDown" && prevIndex < sections.length - 1) {
+  //         e.preventDefault();
+  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex + 1);
+  //         return prevIndex + 1;
+  //       } else if (e.key === "ArrowUp" && prevIndex > 0) {
+  //         e.preventDefault();
+  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex - 1);
+  //         return prevIndex - 1;
+  //       }
+  //       return prevIndex;
+  //     });
+  //   };
 
-    let touchStartY = 0;
-    let touchEndY = 0;
-    let isSwipe = false;
+  //   let touchStartY = 0;
+  //   let touchEndY = 0;
+  //   let isSwipe = false;
 
-    const handleTouchStart = (e) => {
-      touchStartY = e.touches[0].clientY;
-      isSwipe = false;
-    };
-    const handleTouchMove = (e) => {
-      //e.preventDefault();
-      touchEndY = e.touches[0].clientY;
-      const diff = Math.abs(touchStartY - touchEndY);
+  //   const handleTouchStart = (e) => {
+  //     touchStartY = e.touches[0].clientY;
+  //     isSwipe = false;
+  //   };
+  //   const handleTouchMove = (e) => {
+  //     //e.preventDefault();
+  //     touchEndY = e.touches[0].clientY;
+  //     const diff = Math.abs(touchStartY - touchEndY);
 
-      if (diff > 10) {
-        e.preventDefault();
-        isSwipe = true;
-      }
-    };
-    const handleTouchEnd = () => {
-      if (!isSwipe) return;
+  //     if (diff > 10) {
+  //       e.preventDefault();
+  //       isSwipe = true;
+  //     }
+  //   };
+  //   const handleTouchEnd = () => {
+  //     if (!isSwipe) return;
 
-      setSectionIndex((prevIndex) => {
-        const swipeDistance = touchStartY - touchEndY;
-        if (swipeDistance > 50 && prevIndex < sections.length - 1) {
-          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex + 1);
-          return prevIndex + 1;
-        } else if (swipeDistance < -50 && prevIndex > 0) {
-          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex - 1);
-          return prevIndex - 1;
-        }
-        return prevIndex;
-      });
-    };
+  //     setSectionIndex((prevIndex) => {
+  //       const swipeDistance = touchStartY - touchEndY;
+  //       if (swipeDistance > 50 && prevIndex < sections.length - 1) {
+  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex + 1);
+  //         return prevIndex + 1;
+  //       } else if (swipeDistance < -50 && prevIndex > 0) {
+  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex - 1);
+  //         return prevIndex - 1;
+  //       }
+  //       return prevIndex;
+  //     });
+  //   };
 
-    let isScrolling = false;
-    const handleWheel = (e) => {
-      if (isScrolling) return;
-      isScrolling = true;
+  //   let isScrolling = false;
+  //   const handleWheel = (e) => {
+  //     if (isScrolling) return;
+  //     isScrolling = true;
 
-      setSectionIndex((prevIndex) => {
-        if (e.deltaY > 0 && prevIndex < sections.length - 1) {
-          //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex + 1);
-          return prevIndex + 1;
-        } else if (e.deltaY < 0 && prevIndex > 0) {
-          //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-          goToSection(prevIndex - 1);
-          return prevIndex - 1;
-        }
-        return prevIndex;
-      });
+  //     setSectionIndex((prevIndex) => {
+  //       if (e.deltaY > 0 && prevIndex < sections.length - 1) {
+  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex + 1);
+  //         return prevIndex + 1;
+  //       } else if (e.deltaY < 0 && prevIndex > 0) {
+  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+  //         goToSection(prevIndex - 1);
+  //         return prevIndex - 1;
+  //       }
+  //       return prevIndex;
+  //     });
 
-      setTimeout(() => {
-        isScrolling = false;
-      }, 800);
-    };
+  //     setTimeout(() => {
+  //       isScrolling = false;
+  //     }, 800);
+  //   };
 
-    const disableScroll = (e) => {
-      e.preventDefault();
-    };
+  //   const disableScroll = (e) => {
+  //     e.preventDefault();
+  //   };
 
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchmove", handleTouchMove, { passive: false });
-    window.addEventListener("touchend", handleTouchEnd);
-    window.addEventListener("wheel", handleWheel, { passive: false });
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   window.addEventListener("touchstart", handleTouchStart);
+  //   window.addEventListener("touchmove", handleTouchMove, { passive: false });
+  //   window.addEventListener("touchend", handleTouchEnd);
+  //   window.addEventListener("wheel", handleWheel, { passive: false });
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
-      window.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyDown);
+  //     window.removeEventListener("touchstart", handleTouchStart);
+  //     window.removeEventListener("touchmove", handleTouchMove);
+  //     window.removeEventListener("touchend", handleTouchEnd);
+  //     window.removeEventListener("wheel", handleWheel);
+  //   };
+  // }, []);
+
+const partners = [
+  {
+    img: "/part/1.png",
+  },
+  {
+    img: "/part/2.png",
+  },
+  {
+    img: "/part/3.png",
+  },
+  {
+    img: "/part/4.png",
+  },
+  {
+    img: "/part/5.png",
+  },
+  {
+    img: "/part/6.png",
+  },
+  {
+    img: "/part/7.png",
+  },
+  {
+    img: "/part/8.png",
+  },
+  {
+    img: "/part/9.png",
+  },
+  {
+    img: "/part/10.png",
+  },
+  {
+    img: "/part/11.png",
+  },
+];
+
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 5, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
+const mobSettings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 3, // Desktop default
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 1500,
+  autoplaySpeed: 3000,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 768, // Mobile screen
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-y-auto">
       {/* Section 1 - Normal */}
-      <section className="full-section relative h-screen flex items-center justify-start bg-black">
+      <section className=" relative h-screen flex items-center justify-start bg-black">
         {/* <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -201,7 +275,7 @@ const HomeHero = () => {
       </section>
 
       {/* Section 2 - Blur */}
-      <section className="full-section w-full  relative md:h-[h-100%] h-screen flex   pt-28 px-8 md:px-0  bg-black">
+      <section className=" w-full  relative  flex   pt-10 px-8 md:px-0  bg-black">
         <video
           className="absolute inset-0 w-full h-full mb-5 object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -227,9 +301,9 @@ const HomeHero = () => {
               className="w-full h-[200px]  md:h-[300px] rounded-lg md:w-[800px]  object-cover"
             /> */}
 
-            <div className="w-full  md:overflow-hidden pr-3 h-[520px]  md:h-[325px] pl-5 md:pl-10  rounded-lg md:w-[1140px] border border-dotted">
+            <div className="w-full  md:overflow-hidden pr-3  pl-5 md:pl-10  rounded-lg md:w-[2240px] ">
               <h1 className=" text-[18px] md:text-[30px]  pt-3">About us</h1>
-              <div className="w-[50px] md:w-[90px] h-[2px] bg-white  md:mt-1 rounded-full"></div>
+              <div className="w-[50px] bg-white  md:mt-1 rounded-full"></div>
               <div className="leading-snug pb-10">
                 <h1 className="text-[25px] font-[800] pt-5">
                   Who We Are -What We Do
@@ -253,7 +327,40 @@ const HomeHero = () => {
                   </Link>
                 </h3>
               </div>
+               {/* <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...settings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[150px] object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+        <section className="py-12 md:hidden bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-black mb-10">
+              Our Parteners
+            </h2>
+            <Slider {...mobSettings}>
+              {partners.map((member, index) => (
+                <div key={index} className="px-4">
+                  <div className=" overflow-hidden  transition duration-300">
+                    <img src={member.img} className="h-[100px]  object-cover" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section> */}
             </div>
+            
             {/* Dots */}
 
             {/* <div className="absolute bottom-4 md:bottom-28 md:right-[35%] flex gap-2">
@@ -331,18 +438,20 @@ const HomeHero = () => {
              
               </div>
             </div> */}
-            <div className="hidden md:block  absolute cursor-pointer left-28 bottom-5">
+            {/* <div className="hidden md:block  absolute cursor-pointer left-28 bottom-5">
               <Link
                 to="/about"
                 className="flex items-center cursor-pointer justify-center h-full  font-[500] text-4xl">
                 Read more
                 <MdOutlineArrowForwardIos size={40} className="pt-2 mx-3" />
               </Link>
-            </div>
+            </div> */}
 
        
           </div>
+          
         </div>
+        
       </section>
 
       {/* Section 3 - Blur */}
@@ -394,7 +503,7 @@ const HomeHero = () => {
 
       {/* Section mobile -- 4 and Desktop --hidden - Blur */}
 
-      <section className="full-section md:hidden relative h-screen flex items-center justify-center bg-black">
+      <section className=" md:hidden relative h-screen flex items-center justify-center bg-black">
         <video
           className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
           src={videoSrc}
@@ -499,7 +608,7 @@ const HomeHero = () => {
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
 
       <div className="relative">
-        <section className="full-section  relative h-screen md:flex md:items-center md:flex-col md:justify-start bg-black">
+        <section className="  relative h-screen md:flex md:items-center md:flex-col md:justify-start bg-black">
           <video
             className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
             src={videoSrc}
@@ -512,7 +621,7 @@ const HomeHero = () => {
 
           <div className="absolute inset-0 backdrop-blur-lg hidden md:block bg-black/40" />
           <div className=" z-10 h-full text-white">
-            <div className="flex flex-col pt-28 md:pl-16 md:flex-row gap-5">
+            <div className="flex flex-col pt-28 md:pl-14 md:flex-row md:pr-14 gap-5">
               {images.map((item, i) => (
                 <div
                   key={i}

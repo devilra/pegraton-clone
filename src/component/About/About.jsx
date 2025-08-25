@@ -166,7 +166,7 @@ const partners = [
 const settings = {
   dots: false,
   infinite: true,
-  slidesToShow: 8, // Desktop default
+  slidesToShow: 5, // Desktop default
   slidesToScroll: 1,
   autoplay: true,
   speed: 1500,
@@ -391,7 +391,7 @@ const About = () => {
               {partners.map((member, index) => (
                 <div key={index} className="px-4">
                   <div className=" overflow-hidden  transition duration-300">
-                    <img src={member.img} className="h-[100px] object-cover" />
+                    <img src={member.img} className="h-[150px] object-cover" />
                   </div>
                 </div>
               ))}
@@ -407,7 +407,7 @@ const About = () => {
               {partners.map((member, index) => (
                 <div key={index} className="px-4">
                   <div className=" overflow-hidden  transition duration-300">
-                    <img src={member.img} className="h-[100px] object-cover" />
+                    <img src={member.img} className="h-[100px]  object-cover" />
                   </div>
                 </div>
               ))}
