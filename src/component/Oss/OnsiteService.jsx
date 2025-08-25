@@ -216,8 +216,8 @@ const mobSettings = {
               At Sansirong International Pvt Ltd, we specialize in delivering
               Onsite Support Services (OSS) for leading global and domestic
               organizations. Our team of 200+ highly skilled L1, L2 & L3
-              engineers from diverse disciplines — Mechanical, Electrical,
-              Electronics, Automation, and Software Engineering — ensures that
+              engineers from diverse disciplines-Mechanical, Electrical,
+              Electronics, Automation, and Software Engineering-ensures that
               our clients achieve uninterrupted operations, higher efficiency,
               and faster execution.
             </p>
@@ -290,39 +290,39 @@ const mobSettings = {
               Digital Tools & Workforce Benefits
             </h1>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Dedicated OSS Application – for real-time monitoring of
+              Dedicated OSS Application-for real-time monitoring of
               attendance, performance reports, and learning modules.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Attendance Bonus & Skill Allowance – rewarding engineers for
+              Attendance Bonus & Skill Allowance-rewarding engineers for
               discipline, upskilling, and consistent performance.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Continuous Learning & Development – inbuilt training programs to
+              Continuous Learning & Development-inbuilt training programs to
               strengthen technical and professional capabilities.
             </p>
             <h3 className="text-2xl font-bold mt-2">
               Why Choose Sansirong OSS?
             </h3>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Multi-disciplinary Expertise – end-to-end support across
+              Multi-disciplinary Expertise-end-to-end support across
               engineering and technology.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Layered Support Structure – L1, L2 & L3 engineers to cover every
+              Layered Support Structure-L1, L2 & L3 engineers to cover every
               level of client need.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Scalable Workforce – deployable teams tailored to project
+              Scalable Workforce-deployable teams tailored to project
               requirements.
             </p>
 
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Proven Industry Trust – delivering results for world-class
+              Proven Industry Trust-delivering results for world-class
               clients.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">
-              Operational Excellence – ensuring reliability, quality, and
+              Operational Excellence-ensuring reliability, quality, and
               seamless execution.
             </p>
             <p className="text-gray-700 mt-3 leading-relaxed">

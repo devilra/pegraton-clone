@@ -115,12 +115,12 @@ const teamLeaders = [
     role: "HR Associate",
     img: "/hr/h2.jpeg",
   },
-  // {
-  //   name: " Hemachandiran Somaskandan ",
+  {
+    name: " Hemachandiran Somaskandan ",
 
-  //   role: "Technical Manager ( Learning and OSS opertaions)",
-  //   img: "/hr/h1.jpeg",
-  // },
+    role: "Technical Manager ( Learning and OSS opertaions)",
+    img: "/hr/h1.jpeg",
+  },
   // {
   //   name: "Prasath Sridaran",
   //   role: "Managing Director",
@@ -130,37 +130,37 @@ const teamLeaders = [
 
 const partners = [
   {
-    img: "/part/1.png",
+    img: "/part/new/p1.png",
   },
   {
-    img: "/part/2.png",
+    img: "/part/new/p2.png",
   },
   {
-    img: "/part/3.png",
+    img: "/part/new/p3.png",
   },
   {
-    img: "/part/4.png",
+    img: "/part/new/p4.png",
   },
   {
-    img: "/part/5.png",
+    img: "/part/new/p5.png",
   },
   {
-    img: "/part/6.png",
+    img: "/part/new/p6.png",
   },
   {
-    img: "/part/7.png",
+    img: "/part/new/p7.png",
   },
   {
-    img: "/part/8.png",
+    img: "/part/new/p8.png",
   },
   {
-    img: "/part/9.png",
+    img: "/part/new/p9.png",
   },
   {
-    img: "/part/10.png",
+    img: "/part/new/p10.png",
   },
   {
-    img: "/part/11.png",
+    img: "/part/new/p11.png",
   },
 ];
 
@@ -319,8 +319,8 @@ const About = () => {
             At Sansirong International Pvt Ltd, we specialize in delivering
             Onsite Support Services (OSS) for leading global and domestic
             organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers
-            from diverse disciplines — Mechanical, Electrical, Electronics,
-            Automation, and Software Engineering — ensures that our clients
+            from diverse disciplines-Mechanical, Electrical, Electronics,
+            Automation, and Software Engineering-ensures that our clients
             achieve uninterrupted operations, higher efficiency, and faster
             execution.
           </p>
