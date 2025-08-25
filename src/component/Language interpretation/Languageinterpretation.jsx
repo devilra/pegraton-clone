@@ -226,11 +226,11 @@ const mobSettings = {
               Remote / Virtual Interpretation – Real-time interpretation support
               for video calls, webinars, and global collaborations.
             </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <p className="mt-2 leading-relaxed">
               Multilingual Support – Covering major global and regional
               languages to enable cross-cultural communication.
             </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
+            <p className=" mt-2 leading-relaxed">
               {" "}
               Industry-Specific Expertise – Specialized interpreters for
               technical, engineering, manufacturing, and business environments.
@@ -240,8 +240,8 @@ const mobSettings = {
               Why Choose Sansirong?
             </h3>
 
-            <ul className="text-gray-700 mt-2 leading-relaxed custom-list space-y-3">
-              <li> Trained & Certified Professional Interpreters</li>
+            <ul className="mt-2 leading-relaxed text-[18px] custom-list space-y-3">
+              <li>Trained & Certified Professional Interpreters</li>
               <li>
                 Real-time, Accurate, and Culturally Sensitive Communication
               </li>
