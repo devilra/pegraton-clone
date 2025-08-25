@@ -164,7 +164,7 @@ const Careers = () => {
           style={{
             backgroundImage:
               'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
-            height: "500px",
+            height: "700px",
           }}>
           {/* Buttons */}
         </div>

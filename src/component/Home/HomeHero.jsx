@@ -262,7 +262,7 @@ const mobSettings = {
         />
 
         <div className="relative z-10 flex flex-col  items-center justify-center md:justify-end h-full text-white">
-          <p className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-3xl md:text-5xl  px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
+          <h3 className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-3xl md:text-5xl  px-8 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[60px] md:leading-[70px] md:pl-28">
             INNOVATIVE MINDSET, <br />
             <span className="relative hidden md:block typewriter md:leading-[80px]   font-bold text-6xl text-white">
               STRIVING FOR EXCELLENCE.
@@ -270,7 +270,7 @@ const mobSettings = {
             <span className="relative md:hidden typewriter inline-block font-bold text-3xl text-white">
               STRIVING FOR EXCELLENCE.
             </span>
-          </p>
+          </h3>
         </div>
       </section>
 
@@ -286,22 +286,11 @@ const mobSettings = {
         />
         <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
         <div className="relative z-10 text-white text-4xl">
-          {/* <h1 className="md:hidden text-3xl text-white/85 pt-5 pb-8">
-            Navigate the future
-          </h1> */}
+          
           <div className="flex mt-20 md:mt-0 md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
-            {/* <video
-              key={currentVideoIndex}
-              ref={videoRef}
-              src={videos[currentVideoIndex]}
-              autoPlay
-              muted
-              playsInline
-              onEnded={handleVideoEnded}
-              className="w-full h-[200px]  md:h-[300px] rounded-lg md:w-[800px]  object-cover"
-            /> */}
+            
 
-            <div className="w-full  md:overflow-hidden pr-3  pl-5 md:pl-10  rounded-lg md:w-[2240px] ">
+            <div className="w-full  md:overflow-hidden pr-3  pl-5 md:pl-10  rounded-lg md:w-vw ">
               <h1 className=" text-[18px] md:text-[30px]  pt-3">About us</h1>
               <div className="w-[50px] bg-white  md:mt-1 rounded-full"></div>
               <div className="leading-snug pb-10">
@@ -315,9 +304,7 @@ const mobSettings = {
                   professionals who contribute to the seamless execution of
                   operations.
                 </h3>
-                {/* <h1 className="text-[25px]  font-[800] pt-5">
-                  Trading & Sourcing
-                </h1> */}
+       
                 <h3 className="text-[16px]  tracking-[1px] pt-5 leading-[25px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
     Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning...
                   <Link
@@ -327,125 +314,10 @@ const mobSettings = {
                   </Link>
                 </h3>
               </div>
-               {/* <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-              Our Parteners
-            </h2>
-            <Slider {...settings}>
-              {partners.map((member, index) => (
-                <div key={index} className="px-4">
-                  <div className=" overflow-hidden  transition duration-300">
-                    <img src={member.img} className="h-[150px] object-cover" />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </section>
-        <section className="py-12 md:hidden bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Parteners
-            </h2>
-            <Slider {...mobSettings}>
-              {partners.map((member, index) => (
-                <div key={index} className="px-4">
-                  <div className=" overflow-hidden  transition duration-300">
-                    <img src={member.img} className="h-[100px]  object-cover" />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </section> */}
+              
             </div>
             
-            {/* Dots */}
-
-            {/* <div className="absolute bottom-4 md:bottom-28 md:right-[35%] flex gap-2">
-              {videos.map((_, i) => (
-                <div
-                  key={i}
-                  onClick={() => handleDotClick(i)}
-                  className={`w-2 h-2 rounded-full cursor-pointer hidden md:block ${
-                    i === currentVideoIndex ? "bg-white" : "bg-white/50"
-                  }`}
-                />
-              ))}
-            </div> */}
-
-            {/* Right side - grid of smaller images with text */}
-
-            {/* <div className=" max-w-[400px] md:h-[300px] grid grid-cols-3 grid-rows-3  gap-x-3 gap-y-2 ">
-             
-              <div className="relative rounded-lg  overflow-hidden md:row-span-2   cursor-pointer group   ">
-                <img
-                  src="sansirong/s1.jpg"
-                  alt="EV"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-             
-              </div>
-
-            
-              <div className="relative rounded-lg overflow-hidden md:row-span-2 cursor-pointer group ">
-                <img
-                  src="sansirong/s2.jpg"
-                  alt="5G"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-               
-              </div>
-
-             
-              <div className="relative rounded-lg overflow-hidden cursor-pointer group  ">
-                <img
-                  src="sansirong/s3.jpg"
-                  alt="IOT & Smart application"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              
-              </div>
-
-              
-              <div className="relative rounded-lg overflow-hidden cursor-pointer group ">
-                <img
-                  src="about/s1.jpg"
-                  alt="PEGAVERSE"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                
-              </div>
-
-          
-              <div className="relative rounded-lg md:col-span-2 order-2 overflow-hidden  cursor-pointer group  ">
-                <img
-                  src="about/s2.jpg"
-                  alt="Computing"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-             
-              </div>
-
-              
-              <div className="relative rounded-lg order-1 md:h-[98px] md:w-[130px] overflow-hidden md:col-span-1 cursor-pointer group aspect-[4/5] sm:aspect-[3/4]">
-                <img
-                  src="about/s3.jpg"
-                  alt="News"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-             
-              </div>
-            </div> */}
-            {/* <div className="hidden md:block  absolute cursor-pointer left-28 bottom-5">
-              <Link
-                to="/about"
-                className="flex items-center cursor-pointer justify-center h-full  font-[500] text-4xl">
-                Read more
-                <MdOutlineArrowForwardIos size={40} className="pt-2 mx-3" />
-              </Link>
-            </div> */}
+     
 
        
           </div>
@@ -530,80 +402,10 @@ const mobSettings = {
               ))}
             </div>
           </div>
-          {/* <div className="">
-            {selectedImage && (
-              <div
-                className="fixed inset-0 pt-16 bg-black bg-opacity-90 flex md:flex md:flex-col items-center justify-center z-50"
-                onClick={() => setSelectedImage(null)}>
-                <div className="relative flex flex-col w-[700px]  mx-28  gap-7">
-                  <div>
-                    <img
-                      src={selectedImage.src}
-                      alt="Full view"
-                      className="w-[500px] md:h-[70vh] h-[200px]  object-contain rounded-lg"
-                    />
-                
-
-                    <div className="pt-3 w-[400px] mx-auto md-pt-5 ">
-                      <h1 className=" bg-gradient-to-r text-[20px] leading-snug from-[#ff2e27] via-[#c2b0af]  to-[#f56560] text-transparent bg-clip-text font-[500]">
-                        {selectedImage.title}
-                      </h1>
-                      <div className=" w-[100px] mt-2 h-1  rounded-full bg-[#ff2e27]"></div>
-                      <div className="w-[300px]">
-                        {selectedImage.subTitle && (
-                          <h1 className="py-3 text-[18px] font-bold">
-                            {selectedImage.subTitle}
-                          </h1>
-                        )}
-
-                        <p className="w-[400px] font-[700]  leading-snug text-[15px] font-mono py-5">
-                          {selectedImage.description.split("").slice(0, 310)}
-                        </p>
-                      </div>
-                      {Array.isArray(selectedImage.points) ? (
-                        <ul className="text-[14px] leading-snug custom-bullet list-disc pl-5 font-sans md:leading-6">
-                          {selectedImage.points.map((point, i) => (
-                            <li key={i}>{point}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="w-[400px] text-neutral-100 leading-snug text-[15px] font-mono py-5">
-                          {selectedImage.points}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div> */}
+         
         </div>
       </section>
 
-      {/* {section 5 services } */}
-
-      {/* <section className="full-section relative h-screen  bg-black">
-        <video
-          className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
-          src={videoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
-        <div className="absolute top-10 h-full w-full md:px-20 px-5 ">
-          <div className="flex flex-col items-center  md:items-start">
-            <h1 className="text-white  font-semibold text-3xl pt-28">
-              Our services
-            </h1>
-            <div className="w-20 h-[2px]  rounded-full  bg-white mt-3"></div>
-          </div>
-          <div className="h-full">
-            <Service />
-          </div>
-        </div>
-      </section> */}
 
       {/* Section mobile -- 6 and Desktop --5 - Blur */}
 
@@ -619,7 +421,7 @@ const mobSettings = {
             playsInline
           />
 
-          <div className="absolute inset-0 backdrop-blur-lg hidden md:block bg-black/40" />
+          <div className="absolute inset-0 backdrop-blur-lg md:pb-20 hidden md:block bg-black/40" />
           <div className=" z-10 h-full text-white">
             <div className="flex flex-col pt-28 md:pl-14 md:flex-row md:pr-14 gap-5">
               {images.map((item, i) => (
@@ -639,7 +441,7 @@ const mobSettings = {
             </div>
           </div>
           <div className="">
-            <footer className="absolute z-[50] bottom-0 py-20  w-[100vw] md:px-10 md:py-5 left-0 bg-sky-500 text-white">
+            <footer className="absolute z-[50] bottom-0 py-20 top-1/2 w-[100vw] md:px-10   left-0  text-white">
               <div className="container mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
                   {/* Logo & Socials */}

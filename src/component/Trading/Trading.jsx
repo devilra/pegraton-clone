@@ -233,7 +233,7 @@ const Trading = () => {
           className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./trading/a2.jpg")',
-            height: "500px",
+            height: "700px",
           }}>
           {/* Buttons */}
         </div>
@@ -555,7 +555,7 @@ const Trading = () => {
        <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-              Our Parteners
+              Our Partners
             </h2>
             <Slider {...settings}>
               {partners.map((member, index) => (

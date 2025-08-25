@@ -7,11 +7,13 @@ html,
 body {
     margin: 0;
     padding: 0;
-   overflow-y: auto;
+ 
+   overflow-x: hidden;
 }
 
 p{
   color: black !important;
+  font-size: 18px !important;
 }
 
 .custom-bullet li::marker {

@@ -78,7 +78,7 @@ const Contact = () => {
           style={{
             backgroundImage:
               'url("https://static.vecteezy.com/system/resources/previews/051/166/491/non_2x/communication-concept-with-email-message-box-and-contacts-icons-e-mail-marketing-customer-support-counseling-and-support-hotline-connection-with-modern-network-technology-contact-us-free-photo.jpg")',
-            height: "500px",
+            height: "700px",
           }}>
           {/* Buttons */}
         </div>
@@ -125,7 +125,7 @@ const Contact = () => {
           <div className="flex items-start mb-6 text-gray-700">
             <FaMapMarkerAlt className="text-pink-500 mr-3 mt-1" />
             <p className="text-sm leading-relaxed">
-              4, maple building, thiriveni nagar, opposite to saraswathi statue vadakkupattu village 
+              4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204
             </p>
           </div>
 

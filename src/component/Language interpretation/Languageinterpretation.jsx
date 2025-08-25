@@ -172,7 +172,7 @@ const mobSettings = {
           style={{
             backgroundImage:
               'url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=")',
-            height: "500px",
+            height: "700px",
           }}>
           {/* Buttons */}
         </div>
@@ -554,7 +554,7 @@ const mobSettings = {
        <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-              Our Parteners
+              Our Partners
             </h2>
             <Slider {...settings}>
               {partners.map((member, index) => (

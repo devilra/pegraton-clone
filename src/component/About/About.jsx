@@ -17,6 +17,7 @@ import {
 
 import AboutFooter from "./AboutFooter";
 import Clients from "../../clients/Clients";
+import { Link } from "react-router-dom";
 
 // const sections = [
 //   {
@@ -216,7 +217,10 @@ const About = () => {
           className="bg-cover bg-center brightness-50 bg-no-repeat"
           style={{
             backgroundImage: 'url("./about/a.png")',
-            height: "500px",
+            height: "700px",
+            backgroundPosition:'center 20%',
+            backgroundSize:'cover',
+            backgroundRepeat:'no-repeat'
           }}>
           {/* Buttons */}
         </div>
@@ -282,20 +286,20 @@ const About = () => {
 
           {/* Stats */}
           <div className="flex md:justify-center gap-8 mt-10 md:mt-20">
-            <div>
-              <h3 className="text-pink-500 text-3xl font-bold">200+</h3>
-              <p className="text-sm text-gray-600 mt-1">OSS</p>
-            </div>
-            <div>
-              <h3 className="text-pink-500 text-3xl font-bold">12+</h3>
-              <p className="text-sm text-gray-600 mt-1">
+            <Link to='/oss' className="space-y-2">
+              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">200+</h3>
+              <h4 className="text-sm font-bold md:text-2xl text-center mt-1">OSS</h4>
+            </Link>
+            <Link to='/language' className="space-y-2">
+              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">12+</h3>
+              <h4 className="text-sm md:text-2xl text-center font-bold mt-1">
                 Language Interpretation
-              </p>
-            </div>
-            <div>
-              <h3 className="text-pink-500 text-3xl font-bold">3+</h3>
-              <p className="text-sm text-gray-600 mt-1">Clients trading</p>
-            </div>
+              </h4>
+            </Link>
+            <Link to='/trading' className="space-y-2">
+              <h3 className="text-pink-500 text-3xl md:text-4xl text-center font-bold">3+</h3>
+              <h4 className="text-sm  md:text-2xl font-bold text-center mt-1">Clients trading</h4>
+            </Link>
           </div>
         </div>
 
@@ -385,7 +389,7 @@ const About = () => {
         <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-              Our Parteners
+              Our Partners
             </h2>
             <Slider {...settings}>
               {partners.map((member, index) => (
