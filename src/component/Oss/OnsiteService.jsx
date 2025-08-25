@@ -83,39 +83,39 @@ const OnsiteService = () => {
   };
 
 
-  const partners = [
+const partners = [
   {
-    img: "/part/1.png",
+    img: "/part/new/p1.png",
   },
   {
-    img: "/part/2.png",
+    img: "/part/new/p2.png",
   },
   {
-    img: "/part/3.png",
+    img: "/part/new/p3.png",
   },
   {
-    img: "/part/4.png",
+    img: "/part/new/p4.png",
   },
   {
-    img: "/part/5.png",
+    img: "/part/new/p5.png",
   },
   {
-    img: "/part/6.png",
+    img: "/part/new/p6.png",
   },
   {
-    img: "/part/7.png",
+    img: "/part/new/p7.png",
   },
   {
-    img: "/part/8.png",
+    img: "/part/new/p8.png",
   },
   {
-    img: "/part/9.png",
+    img: "/part/new/p9.png",
   },
   {
-    img: "/part/10.png",
+    img: "/part/new/p10.png",
   },
   {
-    img: "/part/11.png",
+    img: "/part/new/p11.png",
   },
 ];
 
@@ -240,7 +240,7 @@ const mobSettings = {
                 return (
                   <span
                     key={index}
-                    className={`px-4 inline-block text-center rounded bg-opacity-40  py-2 text-[13px] md:text-[18px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
+                    className={` inline-block text-center rounded bg-opacity-40  py-2 text-[13px] md:text-[18px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
                     {company}
                   </span>
                 );
