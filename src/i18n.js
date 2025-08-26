@@ -1,23 +1,32 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-import en from "./locales/en/translation.json";
-import fr from "./locales/fr/translation.json";
-import zh from "./locales/zh/translation.json";
-import ja from "./locales/ja/translation.json";
-import ko from "./locales/ko/translation.json";
+import translationEN from './locales/en/translation.json';
+import translationFR from './locales/fr/translation.json';
+import translationZH from './locales/zh/translation.json';
+import translationJA from './locales/ja/translation.json';
+import translationKO from './locales/ko/translation.json';
 
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    fr: { translation: fr },
-    zh: { translation: zh },
-    ja: { translation: ja },
-    ko: { translation: ko },
-  },
-  lng: "en",
-  fallbackLng: "en",
-  interpolation: { escapeValue: false },
-});
+const resources = {
+  en: { translation: translationEN },
+  fr: { translation: translationFR },
+  zh: { translation: translationZH },
+  ja: { translation: translationJA },
+  ko: { translation: translationKO }
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'en',
+    interpolation: { escapeValue: false },
+    detection: {
+      order: ['localStorage', 'navigator'], // First localStorage then browser language
+      caches: ['localStorage'] // Save selected language
+    }
+  });
 
 export default i18n;

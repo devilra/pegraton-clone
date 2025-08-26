@@ -1,5 +1,13 @@
 {
   "welcome": "私たちのウェブサイトへようこそ",
+  "home": "ホーム",
   "about": "私たちについて",
-  "contact": "連絡先"
+  "about_desc": "私たちは高品質なサービスを提供するグローバル企業です。",
+  "contact": "お問い合わせ",
+  "contact_title": "お問い合わせ",
+  "contact_desc": "お気軽にご連絡ください。",
+  "service_title": "サービス",
+  "careers_title": "採用情報",
+  "language_title": "言語通訳",
+  "trading_title": "取引ソリューション"
 }

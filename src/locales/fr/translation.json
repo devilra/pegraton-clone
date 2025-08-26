@@ -1,5 +1,13 @@
 {
-  "welcome": "Bienvenue sur notre site Web",
+  "welcome": "Bienvenue sur notre site",
+  "home": "Accueil",
   "about": "À propos de nous",
-  "contact": "Contact"
+  "about_desc": "Nous sommes une entreprise mondiale offrant des services de qualité.",
+  "contact": "Contact",
+  "contact_title": "Contactez-nous",
+  "contact_desc": "Prenez contact avec nous.",
+  "service_title": "Nos services",
+  "careers_title": "Carrières",
+  "language_title": "Interprétation linguistique",
+  "trading_title": "Solutions de trading"
 }

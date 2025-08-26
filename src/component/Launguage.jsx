@@ -10,9 +10,11 @@ const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
 ];
 
-const Launguage = () => {
+const Language = () => {
   const { i18n } = useTranslation();
   const location = useLocation();
+
+    console.log(i18n.language);
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -20,16 +22,15 @@ const Launguage = () => {
 
   return (
     <div
-      className={`fixed top-0 md:-top-8 right-0 md:-right-36 bg-transparent shadow-md p-1 z-50 ${
-        location.pathname === "/about" && "md:right-2 md:top-0"
-      }`}>
+      className={`fixed top-0 md:top-2 right-0 md:right-4 bg-transparent shadow-md p-1 z-50`}>
       <select
+        aria-label="Select Language"
         onChange={(e) => changeLanguage(e.target.value)}
-        value={i18n.language}
-        className="border border-gray-30 md:w-[100px] text-black0 text-[15px] rounded p-1">
+        value={i18n.resolvedLanguage}
+        className="border border-gray-300 md:w-[120px] text-black text-[15px] rounded p-1">
         {languages.map((lang) => (
           <option
-            className="bg-white md:w-[100px] text-black"
+            className="bg-white text-black"
             key={lang.code}
             value={lang.code}>
             {lang.flag} {lang.name}
@@ -40,4 +41,4 @@ const Launguage = () => {
   );
 };
 
-export default Launguage;
+export default Language;

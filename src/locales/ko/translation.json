@@ -1,5 +1,13 @@
 {
-  "welcome": "우리 웹사이트에 오신 것을 환영합니다",
+  "welcome": "저희 웹사이트에 오신 것을 환영합니다",
+  "home": "홈",
   "about": "회사 소개",
-  "contact": "연락처"
+  "about_desc": "우리는 고품질 서비스를 제공하는 글로벌 기업입니다.",
+  "contact": "연락처",
+  "contact_title": "문의하기",
+  "contact_desc": "저희에게 연락하세요.",
+  "service_title": "서비스",
+  "careers_title": "채용",
+  "language_title": "언어 통역",
+  "trading_title": "거래 솔루션"
 }

@@ -1,5 +1,15 @@
 {
   "welcome": "Welcome to our website",
-  "about": "About Us",
-  "contact": "Contact"
+  "home": "Home",
+  "about": {
+    "head":"About"
+  },
+  "about_desc": "We are a global company providing quality services.",
+  "contact": "Contact",
+  "contact_title": "Contact Us",
+  "contact_desc": "Get in touch with us.",
+  "service_title": "Our Services",
+  "careers_title": "Careers",
+  "language_title": "Language Interpretation",
+  "trading_title": "Trading Solutions"
 }

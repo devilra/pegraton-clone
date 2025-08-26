@@ -13,6 +13,7 @@ import "./i18n";
 import OnsiteService from "./component/Oss/OnsiteService";
 import Languageinterpretation from "./component/Language interpretation/Languageinterpretation";
 import Trading from "./component/Trading/Trading";
+import Language from "./component/Launguage";
 
 const App = () => {
   const validNavbar = ["/"];
@@ -22,6 +23,7 @@ const App = () => {
   return (
     <>
       {validNavbar.includes(location.pathname) && <Navbar />}
+      <Language/>
 
       <Routes>
         <Route path="/" element={<Home t={t} />} />

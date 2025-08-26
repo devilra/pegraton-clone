@@ -1,5 +1,13 @@
 {
   "welcome": "欢迎来到我们的网站",
+  "home": "主页",
   "about": "关于我们",
-  "contact": "联系"
+  "about_desc": "我们是一家提供优质服务的全球公司。",
+  "contact": "联系",
+  "contact_title": "联系我们",
+  "contact_desc": "与我们取得联系。",
+  "service_title": "我们的服务",
+  "careers_title": "招聘",
+  "language_title": "语言翻译",
+  "trading_title": "交易解决方案"
 }
