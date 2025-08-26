@@ -22,7 +22,7 @@ const Language = () => {
 
   return (
     <div
-      className={`fixed top-0 md:top-2 right-0 md:right-4 bg-transparent shadow-md p-1 z-50`}>
+      className={`fixed md:top-8  right-0 md:right-1/2 bg-transparent shadow-md p-1 z-[9999]`}>
       <select
         aria-label="Select Language"
         onChange={(e) => changeLanguage(e.target.value)}
