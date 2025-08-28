@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   FaFacebookF,
-  FaTwitter,
+ 
   FaInstagram,
   FaPinterestP,
   FaArrowUp,
@@ -9,6 +9,8 @@ import {
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const AboutFooter = () => {
   const whatsappNumber = "8610102669";
@@ -67,7 +69,7 @@ const AboutFooter = () => {
         <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
         <div className="flex space-x-4">
           <a
-                                  href="https://www.facebook.com/profile.php?id=61579775423332"
+                                  href="https://www.facebook.com/profile.php?id=61579618665773"
                                   className="hover:text-pink-400"
                                   target="_blank"
                                 >
@@ -78,10 +80,10 @@ const AboutFooter = () => {
                                   className="hover:text-pink-400"
                                   target="_blank"
                                 >
-                                  <FaTwitter size={16} />
+                                  <FaXTwitter size={16} />
                                 </a>
                                 <a
-                                  href="https://www.instagram.com/sansirong.in"
+                                  href="https://www.instagram.com/__sansirong/"
                                   className="hover:text-pink-400"
                                   target="_blank"
                                 >

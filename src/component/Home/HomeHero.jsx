@@ -8,6 +8,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 import {
   FaFacebookF,
@@ -442,7 +444,7 @@ const HomeHero = () => {
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <div className="flex space-x-3">
                       <a
-                        href="https://www.facebook.com/profile.php?id=61579775423332"
+                        href="https://www.facebook.com/profile.php?id=61579618665773"
                         className="hover:text-pink-400"
                         target="_blank"
                       >
@@ -453,10 +455,10 @@ const HomeHero = () => {
                         className="hover:text-pink-400"
                         target="_blank"
                       >
-                        <FaTwitter size={16} />
+                        <FaXTwitter  size={16} />
                       </a>
                       <a
-                        href="https://www.instagram.com/sansirong.in"
+                        href="https://www.instagram.com/__sansirong/"
                         className="hover:text-pink-400"
                         target="_blank"
                       >
