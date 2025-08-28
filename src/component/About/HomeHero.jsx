@@ -438,7 +438,7 @@ const HomeHero = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
                   {/* Logo & Socials */}
                   <div className="pl-2 md:pl-0">
-                    <img src="/logo.png" alt="Logo" className="w-14 mb-3" />
+                    <img src="/logo1.png" alt="Logo" className="w-14 mb-3" />
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <div className="flex space-x-3">
                       <a
