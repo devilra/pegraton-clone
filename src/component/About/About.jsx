@@ -71,11 +71,13 @@ const teamLeaders = [
     role: "Technical Manager ( Learning and OSS opertaions)",
     img: "/hr/h1.jpeg",
   },
-  // {
-  //   name: "Prasath Sridaran",
-  //   role: "Managing Director",
-  //   img: "/hr/h3.jpeg",
-  // },
+  {
+   
+    img: "/hr/h4.jpg",
+  },
+  {
+    img:'/hr/h5.jpg'
+  }
 ];
 
 const partners = [
@@ -265,7 +267,7 @@ const About = ({t}) => {
             </div>
           </div>
           </div>
-          <div className="w-full flex justify-center pt-10">
+          <div className="w-full pt-10 ">
             <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div
