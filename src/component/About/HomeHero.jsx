@@ -501,11 +501,22 @@ const HomeHero = () => {
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
-                        <FiPhone className="text-pink-400" /> +91 8610102669
+                        <FiPhone className="text-pink-400" />
+                        <a
+                          href="tel:+918610102669"
+                          className="flex items-center gap-2 hover:text-pink-300 transition"
+                        >
+                          +91 8610102669
+                        </a>
                       </li>
                       <li className="flex items-center gap-2">
                         <FiMail className="text-pink-400" />{" "}
-                        sansirongsales@gmail.com
+                        <a
+                          href="mailto:sansirongsales@gmail.com"
+                          className="flex items-center gap-2 hover:text-pink-300 transition"
+                        >
+                          sansirongsales@gmail.com
+                        </a>
                       </li>
                       <li className="flex items-start gap-2">
                         <FiMapPin className="text-pink-400 mt-1" size={40} /> 4,

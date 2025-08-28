@@ -66,10 +66,34 @@ const AboutFooter = () => {
         />
         <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-pink-400"><FaFacebookF size={18} /></a>
-          <a href="#" className="hover:text-pink-400"><FaTwitter size={18} /></a>
-          <a href="#" className="hover:text-pink-400"><FaInstagram size={18} /></a>
-          <a href="#" className="hover:text-pink-400"><FaPinterestP size={18} /></a>
+          <a
+                                  href="https://www.facebook.com/profile.php?id=61579775423332"
+                                  className="hover:text-pink-400"
+                                  target="_blank"
+                                >
+                                  <FaFacebookF size={16} />
+                                </a>
+                                <a
+                                  href="https://x.com/sansirongs/communities/explore"
+                                  className="hover:text-pink-400"
+                                  target="_blank"
+                                >
+                                  <FaTwitter size={16} />
+                                </a>
+                                <a
+                                  href="https://www.instagram.com/sansirong.in"
+                                  className="hover:text-pink-400"
+                                  target="_blank"
+                                >
+                                  <FaInstagram size={16} />
+                                </a>
+                                <a
+                                  href="https://www.pinterest.com/sansirongsales/"
+                                  className="hover:text-pink-400"
+                                  target="_blank"
+                                >
+                                  <FaPinterestP size={16} />
+                                </a>
         </div>
       </div>
 
@@ -89,8 +113,20 @@ const AboutFooter = () => {
         <h3 className="font-semibold mb-2">Contact Us</h3>
         <div className="border-b-2 border-pink-400 w-16 mb-4"></div>
         <ul className="space-y-3 text-sm">
-          <li className="flex items-center gap-2"><FiPhone className="text-pink-400" /> +91 8610102669</li>
-          <li className="flex items-center gap-2"><FiMail className="text-pink-400" /> sansirongsales@gmail.com</li>
+          <li className="flex items-center gap-2"><FiPhone className="text-pink-400" /><a
+    href="tel:+918610102669"
+    className="flex items-center gap-2 hover:text-pink-300 transition"
+  >
+    
+    +91 8610102669
+  </a></li>
+          <li className="flex items-center gap-2"><FiMail className="text-pink-400" /> <a
+    href="mailto:sansirongsales@gmail.com"
+    className="flex items-center gap-2 hover:text-pink-300 transition"
+  >
+    
+    sansirongsales@gmail.com
+  </a></li>
           <li className="flex items-start gap-2"><FiMapPin size={40} className="text-pink-400 mt-1" /> 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204</li>
         </ul>
       </div>

@@ -49,16 +49,16 @@ const Footer = () => {
               <img src="/logo1.png" alt="Logo" className="w-14 mb-3" />
               <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
               <div className="flex space-x-3">
-                <a href="#" className="hover:text-pink-400">
+                <a href="https://www.facebook.com/profile.php?id=61579775423332" className="hover:text-pink-400">
                   <FaFacebookF size={16} />
                 </a>
-                <a href="#" className="hover:text-pink-400">
+                <a href="https://x.com/sansirongs/communities/explore" className="hover:text-pink-400">
                   <FaTwitter size={16} />
                 </a>
-                <a href="#" className="hover:text-pink-400">
+                <a href="https://www.instagram.com/sansirong.in" className="hover:text-pink-400">
                   <FaInstagram size={16} />
                 </a>
-                <a href="#" className="hover:text-pink-400">
+                <a href="https://www.pinterest.com/sansirongsales/" className="hover:text-pink-400">
                   <FaPinterestP size={16} />
                 </a>
               </div>
