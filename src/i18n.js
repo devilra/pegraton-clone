@@ -24,8 +24,8 @@ i18n
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator'], // First localStorage then browser language
-      caches: ['localStorage'] // Save selected language
+      order: ['localStorage', 'navigator'], 
+      caches: ['localStorage'] 
     }
   });
 

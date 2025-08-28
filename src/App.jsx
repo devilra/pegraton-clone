@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./component/Home/Home";
 import Navbar from "./component/Navbar";
 import About from "./component/About/About";
@@ -6,23 +6,49 @@ import ProductService from "./component/ProductService/ProductService";
 import Careers from "./component/Careers/Careers";
 import Contact from "./component/Contact/Contact";
 
-//launguage changes code
 import { useTranslation } from "react-i18next";
 import "./i18n";
 import OnsiteService from "./component/Oss/OnsiteService";
 import Languageinterpretation from "./component/Language interpretation/Languageinterpretation";
 import Trading from "./component/Trading/Trading";
 import Language from "./component/Launguage";
+import translations from "./translation.json";
+import { useState } from "react";
+
 
 const App = () => {
+  const [lang, setLang] = useState("en");
   const validNavbar = ["/"];
   const location = useLocation();
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
+  const t = (key) => translations[lang][key];
 
   return (
     <>
       {validNavbar.includes(location.pathname) && <Navbar />}
-      {/* <Language/> */}
+      {/* <Language /> */}
+
+           {/* <nav className="fixed md:top-8 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
+         
+
+         
+           <div className="flex gap-4">
+            <Link to="/">{t("home.head")}</Link>
+             <Link to="/about">{t("about.head")}</Link>
+            <Link to="/contact">{t("contact")}</Link> 
+          </div>
+          <select
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
+            className="border p-1 rounded"
+          >
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="zh">Chinese</option>
+            <option value="ru">Russian</option>
+            <option value="ko">Korean</option>
+          </select>
+        </nav> */}
 
       <Routes>
         <Route path="/" element={<Home t={t} />} />

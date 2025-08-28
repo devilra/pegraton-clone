@@ -20,7 +20,7 @@ import {
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
-const HomeHero = () => {
+const HomeHero = ({t}) => {
   // const videoSrc = "/h.mp4";
 
   const videoSrc =
@@ -67,108 +67,7 @@ const HomeHero = () => {
 
   const location = useLocation();
 
-  // useEffect(() => {
-  //   const sections = document.querySelectorAll(".full-section");
-
-  //   const goToSection = (index) => {
-  //     setSectionIndex(index);
-  //     sections[index]?.scrollIntoView({ behavior: "smooth" });
-  //   };
-
-  //   const handleKeyDown = (e) => {
-  //     setSectionIndex((prevIndex) => {
-  //       if (e.key === "ArrowDown" && prevIndex < sections.length - 1) {
-  //         e.preventDefault();
-  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex + 1);
-  //         return prevIndex + 1;
-  //       } else if (e.key === "ArrowUp" && prevIndex > 0) {
-  //         e.preventDefault();
-  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex - 1);
-  //         return prevIndex - 1;
-  //       }
-  //       return prevIndex;
-  //     });
-  //   };
-
-  //   let touchStartY = 0;
-  //   let touchEndY = 0;
-  //   let isSwipe = false;
-
-  //   const handleTouchStart = (e) => {
-  //     touchStartY = e.touches[0].clientY;
-  //     isSwipe = false;
-  //   };
-  //   const handleTouchMove = (e) => {
-  //     //e.preventDefault();
-  //     touchEndY = e.touches[0].clientY;
-  //     const diff = Math.abs(touchStartY - touchEndY);
-
-  //     if (diff > 10) {
-  //       e.preventDefault();
-  //       isSwipe = true;
-  //     }
-  //   };
-  //   const handleTouchEnd = () => {
-  //     if (!isSwipe) return;
-
-  //     setSectionIndex((prevIndex) => {
-  //       const swipeDistance = touchStartY - touchEndY;
-  //       if (swipeDistance > 50 && prevIndex < sections.length - 1) {
-  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex + 1);
-  //         return prevIndex + 1;
-  //       } else if (swipeDistance < -50 && prevIndex > 0) {
-  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex - 1);
-  //         return prevIndex - 1;
-  //       }
-  //       return prevIndex;
-  //     });
-  //   };
-
-  //   let isScrolling = false;
-  //   const handleWheel = (e) => {
-  //     if (isScrolling) return;
-  //     isScrolling = true;
-
-  //     setSectionIndex((prevIndex) => {
-  //       if (e.deltaY > 0 && prevIndex < sections.length - 1) {
-  //         //sections[prevIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex + 1);
-  //         return prevIndex + 1;
-  //       } else if (e.deltaY < 0 && prevIndex > 0) {
-  //         //sections[prevIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-  //         goToSection(prevIndex - 1);
-  //         return prevIndex - 1;
-  //       }
-  //       return prevIndex;
-  //     });
-
-  //     setTimeout(() => {
-  //       isScrolling = false;
-  //     }, 800);
-  //   };
-
-  //   const disableScroll = (e) => {
-  //     e.preventDefault();
-  //   };
-
-  //   window.addEventListener("keydown", handleKeyDown);
-  //   window.addEventListener("touchstart", handleTouchStart);
-  //   window.addEventListener("touchmove", handleTouchMove, { passive: false });
-  //   window.addEventListener("touchend", handleTouchEnd);
-  //   window.addEventListener("wheel", handleWheel, { passive: false });
-
-  //   return () => {
-  //     window.removeEventListener("keydown", handleKeyDown);
-  //     window.removeEventListener("touchstart", handleTouchStart);
-  //     window.removeEventListener("touchmove", handleTouchMove);
-  //     window.removeEventListener("touchend", handleTouchEnd);
-  //     window.removeEventListener("wheel", handleWheel);
-  //   };
-  // }, []);
+ 
 
   const partners = [
     {
@@ -294,7 +193,7 @@ const HomeHero = () => {
               <div className="w-[50px] bg-white  md:mt-1 rounded-full"></div>
               <div className="leading-snug pb-10">
                 <h1 className="text-[25px] font-[800] pt-5">
-                  Who We Are -What We Do
+                  {t('Who We Are -What We Do')}
                 </h1>
                 <h3 className="text-[16px] leading-[25px] tracking-[1px] md:pt-3 md:w-[900px] font-[500] ">
                   Our company specializes in providing comprehensive OSS

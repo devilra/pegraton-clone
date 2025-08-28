@@ -4,7 +4,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import AboutFooter from "../About/AboutFooter";
 import axios from "axios";
 
-const Contact = () => {
+const Contact = ({t}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,7 +84,7 @@ const Contact = () => {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center">
-            Contact
+            {t('contact')}
           </h1>
         </div>
       </div>

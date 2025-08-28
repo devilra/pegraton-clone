@@ -1,0 +1,59 @@
+{
+  "en": {
+    "home":
+   {
+     "head":"Home",
+     "h1":"INNOVATIVE MINDSET,"
+   },
+    
+    "about": {
+      "head":"About"
+    },
+    "contact": "Contact",
+    "welcome": "Welcome to our Website",
+    "aboutText": "We are providing the best service worldwide.",
+    "contactText": "You can reach us via email or phone.",
+    "listTitle": "Our Services",
+    "listItems": ["Fast Delivery", "24/7 Support", "Affordable Prices"]
+  },
+  "fr": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "welcome": "Bienvenue sur notre site Web",
+    "aboutText": "Nous fournissons le meilleur service dans le monde.",
+    "contactText": "Vous pouvez nous contacter par e-mail ou téléphone.",
+    "listTitle": "Nos Services",
+    "listItems": ["Livraison rapide", "Support 24/7", "Prix abordables"]
+  },
+  "zh": {
+    "home": "主页",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "welcome": "欢迎来到我们的网站",
+    "aboutText": "我们提供全球最好的服务。",
+    "contactText": "您可以通过电子邮件或电话联系我们。",
+    "listTitle": "我们的服务",
+    "listItems": ["快速送货", "全天候支持", "实惠的价格"]
+  },
+  "ru": {
+    "home": "Главная",
+    "about": "О нас",
+    "contact": "Контакт",
+    "welcome": "Добро пожаловать на наш сайт",
+    "aboutText": "Мы предоставляем лучшие услуги по всему миру.",
+    "contactText": "Вы можете связаться с нами по электронной почте или телефону.",
+    "listTitle": "Наши услуги",
+    "listItems": ["Быстрая доставка", "Поддержка 24/7", "Доступные цены"]
+  },
+  "ko": {
+    "home": "홈",
+    "about": "회사 소개",
+    "contact": "문의하기",
+    "welcome": "저희 웹사이트에 오신 것을 환영합니다",
+    "aboutText": "우리는 전 세계적으로 최고의 서비스를 제공합니다.",
+    "contactText": "이메일이나 전화로 문의하실 수 있습니다.",
+    "listTitle": "우리의 서비스",
+    "listItems": ["빠른 배송", "24/7 지원", "합리적인 가격"]
+  }
+}

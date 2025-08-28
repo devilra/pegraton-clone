@@ -1,11 +1,11 @@
 import React from "react";
 import HomeHero from "./HomeHero";
 
-const Home = () => {
+const Home = ({t}) => {
   return (
     <div>
       {/* <VideoBackground /> */}
-      <HomeHero />
+      <HomeHero t={t} />
     </div>
   );
 };

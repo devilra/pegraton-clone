@@ -1,8 +1,10 @@
 {
+  "hello":"Hello world",
   "welcome": "Welcome to our website",
   "home": "Home",
   "about": {
-    "head":"About"
+    "head":"About",
+    "p1":"meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to theseamless execution of operations."
   },
   "about_desc": "We are a global company providing quality services.",
   "contact": "Contact",

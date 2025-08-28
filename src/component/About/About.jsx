@@ -63,20 +63,30 @@ const teamLeaders = [
   {
     name: "Vignesh",
     role: "HR Associate",
-    img: "/hr/h2.jpeg",
+    img: "/hr/h6.jpg",
+    crop:'object-[20%_75%]'
   },
   {
     name: " Hemachandiran Somaskandan ",
 
     role: "Technical Manager ( Learning and OSS opertaions)",
-    img: "/hr/h1.jpeg",
+    img:'/hr/h7.jpg',
+    crop:'object-[20%_85%]'
+  },
+
+  {
+    name: "Chen Shonk Yun",
+    role:'Team Leader',
+    img:'/hr/h8.jpg',
+    crop:'object-[20%_75%]'
+    
   },
   {
-   
-    img: "/hr/h4.jpg",
-  },
-  {
-    img:'/hr/h5.jpg'
+     name: "Veena Mandeep",
+    role:'Team Leader',
+    img:'/hr/h4.jpg',
+    crop:'object-[10%_20%]  '
+
   }
 ];
 
@@ -157,7 +167,7 @@ const mobSettings = {
 const About = ({t}) => {
   const [active, setActive] = useState("vision");
   return (
-    <div className="overflow-y-scroll h-screen">
+    <div className="overflow-y-scroll  h-screen">
       {/* Navbar */}
       <div className="relative">
         <div className="absolute top-0 left-0 w-full z-20">
@@ -189,17 +199,15 @@ const About = ({t}) => {
         <Clients />
       </div>
 
-      <section className="bg-white py-10 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
+      <section className="bg-white py-10 px-6 md:px-20 flex flex-col  md:flex-row items-center gap-10">
         <div className="flex-1 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
             Who We Are <span className="text-black">-</span> What We Do
           </h2>
           <p className="mt-4 text-black leading-relaxed">
-            Our company specializes in providing comprehensive{" "}
-            <span className="font-semibold">OSS</span> solutions tailored to
-            meet the needs of various industries. We pride ourselves on
-            delivering skilled and reliable professionals who contribute to the
-            seamless execution of operations.
+            Our company specializes in providing comprehensive
+            <span className="font-semibold px-2">OSS</span> solutions tailored to meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to theseamless execution of operations.
+           
           </p>
 
           {/* Stats */}
@@ -276,7 +284,7 @@ const About = ({t}) => {
                   <img
                     src={member.img}
                     alt={member.name}
-                    className="w-full h-96 md:w-[300px] object-cover"
+                    className={`w-full h-[300px] md:w-[300px] object-cover   ${member.crop}`}
                   />
                   <div className="p-4 text-center">
                     <h3 className="text-lg text-[#29295e] font-semibold">
