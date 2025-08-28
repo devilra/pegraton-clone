@@ -540,24 +540,7 @@ const HomeHero = () => {
         </section>
       </div>
 
-      {/* <div className="md:hidden ">
-        <section className="full-section relative h-screen md:flex md:f items-center justify-center bg-black">
-          <video
-            className="absolute inset-0 w-full h-full object-cover object-[60%_center] md:object-center"
-            src={videoSrc}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          <div className="absolute inset-0 backdrop-blur-lg bg-black/40" />
-
-          <div className=" z-10 mt-2 text-white text-4xl ">
-            <AboutFooter />
-            <h1>Hello</h1>
-          </div>
-        </section>
-      </div> */}
+      
     </div>
   );
 };
