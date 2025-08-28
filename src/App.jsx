@@ -23,7 +23,7 @@ const App = () => {
   return (
     <>
       {validNavbar.includes(location.pathname) && <Navbar />}
-      <Language/>
+      {/* <Language/> */}
 
       <Routes>
         <Route path="/" element={<Home t={t} />} />
