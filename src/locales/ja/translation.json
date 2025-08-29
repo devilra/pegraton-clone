@@ -1,13 +1,23 @@
 {
-  "welcome": "私たちのウェブサイトへようこそ",
-  "home": "ホーム",
-  "about": "私たちについて",
-  "about_desc": "私たちは高品質なサービスを提供するグローバル企業です。",
-  "contact": "お問い合わせ",
-  "contact_title": "お問い合わせ",
-  "contact_desc": "お気軽にご連絡ください。",
-  "service_title": "サービス",
-  "careers_title": "採用情報",
-  "language_title": "言語通訳",
-  "trading_title": "取引ソリューション"
+  "home": "HOME",
+  "about": "ABOUT",
+  "services": "SERVICES",
+  "contact": "CONTACT",
+  "careers": "CAREERS",
+
+  "head1": "革新的なマインドセット",
+  "head2": "卓越性を目指して",
+
+  "aboutus": "私たちについて",
+  "abouthead": "私たちは誰ですか - 私たちは何をしていますか",
+  "aboutpara1": "当社は、様々な業界のニーズに合わせた包括的なOSSソリューションの提供を専門としています。シームレスな業務遂行に貢献する、熟練した信頼できるプロフェッショナルを派遣することに誇りを持っています。",
+  "aboutpara2": "エンジニア (最前線のサポート): 日常業務がスムーズに進むように、第一レベルのトラブルシューティング、予防保守、基本的な運用サポートを担当します...",
+
+  "footerabout": "について",
+  "footerabout1": "私たちについて",
+  "footerabout2": "オンサイトサポートサービス",
+  "footerabout3": "言語通訳",
+
+  "contactus": "お問い合わせ",
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
 }

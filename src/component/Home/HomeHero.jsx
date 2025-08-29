@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaXTwitter } from "react-icons/fa6";
 
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -20,7 +19,7 @@ import {
 
 //const images = ["/sansirong/s1.jpg", "/sansirong/s2.jpg", "/sansirong/s3.jpg"];
 
-const HomeHero = ({t}) => {
+const HomeHero = ({ t }) => {
   // const videoSrc = "/h.mp4";
 
   const videoSrc =
@@ -66,8 +65,6 @@ const HomeHero = ({t}) => {
   // };
 
   const location = useLocation();
-
- 
 
   const partners = [
     {
@@ -164,9 +161,9 @@ const HomeHero = ({t}) => {
 
         <div className="relative z-10 flex flex-col  items-center justify-center md:justify-end h-full text-white">
           <h3 className="mt-4 bg-gradient-to-r from-neutral-400 to-rose-700 bg-clip-text text-transparent text-white md:font[800] text-stroke text-stroke-white text-fill-white text-[28px] md:text-5xl  px-6 md:px-0 md:pb-28  font-bold md:w-[1000px] md:text-[65px] leading-[55px] md:leading-[70px] md:pl-28">
-            INNOVATIVE MINDSET, <br />
+            {t("head1")} <br />
             <span className="relative hidden md:block typewriter md:leading-[80px]  font-bold text-6xl text-white">
-              STRIVING FOR EXCELLENCE.
+              {t("head2")}
             </span>
             <span className="relative md:hidden typewriter inline-block font-bold text-[28px] text-white">
               STRIVING FOR EXCELLENCE.
@@ -189,24 +186,20 @@ const HomeHero = ({t}) => {
         <div className="relative z-10 text-white text-4xl">
           <div className="flex mt-20 md:mt-0 md:pb-24 gap-5 relative md:pl-28 rounded-lg flex-col md:flex-row  overflow-hidden md:pt-20 shadow-lg">
             <div className="w-full  md:overflow-hidden pr-3  pl-5 md:pl-10  rounded-lg md:w-vw ">
-              <h1 className=" text-[18px] md:text-[30px]  pt-3">About us</h1>
+              <h1 className=" text-[18px] md:text-[30px]  pt-3">
+                {t("aboutus")}
+              </h1>
               <div className="w-[50px] bg-white  md:mt-1 rounded-full"></div>
               <div className="leading-snug pb-10">
                 <h1 className="text-[25px] font-[800] pt-5">
-                  {t('Who We Are -What We Do')}
+                  {t("abouthead")}
                 </h1>
                 <h3 className="text-[16px] leading-[25px] tracking-[1px] md:pt-3 md:w-[900px] font-[500] ">
-                  Our company specializes in providing comprehensive OSS
-                  solutions tailored to meet the needs of various industries. We
-                  pride ourselves on delivering skilled and reliable
-                  professionals who contribute to the seamless execution of
-                  operations.
+                  {t("aboutpara1")}
                 </h3>
 
                 <h3 className="text-[16px]  tracking-[1px] pt-5 leading-[25px] md:pt-3 md:w-[700px] font-[500] md:mb-5 ">
-                  Engineers (Frontline Support): Handle first-level
-                  troubleshooting, preventive maintenance, and basic operational
-                  support to ensure smooth day-to-day functioning...
+                  {t("aboutpara2")}
                   <Link
                     to="/about"
                     className="text-blue-500 text-[15px] cursor-pointer hover:underline"
@@ -354,7 +347,7 @@ const HomeHero = ({t}) => {
                         className="hover:text-pink-400"
                         target="_blank"
                       >
-                        <FaXTwitter  size={16} />
+                        <FaXTwitter size={16} />
                       </a>
                       <a
                         href="https://www.instagram.com/__sansirong/"
@@ -375,22 +368,22 @@ const HomeHero = ({t}) => {
 
                   {/* About */}
                   <div className="pl-2 md:pl-0">
-                    <h3 className="font-semibold mb-2">About</h3>
+                    <h3 className="font-semibold mb-2">{t("footerabout")}</h3>
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <ul className="space-y-1 pl-4 md:pl-0 text-sm">
                       <li>
                         <Link to="/about" className="hover:text-pink-400">
-                          About Us
+                          {t("footerabout1")}
                         </Link>
                       </li>
                       <li>
                         <Link to="/oss" className="hover:text-pink-400">
-                          onsitesupportservicesoss
+                          {t("footerabout2")}
                         </Link>
                       </li>
                       <li>
                         <Link to="/launguage" className="hover:text-pink-400">
-                          languageinterpretation
+                          {t("footerabout3")}
                         </Link>
                       </li>
                     </ul>
@@ -398,7 +391,7 @@ const HomeHero = ({t}) => {
 
                   {/* Contact */}
                   <div>
-                    <h3 className="font-semibold mb-2">Contact Us</h3>
+                    <h3 className="font-semibold mb-2">{t("contactus")}</h3>
                     <div className="border-b-2 border-pink-400 w-14 mb-3"></div>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
@@ -440,8 +433,6 @@ const HomeHero = ({t}) => {
           </a>
         </section>
       </div>
-
-      
     </div>
   );
 };

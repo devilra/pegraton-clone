@@ -13,42 +13,36 @@ import Languageinterpretation from "./component/Language interpretation/Language
 import Trading from "./component/Trading/Trading";
 import Language from "./component/Launguage";
 import translations from "./translation.json";
-import { useState } from "react";
-
 
 const App = () => {
-  const [lang, setLang] = useState("en");
   const validNavbar = ["/"];
   const location = useLocation();
-  //const { t } = useTranslation();
-  const t = (key) => translations[lang][key];
+  const { t } = useTranslation();
 
   return (
     <>
-      {validNavbar.includes(location.pathname) && <Navbar />}
-      {/* <Language /> */}
+      {validNavbar.includes(location.pathname) && <Navbar t={t} />}
+      <Language />
 
-           {/* <nav className="fixed md:top-8 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
-         
-
-         
-           <div className="flex gap-4">
-            <Link to="/">{t("home.head")}</Link>
-             <Link to="/about">{t("about.head")}</Link>
-            <Link to="/contact">{t("contact")}</Link> 
-          </div>
-          <select
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-            className="border p-1 rounded"
-          >
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="zh">Chinese</option>
-            <option value="ru">Russian</option>
-            <option value="ko">Korean</option>
-          </select>
-        </nav> */}
+      {/* <nav className="fixed md:top-8 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
+        <div className="flex gap-4">
+          <Link to="/">{t("home.head")}</Link>
+          <Link to="/about">{t("about.head")}</Link>
+          <Link to="/contact">{t("contact")}</Link>
+        </div>
+        <h1 className="text-white">{t("contactText")}</h1>
+        <select
+          value={lang}
+          onChange={(e) => setLang(e.target.value)}
+          className="border p-1 rounded"
+        >
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="zh">Chinese</option>
+          <option value="ru">Russian</option>
+          <option value="ko">Korean</option>
+        </select>
+      </nav> */}
 
       <Routes>
         <Route path="/" element={<Home t={t} />} />

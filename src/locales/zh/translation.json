@@ -1,13 +1,24 @@
 {
   "welcome": "欢迎来到我们的网站",
-  "home": "主页",
-  "about": "关于我们",
-  "about_desc": "我们是一家提供优质服务的全球公司。",
-  "contact": "联系",
-  "contact_title": "联系我们",
-  "contact_desc": "与我们取得联系。",
-  "service_title": "我们的服务",
-  "careers_title": "招聘",
-  "language_title": "语言翻译",
-  "trading_title": "交易解决方案"
+  "home": "家",
+  "about": "关于",
+  "services": "服务",
+  "contact": "接触",
+  "careers": "职业",
+
+  "head1": "创新思维",
+  "head2": "追求卓越。",
+
+  "aboutus": "关于我们",
+  "abouthead": "我们是谁 - 我们做什么",
+  "aboutpara1": "我们公司专注于提供全面的OSS解决方案,以满足各行各业的需求。我们拥有经验丰富、值得信赖的专业人员,致力于确保运营的无缝执行,对此我们深感自豪。",
+  "aboutpara2": "工程师（-线支持）：处理一级故障排除、预防性维护和基本运营支持，以确保日常运营顺利进行...",
+
+  "footerabout": "关于",
+  "footerabout1": "关于我们",
+  "footerabout2": "现场支持服务",
+  "footerabout3": "语言翻译",
+
+  "contactus": "联系我们",
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
 }

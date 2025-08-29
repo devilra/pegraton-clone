@@ -19,8 +19,6 @@ import AboutFooter from "./AboutFooter";
 import Clients from "../../clients/Clients";
 import { Link } from "react-router-dom";
 
-
-
 const testimonials = [
   {
     name: "Gina Maldonado",
@@ -64,30 +62,28 @@ const teamLeaders = [
     name: "Vignesh",
     role: "HR Associate",
     img: "/hr/h6.jpg",
-    crop:'object-[20%_75%]'
+    crop: "object-[20%_75%]",
   },
   {
     name: " Hemachandiran Somaskandan ",
 
     role: "Technical Manager ( Learning and OSS opertaions)",
-    img:'/hr/h7.jpg',
-    crop:'object-[20%_85%]'
+    img: "/hr/h7.jpg",
+    crop: "object-[20%_85%]",
   },
 
   {
     name: "Chen Shonk Yun",
-    role:'Team Leader',
-    img:'/hr/h8.jpg',
-    crop:'object-[20%_75%]'
-    
+    role: "Team Leader",
+    img: "/hr/h8.jpg",
+    crop: "object-[20%_75%]",
   },
   {
-     name: "Veena Mandeep",
-    role:'Team Leader',
-    img:'/hr/h4.jpg',
-    crop:'object-[10%_20%]  '
-
-  }
+    name: "Veena Mandeep",
+    role: "Team Leader",
+    img: "/hr/h4.jpg",
+    crop: "object-[10%_20%]  ",
+  },
 ];
 
 const partners = [
@@ -164,14 +160,14 @@ const mobSettings = {
   ],
 };
 
-const About = ({t}) => {
+const About = ({ t }) => {
   const [active, setActive] = useState("vision");
   return (
     <div className="overflow-y-scroll  h-screen">
       {/* Navbar */}
       <div className="relative">
         <div className="absolute top-0 left-0 w-full z-20">
-          <AboutNavbar />
+          <AboutNavbar t={t} />
         </div>
 
         {/* Background Image */}
@@ -180,20 +176,19 @@ const About = ({t}) => {
           style={{
             backgroundImage: 'url("./about/a.png")',
             height: "500px",
-            backgroundPosition:'center 20%',
-            backgroundSize:'cover',
-            backgroundRepeat:'no-repeat'
-          }}>
+            backgroundPosition: "center 20%",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold pt-32 text-white text-center">
-          {t('about.head')}
+            {t("about.head")}
           </h1>
         </div>
       </div>
-
-    
 
       <div>
         <Clients />
@@ -206,35 +201,43 @@ const About = ({t}) => {
           </h2>
           <p className="mt-4 text-black leading-relaxed">
             Our company specializes in providing comprehensive
-            <span className="font-semibold px-2">OSS</span> solutions tailored to meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to theseamless execution of operations.
-           
+            <span className="font-semibold px-2">OSS</span> solutions tailored
+            to meet the needs of various industries. We pride ourselves on
+            delivering skilled and reliable professionals who contribute to
+            theseamless execution of operations.
           </p>
 
           {/* Stats */}
           <div className="flex md:justify-center gap-8 font-[400] mt-10 md:mt-20">
-            <Link to='/oss' className="space-y-2">
-              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">200+</h3>
+            <Link to="/oss" className="space-y-2">
+              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">
+                200+
+              </h3>
               <h4 className="text-sm  md:text-2xl text-center mt-1">OSS</h4>
             </Link>
-            <Link to='/language' className="space-y-2">
-              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">12+</h3>
+            <Link to="/language" className="space-y-2">
+              <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">
+                12+
+              </h3>
               <h4 className="text-sm md:text-2xl text-center  mt-1">
                 Language Interpretation
               </h4>
             </Link>
-            <Link to='/trading' className="space-y-2">
-              <h3 className="text-pink-500 text-3xl md:text-4xl text-center font-bold">3+</h3>
-              <h4 className="text-sm  md:text-2xl  text-center mt-1">Clients trading</h4>
+            <Link to="/trading" className="space-y-2">
+              <h3 className="text-pink-500 text-3xl md:text-4xl text-center font-bold">
+                3+
+              </h3>
+              <h4 className="text-sm  md:text-2xl  text-center mt-1">
+                Clients trading
+              </h4>
             </Link>
           </div>
         </div>
-
-      
       </section>
       <section className="bg-white py-5 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
         {/* Left Side */}
         <div className="flex-1 order-2">
-         <p className="text-gray-700 mt-3 leading-relaxed">
+          <p className="text-gray-700 mt-3 leading-relaxed">
             At Sansirong International Pvt Ltd, we specialize in delivering
             Onsite Support Services (OSS) for leading global and domestic
             organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers
@@ -244,15 +247,17 @@ const About = ({t}) => {
             execution.
           </p>
           <p className="mt-4 text-gray-600 leading-relaxed">
-     Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning.
+            Engineers (Frontline Support): Handle first-level troubleshooting,
+            preventive maintenance, and basic operational support to ensure
+            smooth day-to-day functioning.
           </p>
 
           <p className="mt-4 text-gray-600 leading-relaxed">
-       Engineers (Expert Support): Provide high-level technical expertise, root cause analysis, design improvements, and advanced automation/software solutions.
+            Engineers (Expert Support): Provide high-level technical expertise,
+            root cause analysis, design improvements, and advanced
+            automation/software solutions.
           </p>
-         
         </div>
-
       </section>
 
       <section className="py-12 md:mt-20 bg-gray-50">
@@ -262,25 +267,26 @@ const About = ({t}) => {
           </h2>
           <div className="flex justify-center">
             <div className="bg-white md:max-w-[300px]  flex flex-col items-center justify-center  rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-            <img
-              src="/hr/h3.jpeg"
-              alt="Managing Director"
-              className="w-full h-96 md:w-[300px] object-cover"
-            />
-            <div className="p-4 text-center">
-              <h3 className="text-lg text-[#29295e] font-semibold">
-                Prasath Sridaran
-              </h3>
-              <p className="text-sm text-gray-500">Managing Director</p>
+              <img
+                src="/hr/h3.jpeg"
+                alt="Managing Director"
+                className="w-full h-96 md:w-[300px] object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg text-[#29295e] font-semibold">
+                  Prasath Sridaran
+                </h3>
+                <p className="text-sm text-gray-500">Managing Director</p>
+              </div>
             </div>
-          </div>
           </div>
           <div className="w-full pt-10 ">
             <div className="grid gap-6 md:gap-5 sm:grid-cols-2 md:flex  ">
               {teamLeaders.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-white  md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                  className="bg-white  md:w-[300px] rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+                >
                   <img
                     src={member.img}
                     alt={member.name}
@@ -332,8 +338,6 @@ const About = ({t}) => {
       </section>
 
       <div>
-
-
         <AboutFooter />
       </div>
     </div>

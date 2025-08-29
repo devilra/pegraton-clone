@@ -57,7 +57,8 @@ function AboutNavbar() {
       className={`top-0 left-0 md:pt-1 w-full flex justify-between items-center px-8  pb-4 z-50 transition-all duration-300
         md:backdrop-blur-lgv fixed md:relative backdrop-blur-sm md:bg-white/5 shadow-md font-bold  text-[#f30d0d] 
          
-      `}>
+      `}
+    >
       {/* Logo */}
       {/* <Link to="/" className="text-4xl font-sans tracking-[2px] font-bold">
         <img src="/logo.png" className="h-20 md:h-20" />
@@ -65,7 +66,8 @@ function AboutNavbar() {
       <div className="md:px-1 flex items-center">
         <Link
           to="/"
-          className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
+          className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold"
+        >
           <img
             src="/logo1.png"
             className="h-20 md:w-full mr-2 md:mr-0 md:h-20 "
@@ -91,7 +93,8 @@ function AboutNavbar() {
               <div
                 className="flex justify-center items-center gap-3 text-white cursor-pointer"
                 onMouseEnter={() => setIsServicesOpen(!isServicesOpen)}
-                onMouseLeave={() => setIsServicesOpen(!isServicesOpen)}>
+                onMouseLeave={() => setIsServicesOpen(!isServicesOpen)}
+              >
                 <span className="text-[15px]">{page.title}</span>
                 {/* icon toggle */}
                 {isServicesOpen ? (
@@ -107,23 +110,27 @@ function AboutNavbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  ">
+                      className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  "
+                    >
                       <Link
                         to="/oss"
                         onClick={closeMenu}
-                        className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white">
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white"
+                      >
                         ONSITE SUPPORT SERVICES (OSS)
                       </Link>
                       <Link
                         to="/trading"
                         onClick={closeMenu}
-                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white"
+                      >
                         TRADING
                       </Link>
                       <Link
                         to="/language"
                         onClick={closeMenu}
-                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                        className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white"
+                      >
                         LANGUAGE INTERPRETATION
                       </Link>
                     </motion.div>
@@ -143,7 +150,8 @@ function AboutNavbar() {
                   onMouseEnter={(e) =>
                     (e.target.style.textShadow =
                       "0 0 10px #fa160e, 0 0 20px #fa160e")
-                  }>
+                  }
+                >
                   {page.title}
                 </Link>
                 {location.pathname === page.to && (
@@ -163,7 +171,8 @@ function AboutNavbar() {
       {/* Mobile Hamburger Icon */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-2xl cursor-pointer">
+        className="md:hidden text-2xl cursor-pointer"
+      >
         {isOpen ? <FaTimes /> : <FaBars className="text-red-700" />}
       </button>
 
@@ -171,7 +180,8 @@ function AboutNavbar() {
       <div
         className={`fixed top-0  h-screen left-0 w-full bg-black/90 flex flex-col items-center justify-center gap-8 text-lg transform transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}>
+        }`}
+      >
         <button onClick={toggleMenu} className="flex justify-end">
           <FaTimes className="text-white" />
         </button>
@@ -180,7 +190,8 @@ function AboutNavbar() {
             <Link
               to={page.to}
               className="text-white text-[15px]"
-              onClick={closeMenu}>
+              onClick={closeMenu}
+            >
               {page.title}
             </Link>
             {location.pathname === page.to && (

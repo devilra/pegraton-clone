@@ -1,17 +1,23 @@
 {
-  "hello":"Hello world",
-  "welcome": "Welcome to our website",
-  "home": "Home",
-  "about": {
-    "head":"About",
-    "p1":"meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to theseamless execution of operations."
-  },
-  "about_desc": "We are a global company providing quality services.",
-  "contact": "Contact",
-  "contact_title": "Contact Us",
-  "contact_desc": "Get in touch with us.",
-  "service_title": "Our Services",
-  "careers_title": "Careers",
-  "language_title": "Language Interpretation",
-  "trading_title": "Trading Solutions"
+  "home": "HOME",
+  "about": "ABOUT",
+  "services": "SERVICES",
+  "contact": "CONTACT",
+  "careers": "CAREERS",
+
+  "head1": "INNOVATIVE MINDSET,",
+  "head2": "STRIVING FOR EXCELLENCE.",
+
+  "aboutus": "About us",
+  "abouthead": "Who We Are -What We Do",
+  "aboutpara1": "Our company specializes in providing comprehensive OSS solutions tailored to meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to the seamless execution of operations.",
+  "aboutpara2": "Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning...",
+
+  "footerabout": "About",
+  "footerabout1": "About Us",
+  "footerabout2": "onsitesupportservicesoss",
+  "footerabout3": "languageinterpretation",
+
+  "contactus": "Contact Us",
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
 }

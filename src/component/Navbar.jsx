@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
-function Navbar({ aboutScroll }) {
+function Navbar({ aboutScroll, t }) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,12 +40,14 @@ function Navbar({ aboutScroll }) {
         location.pathname === "/about" && isScrolled
           ? "backdrop-blur-md bg-black/50"
           : "bg-transparent"
-      }`}>
+      }`}
+    >
       {/* Logo */}
       <div className="md:px-2 flex items-center">
         <Link
           to="/"
-          className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold">
+          className="text-4xl text-neutral-300 md:text-white  font-sans tracking-[2px] font-bold"
+        >
           <img
             src="/logo1.png"
             className="h-20 md:w-full mr-2 md:mr-0 md:h-20 "
@@ -76,10 +78,12 @@ function Navbar({ aboutScroll }) {
             (e.target.style.textShadow =
               "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
           }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}
+        >
           HOME
+          {/* {t("home")} */}
           {location.pathname === "/" && (
-            <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
+            <div className="h-[2px] bg-[#fa160e] w-full rounded-full"></div>
           )}
         </Link>
         <Link
@@ -93,8 +97,10 @@ function Navbar({ aboutScroll }) {
             (e.target.style.textShadow =
               "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
           }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}
+        >
           ABOUT
+          {/* {t("about")} */}
           {location.pathname === "/about" && (
             <div className="w-[50px] h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
@@ -109,8 +115,11 @@ function Navbar({ aboutScroll }) {
           onMouseLeave={(e) => {
             e.target.style.textShadow = "none";
             setIsServicesOpen(!isServicesOpen);
-          }}>
+          }}
+        >
           <span>SERVICES</span>
+
+          {/* <span>{t("services")}</span> */}
           {isServicesOpen ? (
             <FaChevronUp className="transition-all duration-300 text-white" />
           ) : (
@@ -124,23 +133,27 @@ function Navbar({ aboutScroll }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  ">
+                className="absolute left-0 mt-2 w-80 p-5 space-y-5 backdrop-blur-lg top-5 bg-black/50  rounded-lg shadow-lg flex flex-col z-50  "
+              >
                 <Link
                   to="/oss"
                   onClick={closeMenu}
-                  className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white">
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out hover:text-black px-2 rounded hover:bg-white"
+                >
                   ONSITE SUPPORT SERVICES (OSS)
                 </Link>
                 <Link
                   to="/trading"
                   onClick={closeMenu}
-                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white"
+                >
                   TRADING
                 </Link>
                 <Link
                   to="/language"
                   onClick={closeMenu}
-                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white">
+                  className="text-[15px] transition-all py-2 duration-300 ease-in-out px-2 rounded hover:text-black hover:bg-white"
+                >
                   LANGUAGE INTERPRETATION
                 </Link>
               </motion.div>
@@ -159,8 +172,10 @@ function Navbar({ aboutScroll }) {
             (e.target.style.textShadow =
               "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
           }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}
+        >
           CONTACT
+          {/* {t("contact")} */}
         </Link>
         <Link
           to="/careers"
@@ -173,8 +188,10 @@ function Navbar({ aboutScroll }) {
             (e.target.style.textShadow =
               "0 0 10px rgba(0,0,0,0.6), 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.6)")
           }
-          onMouseLeave={(e) => (e.target.style.textShadow = "none")}>
+          onMouseLeave={(e) => (e.target.style.textShadow = "none")}
+        >
           CAREERS
+          {/* {t("careers")} */}
         </Link>
         {/* <Launguage /> */}
       </div>
@@ -182,7 +199,8 @@ function Navbar({ aboutScroll }) {
       {/* Mobile Hamburger Icon */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-2xl text-white cursor-pointer">
+        className="md:hidden text-2xl text-white cursor-pointer"
+      >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
@@ -190,18 +208,21 @@ function Navbar({ aboutScroll }) {
       <div
         className={`fixed top-0 left-0 w-full h-full bg-black/90 flex flex-col items-center justify-center gap-8 text-lg transform transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}>
+        }`}
+      >
         <button onClick={toggleMenu} className="flex justify-end">
           <FaTimes />
         </button>
         <Link to="/" onClick={closeMenu} className={` text-[15px] `}>
           HOME
+          {/* {t("home")} */}
           {location.pathname === "/" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
         </Link>
         <Link to="/about" onClick={closeMenu} className={` text-[15px] `}>
           ABOUT
+          {/* {t("about")} */}
           {location.pathname === "/about" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
@@ -227,6 +248,7 @@ function Navbar({ aboutScroll }) {
         </Link>
         <Link to="/contact" onClick={closeMenu} className={` text-[15px]`}>
           CONTACT
+          {/* {t("contact")} */}
           {location.pathname === "/contact" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
@@ -234,8 +256,10 @@ function Navbar({ aboutScroll }) {
         <Link
           //to="/careers"
           onClick={closeMenu}
-          className={` text-[15px]`}>
+          className={` text-[15px]`}
+        >
           CAREERS
+          {/* {t("careers")} */}
           {location.pathname === "/contact" && (
             <div className="w-full h-[2px] bg-[#fa160e] rounded-full"></div>
           )}
