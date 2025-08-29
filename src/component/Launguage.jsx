@@ -29,6 +29,7 @@ const Language = () => {
             className="bg-white text-black"
             key={lang.code}
             value={lang.code}
+            selected="en"
           >
             {lang.flag} {lang.name}
           </option>
