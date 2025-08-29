@@ -213,7 +213,7 @@ const OnsiteService = () => {
       <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-            Our Partners
+            {t("partners")}
           </h2>
           <Slider {...settings}>
             {partners.map((member, index) => (
@@ -229,7 +229,7 @@ const OnsiteService = () => {
       <section className="py-12 md:hidden overflow-hidden bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-black mb-10">
-            Our Partners
+            {t("partners")}
           </h2>
           <Slider {...mobSettings}>
             {partners.map((member, index) => (
