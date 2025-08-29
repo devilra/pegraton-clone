@@ -57,35 +57,6 @@ const teamMembers = [
   },
 ];
 
-const teamLeaders = [
-  {
-    name: "Vignesh",
-    role: "HR Associate",
-    img: "/hr/h6.jpg",
-    crop: "object-[20%_75%]",
-  },
-  {
-    name: " Hemachandiran Somaskandan ",
-
-    role: "Technical Manager ( Learning and OSS opertaions)",
-    img: "/hr/h7.jpg",
-    crop: "object-[20%_85%]",
-  },
-
-  {
-    name: "Chen Shonk Yun",
-    role: "Team Leader",
-    img: "/hr/h8.jpg",
-    crop: "object-[20%_75%]",
-  },
-  {
-    name: "Veena Mandeep",
-    role: "Team Leader",
-    img: "/hr/h4.jpg",
-    crop: "object-[10%_20%]  ",
-  },
-];
-
 const partners = [
   {
     img: "/part/new/p1.png",
@@ -161,6 +132,35 @@ const mobSettings = {
 };
 
 const About = ({ t }) => {
+  const teamLeaders = [
+    {
+      name: t("Vignesh"),
+      role: t("role"),
+      img: "/hr/h6.jpg",
+      crop: "object-[20%_75%]",
+    },
+    {
+      name: t("Hemachandiran Somaskandan"),
+
+      role: t("hemarole"),
+      img: "/hr/h7.jpg",
+      crop: "object-[20%_85%]",
+    },
+
+    {
+      name: t("Chen Shonk Yun"),
+      role: t("chenrole"),
+      img: "/hr/h8.jpg",
+      crop: "object-[20%_75%]",
+    },
+    {
+      name: t("Veena Mandeep"),
+      role: t("veenarole"),
+      img: "/hr/h4.jpg",
+      crop: "object-[10%_20%]  ",
+    },
+  ];
+
   const [active, setActive] = useState("vision");
   return (
     <div className="overflow-y-scroll  h-screen">
@@ -185,26 +185,22 @@ const About = ({ t }) => {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold pt-32 text-white text-center">
-            {t("about.head")}
+            {t("about")}
           </h1>
         </div>
       </div>
 
       <div>
-        <Clients />
+        <Clients t={t} />
       </div>
 
       <section className="bg-white py-10 px-6 md:px-20 flex flex-col  md:flex-row items-center gap-10">
         <div className="flex-1 text-black">
           <h2 className="text-3xl md:text-4xl font-bold text-black mt-2">
-            Who We Are <span className="text-black">-</span> What We Do
+            {t("aboutheading")}
           </h2>
           <p className="mt-4 text-black leading-relaxed">
-            Our company specializes in providing comprehensive
-            <span className="font-semibold px-2">OSS</span> solutions tailored
-            to meet the needs of various industries. We pride ourselves on
-            delivering skilled and reliable professionals who contribute to
-            theseamless execution of operations.
+            {t("aboutheadingpara1")}
           </p>
 
           {/* Stats */}
@@ -213,14 +209,16 @@ const About = ({ t }) => {
               <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">
                 200+
               </h3>
-              <h4 className="text-sm  md:text-2xl text-center mt-1">OSS</h4>
+              <h4 className="text-sm  md:text-2xl text-center mt-1">
+                {t("200")}
+              </h4>
             </Link>
             <Link to="/language" className="space-y-2">
               <h3 className="text-pink-500 text-center text-3xl md:text-4xl font-bold">
                 12+
               </h3>
               <h4 className="text-sm md:text-2xl text-center  mt-1">
-                Language Interpretation
+                {t("12+")}
               </h4>
             </Link>
             <Link to="/trading" className="space-y-2">
@@ -228,7 +226,7 @@ const About = ({ t }) => {
                 3+
               </h3>
               <h4 className="text-sm  md:text-2xl  text-center mt-1">
-                Clients trading
+                {t("3+")}
               </h4>
             </Link>
           </div>
@@ -238,24 +236,14 @@ const About = ({ t }) => {
         {/* Left Side */}
         <div className="flex-1 order-2">
           <p className="text-gray-700 mt-3 leading-relaxed">
-            At Sansirong International Pvt Ltd, we specialize in delivering
-            Onsite Support Services (OSS) for leading global and domestic
-            organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers
-            from diverse disciplines-Mechanical, Electrical, Electronics,
-            Automation, and Software Engineering-ensures that our clients
-            achieve uninterrupted operations, higher efficiency, and faster
-            execution.
+            {t("aboutheadingpara2")}
           </p>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            Engineers (Frontline Support): Handle first-level troubleshooting,
-            preventive maintenance, and basic operational support to ensure
-            smooth day-to-day functioning.
+            {t("aboutheadingpara3")}
           </p>
 
           <p className="mt-4 text-gray-600 leading-relaxed">
-            Engineers (Expert Support): Provide high-level technical expertise,
-            root cause analysis, design improvements, and advanced
-            automation/software solutions.
+            {t("aboutheadingpara4")}
           </p>
         </div>
       </section>
@@ -263,7 +251,7 @@ const About = ({ t }) => {
       <section className="py-12 md:mt-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#29295e]  mb-10">
-            Meet Our Team
+            {t("meetourteam")}
           </h2>
           <div className="flex justify-center">
             <div className="bg-white md:max-w-[300px]  flex flex-col items-center justify-center  rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
@@ -274,9 +262,9 @@ const About = ({ t }) => {
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg text-[#29295e] font-semibold">
-                  Prasath Sridaran
+                  {t("Prasath Sridaran")}
                 </h3>
-                <p className="text-sm text-gray-500">Managing Director</p>
+                <p className="text-sm text-gray-500">{t("prasathrole")}</p>
               </div>
             </div>
           </div>
@@ -306,7 +294,7 @@ const About = ({ t }) => {
         <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-              Our Partners
+              {t("partners")}
             </h2>
             <Slider {...settings}>
               {partners.map((member, index) => (
@@ -322,7 +310,7 @@ const About = ({ t }) => {
         <section className="py-12 md:hidden overflow-x-hidden bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Parteners
+              {t("partners")}
             </h2>
             <Slider {...mobSettings}>
               {partners.map((member, index) => (

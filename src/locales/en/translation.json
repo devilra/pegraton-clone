@@ -1,6 +1,6 @@
 {
   "home": "HOME",
-  "about": "ABOUT",
+
   "services": "SERVICES",
   "contact": "CONTACT",
   "careers": "CAREERS",
@@ -19,5 +19,34 @@
   "footerabout3": "languageinterpretation",
 
   "contactus": "Contact Us",
-  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204",
+
+  "about": "ABOUT",
+  "aboutteam": "Our Team",
+  "aboutheading": "Who We Are - What We Do",
+  "aboutheadingpara1": "Our company specializes in providing comprehensive OSS solutions tailored to meet the needs of various industries. We pride ourselves on delivering skilled and reliable professionals who contribute to theseamless execution of operations.",
+  "200": "OSS",
+  "12+": "Language Interpretation",
+  "3+": "Clients trading",
+  "aboutheadingpara2": "At Sansirong International Pvt Ltd, we specialize in delivering Onsite Support Services (OSS) for leading global and domestic organizations. Our team of 200+ highly skilled L1, L2 & L3 engineers from diverse disciplines-Mechanical, Electrical, Electronics, Automation, and Software Engineering-ensures that our clients achieve uninterrupted operations, higher efficiency, and faster execution.",
+  "aboutheadingpara3": "Engineers (Frontline Support): Handle first-level troubleshooting, preventive maintenance, and basic operational support to ensure smooth day-to-day functioning.",
+  "aboutheadingpara4": "Engineers (Expert Support): Provide high-level technical expertise, root cause analysis, design improvements, and advanced automation/software solutions.",
+
+  "meetourteam": "Meet Our Team",
+  "Prasath Sridaran": "Prasath Sridaran",
+  "prasathrole": "Managing Director",
+
+  "Vignesh": "Vignesh",
+  "role": "HR Associate",
+
+  "Hemachandiran Somaskandan": "Hemachandiran Somaskandan",
+  "hemarole": "Technical Manager ( Learning and OSS opertaions)",
+
+  "Chen Shonk Yun": "Chen Shonk Yun",
+  "chenrole": "Team Leader",
+
+  "Veena Mandeep": "Veena Mandeep",
+  "veenarole": "Team Leader",
+
+  "partners": "Our Partners"
 }
