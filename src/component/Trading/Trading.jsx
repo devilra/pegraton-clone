@@ -17,7 +17,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Typewriter from "typewriter-effect";
-
+import { useTranslation } from "react-i18next";
 
 const testimonials = [
   {
@@ -132,6 +132,8 @@ const mobSettings = {
 };
 
 const Trading = () => {
+  const { t } = useTranslation();
+
   const [activeIndex, setActiveIndex] = useState(0);
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -147,31 +149,31 @@ const Trading = () => {
 
   const serve = [
     {
-      title: "Automotive & Aerospace",
+      title: t("t16"),
       bg: "bg-slate-100",
       text: "text-black",
       border: "border-slate-400",
     },
     {
-      title: "Electronics & Manufacturing",
+      title: t("t17"),
       bg: "bg-green-100",
       text: "text-black",
       border: "border-green-400",
     },
     {
-      title: "Consumer Goods & Retail",
+      title: t("t18"),
       bg: "bg-rose-100",
       text: "text-black",
       border: "border-rose-400",
     },
     {
-      title: "Energy & Industrial Products",
+      title: t("t19"),
       bg: "bg-yellow-100",
       text: "text-black",
       border: "border-yellow-400",
     },
     {
-      title: "Healthcare & Pharma",
+      title: t("t20"),
       bg: "bg-purple-100",
       text: "text-black",
       border: "border-purple-400",
@@ -209,7 +211,7 @@ const Trading = () => {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold md:pt-20 text-white text-center">
-            Trading
+            {t("trading")}
           </h1>
         </div>
       </div>
@@ -231,15 +233,15 @@ const Trading = () => {
 
           {/* RIGHT SECTION */}
           <div className="">
-           <div className="text-[22px] md:text-2xl font-bold">
-             <Typewriter
-              options={{
-                strings: ["Efficient Trading, Seamless Supply Chains, Global Reach."],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-           </div>
+            <div className="text-[22px] md:text-2xl font-bold">
+              <Typewriter
+                options={{
+                  strings: [t("t1")],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
             {/* <h3
               className="text-[20px] md:text-2xl my-4 font-bold mt-2 typewritert"
               id="oss"
@@ -248,56 +250,32 @@ const Trading = () => {
             </h3> */}
 
             <p></p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              At Sansirong International Pvt Ltd, we help businesses move
-              smarter, faster, and cost-effectively with our end-to-end trading
-              and supply chain management solutions. From sourcing raw materials
-              to delivering finished products, we ensure reliability,
-              transparency, and efficiency at every step.
-            </p>
-
-            <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">Our Services</h3>
-
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Global Trading Solutions – Sourcing, procurement, and distribution
-              of quality products across industries.
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Vendor & Supplier Management – Building strong partnerships and
-              ensuring reliable supply.
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Inventory Management – Optimized stock levels with minimal holding
-              costs.
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              {" "}
-              Logistics & Transportation – Domestic & international freight
-              (air, sea, and land).
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Customs & Compliance – Hassle-free documentation and regulatory
-              adherence.
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              {" "}
-              End-to-End Supply Chain Solutions – Integrated planning,
-              execution, and monitoring.
-            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t2")}</p>
 
             <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
-              Why Partner with Sansirong?
+              {t("t3")}
+            </h3>
+
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t4")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t5")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t6")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t7")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t8")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("t9")}</p>
+
+            <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
+              {t("t10")}
             </h3>
 
             <ul className="text-gray-700 mt-2 leading-relaxed custom-list space-y-3">
-              <li> Global supplier network & trading expertise</li>
-              <li>Cost-effective procurement with quality assurance</li>
-              <li>Real-time tracking & reporting systems</li>
-              <li>Industry-specific supply chain customization</li>
+              <li>{t("t11")}</li>
+              <li>{t("t12")}</li>
+              <li>{t("t13")}</li>
+              <li>{t("t14")}</li>
             </ul>
 
             <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
-              Industries We Support
+              {t("t15")}
             </h3>
 
             <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-2 md:grid-cols-3">
@@ -314,15 +292,12 @@ const Trading = () => {
             </div>
           </div>
         </div>
-
-       
       </div>
-
 
       <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#29295e] mb-10">
-            Our Partners
+            {t("partners")}
           </h2>
           <Slider {...settings}>
             {partners.map((member, index) => (
@@ -338,7 +313,7 @@ const Trading = () => {
       <section className="py-12 md:hidden overflow-hidden bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-black mb-10">
-            Our Partners
+            {t("partners")}
           </h2>
           <Slider {...mobSettings}>
             {partners.map((member, index) => (
