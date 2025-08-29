@@ -17,12 +17,12 @@ const Language = () => {
   };
 
   return (
-    <div className="fixed md:top-8 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
+    <div className="md:top-8 -rotate-90 md:rotate-0 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
       <select
         aria-label="Select Language"
         onChange={(e) => changeLanguage(e.target.value)}
         value={i18n.resolvedLanguage}
-        className="border border-gray-300 md:w-[150px] text-black text-[15px] rounded p-1"
+        className="border border-gray-300 w-[100px] md:w-[150px] text-black text-[15px] rounded p-1"
       >
         {languages.map((lang) => (
           <option

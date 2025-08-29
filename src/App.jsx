@@ -22,7 +22,7 @@ const App = () => {
   return (
     <>
       {validNavbar.includes(location.pathname) && <Navbar t={t} />}
-      <Language />
+      {/* <Language /> */}
 
       {/* <nav className="fixed md:top-8 right-0 md:right-1/2 bg-transparent p-1 z-[9999]">
         <div className="flex gap-4">

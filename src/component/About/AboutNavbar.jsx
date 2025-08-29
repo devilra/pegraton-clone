@@ -5,6 +5,7 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Launguage from "../Launguage";
+import Language from "../Launguage";
 
 function AboutNavbar() {
   const location = useLocation();
@@ -86,7 +87,10 @@ function AboutNavbar() {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex justify-end  md:pr-14 md:gap-10  md:text-[15px]">
+      <div className="hidden required: md:flex justify-end  md:pr-14 md:gap-10  md:text-[15px]">
+        <div className="absolute top-6 left-[480px] ">
+          <Language />
+        </div>
         {navitems.map((page, index) => (
           <div key={page.title} className="relative">
             {page.title === "SERVICES" ? (
@@ -171,10 +175,13 @@ function AboutNavbar() {
       {/* Mobile Hamburger Icon */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-2xl cursor-pointer"
+        className="md:hidden relative text-2xl cursor-pointer"
       >
         {isOpen ? <FaTimes /> : <FaBars className="text-red-700" />}
       </button>
+      <div className="md:hidden top-36 -left-10 absolute ">
+        <Language />
+      </div>
 
       {/* Mobile Menu */}
       <div

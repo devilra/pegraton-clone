@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
+import Language from "./Launguage";
 
 function Navbar({ aboutScroll, t }) {
   const location = useLocation();
@@ -64,9 +65,12 @@ function Navbar({ aboutScroll, t }) {
           </span>
         </h1>
       </div>
+      <div className="hidden md:block">
+        <Language />
+      </div>
 
       {/* Desktop Menu */}
-      <div className="hidden text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14  ">
+      <div className="hidden relative text-white drop-shadow-lg font-bold md:flex gap-8 md:gap-10 md:pr-14  ">
         <Link
           to="/"
           onClick={closeMenu}
@@ -193,18 +197,21 @@ function Navbar({ aboutScroll, t }) {
           CAREERS
           {/* {t("careers")} */}
         </Link>
-        {/* <Launguage /> */}
       </div>
 
       {/* Mobile Hamburger Icon */}
       <button
         onClick={toggleMenu}
-        className="md:hidden text-2xl text-white cursor-pointer"
+        className="md:hidden text-2xl relative text-white cursor-pointer"
       >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
+      <div className="md:hidden top-36 -left-10 absolute ">
+        <Language />
+      </div>
 
       {/* Mobile Menu */}
+
       <div
         className={`fixed top-0 left-0 w-full h-full bg-black/90 flex flex-col items-center justify-center gap-8 text-lg transform transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"

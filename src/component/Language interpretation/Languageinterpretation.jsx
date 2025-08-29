@@ -5,48 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Typewriter from "typewriter-effect";
-
-const data = [
-  {
-    title: "Assembly Automation",
-    content:
-      "Bizten provides manufacturers with turnkey solutions customized to their customers’ specific needs, from single products to entire production lines, from design to completion. We help customers set up semi-automatic or fully automatic assembly lines for their products, and our experts have rich experience in process automation including linking, repairing, tapping, laser cutting, laser welding, laser marking, welding, hardening. , heat setting, pick and place, gluing, polishing, printing, scanning, plugging, laminating and cleaning.We follow an integrated and innovative approach to bring greater value to customers, including high productivity, high efficiency, superior quality, low cost, high safety operation and better return on investment.Our expertise covers a broad spectrum in the consumer electronics, automotive, telecommunications, medical, semiconductor and new energy sectors.",
-  },
-  {
-    title: "Testing Automation",
-    content:
-      "Bizten provides testing solutions tailored to customer needs. Our products primarily support but are not limited to IT, FCT, audio, camera, connectivity, electronics, kinematics, LED, power, sensor and touch testing applications. Test Manager is extensible and modular in size and functionality. Our expertise covers a broad spectrum in the consumer electronics, automotive, telecommunications, medical, semiconductor and new energy sectors.",
-  },
-  {
-    title: "Inspection Automation",
-    content:
-      "Bizten specializes in developing a complete solution for inspection requirements including aesthetics, size and functionality. With extensive and diverse combined experience in the design and manufacture of automated test equipment, our team provides innovative solutions that exceed customer expectations. Our expertise covers a broad spectrum in the consumer electronics, automotive, telecommunications, medical, semiconductor and new energy sectors.",
-  },
-  {
-    title: "Packing Automation",
-    content:
-      "Bizten provides innovative and intelligent packaging solutions, from simple to complex requirements, semi-automatic or fully automatic depending on customer needs. Our equipment is flexible and scalable enough to keep up with rapidly changing manufacturing environments. Our expertise covers a broad spectrum in the consumer electronics, automotive, telecommunications, medical, semiconductor and new energy sectors.",
-  },
-  {
-    title: "Intelligent Factory",
-    content:
-      "Bizten provides manufacturers with a complete solution to set up a smart factory, including but not limited to smart equipment, smart warehouse, smart logistics, IoT solutions industrial, manufacturing order processing systems, big data and enterprise resource planning. The system uses advanced technology. We provide customized turnkey solutions and help customers grow and compete in the global market by transforming their manufacturing processes to SMART. Our expertise covers a broad spectrum in the consumer electronics, automotive, telecommunications, medical, semiconductor and new energy sectors.",
-  },
-  {
-    title: "Fixtures and Spare Parts",
-    content:
-      "Bizten can support you throughout the product development process for your assembly and parts needs, from simple to complex, at very competitive prices. Luminaires are holding or supporting devices used in the manufacturing industry and we are proficient in making luminaires for most manufacturing processes in the industries in which we operate.",
-  },
-];
-
-const serve = [
-  "Manufacturing & Engineering",
-  "Automotive & Aerospace",
-  "Healthcare & Pharma",
-  "IT & Software",
-  "Education & Training",
-  "International Trade & Business",
-];
+import { useTranslation } from "react-i18next";
 
 const colors = [
   { bg: "bg-indigo-100", text: "text-black", border: "border-indigo-400" },
@@ -70,10 +29,13 @@ const getRandomColor = () => {
 };
 
 const OnsiteService = () => {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
   const handleClick = (index) => {
     setActiveIndex(index);
   };
+
+  const serve = [t("l16"), t("l17"), t("l18"), t("l19"), t("l20"), t("l21")];
 
   const partners = [
     {
@@ -166,7 +128,9 @@ const OnsiteService = () => {
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center"></h1>
+          <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center">
+            {t("language")}
+          </h1>
         </div>
       </div>
 
@@ -195,61 +159,38 @@ const OnsiteService = () => {
             <div className="text-[22px] md:text-2xl font-bold">
               <Typewriter
                 options={{
-                  strings: [" Breaking Barriers, Building Connections."],
+                  strings: [t("l2")],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </div>
 
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              At Sansirong International Pvt Ltd, we understand the power of
-              clear communication. In today’s global business environment,
-              language should never be a barrier. Our professional
-              interpretation services ensure seamless communication between
-              businesses, partners, and clients across borders.
-            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("l3")}</p>
 
             <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
-              Our Interpretation Solutions
+              {t("l4")}
             </h3>
 
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Onsite Interpretation – Expert interpreters available for
-              meetings, conferences, and factory visits.
-            </p>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Remote / Virtual Interpretation – Real-time interpretation support
-              for video calls, webinars, and global collaborations.
-            </p>
-            <p className="mt-2 leading-relaxed">
-              Multilingual Support – Covering major global and regional
-              languages to enable cross-cultural communication.
-            </p>
-            <p className=" mt-2 leading-relaxed">
-              {" "}
-              Industry-Specific Expertise – Specialized interpreters for
-              technical, engineering, manufacturing, and business environments.
-            </p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("l5")}</p>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("l6")}</p>
+            <p className="mt-2 leading-relaxed">{t("l7")}</p>
+            <p className=" mt-2 leading-relaxed">{t("l8")}</p>
 
             <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
-              Why Choose Sansirong?
+              {t("l9")}
             </h3>
 
             <ul className="mt-2 leading-relaxed text-[18px] custom-list space-y-3">
-              <li>Trained & Certified Professional Interpreters</li>
-              <li>
-                Real-time, Accurate, and Culturally Sensitive Communication
-              </li>
-              <li>
-                Support for Business, Legal, Medical, and Technical discussions
-              </li>
-              <li>Flexible Engagement: Hourly, Daily, or Long-term support</li>
-              <li>Trusted by Industry Leaders for Global Operations</li>
+              <li>{t("l10")}</li>
+              <li>{t("l11")}</li>
+              <li>{t("l12")}</li>
+              <li>{t("l13")}</li>
+              <li>{t("l14")}</li>
             </ul>
 
             <h3 className="md:text-2xl text-[22px] font-bold py-2 mt-2">
-              Industries We Serve
+              {t("l15")}
             </h3>
 
             <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-2 md:grid-cols-3">

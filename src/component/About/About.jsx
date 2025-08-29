@@ -325,7 +325,9 @@ const About = ({ t }) => {
         </section>
       </section>
 
-      <div>{/* <AboutFooter t={t} /> */}</div>
+      <div>
+        <AboutFooter t={t} />
+      </div>
     </div>
   );
 };
