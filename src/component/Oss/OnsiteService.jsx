@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Typewriter from "typewriter-effect";
-
+import { useTranslation } from "react-i18next";
 
 const data = [
   {
@@ -40,21 +40,6 @@ const data = [
   },
 ];
 
-const companies = [
-  "TEAL",
-  "TATA",
-  "Foxconn",
-  "Pegatron",
-  "ASM",
-  "Bharat Forge",
-  "Great Ventures",
-  "JLK",
-  "Indo-MIM",
-  "J-Axis",
-  "Salcomp",
-  "Luster",
-];
-
 const colors = [
   { bg: "bg-red-100", text: "text-black", border: "border-red-400" },
   { bg: "bg-green-100", text: "text-black", border: "border-green-400" },
@@ -75,6 +60,7 @@ const colors = [
 
 const OnsiteService = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
   const handleClick = (index) => {
     setActiveIndex(index);
   };
@@ -83,80 +69,94 @@ const OnsiteService = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
+  const companies = [
+    t("TEAL"),
+    t("TATA"),
+    t("Foxconn"),
+    t("Pegatron"),
+    t("ASM"),
+    t("Bharat Forge"),
+    t("Great Ventures"),
+    t("JLK"),
+    t("Indo-MIM"),
+    t("J-Axis"),
+    t("Salcomp"),
+    t("Luster"),
+  ];
 
-const partners = [
-  {
-    img: "/part/new/p1.png",
-  },
-  {
-    img: "/part/new/p2.png",
-  },
-  {
-    img: "/part/new/p3.png",
-  },
-  {
-    img: "/part/new/p4.png",
-  },
-  {
-    img: "/part/new/p5.png",
-  },
-  {
-    img: "/part/new/p6.png",
-  },
-  {
-    img: "/part/new/p7.png",
-  },
-  {
-    img: "/part/new/p8.png",
-  },
-  {
-    img: "/part/new/p9.png",
-  },
-  {
-    img: "/part/new/p10.png",
-  },
-  {
-    img: "/part/new/p11.png",
-  },
-];
-
-const settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 5, // Desktop default
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 1500,
-  autoplaySpeed: 3000,
-  cssEase: "linear",
-  responsive: [
+  const partners = [
     {
-      breakpoint: 768, // Mobile screen
-      settings: {
-        slidesToShow: 1,
-      },
+      img: "/part/new/p1.png",
     },
-  ],
-};
-
-const mobSettings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 3, // Desktop default
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 1500,
-  autoplaySpeed: 3000,
-  cssEase: "linear",
-  responsive: [
     {
-      breakpoint: 768, // Mobile screen
-      settings: {
-        slidesToShow: 1,
-      },
+      img: "/part/new/p2.png",
     },
-  ],
-};
+    {
+      img: "/part/new/p3.png",
+    },
+    {
+      img: "/part/new/p4.png",
+    },
+    {
+      img: "/part/new/p5.png",
+    },
+    {
+      img: "/part/new/p6.png",
+    },
+    {
+      img: "/part/new/p7.png",
+    },
+    {
+      img: "/part/new/p8.png",
+    },
+    {
+      img: "/part/new/p9.png",
+    },
+    {
+      img: "/part/new/p10.png",
+    },
+    {
+      img: "/part/new/p11.png",
+    },
+  ];
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5, // Desktop default
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 768, // Mobile screen
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const mobSettings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3, // Desktop default
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 768, // Mobile screen
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className=" md:pt-0  h-screen overflow-y-scroll">
@@ -171,12 +171,13 @@ const mobSettings = {
           style={{
             backgroundImage: 'url("./trading/a3.jpg")',
             height: "500px",
-          }}>
+          }}
+        >
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold  text-white text-center">
-            Onsite Support Service (OSS)
+            {t("oss")}
           </h1>
         </div>
       </div>
@@ -202,15 +203,14 @@ const mobSettings = {
           {/* RIGHT SECTION */}
           <div className="">
             <div className="text-[22px] md:text-2xl font-bold">
-             <Typewriter
-              options={{
-                strings: ["Engineering Excellence, Delivered Onsite."],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-           </div>
-           
+              <Typewriter
+                options={{
+                  strings: [t("excellence")],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
 
             {/* <p className="text-gray-700 mt-2 leading-relaxed">
               At{" "}
@@ -222,17 +222,11 @@ const mobSettings = {
               industries.
             </p> */}
             <p className="text-gray-700 mt-3 leading-relaxed">
-              At Sansirong International Pvt Ltd, we specialize in delivering
-              Onsite Support Services (OSS) for leading global and domestic
-              organizations. Our team of 200+ highly skilled L1, L2 & L3
-              engineers from diverse disciplines-Mechanical, Electrical,
-              Electronics, Automation, and Software Engineering-ensures that
-              our clients achieve uninterrupted operations, higher efficiency,
-              and faster execution.
+              {t("engineeringpara")}
             </p>
 
             <h3 className="md:text-2xl text-[22px] font-bold mt-6">
-              Our Esteemed OSS Clients
+              {t("Our Esteemed OSS Clients")}
             </h3>
             {/* <p className="text-gray-700 mt-2 leading-relaxed">
               From concept to commercialisation, our versatile “Design
@@ -241,7 +235,7 @@ const mobSettings = {
               advantageous locations.
             </p> */}
             <h1 className="text-gray-500 py-5 text-xl font-bold">
-              We proudly support some of the world’s most respected companies:
+              {t("proudly")}
             </h1>
             <div className="md:max-w-4xl md:my-20 my-10 gap-5  mx-auto grid grid-cols-3 md:grid-cols-5">
               {companies.map((company, index) => {
@@ -249,7 +243,8 @@ const mobSettings = {
                 return (
                   <span
                     key={index}
-                    className={` inline-block text-center rounded bg-opacity-40  py-2 text-[13px] md:text-[18px] font-semibold ${color.bg} ${color.text} ${color.border}`}>
+                    className={` inline-block text-center rounded bg-opacity-40  py-2 text-[13px] md:text-[18px] font-semibold ${color.bg} ${color.text} ${color.border}`}
+                  >
                     {company}
                   </span>
                 );
@@ -275,70 +270,35 @@ const mobSettings = {
               Scalable Production to Meet Market Demand
             </p> */}
 
-            <h3 className="md:text-2xl text-[22px] font-bold mt-2">Our Engineering Levels</h3>
-            <p className="text-gray-700 mt-2 leading-relaxed">
-              Engineers (Frontline Support): Handle first-level troubleshooting,
-              preventive maintenance, and basic operational support to ensure
-              smooth day-to-day functioning.
-            </p>
+            <h3 className="md:text-2xl text-[22px] font-bold mt-2">
+              {t("Our Engineering Levels")}
+            </h3>
+            <p className="text-gray-700 mt-2 leading-relaxed">{t("para1")}</p>
             {/* <h1 className="text-2xl font-bold mt-2">Cost-Effectiveness</h1> */}
             <p className="text-sm md:text-lg uppercase py-5 leading-[30px] text-gray-500 font-semibold">
-              Engineers (Advanced Support): Manage complex issues, system
-              integration, process optimization, and detailed problem-solving.
+              {t("para2")}
             </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Engineers (Expert Support): Provide high-level technical
-              expertise, root cause analysis, design improvements, and advanced
-              automation/software solutions.
-            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para3")}</p>
 
             {/* <h3 className="text-2xl font-bold mt-6">
               Strategic Headquarters and Factory Locations
             </h3> */}
             <h1 className="md:text-2xl text-[22px] font-bold mt-5">
-              Digital Tools & Workforce Benefits
+              {t("para4")}
             </h1>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Dedicated OSS Application-for real-time monitoring of
-              attendance, performance reports, and learning modules.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Attendance Bonus & Skill Allowance-rewarding engineers for
-              discipline, upskilling, and consistent performance.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Continuous Learning & Development-inbuilt training programs to
-              strengthen technical and professional capabilities.
-            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para5")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para6")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para7")}</p>
             <h3 className="md:text-2xl text-[22px] font-bold mt-5">
-              Why Choose Sansirong OSS?
+              {t("para8")}
             </h3>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Multi-disciplinary Expertise-end-to-end support across
-              engineering and technology.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Layered Support Structure-L1, L2 & L3 engineers to cover every
-              level of client need.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Scalable Workforce-deployable teams tailored to project
-              requirements.
-            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para9")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para10")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para11")}</p>
 
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Proven Industry Trust-delivering results for world-class
-              clients.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              Operational Excellence-ensuring reliability, quality, and
-              seamless execution.
-            </p>
-            <p className="text-gray-700 mt-3 leading-relaxed">
-              With Sansirong OSS, you gain a trusted partner committed to
-              delivering engineering excellence onsite, keeping your business
-              operations strong and future-ready
-            </p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para12")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para13")}</p>
+            <p className="text-gray-700 mt-3 leading-relaxed">{t("para14")}</p>
           </div>
         </div>
 
@@ -443,37 +403,37 @@ const mobSettings = {
       </div> */}
 
       <section className="py-12 hidden md:block mt-32 bg-gray-50 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Partners
-            </h2>
-            <Slider {...settings}>
-              {partners.map((member, index) => (
-                <div key={index} className="px-4">
-                  <div className=" overflow-hidden  transition duration-300">
-                    <img src={member.img} className="h-[150px] object-cover" />
-                  </div>
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-black mb-10">
+            {t("partners")}
+          </h2>
+          <Slider {...settings}>
+            {partners.map((member, index) => (
+              <div key={index} className="px-4">
+                <div className=" overflow-hidden  transition duration-300">
+                  <img src={member.img} className="h-[150px] object-cover" />
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </section>
-        <section className="py-12 md:hidden overflow-hidden bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-black mb-10">
-              Our Partners
-            </h2>
-            <Slider {...mobSettings}>
-              {partners.map((member, index) => (
-                <div key={index} className="px-4">
-                  <div className="   transition duration-300">
-                    <img src={member.img} className="h-[100px]  object-cover" />
-                  </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+      <section className="py-12 md:hidden overflow-hidden bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-black mb-10">
+            {t("partners")}
+          </h2>
+          <Slider {...mobSettings}>
+            {partners.map((member, index) => (
+              <div key={index} className="px-4">
+                <div className="   transition duration-300">
+                  <img src={member.img} className="h-[100px]  object-cover" />
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </section>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
 
       {/* Footer */}
       <AboutFooter />

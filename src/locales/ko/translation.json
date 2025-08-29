@@ -1,6 +1,6 @@
 {
   "home": "HOME",
-  "about": "ABOUT",
+
   "services": "SERVICES",
   "contact": "CONTACT",
   "careers": "CAREERS",
@@ -19,5 +19,68 @@
   "footerabout3": "언어통역",
 
   "contactus": "문의하기",
-  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204",
+
+  "about": "에 대한",
+  "aboutteam": "우리 팀",
+  "aboutheading": "우리는 누구인가 - 우리가 하는 일",
+  "aboutheadingpara1": "저희 회사는 다양한 산업의 요구에 맞춰 종합적인 OSS 솔루션을 제공하는 데 특화되어 있습니다. 원활한 운영 실행에 기여하는 숙련되고 신뢰할 수 있는 전문가를 확보하는 데 자부심을 느낍니다.",
+  "200": "OSS",
+  "12+": "언어 통역",
+  "3+": "고객 거래",
+  "aboutheadingpara2": "Sansirong International Pvt Ltd는 선도적인 글로벌 및 국내 기업을 위한 현장 지원 서비스(OSS) 제공을 전문으로 합니다. 기계, 전기, 전자, 자동화 및 소프트웨어 엔지니어링 등 다양한 분야의 200명 이상의 고도로 숙련된 L1, L2, L3 엔지니어로 구성된 저희 팀은 고객이 중단 없는 운영, 더 높은 효율성, 그리고 더 빠른 실행을 달성할 수 있도록 보장합니다.",
+  "aboutheadingpara3": "엔지니어(최전선 지원): 원활한 일상 업무를 보장하기 위해 1차적인 문제 해결, 예방적 유지 관리 및 기본 운영 지원을 처리합니다.",
+  "aboutheadingpara4": "엔지니어(전문가 지원): 높은 수준의 기술 전문성, 근본 원인 분석, 설계 개선, 고급 자동화/소프트웨어 솔루션을 제공합니다.",
+
+  "meetourteam": "우리 팀을 만나보세요",
+  "Prasath Sridaran": "Prasath Sridaran",
+  "prasathrole": "상무이사",
+
+  "Vignesh": "Vignesh",
+  "role": "HR 직원",
+
+  "Hemachandiran Somaskandan": "Hemachandiran Somaskandan",
+  "hemarole": "기술 관리자(학습 및 OSS 운영)",
+
+  "Chen Shonk Yun": "Chen Shonk Yun",
+  "chenrole": "팀 리더",
+
+  "Veena Mandeep": "Veena Mandeep",
+  "veenarole": "팀 리더",
+
+  "partners": "우리의 파트너",
+
+  "oss": "현장 지원 서비스(OSS)",
+  "excellence": "탁월한 엔지니어링을 현장에서 구현합니다.",
+  "engineeringpara": "Sansirong International Pvt Ltd는 선도적인 글로벌 및 국내 기업을 위한 현장 지원 서비스(OSS) 제공을 전문으로 합니다. 기계, 전기, 전자, 자동화 및 소프트웨어 엔지니어링 등 다양한 분야의 200명 이상의 고도로 숙련된 L1, L2, L3 엔지니어로 구성된 저희 팀은 고객이 중단 없는 운영, 더 높은 효율성, 그리고 더 빠른 실행을 달성할 수 있도록 보장합니다.",
+  "Our Esteemed OSS Clients": "우리의 존경하는 OSS 고객",
+  "proudly": "우리는 세계에서 가장 존경받는 몇몇 기업을 자랑스럽게 지원합니다.",
+  "TEAL": "물오리",
+  "TATA": "안녕",
+  "Foxconn": "폭스콘",
+  "Pegatron": "페가트론",
+  "ASM": "ASM",
+  "Bharat Forge": "바라트 포지",
+  "Great Ventures": "위대한 벤처",
+  "JLK": "JLK",
+  "Indo-MIM": "인도-MIM",
+  "J-Axis": "J축",
+  "Salcomp": "살콤프",
+  "Luster": "광택",
+
+  "Our Engineering Levels": "우리의 엔지니어링 수준",
+  "para1": "엔지니어(최전선 지원): 원활한 일상 업무를 보장하기 위해 1차 문제 해결, 예방 유지 관리 및 기본 운영 지원을 처리합니다.",
+  "para2": "엔지니어(고급 지원): 복잡한 문제, 시스템 통합, 프로세스 최적화, 세부적인 문제 해결을 관리합니다.",
+  "para3": "엔지니어(전문가 지원): 높은 수준의 기술 전문성, 근본 원인 분석, 설계 개선 및 고급 자동화/소프트웨어 솔루션 제공",
+  "para4": "디지털 도구 및 직원 혜택",
+  "para5": "출석, 성과 보고서, 학습 모듈을 실시간으로 모니터링하는 전용 OSS 애플리케이션입니다.",
+  "para6": "출석 보너스 및 기술 수당 - 규율, 기술 향상 및 일관된 성과에 대한 엔지니어에게 보상합니다.",
+  "para7": "지속적인 학습 및 개발 - 기술 및 전문적 역량을 강화하기 위한 교육 프로그램을 내장했습니다.",
+  "para8": "왜 Sansirong OSS를 선택해야 하나요?",
+  "para9": "다분야 전문성 - 엔지니어링과 기술 전반에 걸친 종단간 지원.",
+  "para10": "계층적 지원 구조-L1, L2 및 L3 엔지니어가 모든 수준의 고객 요구 사항을 충족합니다.",
+  "para11": "프로젝트 요구 사항에 맞춰 확장 가능한 인력을 배치할 수 있는 팀입니다.",
+  "para12": "입증된 업계 신뢰 - 세계적 수준의 고객을 위해 결과를 제공합니다.",
+  "para13": "운영적 우수성 - 신뢰성, 품질, 원활한 실행을 보장합니다.",
+  "para14": "Sansirong OSS를 사용하면 현장에서 엔지니어링 우수성을 제공하고 비즈니스 운영을 강력하고 미래에 대비할 수 있도록 지원하는 신뢰할 수 있는 파트너를 얻을 수 있습니다."
 }

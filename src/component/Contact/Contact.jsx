@@ -4,7 +4,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import AboutFooter from "../About/AboutFooter";
 import axios from "axios";
 
-const Contact = ({t}) => {
+const Contact = ({ t }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -71,7 +71,7 @@ const Contact = ({t}) => {
 
       <div className="relative">
         <div className="absolute top-0 left-0 w-full z-20">
-          <AboutNavbar />
+          <AboutNavbar t={t} />
         </div>
         <div
           className="bg-cover  top-14 bg-center brightness-50 bg-no-repeat"
@@ -79,12 +79,13 @@ const Contact = ({t}) => {
             backgroundImage:
               'url("https://static.vecteezy.com/system/resources/previews/051/166/491/non_2x/communication-concept-with-email-message-box-and-contacts-icons-e-mail-marketing-customer-support-counseling-and-support-hotline-connection-with-modern-network-technology-contact-us-free-photo.jpg")',
             height: "500px",
-          }}>
+          }}
+        >
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center">
-            {t('contact')}
+            Contact
           </h1>
         </div>
       </div>
@@ -116,7 +117,8 @@ const Contact = ({t}) => {
             <FaEnvelope className="text-pink-500 mr-3" />
             <a
               href="mailto:sanisorgosales@gmail.com"
-              className="text-sm hover:underline">
+              className="text-sm hover:underline"
+            >
               sanisorgosales@gmail.com
             </a>
           </div>
@@ -125,22 +127,24 @@ const Contact = ({t}) => {
           <div className="flex items-start mb-6 text-gray-700">
             <FaMapMarkerAlt className="text-pink-500 mr-3 mt-1" />
             <p className="text-sm leading-relaxed">
-              4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204
+              4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue
+              Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil
+              Nadu 603204
             </p>
           </div>
 
           {/* Google Map */}
           <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg">
-          <iframe
-      title="Google Map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.643495934319!2d79.932525!3d12.8175113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52faa4d7a6001d%3A0x7e173ecf45f4c639!2s4%2C%20maple%20building%2C%20thiriveni%20nagar%2C%20opposite%20to%20saraswathi%20statue%20vadakupattu%20village!5e0!3m2!1sen!2sin!4v1691590913415!5m2!1sen!2sin"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.643495934319!2d79.932525!3d12.8175113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52faa4d7a6001d%3A0x7e173ecf45f4c639!2s4%2C%20maple%20building%2C%20thiriveni%20nagar%2C%20opposite%20to%20saraswathi%20statue%20vadakupattu%20village!5e0!3m2!1sen!2sin!4v1691590913415!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -198,7 +202,8 @@ const Contact = ({t}) => {
                   onChange={handleChange}
                   placeholder="Message"
                   rows="4"
-                  className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"></textarea>
+                  className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"
+                ></textarea>
               </div>
 
               <button
@@ -208,7 +213,8 @@ const Contact = ({t}) => {
                   isValidForm
                     ? "bg-pink-300 text-white hover:bg-pink-400"
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                }`}>
+                }`}
+              >
                 {isSubmitting ? "Sending..." : "Send"}
               </button>
               {/* {status.message && status.type === "success" ? (

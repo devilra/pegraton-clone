@@ -1,6 +1,6 @@
 {
   "home": "HOME",
-  "about": "ABOUT",
+
   "services": "SERVICES",
   "contact": "CONTACT",
   "careers": "CAREERS",
@@ -19,5 +19,68 @@
   "footerabout3": "言語通訳",
 
   "contactus": "お問い合わせ",
-  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204",
+
+  "about": "について",
+  "aboutteam": "私たちのチーム",
+  "aboutheading": "私たちは誰ですか - 私たちは何をしていますか",
+  "aboutheadingpara1": "当社は、様々な業界のニーズに合わせた包括的なOSSソリューションの提供を専門としています。シームレスな運用に貢献する、熟練した信頼できるプロフェッショナルを派遣することに誇りを持っています。",
+  "200": "OSS",
+  "12+": "言語通訳",
+  "3+": "取引するクライアント",
+  "aboutheadingpara2": "Sansirong International Pvt Ltdは、国内外の主要企業向けにオンサイトサポートサービス（OSS）を提供することに特化しています。機械、電気、電子、自動化、ソフトウェアエンジニアリングなど、多様な分野に精通した200名以上のL1、L2、L3エンジニアからなるチームが、お客様の業務の中断のない継続、高い効率性、そして迅速な実行を実現します。",
+  "aboutheadingpara3": "エンジニア (最前線のサポート): 日常業務がスムーズに進むように、第一レベルのトラブルシューティング、予防保守、基本的な運用サポートを担当します。",
+  "aboutheadingpara4": "エンジニア (専門家サポート): 高度な技術的専門知識、根本原因分析、設計の改善、高度な自動化/ソフトウェア ソリューションを提供します。",
+
+  "meetourteam": "私たちのチームのご紹介",
+  "Prasath Sridaran": "Prasath Sridaran",
+  "prasathrole": "取締役社長",
+
+  "Vignesh": "Vignesh",
+  "role": "人事アソシエイト",
+
+  "Hemachandiran Somaskandan": "Hemachandiran Somaskandan",
+  "hemarole": "テクニカルマネージャー（学習・OSS運用）",
+
+  "Chen Shonk Yun": "Chen Shonk Yun",
+  "chenrole": "チームリーダー",
+
+  "Veena Mandeep": "Veena Mandeep",
+  "veenarole": "チームリーダー",
+
+  "partners": "私たちのパートナー",
+
+  "oss": "オンサイトサポートサービス (OSS)",
+  "excellence": "オンサイトで卓越したエンジニアリングを提供。",
+  "engineeringpara": "Sansirong International Pvt Ltdは、国内外の主要企業向けにオンサイトサポートサービス (OSS) を提供することに特化しています。機械、電気、電子、自動化、ソフトウェアエンジニアリングなど、多様な分野に精通した200名以上のL1、L2、L3エンジニアからなるチームが、お客様の継続的な運用、高い効率性、そして迅速な実行を実現します。",
+  "Our Esteemed OSS Clients": "尊敬するOSSクライアント",
+  "proudly": "私たちは、世界で最も尊敬される企業のいくつかを誇りを持ってサポートしています。",
+  "TEAL": "ティール",
+  "TATA": "タタ",
+  "Foxconn": "フォックスコン",
+  "Pegatron": "ペガトロン",
+  "ASM": "ASM",
+  "Bharat Forge": "バーラトフォージ",
+  "Great Ventures": "グレートベンチャーズ",
+  "JLK": "JLK",
+  "Indo-MIM": "インドMIM",
+  "J-Axis": "J軸",
+  "Salcomp": "サルコンプ",
+  "Luster": "光沢",
+
+  "Our Engineering Levels": "当社のエンジニアリングレベル",
+  "para1": "エンジニア（最前線サポート）：日常業務の円滑な運営を確保するために、第一レベルのトラブルシューティング、予防保守、基本的な運用サポートを担当します。",
+  "para2": "エンジニア (上級サポート): 複雑な問題、システム統合、プロセスの最適化、詳細な問題解決を管理します。",
+  "para3": "エンジニア（専門家サポート）：高度な技術的専門知識、根本原因分析、設計改善、高度な自動化/ソフトウェアソリューションを提供します。",
+  "para4": "デジタルツールと従業員の福利厚生",
+  "para5": "専用の OSS アプリケーション - 出席、パフォーマンス レポート、学習モジュールをリアルタイムで監視します。",
+  "para6": "勤怠ボーナスとスキル手当 - 規律、スキルアップ、一貫したパフォーマンスを発揮したエンジニアに報酬を支給します。",
+  "para7": "継続的な学習と開発 - 技術的および専門的な能力を強化するためのトレーニング プログラムが組み込まれています。",
+  "para8": "Sansirong OSS を選ぶ理由",
+  "para9": "多分野にわたる専門知識 - エンジニアリングとテクノロジー全体にわたるエンドツーエンドのサポート。",
+  "para10": "階層化サポート構造 - L1、L2、L3 のエンジニアがあらゆるレベルのクライアントのニーズに対応します。",
+  "para11": "プロジェクト要件に合わせて調整された、スケーラブルな労働力配置可能なチーム。",
+  "para12": "業界で実証された信頼 - 世界クラスのクライアントに成果をもたらします。",
+  "para13": "運用の卓越性 - 信頼性、品質、シームレスな実行を保証します。",
+  "para14": "Sansirong OSSは、現場で優れたエンジニアリングを提供し、ビジネスオペレーションを強力かつ将来に備えた状態に保つことに尽力する信頼できるパートナーとなります。"
 }

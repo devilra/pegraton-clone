@@ -1,7 +1,7 @@
 {
   "welcome": "欢迎来到我们的网站",
   "home": "家",
-  "about": "关于",
+
   "services": "服务",
   "contact": "接触",
   "careers": "职业",
@@ -20,5 +20,68 @@
   "footerabout3": "语言翻译",
 
   "contactus": "联系我们",
-  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204"
+  "address": "4, 4, Maple Building, Thiriveni nagar, Opposite to Saraswathi Statue Vadakkupattu village Oragadam Industrial Area, Kancheepuram, Tamil Nadu 603204",
+
+  "about": "关于",
+  "aboutteam": "我们的团队",
+  "aboutheading": "我们是谁 - 我们做什么",
+  "aboutheadingpara1": "我们公司专注于提供全面的OSS解决方案，以满足各行各业的需求。我们拥有经验丰富、值得信赖的专业人员，致力于实现无缝运营，我们为此深感自豪。",
+  "200": "OSS",
+  "12+": "语言翻译",
+  "3+": "客户交易",
+  "aboutheadingpara2": "Sansirong International Pvt Ltd 专注于为国内外领先企业提供现场支持服务 (OSS)。我们的团队拥有 200 多名高技能的 L1、L2 和 L3 工程师，涵盖机械、电气、电子、自动化和软件工程等多个领域，确保客户实现不间断运营、更高效率和更快执行速度。",
+  "aboutheadingpara3": "工程师（一线支持）：处理一级故障排除、预防性维护和基本运营支持，以确保日常运营顺利进行。",
+  "aboutheadingpara4": "工程师（专家支持）：提供高水平的技术专长、根本原因分析、设计改进和先进的自动化/软件解决方案。",
+
+  "meetourteam": "认识我们的团队",
+  "Prasath Sridaran": "Prasath Sridaran",
+  "prasathrole": "常务董事",
+
+  "Vignesh": "Vignesh",
+  "role": "人力资源助理",
+
+  "Hemachandiran Somaskandan": "Hemachandiran Somaskandan",
+  "hemarole": "技术经理（学习和OSS运营）",
+
+  "Chen Shonk Yun": "Chen Shonk Yun",
+  "chenrole": "队长",
+
+  "Veena Mandeep": "Veena Mandeep",
+  "veenarole": "队长",
+
+  "partners": "我们的合作伙伴",
+
+  "oss": "现场支持服务（OSS）",
+  "excellence": "卓越的工程，现场交付。",
+  "engineeringpara": "Sansirong International Pvt Ltd 专注于为国内外领先企业提供现场支持服务 (OSS)。我们的团队拥有 200 多名高技能的 L1、L2 和 L3 工程师，涵盖机械、电气、电子、自动化和软件工程等多个领域，确保客户实现不间断运营、更高效率和更快执行速度。",
+  "Our Esteemed OSS Clients": "我们尊贵的OSS客户",
+  "proudly": "我们自豪地支持一些世界上最受尊敬的公司：",
+  "TEAL": "青色",
+  "TATA": "塔塔",
+  "Foxconn": "富士康",
+  "Pegatron": "和硕",
+  "ASM": "先进制造商",
+  "Bharat Forge": "巴拉特锻造厂",
+  "Great Ventures": "伟大的企业",
+  "JLK": "吉林康",
+  "Indo-MIM": "印度-MIM",
+  "J-Axis": "J轴",
+  "Salcomp": "赛尔康",
+  "Luster": "光泽",
+
+  "Our Engineering Levels": "我们的工程水平",
+  "para1": "工程师（一线支持）：处理一级故障排除、预防性维护和基本运营支持，以确保日常运营顺利进行",
+  "para2": "工程师（高级支持）：管理复杂问题、系统集成、流程优化和详细的问题解决。",
+  "para3": "工程师（专家支持）：提供高水平的技术专业知识、根本原因分析、设计改进和先进的自动化/软件解决方案",
+  "para4": "数字工具和员工福利",
+  "para5": "专用 OSS 应用程序 - 用于实时监控出勤情况、绩效报告和学习模块。",
+  "para6": "出勤奖金和技能津贴——奖励遵守纪律、提高技能和始终如一表现的工程师。",
+  "para7": "持续学习和发展——内置培训计划，以加强技术和专业能力。",
+  "para8": "为什么选择三思荣OSS？",
+  "para9": "多学科专业知识——跨工程和技术的端到端支持。",
+  "para10": "分层支持结构-L1、L2 和 L3 工程师可满足各个级别的客户需求。",
+  "para11": "可扩展的劳动力部署团队，可根据项目要求进行定制。",
+  "para12": "获得业界认可的信任，为世界一流的客户提供成果。",
+  "para13": "卓越运营——确保可靠性、质量和无缝执行。",
+  "para14": "借助 Sansirong OSS，您将获得一个值得信赖的合作伙伴，致力于在现场提供卓越的工程服务，保持您的业务运营强劲并面向未来"
 }
