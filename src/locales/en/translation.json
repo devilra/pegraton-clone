@@ -2,7 +2,7 @@
   "home": "HOME",
 
   "services": "SERVICES",
-  "contact": "CONTACT",
+
   "careers": "CAREERS",
 
   "head1": "INNOVATIVE MINDSET,",
@@ -126,5 +126,15 @@
   "l18": "Healthcare & Pharma",
   "l19": "IT & Software",
   "l20": "Education & Training",
-  "l21": "International Trade & Business"
+  "l21": "International Trade & Business",
+
+  "contact": "Contact",
+  "contactaddress": "Address Info:",
+  "moredetails": "Write Us for More Information and Details",
+  "Mon-Sat": "Mon-Sat",
+  "Name": "Name",
+  "Email": "Email",
+  "Message": "Message",
+  "Send": "Send",
+  "Sending": "Sending..."
 }

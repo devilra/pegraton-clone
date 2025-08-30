@@ -2,7 +2,7 @@
   "home": "HOME",
 
   "services": "SERVICES",
-  "contact": "CONTACT",
+
   "careers": "CAREERS",
 
   "head1": "革新的なマインドセット",
@@ -126,5 +126,15 @@
   "l18": "ヘルスケアと製薬",
   "l19": "ITとソフトウェア",
   "l20": "教育とトレーニング",
-  "l21": "国際貿易とビジネス"
+  "l21": "国際貿易とビジネス",
+
+  "contact": "接触",
+  "contactaddress": "住所情報:",
+  "moredetails": "詳しい情報や詳細についてはお問い合わせください",
+  "Mon-Sat": "月曜～土曜",
+  "Name": "名前",
+  "Email": "電子メール",
+  "Message": "メッセージ",
+  "Send": "送信",
+  "Sending": "送信中..."
 }

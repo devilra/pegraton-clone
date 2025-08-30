@@ -3,8 +3,10 @@ import AboutNavbar from "../About/AboutNavbar";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import AboutFooter from "../About/AboutFooter";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
-const Contact = ({ t }) => {
+const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -85,7 +87,7 @@ const Contact = ({ t }) => {
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold md:pt-32 text-white text-center">
-            Contact
+            {t("contact")}
           </h1>
         </div>
       </div>
@@ -103,7 +105,7 @@ const Contact = ({ t }) => {
         {/* Right Side - Address Info */}
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-blue-900 mb-4">
-            Address Info:
+            {t("contactaddress")}
           </h2>
 
           {/* Phone */}
@@ -152,13 +154,13 @@ const Contact = ({ t }) => {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <h2 className="text-2xl md:text-3xl font-bold text-[#2C3E91] mb-8">
-            Write Us for More Information and Details
+            {t("moredetails")}
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left side - Working Hours */}
             <div className="border border-blue-200 rounded-lg md:h-[100px] md:mt-5 flex justify-between items-center p-4 text-sm text-[#2C3E91]">
-              <span>Mon-Sat</span>
+              <span>{t("Mon-Sat")}</span>
               <span className="font-medium">09:00 AM - 06:00 PM</span>
             </div>
 
@@ -166,11 +168,11 @@ const Contact = ({ t }) => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs text-[#2C3E91] mb-1">
-                  Name
+                  {t("Name")}
                 </label>
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder={t("Name")}
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -180,27 +182,27 @@ const Contact = ({ t }) => {
 
               <div>
                 <label className="block text-xs text-[#2C3E91] mb-1">
-                  Email
+                  {t("Email")}
                 </label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email"
+                  placeholder={t("Email")}
                   className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"
                 />
               </div>
 
               <div>
                 <label className="block text-xs text-[#2C3E91] mb-1">
-                  Message
+                  {t("Message")}
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Message"
+                  placeholder={t("Message")}
                   rows="4"
                   className="w-full border border-blue-200 rounded-md p-2 text-sm focus:outline-none focus:border-pink-300"
                 ></textarea>
@@ -215,21 +217,9 @@ const Contact = ({ t }) => {
                     : "bg-gray-300 text-gray-500 cursor-not-allowed"
                 }`}
               >
-                {isSubmitting ? "Sending..." : "Send"}
+                {isSubmitting ? t("Sending") : t("Send")}
               </button>
-              {/* {status.message && status.type === "success" ? (
-                <p className="text-sm md:text-lg  text-green-500 border py-5 rounded bg-[#effdef] border-[#c6fac6] font-bold  text-center">
-                  {status.message}
-                </p>
-              ) : status.type === "failed" ? (
-                <p className="text-sm md:text-lg text-red-500 border py-5 rounded border-[#fad1d1] bg-[#fde3e3] font-bold mt-2 text-center">
-                  {status.message}
-                </p>
-              ) : (
-                <p className="text-sm md:text-lg text-red-500  font-bold mt-2 text-center">
-                  {status.message}
-                </p>
-              )} */}
+
               {status.message ? (
                 status.type === "success" ? (
                   <p className="text-green-500 border bg-[#effdef] border-[#c6fac6] py-5 rounded font-bold text-center">

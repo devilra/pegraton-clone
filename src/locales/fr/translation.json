@@ -120,5 +120,15 @@
   "l18": "Santé et pharmacie",
   "l19": "Informatique et logiciels",
   "l20": "Éducation et formation",
-  "l21": "Commerce international et affaires"
+  "l21": "Commerce international et affaires",
+
+  "contact": "Contact",
+  "contactaddress": "Informations sur l'adresse :",
+  "moredetails": "Écrivez-nous pour plus d'informations et de détails",
+  "Mon-Sat": "Mon-Sat",
+  "Name": "Nom",
+  "Email": "E-mail",
+  "Message": "Message",
+  "Send": "Envoyer",
+  "Sending": "Envoi..."
 }
