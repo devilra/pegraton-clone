@@ -4,18 +4,20 @@ import AboutFooter from "../About/AboutFooter";
 import countryList from "react-select-country-list";
 import Select from "react-select";
 import Clients from "../../clients/Clients";
+import { useTranslation } from "react-i18next";
 
 const Careers = () => {
   const [country, setCountry] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const { t } = useTranslation();
 
   const options = useMemo(() => countryList().getData(), []);
 
   //console.log(country);
 
-    const API = import.meta.env.VITE_PRODUCTION_BACKEND_URL;
+  const API = import.meta.env.VITE_PRODUCTION_BACKEND_URL;
 
   const [form, setForm] = useState({
     name: "",
@@ -167,12 +169,13 @@ const Careers = () => {
             backgroundImage:
               'url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/indian-express-malayalam/media/media_files/uploads/2021/07/jobs1.jpg")',
             height: "500px",
-          }}>
+          }}
+        >
           {/* Buttons */}
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-2xl md:text-5xl font-bold text-white md:pt-32 text-center">
-            Carrers
+            {t("carrers")}
           </h1>
         </div>
       </div>
@@ -184,25 +187,17 @@ const Careers = () => {
             {/* What Defines Us */}
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                What Defines Us
+                {t("c1")}
               </h2>
               <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                 <li>
-                  <strong>People-First Culture:</strong> Rooted in communication
-                  and collaboration, our environment thrives on teamwork and a
-                  shared dedication to client success.
+                  <strong>{t("c2")}</strong> {t("c3")}
                 </li>
                 <li>
-                  <strong>Quality-Driven Approach:</strong> We follow rigorous
-                  processes and maintain excellence across interpretation,
-                  localization, and OSS delivery Sansiorg International private
-                  limited.
+                  <strong>{t("c4")}</strong> {t("c5")}
                 </li>
                 <li>
-                  <strong>Versatile Expertise:</strong> Our team works on
-                  multilingual document translation, conference interpretation,
-                  website localization, and equipment trading — especially for
-                  the EMS/transport sector.
+                  <strong>{t("c6")}</strong> {t("c7")}
                 </li>
               </ul>
             </div>
@@ -210,66 +205,49 @@ const Careers = () => {
             {/* Why Build Your Career with Us */}
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                Why Build Your Career with Us
+                {t("c8")}
               </h2>
               <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
                 <li>
-                  <strong>Dynamic Workplace:</strong> A compact but ambitious
-                  organization where every voice matters.
+                  <strong>{t("c9")}</strong> {t("c10")}
                 </li>
                 <li>
-                  <strong>Opportunity to Grow:</strong> As a young and evolving
-                  company, we offer paths to advance across domains — from
-                  project delivery to client liaison and technical support.
+                  <strong>{t("c11")}</strong> {t("c12")}
                 </li>
                 <li>
-                  <strong>Diverse Projects:</strong> Work spans across
-                  industries and geographies, engaging with varied clients and
-                  languages.
+                  <strong>{t("c13")}</strong> {t("c14")}
                 </li>
                 <li>
-                  <strong>Impactful Roles:</strong> Collaboration happens
-                  closely with leadership, making your contributions tangible
-                  and appreciated.
+                  <strong>{t("c15")}</strong> {t("c16")}
                 </li>
                 <li>
-                  <strong>Learning Culture:</strong> For those passionate about
-                  language, customer service, and technology, we offer
-                  opportunities to excel.
+                  <strong>{t("c17")}</strong> {t("c18")}
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                Ideal Fit For You If You Are
+                {t("c19")}
               </h2>
               <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                <li>A multilingual communicator and problem-solver</li>
-                <li>Service-oriented, with strong people skills</li>
-                <li>Detail-minded and committed to delivering quality</li>
-                <li>Flexible and resourceful in a fast-moving environment</li>
-                <li>
-                  Interested in learning global trade, EMS services, or onsite
-                  customer support
-                </li>
+                <li>{t("c20")}</li>
+                <li>{t("c21")}</li>
+                <li>{t("c22")}</li>
+                <li>{t("c23")}</li>
+                <li>{t("c24")}</li>
               </ul>
             </div>
             <div>
               <h1 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                How to Apply
+                {t("c25")}
               </h1>
-              <h3 className="py-3">Send your resume highlighting:</h3>
+              <h3 className="py-3">{t("c26")}</h3>
               <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-                <li>Relevant language or technical skills</li>
-                <li>Client-facing or on-site experience</li>
-                <li>
-                  Industry exposure, especially in transport, EMS, or logistics
-                </li>
-                <li>Flexible and resourceful in a fast-moving environment</li>
-                <li>
-                  Examples of successful multilingual projects or interpretation
-                  assignments
-                </li>
+                <li>{t("c27")}</li>
+                <li>{t("c28")}</li>
+                <li>{t("c29")}</li>
+                <li>{t("c30")}</li>
+                <li>{t("c31")}</li>
               </ul>
             </div>
           </div>
@@ -277,52 +255,51 @@ const Careers = () => {
           {/* Right Form */}
           <div className="lg:w-1/2 bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
             <h2 className="text-base sm:text-lg fonta-semibold mb-4 sm:mb-6">
-              Personal Information
+              {t("c32")}
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               {/* Name */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Name <span className="text-red-500">*</span>
+                  {t("c33")} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="E.g. Kumar"
+                  placeholder={t("c34")}
                   className="w-full border rounded p-2 text-sm sm:text-base"
                   required
                 />
-               
               </div>
 
               {/* Email & Phone */}
               <div className="flex flex-col md:flex-row gap-3">
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    Email Address
+                    {t("c35")}
                   </label>
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="E.g. kumar@gmail.com"
+                    placeholder={t("c36")}
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    Phone <span className="text-red-500">*</span>
+                    {t("c37")} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="E.g. +91 9878473878"
+                    placeholder="+91 9878473878"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                     required
                   />
@@ -332,14 +309,14 @@ const Careers = () => {
               {/* Street Address */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Street Address
+                  {t("c38")}
                 </label>
                 <input
                   type="text"
                   name="street"
                   value={form.street}
                   onChange={handleChange}
-                  placeholder="E.g. 42 chennai"
+                  placeholder={t("c39")}
                   className="w-full border rounded p-2 text-sm sm:text-base"
                 />
               </div>
@@ -347,7 +324,7 @@ const Careers = () => {
               {/* Apartment */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Apartment, suite, etc
+                  {t("c40")}
                 </label>
                 <input
                   type="text"
@@ -362,26 +339,28 @@ const Careers = () => {
               {/* City & State */}
               <div className="flex flex-col md:flex-row gap-3">
                 <div className="w-full">
-                  <label className="block text-sm font-medium mb-1">City</label>
+                  <label className="block text-sm font-medium mb-1">
+                    {t("c41")}
+                  </label>
                   <input
                     type="text"
                     name="city"
                     value={form.city}
                     onChange={handleChange}
-                    placeholder="E.g. chennai"
+                    placeholder={t("c42")}
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    State
+                    {t("c43")}
                   </label>
                   <input
                     name="state"
                     value={form.state}
                     onChange={handleChange}
                     type="text"
-                    placeholder="E.g. Tamilnadu"
+                    placeholder={t("c44")}
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
@@ -391,20 +370,20 @@ const Careers = () => {
               <div className="flex flex-col md:flex-row gap-3">
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    ZIP / Postal Code
+                    {t("c45")}
                   </label>
                   <input
                     name="zip"
                     value={form.zip}
                     onChange={handleChange}
                     type="text"
-                    placeholder="E.g. 600457"
+                    placeholder="600457"
                     className="w-full border rounded p-2 text-sm sm:text-base"
                   />
                 </div>
                 <div className="w-full">
                   <label className="block text-sm font-medium mb-1">
-                    Country
+                    {t("c46")}
                   </label>
                   <Select
                     options={options}
@@ -415,7 +394,7 @@ const Careers = () => {
                 </div>
               </div>
               <div className="  bg-purple-50 p-4 sm:p-6 rounded-md shadow-sm w-full">
-                <h2 className="text-lg font-semibold mb-4">Education</h2>
+                <h2 className="text-lg font-semibold mb-4">{t("c47")}</h2>
                 {education.map((edu, i) => (
                   <div key={i}>
                     <div className="flex flex-col md:flex-row gap-4 mb-4">
@@ -424,7 +403,7 @@ const Careers = () => {
                         name="degree"
                         value={edu.degree}
                         onChange={(e) => handleEducationChange(i, e)}
-                        placeholder="E.g.graduate"
+                        placeholder={t("c48")}
                         className="w-full border rounded p-2 text-sm"
                       />
                       <input
@@ -436,24 +415,26 @@ const Careers = () => {
                       />
                     </div>
                     <textarea
-                      placeholder="E.g. Institute name"
+                      placeholder={t("c49")}
                       name="institute"
                       value={edu.institute}
                       onChange={(e) => handleEducationChange(i, e)}
                       rows="3"
-                      className="w-full border rounded p-2 text-sm"></textarea>
+                      className="w-full border rounded p-2 text-sm"
+                    ></textarea>
                   </div>
                 ))}
                 <button
                   type="button"
                   onClick={addEducation}
-                  className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
-                  Add Education
+                  className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50"
+                >
+                  {t("c50")}
                 </button>
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold mb-4">Work Experience</h2>
+                <h2 className="text-lg font-semibold mb-4">{t("c51")}</h2>
                 {work.map((w, i) => (
                   <div key={i}>
                     <div className="flex flex-col md:flex-row gap-4 mb-4">
@@ -461,7 +442,7 @@ const Careers = () => {
                         name="company"
                         value={w.company}
                         type="text"
-                        placeholder="E.g.company name"
+                        placeholder={t("c52")}
                         onChange={(e) => handleWorkChange(i, e)}
                         className="w-full border rounded p-2 text-sm"
                       />
@@ -469,7 +450,7 @@ const Careers = () => {
                         type="text"
                         name="role"
                         value={w.role}
-                        placeholder="Enter role"
+                        placeholder={t("c53")}
                         onChange={(e) => handleWorkChange(i, e)}
                         className="w-full border rounded p-2 text-sm"
                       />
@@ -477,30 +458,32 @@ const Careers = () => {
                         type="text"
                         name="experience"
                         value={w.experience}
-                        placeholder="Enter Experience years"
+                        placeholder={t("c54")}
                         onChange={(e) => handleWorkChange(i, e)}
                         className="w-full border rounded p-2 text-sm"
                       />
                     </div>
                     <textarea
-                      placeholder="E.g. job Resposibilities"
+                      placeholder={t("c55")}
                       name="responsibilities"
                       value={w.responsibilities}
                       onChange={(e) => handleWorkChange(i, e)}
                       rows="3"
-                      className="w-full border rounded p-2 text-sm"></textarea>
+                      className="w-full border rounded p-2 text-sm"
+                    ></textarea>
                   </div>
                 ))}
                 <button
                   type="button"
                   onClick={addwork}
-                  className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50">
-                  Add Experience
+                  className="mt-3 px-4 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50"
+                >
+                  {t("c56")}
                 </button>
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold mb-4">Resume Upload</h2>
+                <h2 className="text-lg font-semibold mb-4">{t("c57")}</h2>
                 <input
                   type="file"
                   onChange={(e) => setResume(e.target.files[0])}
@@ -518,9 +501,7 @@ const Careers = () => {
                     setForm({ ...form, confirm: e.target.checked })
                   }
                 />
-                <label className="text-sm">
-                  Confirm that the information provided is true and accurate.
-                </label>
+                <label className="text-sm">{t("c58")}</label>
               </div>
 
               <button
@@ -532,8 +513,9 @@ const Careers = () => {
                     : success
                     ? "bg-green-500 hover:bg-green-600 text-white"
                     : "bg-blue-500 hover:bg-blue-600 text-white"
-                }`}>
-                {loading ? "Submitting..." : "Apply"}
+                }`}
+              >
+                {loading ? t("c60") : t("c59")}
               </button>
             </form>
             {error && <p className="text-red-500 mt-2">{error}</p>}
