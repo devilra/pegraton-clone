@@ -21,7 +21,7 @@ const Language = () => {
       <select
         aria-label="Select Language"
         onChange={(e) => changeLanguage(e.target.value)}
-        value={i18n.resolvedLanguage}
+        value={i18n.language || "en"}
         className="border border-gray-300 w-[100px] md:w-[150px] text-black text-[15px] rounded p-1"
       >
         {languages.map((lang) => (
@@ -29,7 +29,6 @@ const Language = () => {
             className="bg-white text-black"
             key={lang.code}
             value={lang.code}
-            selected="en"
           >
             {lang.flag} {lang.name}
           </option>
