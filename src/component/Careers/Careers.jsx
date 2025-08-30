@@ -186,10 +186,10 @@ const Careers = () => {
           <div className="lg:w-1/2 space-y-6 sm:space-y-8">
             {/* What Defines Us */}
             <div>
-              <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+              <h2 className="text-xl md:text-xl font-bold mb-3 sm:mb-4">
                 {t("c1")}
               </h2>
-              <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
+              <ul className="list-disc  list-inside space-y-2 sm:space-y-3 text-gray-700 text-[17px]">
                 <li>
                   <strong>{t("c2")}</strong> {t("c3")}
                 </li>
@@ -204,10 +204,8 @@ const Careers = () => {
 
             {/* Why Build Your Career with Us */}
             <div>
-              <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                {t("c8")}
-              </h2>
-              <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
+              <h2 className=" text-xl font-bold mb-3 sm:mb-4">{t("c8")}</h2>
+              <ul className="list-disc list-inside text-[17px] space-y-2 leading-[30px] sm:space-y-3 text-gray-700 ">
                 <li>
                   <strong>{t("c9")}</strong> {t("c10")}
                 </li>
@@ -226,10 +224,8 @@ const Careers = () => {
               </ul>
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                {t("c19")}
-              </h2>
-              <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
+              <h2 className="text-xl  font-bold mb-3 sm:mb-4">{t("c19")}</h2>
+              <ul className="list-disc text-[17px] list-inside space-y-2 sm:space-y-3 text-gray-700 ">
                 <li>{t("c20")}</li>
                 <li>{t("c21")}</li>
                 <li>{t("c22")}</li>
@@ -238,11 +234,9 @@ const Careers = () => {
               </ul>
             </div>
             <div>
-              <h1 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
-                {t("c25")}
-              </h1>
-              <h3 className="py-3">{t("c26")}</h3>
-              <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
+              <h1 className="text-xl font-bold mb-3 sm:mb-4">{t("c25")}</h1>
+              <h3 className="py-3 text-lg font-semibold">{t("c26")}</h3>
+              <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-gray-700 text-[17px]">
                 <li>{t("c27")}</li>
                 <li>{t("c28")}</li>
                 <li>{t("c29")}</li>
