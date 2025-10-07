@@ -308,7 +308,7 @@ const HomeHero = ({ t }) => {
           />
 
           <div className="absolute inset-0 backdrop-blur-lg md:pb-20  md:block bg-black/40" />
-          <div className=" z-10 h-full hidden md:block text-white">
+          <div className=" z-10 h-full hidden pb-20 md:block text-white">
             <div className="flex flex-col pt-28   md:pl-14 md:flex-row md:pr-14 gap-5">
               {images.map((item, i) => (
                 <div
@@ -327,7 +327,7 @@ const HomeHero = ({ t }) => {
             </div>
           </div>
           <div className="">
-            <footer className="absolute z-[50] bottom-0 py-10 md:pt-20 md:top-1/2 w-[100vw] md:px-10   left-0  text-white">
+            <footer className="absolute z-[50] inset-0 mt-10 md:pt-20 md:top-1/3 w-[100vw] md:px-10   left-0  text-white">
               <div className="container mx-auto px-6 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-800 pb-6">
                   {/* Logo & Socials */}
@@ -407,10 +407,20 @@ const HomeHero = ({ t }) => {
                         Saraswathi Statue Vadakkupattu village Oragadam
                         Industrial Area, Kancheepuram, Tamil Nadu 603204
                       </li>
+                      <li className="flex items-start gap-2">
+                        <FiMapPin size={14} className="text-pink-400 mt-1" />
+                        65 Sims Ave
+                        <br />
+                        #04-11
+                        <br />
+                        Yi Xiu Factory Building
+                        <br />
+                        Singapore 387418
+                      </li>
                     </ul>
                   </div>
                 </div>
-                <div className="text-center text-xs cursor-pointer text-white mt-3">
+                <div className="text-center text-xs cursor-pointer  text-white mt-3">
                   © 2025 Created with{" "}
                   <a
                     href="https://amigowebster.com"

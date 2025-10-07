@@ -146,6 +146,17 @@ const AboutFooter = () => {
                 Vadakkupattu village Oragadam Industrial Area, Kancheepuram,
                 Tamil Nadu 603204
               </li>
+
+              <li className="flex items-start gap-2">
+                <FiMapPin size={15} className="text-pink-400 mt-1" />
+                65 Sims Ave
+                <br />
+                #04-11
+                <br />
+                Yi Xiu Factory Building
+                <br />
+                Singapore 387418
+              </li>
             </ul>
           </div>
         </div>
